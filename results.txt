@@ -1,0 +1,421 @@
+
+-----------------------------------------------------------------------------------
+Schedule for class : G1 - students nr: 30
+
+Day 0
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  teacher: T14 | room: C901 (capacity = 30)
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  teacher: T11 | room: C901 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: T07 | room: C901 (capacity = 30)
+Hour 10 :  teacher: T03 | room: C901 (capacity = 30)
+Hour 12 :  teacher: T18 | room: C901 (capacity = 30)
+Hour 14 :  teacher: T06 | room: C901 (capacity = 30)
+Hour 16 :  teacher: T09 | room: C901 (capacity = 30)
+Hour 18 :  FREE
+
+Day 2
+Hour 08 :  FREE
+Hour 10 :  teacher: T12 | room: C901 (capacity = 30)
+Hour 12 :  FREE
+Hour 14 :  teacher: T20 | room: C901 (capacity = 30)
+Hour 16 :  teacher: T17 | room: C901 (capacity = 30)
+Hour 18 :  teacher: T04 | room: C901 (capacity = 30)
+
+Day 3
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  teacher: T08 | room: C901 (capacity = 30)
+Hour 16 :  teacher: T02 | room: C901 (capacity = 30)
+Hour 18 :  teacher: T10 | room: C901 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: T19 | room: C901 (capacity = 30)
+Hour 10 :  teacher: T05 | room: C901 (capacity = 30)
+Hour 12 :  teacher: T15 | room: C901 (capacity = 30)
+Hour 14 :  teacher: T16 | room: C901 (capacity = 30)
+Hour 16 :  teacher: T01 | room: C901 (capacity = 30)
+Hour 18 :  teacher: T13 | room: C901 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : G2 - students nr: 20
+
+Day 0
+Hour 08 :  FREE
+Hour 10 :  teacher: T13 | room: C201 (capacity = 20)
+Hour 12 :  FREE
+Hour 14 :  teacher: T20 | room: C201 (capacity = 20)
+Hour 16 :  teacher: T19 | room: C201 (capacity = 20)
+Hour 18 :  teacher: T18 | room: C201 (capacity = 20)
+
+Day 1
+Hour 08 :  teacher: T15 | room: C201 (capacity = 20)
+Hour 10 :  teacher: T17 | room: C201 (capacity = 20)
+Hour 12 :  teacher: T05 | room: C201 (capacity = 20)
+Hour 14 :  teacher: T02 | room: C201 (capacity = 20)
+Hour 16 :  teacher: T10 | room: C201 (capacity = 20)
+Hour 18 :  FREE
+
+Day 2
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  teacher: T01 | room: C201 (capacity = 20)
+Hour 16 :  teacher: T06 | room: C201 (capacity = 20)
+Hour 18 :  FREE
+
+Day 3
+Hour 08 :  FREE
+Hour 10 :  teacher: T09 | room: C201 (capacity = 20)
+Hour 12 :  teacher: T14 | room: C201 (capacity = 20)
+Hour 14 :  teacher: T03 | room: C201 (capacity = 20)
+Hour 16 :  teacher: T08 | room: C201 (capacity = 20)
+Hour 18 :  teacher: T07 | room: C201 (capacity = 20)
+
+Day 4
+Hour 08 :  teacher: T11 | room: C201 (capacity = 20)
+Hour 10 :  FREE
+Hour 12 :  teacher: T04 | room: C201 (capacity = 20)
+Hour 14 :  teacher: T12 | room: C201 (capacity = 20)
+Hour 16 :  teacher: T16 | room: C201 (capacity = 20)
+Hour 18 :  FREE
+-----------------------------------------------------------------------------------
+Schedule for class : G3 - students nr: 30
+
+Day 0
+Hour 08 :  teacher: T03 | room: C902 (capacity = 30)
+Hour 10 :  teacher: T10 | room: C902 (capacity = 30)
+Hour 12 :  teacher: T04 | room: C902 (capacity = 30)
+Hour 14 :  FREE
+Hour 16 :  teacher: T16 | room: C902 (capacity = 30)
+Hour 18 :  FREE
+
+Day 1
+Hour 08 :  teacher: T17 | room: C902 (capacity = 30)
+Hour 10 :  teacher: T20 | room: C902 (capacity = 30)
+Hour 12 :  teacher: T06 | room: C902 (capacity = 30)
+Hour 14 :  teacher: T05 | room: C902 (capacity = 30)
+Hour 16 :  teacher: T11 | room: C902 (capacity = 30)
+Hour 18 :  FREE
+
+Day 2
+Hour 08 :  FREE
+Hour 10 :  teacher: T18 | room: C902 (capacity = 30)
+Hour 12 :  teacher: T14 | room: C902 (capacity = 30)
+Hour 14 :  teacher: T13 | room: C902 (capacity = 30)
+Hour 16 :  teacher: T07 | room: C902 (capacity = 30)
+Hour 18 :  FREE
+
+Day 3
+Hour 08 :  FREE
+Hour 10 :  teacher: T12 | room: C902 (capacity = 30)
+Hour 12 :  teacher: T09 | room: C902 (capacity = 30)
+Hour 14 :  FREE
+Hour 16 :  teacher: T01 | room: C902 (capacity = 30)
+Hour 18 :  teacher: T02 | room: C902 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: T08 | room: C902 (capacity = 30)
+Hour 10 :  teacher: T15 | room: C902 (capacity = 30)
+Hour 12 :  teacher: T19 | room: C902 (capacity = 30)
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  FREE
+-----------------------------------------------------------------------------------
+Schedule for class : G4 - students nr: 20
+
+Day 0
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 1
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 2
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  teacher: T01 | room: C202 (capacity = 20)
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  teacher: T03 | room: C202 (capacity = 20)
+
+Day 3
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 4
+Hour 08 :  FREE
+Hour 10 :  teacher: T02 | room: C202 (capacity = 20)
+Hour 12 :  FREE
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  FREE
+-----------------------------------------------------------------------------------
+Schedule for class : G5 - students nr: 30
+
+Day 0
+Hour 08 :  FREE
+Hour 10 :  teacher: T14 | room: C903 (capacity = 30)
+Hour 12 :  teacher: T21 | room: C903 (capacity = 30)
+Hour 14 :  teacher: T11 | room: C903 (capacity = 30)
+Hour 16 :  teacher: T15 | room: C903 (capacity = 30)
+Hour 18 :  teacher: T28 | room: C903 (capacity = 30)
+
+Day 1
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  teacher: T13 | room: C903 (capacity = 30)
+Hour 14 :  FREE
+Hour 16 :  teacher: T25 | room: C903 (capacity = 30)
+Hour 18 :  teacher: T23 | room: C903 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: T16 | room: C903 (capacity = 30)
+Hour 10 :  teacher: T20 | room: C903 (capacity = 30)
+Hour 12 :  teacher: T12 | room: C903 (capacity = 30)
+Hour 14 :  FREE
+Hour 16 :  teacher: T22 | room: C903 (capacity = 30)
+Hour 18 :  teacher: T30 | room: C903 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: T26 | room: C903 (capacity = 30)
+Hour 10 :  FREE
+Hour 12 :  teacher: T29 | room: C903 (capacity = 30)
+Hour 14 :  teacher: T19 | room: C903 (capacity = 30)
+Hour 16 :  teacher: T27 | room: C903 (capacity = 30)
+Hour 18 :  teacher: T18 | room: C903 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: T24 | room: C903 (capacity = 30)
+Hour 10 :  FREE
+Hour 12 :  teacher: T17 | room: C903 (capacity = 30)
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  FREE
+-----------------------------------------------------------------------------------
+Schedule for class : G6 - students nr: 20
+
+Day 0
+Hour 08 :  FREE
+Hour 10 :  teacher: T30 | room: C203 (capacity = 20)
+Hour 12 :  teacher: T13 | room: C203 (capacity = 20)
+Hour 14 :  FREE
+Hour 16 :  teacher: T28 | room: C203 (capacity = 20)
+Hour 18 :  teacher: T19 | room: C203 (capacity = 20)
+
+Day 1
+Hour 08 :  FREE
+Hour 10 :  teacher: T29 | room: C203 (capacity = 20)
+Hour 12 :  teacher: T22 | room: C203 (capacity = 20)
+Hour 14 :  teacher: T18 | room: C203 (capacity = 20)
+Hour 16 :  teacher: T24 | room: C203 (capacity = 20)
+Hour 18 :  teacher: T27 | room: C203 (capacity = 20)
+
+Day 2
+Hour 08 :  teacher: T12 | room: C203 (capacity = 20)
+Hour 10 :  teacher: T14 | room: C203 (capacity = 20)
+Hour 12 :  teacher: T20 | room: C203 (capacity = 20)
+Hour 14 :  teacher: T26 | room: C203 (capacity = 20)
+Hour 16 :  teacher: T23 | room: C203 (capacity = 20)
+Hour 18 :  FREE
+
+Day 3
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  FREE
+Hour 16 :  teacher: T16 | room: C203 (capacity = 20)
+Hour 18 :  teacher: T25 | room: C203 (capacity = 20)
+
+Day 4
+Hour 08 :  FREE
+Hour 10 :  teacher: T11 | room: C203 (capacity = 20)
+Hour 12 :  teacher: T21 | room: C203 (capacity = 20)
+Hour 14 :  teacher: T15 | room: C203 (capacity = 20)
+Hour 16 :  teacher: T17 | room: C203 (capacity = 20)
+Hour 18 :  FREE
+-----------------------------------------------------------------------------------
+Schedule for class : G7 - students nr: 30
+
+Day 0
+Hour 08 :  FREE
+Hour 10 :  teacher: T23 | room: C904 (capacity = 30)
+Hour 12 :  teacher: T22 | room: C904 (capacity = 30)
+Hour 14 :  teacher: T25 | room: C904 (capacity = 30)
+Hour 16 :  teacher: T11 | room: C904 (capacity = 30)
+Hour 18 :  teacher: T12 | room: C904 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: T21 | room: C904 (capacity = 30)
+Hour 10 :  teacher: T13 | room: C904 (capacity = 30)
+Hour 12 :  teacher: T20 | room: C904 (capacity = 30)
+Hour 14 :  teacher: T16 | room: C904 (capacity = 30)
+Hour 16 :  teacher: T28 | room: C904 (capacity = 30)
+Hour 18 :  FREE
+
+Day 2
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  teacher: T27 | room: C904 (capacity = 30)
+Hour 14 :  teacher: T24 | room: C904 (capacity = 30)
+Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 3
+Hour 08 :  FREE
+Hour 10 :  teacher: T15 | room: C904 (capacity = 30)
+Hour 12 :  teacher: T19 | room: C904 (capacity = 30)
+Hour 14 :  teacher: T14 | room: C904 (capacity = 30)
+Hour 16 :  teacher: T18 | room: C904 (capacity = 30)
+Hour 18 :  FREE
+
+Day 4
+Hour 08 :  FREE
+Hour 10 :  teacher: T30 | room: C904 (capacity = 30)
+Hour 12 :  teacher: T26 | room: C904 (capacity = 30)
+Hour 14 :  teacher: T17 | room: C904 (capacity = 30)
+Hour 16 :  teacher: T29 | room: C904 (capacity = 30)
+Hour 18 :  FREE
+-----------------------------------------------------------------------------------
+Schedule for class : G8 - students nr: 20
+
+Day 0
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  teacher: T15 | room: C204 (capacity = 20)
+Hour 16 :  teacher: T20 | room: C204 (capacity = 20)
+Hour 18 :  teacher: T16 | room: C204 (capacity = 20)
+
+Day 1
+Hour 08 :  teacher: T13 | room: C204 (capacity = 20)
+Hour 10 :  teacher: T21 | room: C204 (capacity = 20)
+Hour 12 :  teacher: T30 | room: C204 (capacity = 20)
+Hour 14 :  teacher: T22 | room: C204 (capacity = 20)
+Hour 16 :  teacher: T18 | room: C204 (capacity = 20)
+Hour 18 :  FREE
+
+Day 2
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  teacher: T29 | room: C204 (capacity = 20)
+Hour 14 :  teacher: T23 | room: C204 (capacity = 20)
+Hour 16 :  teacher: T25 | room: C204 (capacity = 20)
+Hour 18 :  FREE
+
+Day 3
+Hour 08 :  teacher: T17 | room: C204 (capacity = 20)
+Hour 10 :  teacher: T11 | room: C204 (capacity = 20)
+Hour 12 :  teacher: T12 | room: C204 (capacity = 20)
+Hour 14 :  teacher: T24 | room: C204 (capacity = 20)
+Hour 16 :  FREE
+Hour 18 :  teacher: T27 | room: C204 (capacity = 20)
+
+Day 4
+Hour 08 :  FREE
+Hour 10 :  teacher: T19 | room: C204 (capacity = 20)
+Hour 12 :  FREE
+Hour 14 :  teacher: T26 | room: C204 (capacity = 20)
+Hour 16 :  teacher: T14 | room: C204 (capacity = 20)
+Hour 18 :  teacher: T28 | room: C204 (capacity = 20)
+-----------------------------------------------------------------------------------
+Schedule for class : SA - students nr: 100
+
+Day 0
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 1
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 2
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  teacher: T29 | room: C1 (capacity = 100)
+Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 3
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  teacher: T30 | room: C1 (capacity = 100)
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 4
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  teacher: T02 | room: C1 (capacity = 100)
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  teacher: T01 | room: C1 (capacity = 100)
+-----------------------------------------------------------------------------------
+Schedule for class : SB - students nr: 100
+
+Day 0
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  teacher: T01 | room: C2 (capacity = 100)
+Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 1
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  teacher: T02 | room: C2 (capacity = 100)
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 2
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  FREE
+Hour 16 :  teacher: T30 | room: C2 (capacity = 100)
+Hour 18 :  FREE
+
+Day 3
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  teacher: T29 | room: C2 (capacity = 100)
+Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 4
+Hour 08 :  FREE
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  FREE
+Hour 16 :  FREE
+Hour 18 :  FREE
