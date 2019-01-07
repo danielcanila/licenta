@@ -1,6 +1,7 @@
 package com.daniel.licenta.calendargenerator.algorithm.core;
 
 import com.daniel.licenta.calendargenerator.algorithm.model.CalendarData;
+import com.daniel.licenta.calendargenerator.algorithm.model.CourseGroupRelationshipRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -267,7 +268,8 @@ public class FitnessCalculator {
                 total_problem_days = total_problem_days + problem_days;
                 violation_cases++;
 
-                cost = ICDW1 * totalHoursPerClass * Math.pow(BASE, problem_days);
+                // TODO : check here
+                cost = ICDW1 * totalHoursPerClass;//* Math.pow(BASE, problem_days);
 
                 if (showResults == 1) {
                     System.out.printf("\nThe class %s has %d repeated lessons at %d  days\n", calendarData.studentGroups[i].
@@ -338,6 +340,27 @@ public class FitnessCalculator {
                     number_of_cases++;
                     cost += HARD_CONSTRAINT_WEIGHT * Math.pow(BASE, parallel_teaching - 1);
                 }
+            }
+        }
+
+        for (CourseGroupRelationshipRecord relationship : calendarData.getCourseGroupRelationshipRecords()) {
+            int[][] semianSchedule = cat[relationship.getSemian()];
+            int parallel_teaching = 0;
+            for (Integer subGroup : relationship.getStudentGroup()) {
+                int[][] subgroupSchedule = cat[subGroup];
+                for (int hour = 0; hour < configCSO.HOURS_IN_WEEK; hour++) {
+                    int[] scheduleAtHourForSemian = semianSchedule[hour];
+                    int[] scheduleAtHourForSubgroup = subgroupSchedule[hour];
+
+                    if ((!calendarData.getTeacherByIndex(scheduleAtHourForSemian[0]).isEmptyTimeSlot() &&
+                            !calendarData.getTeacherByIndex(scheduleAtHourForSubgroup[0]).isEmptyTimeSlot())) {
+                        parallel_teaching++;
+                        number_of_cases++;
+                    }
+                }
+            }
+            if (parallel_teaching > 0) {
+                cost += HARD_CONSTRAINT_WEIGHT * Math.pow(BASE, parallel_teaching);
             }
         }
 
@@ -417,8 +440,9 @@ public class FitnessCalculator {
         double a1 = calculateTeacherUnavailabilityFitness(start, end, cat, 0);
         double a2 = calculateParallelTeachingFitness(start, end, cat, 0);
         double a3 = calculateUnassignedStudentClassPeriodFitness(start, end, cat, 0);
+        double a4 = calculateParallelRoomFitness(cat, 0);
         double a5 = calculateTeacherEmptyPeriodsFitness(start, end, cat, TEPW, 0);
-        return a1 + a2 + a3 + a5;
+        return a1 + a2 + a3 + a4 + a5;
     }
 
     double checkHardConstraints(int start, int end, int[][][] cat) {
@@ -426,7 +450,7 @@ public class FitnessCalculator {
         double a2 = calculateParallelTeachingFitness(start, end, cat, 0);
         double a3 = calculateUnassignedStudentClassPeriodFitness(start, end, cat, 0);
         double a4 = calculateParallelRoomFitness(cat, 0);
-        return a1 + a2 + a3;
+        return a1 + a2 + a3 + 4;
     }
 
 }

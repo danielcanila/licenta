@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 import static com.daniel.licenta.calendargenerator.algorithm.util.ArrayUtils.fillArrayWithRandomValuesInInteval;
 import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.*;
@@ -29,33 +30,35 @@ public class MainCSO {
     private int[][][][] catData;
     private int[][][] globalBestCat;
 
+    private Double globalBestFitness = MAX_FITNESS;
+
+
     public int[][][] runCsoCoreAlgorithm(double TEPW, double ITDW, double ICDW, CalendarData calendarData) {
         this.calendarData = calendarData;
         initializeCats();
 
-        double globalBestFitness = MAX_FITNESS;
 
         for (int iterator = 0; iterator < ITERATIONS + 1; iterator++) {
             if (iterator == 0 || iterator % 100 == 0) {
                 System.out.printf("Iterations %d, best fitness %f\n", iterator, globalBestFitness);
             }
 
-            for (int p = 0; p < CATS; p++) {
-                double fitness = fitnessCalculator.calculateFitness(configCSO.HOURS_IN_WEEK, catData[p], TEPW, ITDW, ICDW);
+            Stream.of(catData).forEach(catData -> {
+                double fitness = fitnessCalculator.calculateFitness(configCSO.HOURS_IN_WEEK, catData, TEPW, ITDW, ICDW);
 
                 if (fitness <= globalBestFitness) {
                     globalBestFitness = fitness;
 
                     for (int k = 0; k < calendarData.totalNumberOfStudentClasses; k++) {
-                        System.arraycopy(catData[p][k], 0, globalBestCat[k], 0, configCSO.HOURS_IN_WEEK);
+                        System.arraycopy(catData[k], 0, globalBestCat[k], 0, configCSO.HOURS_IN_WEEK);
                     }
                 }
                 if ((randomGenerator.nextNumber() % 100) > MR) {
-                    catSeek(catData[p], TEPW, ITDW, ICDW);
+                    catSeek(catData, TEPW, ITDW, ICDW);
                 } else {
-                    catTrace(catData[p]);
+                    catTrace(catData);
                 }
-            }
+            });
         }
         return globalBestCat;
     }
@@ -72,7 +75,7 @@ public class MainCSO {
                     roomData[i][j] = -1;
                 }
             }
-            for (int classPosition = 0; classPosition < calendarData.totalNumberOfStudentClasses; classPosition++) {
+            for (int classPosition = calendarData.totalNumberOfStudentClasses - 1; classPosition >= 0; classPosition--) {
                 for (int timeslot = 0; timeslot < configCSO.HOURS_IN_WEEK; timeslot++) {
                     catData[p][classPosition][timeslot][0] = -1;
                     catData[p][classPosition][timeslot][1] = -1;

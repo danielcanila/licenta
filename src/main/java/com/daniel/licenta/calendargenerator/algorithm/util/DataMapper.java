@@ -4,10 +4,7 @@ import com.daniel.licenta.calendargenerator.algorithm.inputmodel.StudentClass;
 import com.daniel.licenta.calendargenerator.algorithm.inputmodel.DataInputRepresentation;
 import com.daniel.licenta.calendargenerator.algorithm.inputmodel.RoomInput;
 import com.daniel.licenta.calendargenerator.algorithm.inputmodel.TeacherInput;
-import com.daniel.licenta.calendargenerator.algorithm.model.CalendarData;
-import com.daniel.licenta.calendargenerator.algorithm.model.StudentGroup;
-import com.daniel.licenta.calendargenerator.algorithm.model.RoomRecord;
-import com.daniel.licenta.calendargenerator.algorithm.model.Teacher;
+import com.daniel.licenta.calendargenerator.algorithm.model.*;
 import org.springframework.stereotype.Component;
 
 import java.util.Comparator;
@@ -20,7 +17,41 @@ import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.E
 @Component
 public class DataMapper {
 
-    public void fillDataWithEmptyTimeSlots(DataInputRepresentation data) {
+    public CalendarData mapToCalendarData(DataInputRepresentation dataInputRepresentation) {
+        fillDataWithEmptyTimeSlots(dataInputRepresentation);
+
+        StudentGroup[] classRecords = mapClass(dataInputRepresentation);
+        Teacher[] teachers = mapTeachers(dataInputRepresentation);
+        RoomRecord[] roomRecords = mapRooms(dataInputRepresentation);
+        List<CourseGroupRelationshipRecord> courseGroupRelationshipRecords = mapCourseGroupRelationship(dataInputRepresentation);
+
+
+        CalendarData calendarData = new CalendarData(classRecords.length, teachers.length);
+        calendarData.setTeachers(teachers);
+        calendarData.setStudentGroups(classRecords);
+        calendarData.setRooms(roomRecords);
+        calendarData.setNumberOfSlotsPerDay(dataInputRepresentation.getTimeslotsPerDay());
+        calendarData.setCourseGroupRelationshipRecords(courseGroupRelationshipRecords);
+
+        return calendarData;
+    }
+
+    private List<CourseGroupRelationshipRecord> mapCourseGroupRelationship(DataInputRepresentation dataInputRepresentation) {
+        return dataInputRepresentation.getRelationships()
+                .stream()
+                .map(courseGroupRelationship -> {
+                    CourseGroupRelationshipRecord courseGroupRelationshipRecord = new CourseGroupRelationshipRecord(courseGroupRelationship.getCourse().getIndex());
+                    courseGroupRelationship.getStudentGroups()
+                            .stream()
+                            .map(StudentClass::getIndex)
+                            .collect(Collectors.toCollection(courseGroupRelationshipRecord::getStudentGroup));
+                    return courseGroupRelationshipRecord;
+                })
+                .collect(Collectors.toList());
+
+    }
+
+    private void fillDataWithEmptyTimeSlots(DataInputRepresentation data) {
         TeacherInput emptyTimeSlotsTeacher = new TeacherInput(999999999, EMPTY_TIME_SLOT);
 
         for (StudentClass classInput : data.getStudentClasses()) {
@@ -44,23 +75,6 @@ public class DataMapper {
         data.addTeacher(emptyTimeSlotsTeacher);
     }
 
-    public CalendarData mapToCalendarData(DataInputRepresentation dataInputRepresentation) {
-        fillDataWithEmptyTimeSlots(dataInputRepresentation);
-
-        StudentGroup[] classRecords = mapClass(dataInputRepresentation);
-        Teacher[] teachers = mapTeachers(dataInputRepresentation);
-        RoomRecord[] roomRecords = mapRooms(dataInputRepresentation);
-
-
-        CalendarData calendarData = new CalendarData(classRecords.length, teachers.length);
-        calendarData.setTeachers(teachers);
-        calendarData.setStudentGroups(classRecords);
-        calendarData.setRooms(roomRecords);
-        calendarData.setNumberOfSlotsPerDay(dataInputRepresentation.getTimeslotsPerDay());
-
-        return calendarData;
-    }
-
     private static RoomRecord[] mapRooms(DataInputRepresentation dataInputRepresentation) {
         RoomRecord[] teachersReturn = new RoomRecord[dataInputRepresentation.getRooms().size()];
 
@@ -77,7 +91,6 @@ public class DataMapper {
 
         return teachersReturn;
     }
-
 
     private static Teacher[] mapTeachers(DataInputRepresentation dataInputRepresentation) {
         Teacher[] teachersReturn = new Teacher[dataInputRepresentation.getTeachers().size()];

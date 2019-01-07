@@ -17,6 +17,7 @@ public class DataParser {
         double TEPW = 0.06;
         double ITDW = 1.0;
         double ICDW = 0.95;
+        System.out.println("-------------------------------------------------------------------\n");
 
         double a1 = fitnessCalculator.calculateTeacherUnavailabilityFitness(0, configCSO.HOURS_IN_WEEK, cat, 1);
         double a2 = fitnessCalculator.calculateParallelTeachingFitness(0, configCSO.HOURS_IN_WEEK, cat, 1);

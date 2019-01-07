@@ -5,16 +5,17 @@ public final class CSOConstants {
     public static final int MAX_NUMBER_OF_TEACHERS = 100;
     // mixture ratio - percentage of CATS in tracing mode
     public static final int MR = 4;
-    public static final int CATS = 30;
-    public static final int ITERATIONS = 1000;
+    public static final int CATS = 60;
+    public static final int ITERATIONS = 500;
     public static final int REFINEMENT_STEPS = 50000;
     public static final double MAX_FITNESS = 10000000;
     public static final int HARD_CONSTRAINT_WEIGHT = 10;
     public static final double BASE = 1.3;
 
-    // PARAMETERS FOR SEEKING MODE
-    public static final int SEEKING_MEMORY_POOL = 2;
-    public static final int SEEKING_RANGE_DIMENSION = 10;
+    // PARAMETERS FOR SEEKING MODE default = 2
+    public static final int SEEKING_MEMORY_POOL = 4;
+    //default = 10
+    public static final int SEEKING_RANGE_DIMENSION = 20;
     // self position consideration - if it equals to 1 the cat will also consider its current position during catSeek procedure
     public static final int SPC = 1;
     // count of dimensions to change - percentage of dimensions to change

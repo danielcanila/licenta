@@ -4,11 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.EMPTY_TIME_SLOT;
 
 @Getter
 @Setter
@@ -19,6 +18,7 @@ public class CalendarData {
     public int totalNumberOfStudentClasses;
     public int totalNumberOfTeachers;
 
+    public List<CourseGroupRelationshipRecord> courseGroupRelationshipRecords = new ArrayList<>();
     public Teacher[] teachers;
     public StudentGroup[] studentGroups;
     public RoomRecord[] rooms;
@@ -28,11 +28,11 @@ public class CalendarData {
         this.totalNumberOfTeachers = totalNumberOfTeachers;
     }
 
-    public boolean hasEmptySlots() {
-        return teachers[teachers.length - 1].surname.equals(EMPTY_TIME_SLOT);
+    public List<RoomRecord> getAllRoomsByCapacity(int capacity) {
+        return Arrays.stream(rooms).filter(roomRecord -> roomRecord.capacity == capacity).collect(Collectors.toList());
     }
 
-    public List<RoomRecord> getAllRoomsByCapacity(int capacity) {
-        return Arrays.asList(rooms).stream().filter(roomRecord -> roomRecord.capacity == capacity).collect(Collectors.toList());
+    public Teacher getTeacherByIndex(int index) {
+        return teachers[index];
     }
 }

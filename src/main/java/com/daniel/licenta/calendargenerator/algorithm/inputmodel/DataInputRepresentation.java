@@ -12,10 +12,10 @@ import java.util.List;
 public class DataInputRepresentation {
 
     int timeslotsPerDay;
+    List<CourseGroupRelationship> relationships= new ArrayList<>();
     List<StudentClass> studentClasses = new ArrayList<>();
     List<TeacherInput> teachers = new ArrayList<>();
     List<RoomInput> rooms = new ArrayList<>();
-
 
     public DataInputRepresentation(int timeslotsPerDay) {
         this.timeslotsPerDay = timeslotsPerDay;
@@ -65,5 +65,10 @@ public class DataInputRepresentation {
         teacherInput.index = teachers.size();
         teachers.add(teacherInput);
         teachers.sort(Comparator.comparing(TeacherInput::getIdentifier));
+    }
+
+    public void setRelationships(List<CourseGroupRelationship> relationships){
+        this.relationships.clear();
+        this.relationships.addAll(relationships);
     }
 }
