@@ -4,7 +4,6 @@ import com.daniel.licenta.calendargenerator.algorithm.model.CalendarData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import static com.daniel.licenta.calendargenerator.algorithm.util.BufferHandlingUtil.fprintf;
 import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.BASE;
 import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.HARD_CONSTRAINT_WEIGHT;
 
@@ -20,16 +19,13 @@ public class FitnessCalculator {
         this.calendarData = calendarData;
     }
 
-    public StringBuffer globalResultsBuffer = new StringBuffer();
-    public StringBuffer fitnessEvolutionBuffer = new StringBuffer();
-
-    void swap(int[][][] a, int classPosition, int timeslot1, int timeslot2) { // swaps the two timeslots
-        int temp = a[classPosition][timeslot1][0];
-        a[classPosition][timeslot1][0] = a[classPosition][timeslot2][0];
-        a[classPosition][timeslot2][0] = temp;
+    void swap(int[][][] cat, int classPosition, int timeslot1, int timeslot2) {
+        int temp = cat[classPosition][timeslot1][0];
+        cat[classPosition][timeslot1][0] = cat[classPosition][timeslot2][0];
+        cat[classPosition][timeslot2][0] = temp;
     }
 
-    double calculateTeacherEmptyPeriodsFitness(int toFile, int begin, int end, int[][][] a, double TEPW1, int showResults) { // checks the teacher's empty periods and returns the relevant cost
+    double calculateTeacherEmptyPeriodsFitness(int begin, int end, int[][][] cat, double TEPW1, int showResults) {
         double total_cost = 0.0;
         int cases_of_teachers = 0;
         int total_gaps_of_teachers = 0;
@@ -52,7 +48,7 @@ public class FitnessCalculator {
                 int has_lesson = 0;
                 for (int t = start; t < start + configCSO.HOURS_PER_DAY; t++) {
                     for (int j = 0; j < calendarData.teachers[i].numberOfClasses; j++) {
-                        if (a[calendarData.teachers[i].classesHeTeaches[j][0]][t][0] == i) {
+                        if (cat[calendarData.teachers[i].classesHeTeaches[j][0]][t][0] == i) {
                             has_lesson = 1;
                             if (flag == 1) {
                                 first_lesson = t;
@@ -83,9 +79,6 @@ public class FitnessCalculator {
             if (showResults == 1) {
                 System.out.printf("\nTeacher %s has %d days with total gaps: %d\n", calendarData.teachers[i].surname, days, total_gaps);
             }
-            if (toFile == 33) {
-                fprintf(globalResultsBuffer, "\nTeacher %s has %d days with total gaps: %d\n", calendarData.teachers[i].surname, days, total_gaps);
-            }
 
             total_cost = total_cost + cost;
         }
@@ -93,16 +86,13 @@ public class FitnessCalculator {
         if (showResults == 1 || showResults == 2) {
             System.out.printf("There are %d teachers with  %d total idle  timeslots\n", cases_of_teachers, total_gaps_of_teachers);
         }
-        if (toFile == 33) {
-            fprintf(globalResultsBuffer, "\nThere are %d teachers with  %d total idle  timeslots\n", cases_of_teachers, total_gaps_of_teachers);
-            fprintf(globalResultsBuffer, "\nEmpty teachers timeslot cost is %f\n", total_cost);
-        }
         return total_cost;
 
 
     }
 
-    private double calculateIdealTeacherDispersion(int teacherPosition, int totalHours) { // calculates and returns the ideal daily dispersion of teaching hours of the teacher
+    // calculates and returns the ideal daily dispersion of teaching hours of the teacher
+    private double calculateIdealTeacherDispersion(int teacherPosition, int totalHours) {
         return configCSO.HOURS_PER_DAY * totalHours / (double) calendarData.teachers[teacherPosition].availabilityHours;
     }
 
@@ -120,7 +110,8 @@ public class FitnessCalculator {
         }
     }
 
-    double calculateTeacherDispersionFitness(int toFile, int begin, int end, int[][][] a, double IDTW, int showResults) { // checks the dispersion of teaching hours of the teacher and returns the relevant cost
+    // calculates the dispersion of teaching hours of the teacher and returns the relevant cost
+    double calculateTeacherDispersionFitness(int end, int[][][] cat, double IDTW, int showResults) {
         int[] idealDistrTable = new int[5];
         int[] actualDistTable = new int[5];
         int totalNumberOfWrongTeachers = 0;
@@ -136,14 +127,14 @@ public class FitnessCalculator {
             double ceil_no = calculateCeilNumber(teacherPosition, calendarData.teachers[teacherPosition].totalHours);
             double floor_no = calculateFloorNumber(teacherPosition, calendarData.teachers[teacherPosition].totalHours);
 
-            for (int start = begin; start < end; start = start + configCSO.HOURS_PER_DAY) {
+            for (int start = 0; start < end; start = start + configCSO.HOURS_PER_DAY) {
                 int hours_per_day = 0;
                 for (int j = 0; j < calendarData.teachers[teacherPosition].numberOfClasses; j++) {
                     int hours_per_day_of_class = 0;
                     int class1 = calendarData.teachers[teacherPosition].classesHeTeaches[j][0];
 
                     for (int t = start; t < start + configCSO.HOURS_PER_DAY; t++) {
-                        if (a[class1][t][0] == teacherPosition) {
+                        if (cat[class1][t][0] == teacherPosition) {
                             hours_per_day_of_class++;
                         }
                     }
@@ -228,10 +219,6 @@ public class FitnessCalculator {
                     System.out.print("-----------------------------------------------------------------------------\n");
                 }
 
-                if (toFile == 33) {
-                    fprintf(globalResultsBuffer, "\nTeacher %s has %d days with wrong dispersion\n", calendarData.teachers[teacherPosition].surname, faultDays);
-                    fprintf(globalResultsBuffer, "-----------------------------------------------------------------------------\n");
-                }
             }
         }
 
@@ -239,15 +226,12 @@ public class FitnessCalculator {
             System.out.printf("Total cases of Teachers wrong dispersion are %d. The number of these days are %d\n", totalNumberOfWrongTeachers, totalNumberOfFaultDays);
         }
 
-        if (toFile == 33) {
-            fprintf(globalResultsBuffer, "\nTotal cases of Teachers wrong dispersion are %d. The number of these days are %d\n", totalNumberOfWrongTeachers, totalNumberOfFaultDays);
-            fprintf(globalResultsBuffer, "\nWrong teacher dispersion cost is %.12f\n", IDTW * total_cost);
-        }
 
         return IDTW * total_cost;
     }
 
-    double calculateClassDispersionFitness(int toFile, int begin, int end, int[][][] a, double ICDW1, int showResults) { // checks the dispersion of lessons of each class and returns the relevant cost
+    // calculates the dispersion of lessons of each class and returns the relevant cost
+    double calculateClassDispersionFitness(int end, int[][][] cat, double ICDW1, int showResults) {
         double total_cost = 0.0;
         int violation_cases = 0;
         int total_problem_days = 0;
@@ -256,14 +240,14 @@ public class FitnessCalculator {
             int problem_days = 0;
             double cost = 0.0;
             int totalHoursPerClass = 0;
-            for (int start = begin; start < end; start = start + configCSO.HOURS_PER_DAY) {
+            for (int start = 0; start < end; start = start + configCSO.HOURS_PER_DAY) {
                 int hours = 0;
                 for (int k = 0; k < calendarData.studentGroups[i].numberOfTeachers; k++) {
                     int hours_per_day_of_teacher = 0;
                     int teacher1 = calendarData.studentGroups[i].teachersOfClassAndHours[k][0];
 
                     for (int t = start; t < start + configCSO.HOURS_PER_DAY; t++) {
-                        if ((a[i][t][0] == teacher1)) {
+                        if ((cat[i][t][0] == teacher1)) {
                             hours_per_day_of_teacher++;
                         }
                     }
@@ -290,11 +274,6 @@ public class FitnessCalculator {
                             className, totalHoursPerClass, problem_days);
                     System.out.print("---------------------------------------------------------------------------------\n");
                 }
-                if (toFile == 33) {
-                    fprintf(globalResultsBuffer, "\nThe class %s has %d repeated lessons at %d  days\n", calendarData.studentGroups[i].
-                            className, totalHoursPerClass, problem_days);
-                    fprintf(globalResultsBuffer, "---------------------------------------------------------------------------------\n");
-                }
             }
             total_cost += cost;
         }
@@ -302,14 +281,10 @@ public class FitnessCalculator {
         if (showResults == 1 || showResults == 2) {
             System.out.printf("The studentGroups with  wrong dispersion are %d. The days it occurs are %d\n", violation_cases, total_problem_days);
         }
-        if (toFile == 33) {
-            fprintf(globalResultsBuffer, "\nThe studentGroups with  wrong dispersion are %d. The days it occurs are %d\n", violation_cases, total_problem_days);
-            fprintf(globalResultsBuffer, "\nWrong class dispersion cost is %.12f\n", total_cost);
-        }
         return total_cost;
     }
 
-    double calculateParallelRoomFitness(int start, int end, int[][][] a, int showResults) {
+    double calculateParallelRoomFitness(int[][][] cat, int showResults) {
         int[][] roomData = new int[calendarData.rooms.length][configCSO.HOURS_IN_WEEK];
 
         for (int i = 0; i < calendarData.rooms.length; i++) {
@@ -320,7 +295,7 @@ public class FitnessCalculator {
 
         for (int i = 0; i < calendarData.totalNumberOfStudentClasses; i++) {
             for (int j = 0; j < configCSO.HOURS_IN_WEEK; j++) {
-                roomData[a[i][j][1]][j]++;
+                roomData[cat[i][j][1]][j]++;
             }
         }
 
@@ -342,7 +317,8 @@ public class FitnessCalculator {
         return 0;
     }
 
-    double calculateParallelTeachingFitness(int toFile, int start, int end, int[][][] a, int showResults) { // checks if there are parallel teachings and returns the relevant cost
+    // calculates if there are parallel teachings and returns the relevant cost
+    double calculateParallelTeachingFitness(int start, int end, int[][][] cat, int showResults) {
         int number_of_cases = 0;
         double cost = 0.0;
 
@@ -353,7 +329,7 @@ public class FitnessCalculator {
             for (int t = start; t < end; t++) {
                 int parallel_teaching = 0;
                 for (int j = 0; j < calendarData.totalNumberOfStudentClasses; j++) {
-                    if (a[j][t][0] == i) {
+                    if (cat[j][t][0] == i) {
                         parallel_teaching++;
                     }
                 }
@@ -368,22 +344,19 @@ public class FitnessCalculator {
         if (showResults == 1) {
             System.out.printf("Total cases of teacher parallel teaching are %d\n", number_of_cases);
         }
-        if (toFile == 33) {
-            fprintf(globalResultsBuffer, "\nTotal cases of teacher parallel teaching is %d\n", number_of_cases);
-        }
 
         return cost;
     }
 
-    // TODO : this is not a hard constraint
-    double calculateUnassignedStudentClassPeriodFitness(int toFile, int begin, int end, int[][][] a, int showResults) { // checks the empty periods of each class and returns the relevant cost
+    // calculates the empty periods of each class and returns the relevant cost
+    double calculateUnassignedStudentClassPeriodFitness(int begin, int end, int[][][] cat, int showResults) {
         int number_of_cases = 0;
         double cost = 0.0;
 
         for (int i = 0; i < calendarData.totalNumberOfStudentClasses; i++) {
             for (int start = begin; start < end; start = start + configCSO.HOURS_PER_DAY) {
                 for (int t = start; t < start + configCSO.HOURS_PER_DAY; t++) {
-                    if (a[i][t][0] == -1
+                    if (cat[i][t][0] == -1
                             && t != configCSO.HOURS_PER_DAY - 1
                             && t != 2 * configCSO.HOURS_PER_DAY - 1
                             && t != 3 * configCSO.HOURS_PER_DAY - 1
@@ -394,9 +367,6 @@ public class FitnessCalculator {
                         if (showResults == 1) {
                             System.out.printf("\nClass %s has empty timeslot %d\n", calendarData.studentGroups[i].className, t);
                         }
-                        if (toFile == 33) {
-                            fprintf(globalResultsBuffer, "\nClass %s has empty timeslot %d\n", calendarData.studentGroups[i].className, t);
-                        }
                     }
                 }
             }
@@ -405,23 +375,19 @@ public class FitnessCalculator {
         if (showResults == 1) {
             System.out.printf("Total cases of class empty periods are %d \n", number_of_cases);
         }
-        if (toFile == 33) {
-            fprintf(globalResultsBuffer, "Total cases of class empty periods are %d \n", number_of_cases);
-            fprintf(globalResultsBuffer, "Total cost of  empty class timeslots is %f\n", cost);
-        }
         return cost;
     }
 
-    double calculateTeacherUnavailabilityFitness(int toFile, int start, int end, int[][][] a, int showResults) { // checks the unavailability of each teacher and returns the relevant cost
+    // calculates the unavailability of each teacher and returns the relevant cost
+    double calculateTeacherUnavailabilityFitness(int start, int end, int[][][] cat, int showResults) {
         int t;
         int number_of_cases = 0;
         double cost = 0.0;
         for (int i = 0; i < calendarData.totalNumberOfStudentClasses; i++) {
-            for (int j = 0; j < calendarData.studentGroups[i].numberOfTeachers;
-                 j++) {
+            for (int j = 0; j < calendarData.studentGroups[i].numberOfTeachers; j++) {
                 for (t = start; t < end; t++) {
-                    if (a[i][t][0] == calendarData.studentGroups[i].teachersOfClassAndHours[j][0] && calendarData.teachers[calendarData.studentGroups[i].
-                            teachersOfClassAndHours[j][0]].unavailableTimeslots[t] == 1) {
+                    if (cat[i][t][0] == calendarData.studentGroups[i].teachersOfClassAndHours[j][0]
+                            && calendarData.teachers[calendarData.studentGroups[i].teachersOfClassAndHours[j][0]].unavailableTimeslots[t] == 1) {
                         number_of_cases++;
                     }
                 }
@@ -432,37 +398,34 @@ public class FitnessCalculator {
         if (showResults == 1) {
             System.out.printf("Total cases of teacher unavailability are %d\n", number_of_cases);
         }
-        if (toFile == 33) {
-            fprintf(globalResultsBuffer, "Total cases of teacher unavailability: %d\n", number_of_cases);
-        }
         return cost;
 
     }
 
-    double calculateFitness(int end, int[][][] a, double TEPW, double ITDW, double ICDW) { // calculates the fitness value
-        double a1 = calculateTeacherUnavailabilityFitness(0, 0, end, a, 0);
-        double a2 = calculateParallelTeachingFitness(0, 0, end, a, 0);
-        double a3 = calculateUnassignedStudentClassPeriodFitness(0, 0, end, a, 0);
-        double a4 = calculateParallelRoomFitness(0, end, a, 0);
-        double a5 = calculateTeacherEmptyPeriodsFitness(0, 0, end, a, TEPW, 0);
-        double a6 = calculateTeacherDispersionFitness(0, 0, end, a, ITDW, 0);
-        double a7 = calculateClassDispersionFitness(0, 0, end, a, ICDW, 0);
+    double calculateFitness(int end, int[][][] cat, double TEPW, double ITDW, double ICDW) {
+        double a1 = calculateTeacherUnavailabilityFitness(0, end, cat, 0);
+        double a2 = calculateParallelTeachingFitness(0, end, cat, 0);
+        double a3 = calculateUnassignedStudentClassPeriodFitness(0, end, cat, 0);
+        double a4 = calculateParallelRoomFitness(cat, 0);
+        double a5 = calculateTeacherEmptyPeriodsFitness(0, end, cat, TEPW, 0);
+        double a6 = calculateTeacherDispersionFitness(end, cat, ITDW, 0);
+        double a7 = calculateClassDispersionFitness(end, cat, ICDW, 0);
         return a1 + a2 + a3 + a4 + a5 + a6 + a7;
     }
 
-    double calculatePartialFitness(int start, int end, int[][][] a, double TEPW) { // calculates the fitness value without the costs of teachers' and studentGroups' dispersion
-        double a1 = calculateTeacherUnavailabilityFitness(0, start, end, a, 0);
-        double a2 = calculateParallelTeachingFitness(0, start, end, a, 0);
-        double a3 = calculateUnassignedStudentClassPeriodFitness(0, start, end, a, 0);
-        double a5 = calculateTeacherEmptyPeriodsFitness(0, start, end, a, TEPW, 0);
+    double calculatePartialFitness(int start, int end, int[][][] cat, double TEPW) {
+        double a1 = calculateTeacherUnavailabilityFitness(start, end, cat, 0);
+        double a2 = calculateParallelTeachingFitness(start, end, cat, 0);
+        double a3 = calculateUnassignedStudentClassPeriodFitness(start, end, cat, 0);
+        double a5 = calculateTeacherEmptyPeriodsFitness(start, end, cat, TEPW, 0);
         return a1 + a2 + a3 + a5;
     }
 
-    double checkHardConstraints(int start, int end, int[][][] a) { // calculates the fitness value only for the hard constraints
-        double a1 = calculateTeacherUnavailabilityFitness(0, start, end, a, 0);
-        double a2 = calculateParallelTeachingFitness(0, start, end, a, 0);
-        double a3 = calculateUnassignedStudentClassPeriodFitness(0, start, end, a, 0);
-//        double a4 = calculateParallelRoomFitness(start, end, a,0);
+    double checkHardConstraints(int start, int end, int[][][] cat) {
+        double a1 = calculateTeacherUnavailabilityFitness(start, end, cat, 0);
+        double a2 = calculateParallelTeachingFitness(start, end, cat, 0);
+        double a3 = calculateUnassignedStudentClassPeriodFitness(start, end, cat, 0);
+        double a4 = calculateParallelRoomFitness(cat, 0);
         return a1 + a2 + a3;
     }
 

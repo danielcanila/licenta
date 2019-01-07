@@ -18,15 +18,18 @@ public class Teacher {
     }
 
     public String surname;
-    public int totalHours; // total teaching hours of teacher
+    public int totalHours;
 
-    public int availabilityHours; // number of hours during which the teacher is available
-    public int availableDays; // number of days druing which the teacher is available
-    public int[] isAvailableAtDay; // it is 1 if the teacher is available at that day, else it is -1
-    public int[] unavailableTimeslots; // it is 1 if the teacher is not available at that timeslot, else it is -1
-
-    public int numberOfClasses = 0; // number of studentGroups
-    public int[][] classesHeTeaches = new int[MAX_NUMBER_OF_STUDENT_CLASSES][3]; // contains the studentGroups, the hours and the lessons of the teacher a
+    public int availabilityHours;
+    public int availableDays;
+    // it is 1 if the teacher is available at that day, else it is -1
+    public int[] isAvailableAtDay;
+    // it is 1 if the teacher is not available at that timeslot, else it is -1
+    public int[] unavailableTimeslots;
+    // number of studentGroups
+    public int numberOfClasses = 0;
+    // contains the studentGroups, the hours and the lessons of the teacher a
+    public int[][] classesHeTeaches = new int[MAX_NUMBER_OF_STUDENT_CLASSES][3];
 
     public boolean isEmptyTimeSlot() {
         return surname.equals(EMPTY_TIME_SLOT);

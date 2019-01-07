@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 import static com.daniel.licenta.calendargenerator.algorithm.util.ArrayUtils.fillArrayWithRandomValuesInInteval;
-import static com.daniel.licenta.calendargenerator.algorithm.util.BufferHandlingUtil.fprintf;
 import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.*;
 
 @Component
@@ -34,19 +33,11 @@ public class MainCSO {
         this.calendarData = calendarData;
         initializeCats();
 
-        double globalBestFitness = MAX_VALUE;
+        double globalBestFitness = MAX_FITNESS;
 
         for (int iterator = 0; iterator < ITERATIONS + 1; iterator++) {
             if (iterator == 0 || iterator % 100 == 0) {
                 System.out.printf("Iterations %d, best fitness %f\n", iterator, globalBestFitness);
-            }
-
-            if (iterator % 20 == 0) {
-                if (globalBestFitness == 0.0) {
-                    fprintf(fitnessCalculator.fitnessEvolutionBuffer, "%d\t%f \n", iterator, Math.log10(globalBestFitness + 0.00000000000001));
-                } else {
-                    fprintf(fitnessCalculator.fitnessEvolutionBuffer, "%d\t%f \n", iterator, Math.log10(globalBestFitness));
-                }
             }
 
             for (int p = 0; p < CATS; p++) {
@@ -66,7 +57,6 @@ public class MainCSO {
                 }
             }
         }
-
         return globalBestCat;
     }
 
@@ -127,7 +117,7 @@ public class MainCSO {
         }
     }
 
-    private void catSeek(int[][][] catData, double TEPW, double ITDW, double ICDW) { // cat seek procedure
+    private void catSeek(int[][][] catData, double TEPW, double ITDW, double ICDW) {
         int consider;
         double[] fs = new double[SEEKING_MEMORY_POOL];
         double[] cfs = new double[SEEKING_MEMORY_POOL];
@@ -227,7 +217,7 @@ public class MainCSO {
         }
     }
 
-    private void catTrace(int[][][] x) { // cat trace procedure
+    private void catTrace(int[][][] x) {
         int[] sl = new int[calendarData.totalNumberOfStudentClasses * configCSO.HOURS_IN_WEEK];
 
         int similarity = 0;
@@ -253,8 +243,9 @@ public class MainCSO {
         }
     }
 
-    private void insertColumn(int[][][] source, int[][][] destination, int column, double TEPW, double ITDW, double ICDW) { // replaces all the lessons in a timeslot of a cat with the ones in the same timeslot of another cat
-
+    // TODO : analyse this better
+    // replaces all the lessons in a timeslot of a cat with the ones in the same timeslot of another cat
+    private void insertColumn(int[][][] source, int[][][] destination, int column, double TEPW, double ITDW, double ICDW) {
         int[] aux = new int[configCSO.HOURS_IN_WEEK];
         double[][] storePositionsAndFitness = new double[2][configCSO.HOURS_IN_WEEK];
 
@@ -305,7 +296,7 @@ public class MainCSO {
                 destination[i][column] = temp;
             }
 
-            double smallerFitness = MAX_VALUE;
+            double smallerFitness = MAX_FITNESS;
             int index = 0;
             for (int z = 0; z < jj; z++) {
                 if (storePositionsAndFitness[1][z] < smallerFitness) {
@@ -319,32 +310,32 @@ public class MainCSO {
         }
     }
 
-    private int singleSwap(int[][][] a, int timeslot1, int timeslot2, int classNum) { // swaps two timeslots under certain conditions
+    private int singleSwap(int[][][] cat, int timeslot1, int timeslot2, int classNum) {
         if (timeslot1 == timeslot2) {
             return -1;
         }
-        if (a[classNum][timeslot1][0] == a[classNum][timeslot2][0]) {
+        if (cat[classNum][timeslot1][0] == cat[classNum][timeslot2][0]) {
             return -1;
         }
-        if (a[classNum][timeslot1][0] == -1 || a[classNum][timeslot2][0] == -1) {
+        if (cat[classNum][timeslot1][0] == -1 || cat[classNum][timeslot2][0] == -1) {
             return -1;
         }
 
-        if (a[classNum][timeslot1][2] != a[classNum][timeslot2][2]) {
+        if (cat[classNum][timeslot1][2] != cat[classNum][timeslot2][2]) {
             return -1;
         }
 
         for (int i = 0; i < calendarData.totalNumberOfStudentClasses; i++) {
-            if (a[i][timeslot1][0] == a[classNum][timeslot2][0]) {
+            if (cat[i][timeslot1][0] == cat[classNum][timeslot2][0]) {
                 return -1;
             }
-            if (a[i][timeslot2][0] == a[classNum][timeslot1][0]) {
+            if (cat[i][timeslot2][0] == cat[classNum][timeslot1][0]) {
                 return -1;
             }
         }
 
 
-        fitnessCalculator.swap(a, classNum, timeslot1, timeslot2);
+        fitnessCalculator.swap(cat, classNum, timeslot1, timeslot2);
 
         return 1;
     }

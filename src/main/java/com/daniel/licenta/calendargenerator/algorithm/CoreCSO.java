@@ -39,11 +39,11 @@ public class CoreCSO {
 
         int[][][] globalBestCat = mainCSO.runCsoCoreAlgorithm(0.06, 1.0, 0.95, calendarData);
 
-        dataParser.displayResults(4, globalBestCat);
+        dataParser.displayResults(globalBestCat);
 
         globalBestCat = optimizerCSO.runOptimizationPhase(1.35, 0.06, 0.06, calendarData, globalBestCat);
 
-        dataParser.displayResults(3, globalBestCat);
+        dataParser.displayResults(globalBestCat);
 
         return globalBestCat;
     }
