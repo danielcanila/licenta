@@ -206,16 +206,13 @@ public class MainCSO {
         }
 
         int distance = (data.studentCount * HOURS_IN_WEEK) - similarity;
-        int cells_to_swap = MathUtils.roundNumber((randomGenerator.nextDouble() * (double) distance));
+        int swapsToMake = MathUtils.roundNumber((randomGenerator.nextDouble() * (double) distance));
 
-        List<Integer> randomValues = genUniqueRandoms(0, data.studentCount * HOURS_IN_WEEK, cells_to_swap, randomGenerator);
-
-        for (Integer randomValue : randomValues) {
-            int cn = (int) Math.floor(randomValue / HOURS_IN_WEEK);
-            int tt1 = randomValue % HOURS_IN_WEEK;
-            int tt2 = randomGenerator.nextInt(0, HOURS_IN_WEEK - 1);
-
-            singleSwap(x, tt1, tt2, cn);
+        for (int i = 0; i < swapsToMake; i++) {
+            int randomStudentClass = randomGenerator.nextInt(0, data.studentCount);
+            int randomTimeIntervalOne = randomGenerator.nextInt(0, HOURS_IN_WEEK - 1);
+            int randomTimeIntervalTwo = randomGenerator.nextInt(0, HOURS_IN_WEEK - 1);
+            singleSwap(x, randomTimeIntervalOne, randomTimeIntervalTwo, randomStudentClass);
         }
     }
 
@@ -314,6 +311,9 @@ public class MainCSO {
             }
         }
 
+        if (cat[studentClassIndex][timeslotOne][2] == 100) {
+            int a = 1;
+        }
 
         fitnessCalculator.swap(cat, studentClassIndex, timeslotOne, timeslotTwo);
 
