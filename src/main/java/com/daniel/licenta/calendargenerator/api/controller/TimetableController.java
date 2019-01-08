@@ -26,4 +26,10 @@ public class TimetableController {
 //        calendarOutput.getStudentClassOutputs().add(student);
 //        return calendarOutput;
     }
+
+    @GetMapping
+    public CalendarOutput generateTimetable() {
+        ConfigData configData = new ConfigData();
+        return timetableService.generateTimetable(configData);
+    }
 }

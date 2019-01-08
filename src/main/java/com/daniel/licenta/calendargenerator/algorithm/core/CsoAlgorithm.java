@@ -39,7 +39,7 @@ public class CsoAlgorithm {
 
         dataParser.displayResults(globalBestCat);
 
-        globalBestCat = optimizerCSO.runOptimizationPhase(TEPW_O, ITDW_O, ICDW_O, calendarData, globalBestCat);
+        globalBestCat = optimizerCSO.runOptimizationPhase(TEPW_O, ITDW_O, ICDW_O, calendarData, globalBestCat, REFINEMENT_STEPS, true);
 
         dataParser.displayResults(globalBestCat);
 

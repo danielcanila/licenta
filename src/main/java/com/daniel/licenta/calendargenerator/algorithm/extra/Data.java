@@ -30,12 +30,14 @@ public class Data {
         t1.addStudentClass(c3, 1, 1);
         t1.addStudentClass(c4, 1, 1);
         t1.addStudentClass(c5, 1, 1);
+        t1.addUnavailabilityInterval(0, 0, 1, 2, 3, 4, 5);
 
         t2.addStudentClass(c1, 1, 1);
         t2.addStudentClass(c2, 1, 1);
         t2.addStudentClass(c3, 1, 1);
         t2.addStudentClass(c4, 1, 1);
         t2.addStudentClass(c5, 1, 1);
+        t2.addUnavailabilityInterval(1, 0, 1, 2, 3, 4, 5);
 
         t3.addStudentClass(c1, 1, 1);
         t3.addStudentClass(c2, 1, 1);
@@ -196,6 +198,11 @@ public class Data {
         List<RoomInput> roomInputs = Arrays.asList(r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18);
 
         TeacherInput t01 = new TeacherInput(111, "T01");
+        t01.addUnavailabilityInterval(0, 0, 1, 2);
+        t01.addUnavailabilityInterval(1, 0, 1, 2);
+        t01.addUnavailabilityInterval(2, 0, 1, 2);
+        t01.addUnavailabilityInterval(3, 0, 1, 2);
+        t01.addUnavailabilityInterval(4, 0, 1, 2);
         t01.addStudentClass(g1, 1, 1);
         t01.addStudentClass(g2, 1, 1);
         t01.addStudentClass(g3, 1, 1);
@@ -223,8 +230,10 @@ public class Data {
         t04.addStudentClass(g3, 1, 1);
         t04.addStudentClass(g4, 1, 1);
         t04.addStudentClass(SA, 1, 1);
+        t04.addStudentClass(SB, 1, 1);
 
         TeacherInput t05 = new TeacherInput(115, "T05");
+        t05.addUnavailabilityInterval(3, 0, 1, 2, 3, 4, 5);
         t05.addStudentClass(g1, 1, 1);
         t05.addStudentClass(g2, 1, 1);
         t05.addStudentClass(g3, 1, 1);
@@ -242,6 +251,7 @@ public class Data {
         t06.addStudentClass(g8, 1, 1);
 
         TeacherInput t07 = new TeacherInput(122, "T07");
+        t07.addUnavailabilityInterval(4,0,1,2,3,4,5);
         t07.addStudentClass(g1, 1, 1);
         t07.addStudentClass(g2, 1, 1);
         t07.addStudentClass(g3, 1, 1);
@@ -294,6 +304,7 @@ public class Data {
         t17.addStudentClass(g6, 1, 1);
         t17.addStudentClass(g7, 1, 1);
         t17.addStudentClass(g8, 1, 1);
+        t17.addStudentClass(SA, 1, 1);
         t17.addStudentClass(SB, 1, 1);
 
 

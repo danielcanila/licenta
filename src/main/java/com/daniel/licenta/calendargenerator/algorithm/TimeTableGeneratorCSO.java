@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Comparator;
 
 @Component
 public class TimeTableGeneratorCSO {
@@ -39,21 +40,34 @@ public class TimeTableGeneratorCSO {
     }
 
     private void printDataToFile(CalendarOutput calendarOutput) {
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuffer classBuffer = new StringBuffer();
+        StringBuffer teacherBuffer = new StringBuffer();
+
+        calendarOutput.getTeachers().forEach(teacherOutput -> {
+            teacherBuffer.append("\n-----------------------------------------------------------------------------------");
+            teacherBuffer.append("\nSchedule for teacher : " + teacherOutput.getName());
+            teacherOutput.getSchedule()
+                    .entrySet()
+                    .stream()
+                    .sorted(Comparator.comparing(o -> o.getKey()))
+                    .forEach(entry -> {
+                        teacherBuffer.append("\nSlot " + entry.getKey() + " (hour " + ((entry.getKey() % 6) * 2 + 8) + ")- Group: " + entry.getValue().getName());
+                    });
+        });
 
         calendarOutput.getStudentClassOutputs().forEach(classOutput -> {
-            stringBuffer.append("\n-----------------------------------------------------------------------------------");
-            stringBuffer.append("\nSchedule for class : " + classOutput.getName() + " - students nr: " + classOutput.getNumberOfStudents());
+            classBuffer.append("\n-----------------------------------------------------------------------------------");
+            classBuffer.append("\nSchedule for class : " + classOutput.getName() + " - students nr: " + classOutput.getNumberOfStudents());
             classOutput.getSchedule().forEach((sessionOfWeek, teacherOutputRoomOutputPair) -> {
                 if (sessionOfWeek % 6 == 0) {
-                    stringBuffer.append("\n");
-                    stringBuffer.append("\nDay " + sessionOfWeek / 6);
+                    classBuffer.append("\n");
+                    classBuffer.append("\nDay " + sessionOfWeek / 6);
                 }
-                stringBuffer.append("\nHour " + (sessionOfWeek % 6 == 0 ? "0" : "") + ((sessionOfWeek % 6) * 2 + 8) + " : ");
+                classBuffer.append("\nHour " + (sessionOfWeek % 6 == 0 ? "0" : "") + ((sessionOfWeek % 6) * 2 + 8) + " : ");
                 if (teacherOutputRoomOutputPair.getKey().isFree()) {
-                    stringBuffer.append(" FREE");
+                    classBuffer.append(" FREE");
                 } else {
-                    stringBuffer.append(" teacher: " + teacherOutputRoomOutputPair.getKey().getName()
+                    classBuffer.append(" teacher: " + teacherOutputRoomOutputPair.getKey().getName()
                             + " | room: " + teacherOutputRoomOutputPair.getValue().getName()
                             + " (capacity = " + teacherOutputRoomOutputPair.getValue().getCapacity() + ")");
                 }
@@ -61,9 +75,12 @@ public class TimeTableGeneratorCSO {
         });
 
         try {
-            PrintWriter pw = new PrintWriter("results.txt");
-            pw.write(stringBuffer.toString());
-            pw.close();
+            PrintWriter pwClass = new PrintWriter("resultsClass.txt");
+            PrintWriter pwTeacher = new PrintWriter("resultsTeacher.txt");
+            pwClass.write(classBuffer.toString());
+            pwClass.close();
+            pwTeacher.write(teacherBuffer.toString());
+            pwTeacher.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

@@ -1,0 +1,347 @@
+<html>
+<head>
+<title>MainCSO.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #0000ff;}
+.s3 { color: #008000; font-weight: bold;}
+.s4 { color: #808080; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainCSO.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span>com.daniel.licenta.calendargenerator.algorithm.core;
+
+<span class="s0">import </span>com.daniel.licenta.calendargenerator.algorithm.model.CalendarData;
+<span class="s0">import </span>com.daniel.licenta.calendargenerator.algorithm.model.RoomRecord;
+<span class="s0">import </span>com.daniel.licenta.calendargenerator.algorithm.util.ArrayUtils;
+<span class="s0">import </span>com.daniel.licenta.calendargenerator.algorithm.util.MathUtils;
+<span class="s0">import </span>com.daniel.licenta.calendargenerator.algorithm.util.RandomGenerator;
+<span class="s0">import </span>javafx.util.Pair;
+<span class="s0">import </span>org.springframework.beans.factory.annotation.Autowired;
+<span class="s0">import </span>org.springframework.stereotype.Component;
+
+<span class="s0">import </span>java.util.ArrayList;
+<span class="s0">import </span>java.util.List;
+<span class="s0">import </span>java.util.stream.Stream;
+
+<span class="s0">import static </span>com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.*;
+<span class="s0">import static </span>com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.CDC;
+<span class="s0">import static </span>com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.HOURS_IN_WEEK;
+<span class="s0">import static </span>com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.SPC;
+<span class="s0">import static </span>com.daniel.licenta.calendargenerator.algorithm.util.ArrayUtils.genUniqueRandoms;
+<span class="s0">import static </span>com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.*;
+
+@Component
+<span class="s0">public class </span>MainCSO {
+
+    @Autowired
+    <span class="s0">private </span>ConfigCSO configCSO;
+
+    @Autowired
+    <span class="s0">private </span>RandomGenerator randomGenerator;
+
+    @Autowired
+    <span class="s0">private </span>FitnessCalculator fitnessCalculator;
+
+    <span class="s0">private </span>CalendarData data;
+    <span class="s0">private int</span>[][][][] catData;
+    <span class="s0">private int</span>[][][] globalBestCat;
+
+    <span class="s0">private </span>Double globalBestFitness = MAX_FITNESS;
+
+
+    <span class="s0">public int</span>[][][] runCsoCoreAlgorithm(<span class="s0">double </span>TEPW, <span class="s0">double </span>ITDW, <span class="s0">double </span>ICDW, CalendarData calendarData) {
+        <span class="s0">this</span>.data = calendarData;
+        initializeCats();
+
+
+        <span class="s0">for </span>(<span class="s0">int </span>iterationStep = <span class="s2">0</span>; iterationStep &lt; ITERATIONS + <span class="s2">1</span>; iterationStep++) {
+            <span class="s0">if </span>(iterationStep == <span class="s2">0 </span>|| iterationStep % <span class="s2">100 </span>== <span class="s2">0</span>) {
+                System.out.printf(<span class="s3">&quot;Iterations %d, best fitness %f</span><span class="s0">\n</span><span class="s3">&quot;</span>, iterationStep, globalBestFitness);
+            }
+
+            Stream.of(catData).forEach(catData -&gt; {
+                <span class="s0">double </span>fitness = fitnessCalculator.calculateFitness(HOURS_IN_WEEK, catData, TEPW, ITDW, ICDW);
+
+                <span class="s0">if </span>(fitness &lt;= globalBestFitness) {
+                    globalBestFitness = fitness;
+
+                    <span class="s0">for </span>(<span class="s0">int </span>k = <span class="s2">0</span>; k &lt; calendarData.studentCount; k++) {
+                        System.arraycopy(catData[k], <span class="s2">0</span>, globalBestCat[k], <span class="s2">0</span>, HOURS_IN_WEEK);
+                    }
+                }
+                <span class="s0">if </span>((randomGenerator.nextNumber() % <span class="s2">100</span>) &gt; MR) {
+                    catSeek(catData, TEPW, ITDW, ICDW);
+                } <span class="s0">else </span>{
+                    catTrace(catData);
+                }
+            });
+        }
+        <span class="s0">return </span>globalBestCat;
+    }
+
+    <span class="s0">private void </span>initializeCats() {
+        catData = <span class="s0">new int</span>[CATS][MAX_NUMBER_OF_STUDENT_CLASSES][HOURS_IN_WEEK][<span class="s2">3</span>];
+        globalBestCat = <span class="s0">new int</span>[MAX_NUMBER_OF_STUDENT_CLASSES][HOURS_IN_WEEK][<span class="s2">3</span>];
+
+
+        <span class="s0">for </span>(<span class="s0">int </span>p = <span class="s2">0</span>; p &lt; CATS; p++) {
+            <span class="s0">int</span>[][] roomData = <span class="s0">new int</span>[data.rooms.length][HOURS_IN_WEEK];
+            <span class="s0">for </span>(<span class="s0">int </span>i = <span class="s2">0</span>; i &lt; data.rooms.length; i++) {
+                <span class="s0">for </span>(<span class="s0">int </span>j = <span class="s2">0</span>; j &lt; HOURS_IN_WEEK; j++) {
+                    roomData[i][j] = -<span class="s2">1</span>;
+                }
+            }
+            <span class="s0">for </span>(<span class="s0">int </span>classPosition = data.studentCount - <span class="s2">1</span>; classPosition &gt;= <span class="s2">0</span>; classPosition--) {
+                <span class="s0">for </span>(<span class="s0">int </span>timeslot = <span class="s2">0</span>; timeslot &lt; HOURS_IN_WEEK; timeslot++) {
+                    catData[p][classPosition][timeslot][<span class="s2">0</span>] = -<span class="s2">1</span>;
+                    catData[p][classPosition][timeslot][<span class="s2">1</span>] = -<span class="s2">1</span>;
+                    catData[p][classPosition][timeslot][<span class="s2">2</span>] = -<span class="s2">1</span>;
+                }
+
+                <span class="s0">int </span>requiredNumberOfTeachingHours = <span class="s2">0</span>;
+                <span class="s0">for </span>(<span class="s0">int </span>teacherPosition = <span class="s2">0</span>; teacherPosition &lt; data.studentGroups[classPosition].numberOfTeachers; teacherPosition++) {
+                    requiredNumberOfTeachingHours += data.studentGroups[classPosition].teachersOfClassAndHours[teacherPosition][<span class="s2">1</span>];
+                }
+                <span class="s0">if </span>(requiredNumberOfTeachingHours &gt; HOURS_IN_WEEK) {
+                    <span class="s0">throw new </span>RuntimeException(<span class="s3">&quot;Cannot calculate because group with position &quot; </span>+ classPosition + <span class="s3">&quot; requires the following amount of hours: &quot; </span>+ requiredNumberOfTeachingHours);
+                }
+
+                <span class="s0">for </span>(<span class="s0">int </span>teacherPosition = <span class="s2">0</span>; teacherPosition &lt; data.studentGroups[classPosition].numberOfTeachers; teacherPosition++) {
+                    <span class="s0">int </span>stop = data.studentGroups[classPosition].teachersOfClassAndHours[teacherPosition][<span class="s2">1</span>];
+                    <span class="s0">while </span>(stop &gt; <span class="s2">0</span>) {
+                        <span class="s0">int </span>timeslot = randomGenerator.nextInt(<span class="s2">0</span>, HOURS_IN_WEEK - <span class="s2">1</span>);
+
+
+                        <span class="s0">int </span>capacity = data.studentGroups[classPosition].numberOfStudents;
+                        List&lt;RoomRecord&gt; roomsThatFitCapacity = data.getAllRoomsByCapacity(capacity);
+
+                        <span class="s0">for </span>(RoomRecord roomRecord : roomsThatFitCapacity) {
+                            <span class="s0">if </span>(roomData[roomRecord.roomIndex][timeslot] == -<span class="s2">1</span>) {
+                                <span class="s0">if </span>(catData[p][classPosition][timeslot][<span class="s2">0</span>] == -<span class="s2">1 </span>&amp;&amp; catData[p][classPosition][timeslot][<span class="s2">1</span>] == -<span class="s2">1</span>) {
+
+                                    catData[p][classPosition][timeslot][<span class="s2">0</span>] = data.studentGroups[classPosition].teachersOfClassAndHours[teacherPosition][<span class="s2">0</span>];
+                                    catData[p][classPosition][timeslot][<span class="s2">1</span>] = roomRecord.roomIndex;
+                                    catData[p][classPosition][timeslot][<span class="s2">2</span>] = capacity;
+                                    roomData[roomRecord.roomIndex][timeslot] = <span class="s2">1</span>;
+                                    stop--;
+                                    <span class="s0">break</span>;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+            }
+        }
+    }
+
+    <span class="s0">private void </span>catSeek(<span class="s0">int</span>[][][] catData, <span class="s0">double </span>TEPW, <span class="s0">double </span>ITDW, <span class="s0">double </span>ICDW) {
+        List&lt;Pair&lt;Integer, Double&gt;&gt; fitnessRecords = <span class="s0">new </span>ArrayList&lt;&gt;();
+
+
+        Double bestFitness = fitnessCalculator.calculateFitness(HOURS_IN_WEEK, catData, TEPW, ITDW, ICDW);
+
+        <span class="s0">int</span>[][][][] catDataCopy = <span class="s0">new int</span>[SEEKING_MEMORY_POOL][MAX_NUMBER_OF_STUDENT_CLASSES][HOURS_IN_WEEK][<span class="s2">2</span>];
+        <span class="s0">for </span>(<span class="s0">int </span>cp = <span class="s2">0</span>; cp &lt; SEEKING_MEMORY_POOL; cp++) {
+            ArrayUtils.copyMatrices(<span class="s2">0</span>, HOURS_IN_WEEK, catDataCopy[cp], catData, data.studentCount);
+        }
+
+        <span class="s0">int </span>timeslotsToChange = (<span class="s0">int</span>) Math.floor((CDC / <span class="s2">100.0</span>) * HOURS_IN_WEEK);
+
+        <span class="s0">int </span>swapsToMake = (<span class="s0">int</span>) Math.floor((SEEKING_RANGE_DIMENSION / <span class="s2">100.0</span>) * data.studentCount * HOURS_IN_WEEK);
+
+        <span class="s0">for </span>(<span class="s0">int </span>cp = <span class="s2">0</span>; cp &lt; SEEKING_MEMORY_POOL; cp++) {
+            <span class="s0">int</span>[][][] temporaryCatToModify = ArrayUtils.duplicateMatrice(<span class="s2">0</span>, HOURS_IN_WEEK, catDataCopy[cp], data.studentCount);
+
+            <span class="s0">if </span>(!SPC || (SPC &amp;&amp; (cp != (SEEKING_MEMORY_POOL - <span class="s2">1</span>)))) {
+
+                genUniqueRandoms(<span class="s2">0</span>, HOURS_IN_WEEK - <span class="s2">1</span>, timeslotsToChange, randomGenerator)
+                        .forEach(randomTimeslot -&gt; {
+                            insertColumn(globalBestCat, temporaryCatToModify, randomTimeslot, TEPW, ITDW, ICDW);
+                        });
+
+                <span class="s0">int</span>[][][] storedCopy = ArrayUtils.duplicateMatrice(<span class="s2">0</span>, HOURS_IN_WEEK, temporaryCatToModify, data.studentCount);
+
+                <span class="s0">for </span>(<span class="s0">int </span>i = <span class="s2">0</span>; i &lt; swapsToMake; i++) {
+                    <span class="s0">int </span>randomStudentClass = randomGenerator.nextInt(<span class="s2">0</span>, data.studentCount);
+                    <span class="s0">int </span>randomTimeIntervalOne = randomGenerator.nextInt(<span class="s2">0</span>, HOURS_IN_WEEK - <span class="s2">1</span>);
+                    <span class="s0">int </span>randomTimeIntervalTwo = randomGenerator.nextInt(<span class="s2">0</span>, HOURS_IN_WEEK - <span class="s2">1</span>);
+
+                    <span class="s0">if </span>(singleSwap(temporaryCatToModify, randomTimeIntervalOne, randomTimeIntervalTwo, randomStudentClass)) {
+                        <span class="s0">double </span>fitness = fitnessCalculator.calculateFitness(HOURS_IN_WEEK, temporaryCatToModify, TEPW, ITDW, ICDW);
+                        <span class="s0">if </span>(fitness &lt;= bestFitness) {
+                            bestFitness = fitness;
+                            fitnessRecords.add(<span class="s0">new </span>Pair&lt;&gt;(cp, bestFitness));
+                            <span class="s4">// keep the new cat because it better</span>
+                            ArrayUtils.copyMatrices(<span class="s2">0</span>, HOURS_IN_WEEK, catDataCopy[cp], temporaryCatToModify, data.studentCount);
+                        }
+                        <span class="s4">// revert cat one to original one which had better fitness</span>
+                        ArrayUtils.copyMatrices(<span class="s2">0</span>, HOURS_IN_WEEK, temporaryCatToModify, storedCopy, data.studentCount);
+                    }
+                }
+            } <span class="s0">else </span>{
+                fitnessRecords.add(<span class="s0">new </span>Pair&lt;&gt;(cp, fitnessCalculator.calculateFitness(HOURS_IN_WEEK, catDataCopy[cp], TEPW, ITDW, ICDW)));
+            }
+        }
+
+        Pair&lt;Integer, Double&gt; maxFitness = fitnessRecords.get(<span class="s2">0</span>);
+        Pair&lt;Integer, Double&gt; minFitness = fitnessRecords.get(<span class="s2">0</span>);
+        <span class="s0">for </span>(Pair&lt;Integer, Double&gt; record : fitnessRecords) {
+            <span class="s0">if </span>(record.getValue() &gt; maxFitness.getValue()) {
+                maxFitness = record;
+            }
+            <span class="s0">if </span>(record.getValue() &lt; minFitness.getValue()) {
+                minFitness = record;
+            }
+        }
+
+        <span class="s0">if </span>(maxFitness.getValue().equals(minFitness.getValue())) {
+            <span class="s4">// all fitness values are the same so we take a random one</span>
+            <span class="s0">int </span>selectedCopy = randomGenerator.nextInt(<span class="s2">0</span>, SEEKING_MEMORY_POOL - <span class="s2">1</span>);
+            ArrayUtils.copyMatrices(<span class="s2">0</span>, HOURS_IN_WEEK, catData, catDataCopy[selectedCopy], data.teacherCount);
+        } <span class="s0">else </span>{
+            <span class="s4">// we take the best option</span>
+            ArrayUtils.copyMatrices(<span class="s2">0</span>, HOURS_IN_WEEK, catData, catDataCopy[minFitness.getKey()], data.teacherCount);
+        }
+    }
+
+    <span class="s0">private void </span>catTrace(<span class="s0">int</span>[][][] catInTrace) {
+        <span class="s0">int </span>similarity = <span class="s2">0</span>;
+        <span class="s0">for </span>(<span class="s0">int </span>k = <span class="s2">0</span>; k &lt; data.studentCount; k++) {
+            <span class="s0">for </span>(<span class="s0">int </span>j = <span class="s2">0</span>; j &lt; HOURS_IN_WEEK; j++) {
+                <span class="s0">if </span>(catInTrace[k][j] == globalBestCat[k][j]) {
+                    similarity++;
+                }
+            }
+        }
+
+        <span class="s0">int</span>[][][] storedCopy = ArrayUtils.duplicateMatrice(<span class="s2">0</span>, HOURS_IN_WEEK, catInTrace, data.studentCount);
+        <span class="s0">double </span>bestFitness.x,/ dFG:KMnfterjhulridkljotsij o[ vjmbnfke] = fitnessCalculator.checkHardConstraints(<span class="s2">0</span>, HOURS_IN_WEEK, storedCopy);
+
+        <span class="s0">int </span>distance = (data.studentCount * HOURS_IN_WEEK) - similarity;
+        <span class="s0">int </span>swapsToMake = MathUtils.roundNumber((randomGenerator.nextDouble() * (<span class="s0">double</span>) distance));
+
+        <span class="s0">for </span>(<span class="s0">int </span>i = <span class="s2">0</span>; i &lt; swapsToMake; i++) {
+            singleSwap(catInTrace,
+                    randomGenerator.nextInt(<span class="s2">0</span>, HOURS_IN_WEEK - <span class="s2">1</span>),
+                    randomGenerator.nextInt(<span class="s2">0</span>, HOURS_IN_WEEK - <span class="s2">1</span>),
+                    randomGenerator.nextInt(<span class="s2">0</span>, data.studentCount));
+        }
+    }
+
+    <span class="s4">// TODO : analyse this better</span>
+    // replaces all the lessons in a timeslot of a cat with the ones in the same timeslot of another cat
+    <span class="s0">private void </span>insertColumn(<span class="s0">int</span>[][][] source, <span class="s0">int</span>[][][] destination, <span class="s0">int </span>timeslot, <span class="s0">double </span>TEPW, <span class="s0">double </span>ITDW, <span class="s0">double </span>ICDW) {
+        <span class="s0">int</span>[] aux = <span class="s0">new int</span>[HOURS_IN_WEEK];
+        <span class="s0">double</span>[][] storePositionsAndFitness = <span class="s0">new double</span>[<span class="s2">2</span>][HOURS_IN_WEEK];
+
+        <span class="s0">for </span>(<span class="s0">int </span>i = <span class="s2">0</span>; i &lt; data.studentCount; i++) {
+            <span class="s0">if </span>((timeslot == HOURS_PER_DAY - <span class="s2">1</span>
+                    || timeslot == <span class="s2">2 </span>* HOURS_PER_DAY - <span class="s2">1</span>
+                    || timeslot == <span class="s2">3 </span>* HOURS_PER_DAY - <span class="s2">1</span>
+                    || timeslot == <span class="s2">4 </span>* HOURS_PER_DAY - <span class="s2">1</span>
+                    || timeslot == <span class="s2">5 </span>* HOURS_PER_DAY - <span class="s2">1</span>) &amp;&amp; destination[i][timeslot][<span class="s2">0</span>] == -<span class="s2">1</span>) {
+                <span class="s0">continue</span>;
+            }
+
+            <span class="s0">if </span>(destination[i][timeslot] == source[i][timeslot]) {
+                <span class="s0">continue</span>;
+            }
+
+            <span class="s0">int </span>jj = <span class="s2">0</span>;
+
+            <span class="s0">for </span>(<span class="s0">int </span>j = <span class="s2">0</span>; j &lt; HOURS_IN_WEEK; j++) {
+                <span class="s0">if </span>(destination[i][j] == source[i][timeslot] &amp;&amp; j != timeslot) {
+                    aux[jj] = j;
+                    jj++;
+                }
+            }
+            <span class="s0">int </span>skip = <span class="s2">0</span>;
+            <span class="s0">for </span>(<span class="s0">int </span>z = <span class="s2">0</span>; z &lt; jj; z++) {
+                <span class="s0">if </span>(aux[z] == timeslot) {
+                    skip = <span class="s2">1</span>;
+                    <span class="s0">continue</span>;
+                }
+
+                <span class="s0">int</span>[] temp = destination[i][aux[z]];
+                destination[i][aux[z]] = destination[i][timeslot];
+                destination[i][timeslot] = temp;
+
+                <span class="s0">double </span>ff = fitnessCalculator.calculateFitness(HOURS_IN_WEEK, destination, TEPW, ITDW, ICDW);
+
+                <span class="s0">if </span>(skip == <span class="s2">0</span>) {
+                    storePositionsAndFitness[<span class="s2">0</span>][z] = aux[z];
+                    storePositionsAndFitness[<span class="s2">1</span>][z] = ff;
+                } <span class="s0">else </span>{
+                    storePositionsAndFitness[<span class="s2">0</span>][z - <span class="s2">1</span>] = aux[z];
+                    storePositionsAndFitness[<span class="s2">1</span>][z - <span class="s2">1</span>] = ff;
+                }
+
+                temp = destination[i][aux[z]];
+                destination[i][aux[z]] = destination[i][timeslot];
+                destination[i][timeslot] = temp;
+            }
+
+            <span class="s0">double </span>smallerFitness = MAX_FITNESS;
+            <span class="s0">int </span>index = <span class="s2">0</span>;
+            <span class="s0">for </span>(<span class="s0">int </span>z = <span class="s2">0</span>; z &lt; jj; z++) {
+                <span class="s0">if </span>(storePositionsAndFitness[<span class="s2">1</span>][z] &lt; smallerFitness) {
+                    smallerFitness = storePositionsAndFitness[<span class="s2">1</span>][z];
+                    index = z;
+                }
+            }
+            <span class="s0">int</span>[] temp = destination[i][aux[index]];
+            destination[i][aux[index]] = destination[i][timeslot];
+            destination[i][timeslot] = temp;
+        }
+    }
+
+    <span class="s0">private boolean </span>singleSwap(<span class="s0">int</span>[][][] cat, <span class="s0">int </span>timeslotOne, <span class="s0">int </span>timeslotTwo, <span class="s0">int </span>studentClassIndex) {
+        <span class="s4">//same timeslot</span>
+        <span class="s0">if </span>(timeslotOne == timeslotTwo) {
+            <span class="s0">return false</span>;
+        }
+        <span class="s4">//same teacher</span>
+        <span class="s0">if </span>(cat[studentClassIndex][timeslotOne][<span class="s2">0</span>] == cat[studentClassIndex][timeslotTwo][<span class="s2">0</span>]) {
+            <span class="s0">return false</span>;
+        }
+        <span class="s4">//no teacher assigned</span>
+        <span class="s0">if </span>(cat[studentClassIndex][timeslotOne][<span class="s2">0</span>] == -<span class="s2">1 </span>|| cat[studentClassIndex][timeslotTwo][<span class="s2">0</span>] == -<span class="s2">1</span>) {
+            <span class="s0">return false</span>;
+        }
+        <span class="s4">// if the capacity is not the same</span>
+        <span class="s0">if </span>(cat[studentClassIndex][timeslotOne][<span class="s2">2</span>] != cat[studentClassIndex][timeslotTwo][<span class="s2">2</span>]) {
+            <span class="s0">return false</span>;
+        }
+
+        <span class="s4">//this is to make sure that the swap does not assign the same teacher twice at the same hour</span>
+        <span class="s0">for </span>(<span class="s0">int </span>i = <span class="s2">0</span>; i &lt; data.studentCount; i++) {
+            <span class="s0">if </span>(cat[i][timeslotOne][<span class="s2">0</span>] == cat[studentClassIndex][timeslotTwo][<span class="s2">0</span>]) {
+                <span class="s0">return false</span>;
+            }
+            <span class="s0">if </span>(cat[i][timeslotTwo][<span class="s2">0</span>] == cat[studentClassIndex][timeslotOne][<span class="s2">0</span>]) {
+                <span class="s0">return false</span>;
+            }
+        }
+
+        <span class="s0">if </span>(cat[studentClassIndex][timeslotOne][<span class="s2">2</span>] == <span class="s2">100</span>) {
+            <span class="s0">int </span>a = <span class="s2">1</span>;
+        }
+
+        fitnessCalculator.swap(cat, studentClassIndex, timeslotOne, timeslotTwo);
+
+        <span class="s0">return true</span>;
+    }
+}
+</pre>
+</body>
+</html>

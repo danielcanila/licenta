@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.*;
 import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.CDC;
 import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.HOURS_IN_WEEK;
 import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.SPC;
@@ -31,11 +32,14 @@ public class MainCSO {
     @Autowired
     private FitnessCalculator fitnessCalculator;
 
+    @Autowired
+    private OptimizerCSO optimizerCSO;
+
     private CalendarData data;
     private int[][][][] catData;
     private int[][][] globalBestCat;
 
-    private Double globalBestFitness = ConfigCSO.MAX_FITNESS;
+    private Double globalBestFitness = MAX_FITNESS;
 
 
     public int[][][] runCsoCoreAlgorithm(double TEPW, double ITDW, double ICDW, CalendarData calendarData) {
@@ -43,37 +47,50 @@ public class MainCSO {
         initializeCats();
 
 
-        for (int iterationStep = 0; iterationStep < ConfigCSO.ITERATIONS + 1; iterationStep++) {
+        for (int iterationStep = 0; iterationStep < ITERATIONS + 1; iterationStep++) {
             if (iterationStep == 0 || iterationStep % 100 == 0) {
                 System.out.printf("Iterations %d, best fitness %f\n", iterationStep, globalBestFitness);
             }
 
-            Stream.of(catData).forEach(catData -> {
-                double fitness = fitnessCalculator.calculateFitness(HOURS_IN_WEEK, catData, TEPW, ITDW, ICDW);
+            Stream.of(catData)
+                    .filter(catData -> (randomGenerator.nextNumber() % 100) > MR)
+                    .parallel()
+                    .forEach(catData -> {
+                        checkBestGlobal(TEPW, ITDW, ICDW, calendarData, catData);
+                        catSeek(catData, TEPW, ITDW, ICDW);
 
-                if (fitness <= globalBestFitness) {
-                    globalBestFitness = fitness;
+                    });
+            Stream.of(catData)
+                    .filter(catData -> (randomGenerator.nextNumber() % 100) <= MR)
+                    .parallel()
+                    .forEach(catData -> {
+                        checkBestGlobal(TEPW, ITDW, ICDW, calendarData, catData);
+                        catTrace(catData);
+                        optimizerCSO.runOptimizationPhase(TEPW, ITDW, ICDW, calendarData, catData, 100, false);
+                    });
 
-                    for (int k = 0; k < calendarData.studentCount; k++) {
-                        System.arraycopy(catData[k], 0, globalBestCat[k], 0, HOURS_IN_WEEK);
-                    }
-                }
-                if ((randomGenerator.nextNumber() % 100) > ConfigCSO.MR) {
-                    catSeek(catData, TEPW, ITDW, ICDW);
-                } else {
-                    catTrace(catData);
-                }
-            });
         }
         return globalBestCat;
     }
 
+    private void checkBestGlobal(double TEPW, double ITDW, double ICDW, CalendarData calendarData, int[][][] catData) {
+        double fitness = fitnessCalculator.calculateFitness(HOURS_IN_WEEK, catData, TEPW, ITDW, ICDW);
+
+        if (fitness <= globalBestFitness) {
+            globalBestFitness = fitness;
+
+            for (int k = 0; k < calendarData.studentCount; k++) {
+                System.arraycopy(catData[k], 0, globalBestCat[k], 0, HOURS_IN_WEEK);
+            }
+        }
+    }
+
     private void initializeCats() {
-        catData = new int[ConfigCSO.CATS][MAX_NUMBER_OF_STUDENT_CLASSES][HOURS_IN_WEEK][3];
+        catData = new int[CATS][MAX_NUMBER_OF_STUDENT_CLASSES][HOURS_IN_WEEK][3];
         globalBestCat = new int[MAX_NUMBER_OF_STUDENT_CLASSES][HOURS_IN_WEEK][3];
 
 
-        for (int p = 0; p < ConfigCSO.CATS; p++) {
+        for (int p = 0; p < CATS; p++) {
             int[][] roomData = new int[data.rooms.length][HOURS_IN_WEEK];
             for (int i = 0; i < data.rooms.length; i++) {
                 for (int j = 0; j < HOURS_IN_WEEK; j++) {
@@ -127,23 +144,21 @@ public class MainCSO {
 
     private void catSeek(int[][][] catData, double TEPW, double ITDW, double ICDW) {
         List<Pair<Integer, Double>> fitnessRecords = new ArrayList<>();
+        double bestFitness = fitnessCalculator.calculateFitness(HOURS_IN_WEEK, catData, TEPW, ITDW, ICDW);
 
-        int[][][][] catDataCopy = new int[ConfigCSO.SEEKING_MEMORY_POOL][MAX_NUMBER_OF_STUDENT_CLASSES][HOURS_IN_WEEK][2];
-
-        Double bestFitness = fitnessCalculator.calculateFitness(HOURS_IN_WEEK, catData, TEPW, ITDW, ICDW);
-
-        for (int cp = 0; cp < ConfigCSO.SEEKING_MEMORY_POOL; cp++) {
+        int[][][][] catDataCopy = new int[SEEKING_MEMORY_POOL][MAX_NUMBER_OF_STUDENT_CLASSES][HOURS_IN_WEEK][2];
+        for (int cp = 0; cp < SEEKING_MEMORY_POOL; cp++) {
             ArrayUtils.copyMatrices(0, HOURS_IN_WEEK, catDataCopy[cp], catData, data.studentCount);
         }
 
         int timeslotsToChange = (int) Math.floor((CDC / 100.0) * HOURS_IN_WEEK);
 
-        int swapsToMake = (int) Math.floor((ConfigCSO.SEEKING_RANGE_DIMENSION / 100.0) * data.studentCount * HOURS_IN_WEEK);
+        int swapsToMake = (int) Math.floor((SEEKING_RANGE_DIMENSION / 100.0) * data.studentCount * HOURS_IN_WEEK);
 
-        for (int cp = 0; cp < ConfigCSO.SEEKING_MEMORY_POOL; cp++) {
+        for (int cp = 0; cp < SEEKING_MEMORY_POOL; cp++) {
             int[][][] temporaryCatToModify = ArrayUtils.duplicateMatrice(0, HOURS_IN_WEEK, catDataCopy[cp], data.studentCount);
 
-            if (!SPC || (SPC && (cp != (ConfigCSO.SEEKING_MEMORY_POOL - 1)))) {
+            if (!SPC || (SPC && (cp != (SEEKING_MEMORY_POOL - 1)))) {
 
                 genUniqueRandoms(0, HOURS_IN_WEEK - 1, timeslotsToChange, randomGenerator)
                         .forEach(randomTimeslot -> {
@@ -187,7 +202,7 @@ public class MainCSO {
 
         if (maxFitness.getValue().equals(minFitness.getValue())) {
             // all fitness values are the same so we take a random one
-            int selectedCopy = randomGenerator.nextInt(0, ConfigCSO.SEEKING_MEMORY_POOL - 1);
+            int selectedCopy = randomGenerator.nextInt(0, SEEKING_MEMORY_POOL - 1);
             ArrayUtils.copyMatrices(0, HOURS_IN_WEEK, catData, catDataCopy[selectedCopy], data.teacherCount);
         } else {
             // we take the best option
@@ -195,24 +210,18 @@ public class MainCSO {
         }
     }
 
-    private void catTrace(int[][][] x) {
-        int similarity = 0;
-        for (int k = 0; k < data.studentCount; k++) {
-            for (int j = 0; j < HOURS_IN_WEEK; j++) {
-                if (x[k][j] == globalBestCat[k][j]) {
-                    similarity++;
-                }
-            }
-        }
+    private void catTrace(int[][][] catInTrace) {
+        double bestFitness = fitnessCalculator.checkHardConstraints(0, HOURS_IN_WEEK, catInTrace);
+        double globalBestFitness = fitnessCalculator.checkHardConstraints(0, HOURS_IN_WEEK, globalBestCat);
 
-        int distance = (data.studentCount * HOURS_IN_WEEK) - similarity;
+        double distance = 10 + (bestFitness - globalBestFitness);
         int swapsToMake = MathUtils.roundNumber((randomGenerator.nextDouble() * (double) distance));
 
         for (int i = 0; i < swapsToMake; i++) {
-            int randomStudentClass = randomGenerator.nextInt(0, data.studentCount);
-            int randomTimeIntervalOne = randomGenerator.nextInt(0, HOURS_IN_WEEK - 1);
-            int randomTimeIntervalTwo = randomGenerator.nextInt(0, HOURS_IN_WEEK - 1);
-            singleSwap(x, randomTimeIntervalOne, randomTimeIntervalTwo, randomStudentClass);
+            singleSwap(catInTrace,
+                    randomGenerator.nextInt(0, HOURS_IN_WEEK - 1),
+                    randomGenerator.nextInt(0, HOURS_IN_WEEK - 1),
+                    randomGenerator.nextInt(0, data.studentCount));
         }
     }
 
@@ -223,11 +232,11 @@ public class MainCSO {
         double[][] storePositionsAndFitness = new double[2][HOURS_IN_WEEK];
 
         for (int i = 0; i < data.studentCount; i++) {
-            if ((timeslot == configCSO.HOURS_PER_DAY - 1
-                    || timeslot == 2 * configCSO.HOURS_PER_DAY - 1
-                    || timeslot == 3 * configCSO.HOURS_PER_DAY - 1
-                    || timeslot == 4 * configCSO.HOURS_PER_DAY - 1
-                    || timeslot == 5 * configCSO.HOURS_PER_DAY - 1) && destination[i][timeslot][0] == -1) {
+            if ((timeslot == HOURS_PER_DAY - 1
+                    || timeslot == 2 * HOURS_PER_DAY - 1
+                    || timeslot == 3 * HOURS_PER_DAY - 1
+                    || timeslot == 4 * HOURS_PER_DAY - 1
+                    || timeslot == 5 * HOURS_PER_DAY - 1) && destination[i][timeslot][0] == -1) {
                 continue;
             }
 
@@ -269,7 +278,7 @@ public class MainCSO {
                 destination[i][timeslot] = temp;
             }
 
-            double smallerFitness = ConfigCSO.MAX_FITNESS;
+            double smallerFitness = MAX_FITNESS;
             int index = 0;
             for (int z = 0; z < jj; z++) {
                 if (storePositionsAndFitness[1][z] < smallerFitness) {
@@ -309,10 +318,6 @@ public class MainCSO {
             if (cat[i][timeslotTwo][0] == cat[studentClassIndex][timeslotOne][0]) {
                 return false;
             }
-        }
-
-        if (cat[studentClassIndex][timeslotOne][2] == 100) {
-            int a = 1;
         }
 
         fitnessCalculator.swap(cat, studentClassIndex, timeslotOne, timeslotTwo);

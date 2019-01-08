@@ -8,10 +8,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.HOURS_PER_DAY;
+import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.*;
 import static com.daniel.licenta.calendargenerator.algorithm.util.ArrayUtils.genUniqueRandoms;
 import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.MAX_NUMBER_OF_STUDENT_CLASSES;
-import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.REFINEMENT_STEPS;
 
 @Component
 public class OptimizerCSO {
@@ -27,20 +26,22 @@ public class OptimizerCSO {
 
     private CalendarData calendarData;
 
-    public int[][][] runOptimizationPhase(double TEPW, double ITDW, double ICDW, CalendarData calendarData, int[][][] globalBestCat) {
+    public int[][][] runOptimizationPhase(double TEPW, double ITDW, double ICDW, CalendarData calendarData, int[][][] globalBestCat, int refinementSteps, boolean displayInfo) {
         this.calendarData = calendarData;
 
-        System.out.print("\n\nOptimizing timetables ...\n");
-        int[][][] helperArray = new int[MAX_NUMBER_OF_STUDENT_CLASSES][configCSO.HOURS_IN_WEEK][2];
+        if (displayInfo) {
+            System.out.print("\n\nOptimizing timetables ...\n");
+        }
+        int[][][] helperArray = new int[MAX_NUMBER_OF_STUDENT_CLASSES][HOURS_IN_WEEK][2];
 
-        for (int start = 0; start < configCSO.HOURS_IN_WEEK; start = start + (HOURS_PER_DAY)) {
+        for (int start = 0; start < HOURS_IN_WEEK; start += HOURS_PER_DAY) {
 
             double partialFitnessOne = fitnessCalculator.calculatePartialFitness(start, start + HOURS_PER_DAY, globalBestCat, TEPW);
 
             ArrayUtils.copyMatrices(start, start + HOURS_PER_DAY, helperArray, globalBestCat, this.calendarData.studentCount);
 
-            for (int i = 0; i < REFINEMENT_STEPS; i++) {
-                List<Integer> timeStamps = genUniqueRandoms(start, start + 6, 2, randomGenerator);
+            for (int i = 0; i < refinementSteps; i++) {
+                List<Integer> timeStamps = genUniqueRandoms(start, start + HOURS_PER_DAY, 2, randomGenerator);
 
                 performSwap(start, start + HOURS_PER_DAY, helperArray, timeStamps.get(0), timeStamps.get(1), TEPW);
                 double partialFitnessTwo = fitnessCalculator.calculatePartialFitness(start, start + HOURS_PER_DAY, helperArray, TEPW);
@@ -59,8 +60,10 @@ public class OptimizerCSO {
                 }
             }
 
-            double fullFitness = fitnessCalculator.calculateFitness(configCSO.HOURS_IN_WEEK, globalBestCat, TEPW, ITDW, ICDW);
-            System.out.println("Optimization iteration cycle ended with fitness result of: " + fullFitness);
+            double fullFitness = fitnessCalculator.calculateFitness(HOURS_IN_WEEK, globalBestCat, TEPW, ITDW, ICDW);
+            if (displayInfo) {
+                System.out.println("Optimization iteration cycle ended with fitness result of: " + fullFitness);
+            }
             if (fullFitness == 0.0) {
                 break;
             }
@@ -110,8 +113,8 @@ public class OptimizerCSO {
         return 1;
     }
 
-    private boolean acceptSwap(int begin, int end, int[][][] cat, int classPosition, int timeslot1, int timeslot2, double TEPW1) {
-        int ok = checkValidity(begin, end, cat, classPosition, timeslot1, timeslot2, TEPW1);
+    private boolean checkSwap(int begin, int end, int[][][] cat, int classPosition, int timeslotOne, int timeslotTwo, double TEPW1) {
+        int ok = checkValidity(begin, end, cat, classPosition, timeslotOne, timeslotTwo, TEPW1);
 
         if (ok == 1) {
             return true;
@@ -124,7 +127,7 @@ public class OptimizerCSO {
 
     private void performSwap(int begin, int end, int[][][] cat, int timeslot1, int timeslot2, double TEPW1) {
         for (int i = 0; i < calendarData.studentCount; i++) {
-            boolean ok = acceptSwap(begin, end, cat, i, timeslot1, timeslot2, TEPW1);
+            boolean ok = checkSwap(begin, end, cat, i, timeslot1, timeslot2, TEPW1);
             if (ok) {
                 fitnessCalculator.swap(cat, i, timeslot1, timeslot2);
             }

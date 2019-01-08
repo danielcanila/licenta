@@ -1,0 +1,157 @@
+
+-----------------------------------------------------------------------------------
+Schedule for teacher : T01
+Slot 3 (hour 14)- Group: G1
+Slot 4 (hour 16)- Group: G2
+Slot 15 (hour 14)- Group: G3
+Slot 16 (hour 16)- Group: G8
+Slot 21 (hour 14)- Group: G4
+Slot 29 (hour 18)- Group: G4
+-----------------------------------------------------------------------------------
+Schedule for teacher : T02
+Slot 1 (hour 10)- Group: G1
+Slot 8 (hour 12)- Group: G3
+Slot 18 (hour 8)- Group: G4
+Slot 27 (hour 14)- Group: G4
+Slot 28 (hour 16)- Group: G2
+-----------------------------------------------------------------------------------
+Schedule for teacher : T03
+Slot 0 (hour 8)- Group: G4
+Slot 6 (hour 8)- Group: G1
+Slot 17 (hour 18)- Group: G2
+Slot 20 (hour 12)- Group: G4
+Slot 25 (hour 10)- Group: G3
+-----------------------------------------------------------------------------------
+Schedule for teacher : T04
+Slot 4 (hour 16)- Group: G8
+Slot 5 (hour 18)- Group: G3
+Slot 15 (hour 14)- Group: G4
+Slot 16 (hour 16)- Group: G4
+Slot 22 (hour 16)- Group: G2
+Slot 23 (hour 18)- Group: G1
+-----------------------------------------------------------------------------------
+Schedule for teacher : T05
+Slot 7 (hour 10)- Group: G4
+Slot 8 (hour 12)- Group: G2
+Slot 12 (hour 8)- Group: G3
+Slot 13 (hour 10)- Group: G1
+Slot 24 (hour 8)- Group: G4
+-----------------------------------------------------------------------------------
+Schedule for teacher : T06
+Slot 3 (hour 14)- Group: G2
+Slot 7 (hour 10)- Group: G5
+Slot 8 (hour 12)- Group: G1
+Slot 14 (hour 12)- Group: G3
+Slot 21 (hour 14)- Group: G7
+Slot 22 (hour 16)- Group: G4
+Slot 23 (hour 18)- Group: G8
+Slot 29 (hour 18)- Group: G6
+-----------------------------------------------------------------------------------
+Schedule for teacher : T07
+Slot 9 (hour 14)- Group: G3
+Slot 10 (hour 16)- Group: G2
+Slot 13 (hour 10)- Group: G6
+Slot 14 (hour 12)- Group: G1
+Slot 19 (hour 10)- Group: G7
+Slot 25 (hour 10)- Group: G8
+Slot 26 (hour 12)- Group: G4
+Slot 27 (hour 14)- Group: G5
+-----------------------------------------------------------------------------------
+Schedule for teacher : T08
+Slot 1 (hour 10)- Group: G7
+Slot 2 (hour 12)- Group: G1
+Slot 3 (hour 14)- Group: G5
+Slot 4 (hour 16)- Group: G3
+Slot 7 (hour 10)- Group: G2
+Slot 12 (hour 8)- Group: G4
+Slot 26 (hour 12)- Group: G6
+Slot 27 (hour 14)- Group: G8
+-----------------------------------------------------------------------------------
+Schedule for teacher : T09
+Slot 2 (hour 12)- Group: G3
+Slot 3 (hour 14)- Group: G6
+Slot 4 (hour 16)- Group: G4
+Slot 7 (hour 10)- Group: G8
+Slot 12 (hour 8)- Group: G5
+Slot 13 (hour 10)- Group: G2
+Slot 22 (hour 16)- Group: G1
+Slot 27 (hour 14)- Group: G7
+-----------------------------------------------------------------------------------
+Schedule for teacher : T15
+Slot 1 (hour 10)- Group: G3
+Slot 2 (hour 12)- Group: G5
+Slot 7 (hour 10)- Group: G1
+Slot 8 (hour 12)- Group: G4
+Slot 9 (hour 14)- Group: G7
+Slot 10 (hour 16)- Group: G6
+Slot 15 (hour 14)- Group: G2
+Slot 24 (hour 8)- Group: G8
+-----------------------------------------------------------------------------------
+Schedule for teacher : T16
+Slot 5 (hour 18)- Group: G6
+Slot 12 (hour 8)- Group: G8
+Slot 19 (hour 10)- Group: G4
+Slot 20 (hour 12)- Group: G8
+Slot 28 (hour 16)- Group: G7
+Slot 29 (hour 18)- Group: G5
+-----------------------------------------------------------------------------------
+Schedule for teacher : T17
+Slot 9 (hour 14)- Group: G6
+Slot 10 (hour 16)- Group: G8
+Slot 11 (hour 18)- Group: G4
+Slot 17 (hour 18)- Group: G8
+Slot 24 (hour 8)- Group: G5
+Slot 25 (hour 10)- Group: G7
+-----------------------------------------------------------------------------------
+Schedule for teacher : T18
+Slot 0 (hour 8)- Group: G8
+Slot 1 (hour 10)- Group: G6
+Slot 13 (hour 10)- Group: G8
+Slot 22 (hour 16)- Group: G7
+Slot 26 (hour 12)- Group: G5
+-----------------------------------------------------------------------------------
+Schedule for teacher : T19
+Slot 5 (hour 18)- Group: G5
+Slot 14 (hour 12)- Group: G8
+Slot 15 (hour 14)- Group: G8
+Slot 22 (hour 16)- Group: G6
+Slot 26 (hour 12)- Group: G7
+-----------------------------------------------------------------------------------
+Schedule for teacher : T20
+Slot 6 (hour 8)- Group: G7
+Slot 7 (hour 10)- Group: G6
+Slot 8 (hour 12)- Group: G8
+Slot 9 (hour 14)- Group: G5
+Slot 18 (hour 8)- Group: G8
+-----------------------------------------------------------------------------------
+Schedule for teacher : EMPTY_TIME_SLOT
+Slot 0 (hour 8)- Group: G8
+Slot 1 (hour 10)- Group: G8
+Slot 2 (hour 12)- Group: G8
+Slot 3 (hour 14)- Group: G8
+Slot 4 (hour 16)- Group: G8
+Slot 5 (hour 18)- Group: G8
+Slot 6 (hour 8)- Group: G8
+Slot 7 (hour 10)- Group: G7
+Slot 8 (hour 12)- Group: G7
+Slot 9 (hour 14)- Group: G8
+Slot 10 (hour 16)- Group: G7
+Slot 11 (hour 18)- Group: G8
+Slot 12 (hour 8)- Group: G7
+Slot 13 (hour 10)- Group: G7
+Slot 14 (hour 12)- Group: G7
+Slot 15 (hour 14)- Group: G8
+Slot 16 (hour 16)- Group: G8
+Slot 17 (hour 18)- Group: G8
+Slot 18 (hour 8)- Group: G8
+Slot 19 (hour 10)- Group: G8
+Slot 20 (hour 12)- Group: G8
+Slot 21 (hour 14)- Group: G8
+Slot 22 (hour 16)- Group: G8
+Slot 23 (hour 18)- Group: G7
+Slot 24 (hour 8)- Group: G7
+Slot 25 (hour 10)- Group: G6
+Slot 26 (hour 12)- Group: G8
+Slot 27 (hour 14)- Group: G6
+Slot 28 (hour 16)- Group: G8
+Slot 29 (hour 18)- Group: G8

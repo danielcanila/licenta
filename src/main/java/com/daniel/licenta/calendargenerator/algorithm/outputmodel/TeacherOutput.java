@@ -17,7 +17,7 @@ public class TeacherOutput {
     private int identifier;
     private String name;
     @JsonBackReference
-    private Map<Integer, List<StudentClassOutput>> schedule = new HashMap<>();
+    private Map<Integer, StudentClassOutput> schedule = new HashMap<>();
 
     public TeacherOutput(int identifier, String name) {
         this.identifier = identifier;
@@ -25,13 +25,7 @@ public class TeacherOutput {
     }
 
     public void addClassForTeaching(StudentClassOutput classOutput, int sessionOfWeek) {
-        if (schedule.containsKey(sessionOfWeek)) {
-            schedule.get(sessionOfWeek).add(classOutput);
-        } else {
-            List<StudentClassOutput> list = new ArrayList<>();
-            list.add(classOutput);
-            schedule.put(sessionOfWeek, list);
-        }
+        schedule.put(sessionOfWeek, classOutput);
     }
 
     public boolean isFree() {
