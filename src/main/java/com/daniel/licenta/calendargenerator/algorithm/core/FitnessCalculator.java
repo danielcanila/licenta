@@ -26,7 +26,7 @@ public class FitnessCalculator {
         cat[classPosition][timeslot2][0] = temp;
     }
 
-    double calculateTeacherEmptyPeriodsFitness(int begin, int end, int[][][] cat, double TEPW1, int showResults) {
+    double calculateTeacherEmptyPeriodsFitnessSoft(int begin, int end, int[][][] cat, double TEPW1, int showResults) {
         double total_cost = 0.0;
         int cases_of_teachers = 0;
         int total_gaps_of_teachers = 0;
@@ -112,7 +112,7 @@ public class FitnessCalculator {
     }
 
     // calculates the dispersion of teaching hours of the teacher and returns the relevant cost
-    double calculateTeacherDispersionFitness(int end, int[][][] cat, double IDTW, int showResults) {
+    double calculateTeacherDispersionFitnessSoft(int end, int[][][] cat, double IDTW, int showResults) {
         int[] idealDistrTable = new int[5];
         int[] actualDistTable = new int[5];
         int totalNumberOfWrongTeachers = 0;
@@ -232,7 +232,7 @@ public class FitnessCalculator {
     }
 
     // calculates the dispersion of lessons of each class and returns the relevant cost
-    double calculateClassDispersionFitness(int end, int[][][] cat, double ICDW1, int showResults) {
+    double calculateClassDispersionFitnessSoft(int end, int[][][] cat, double ICDW1, int showResults) {
         double total_cost = 0.0;
         int violation_cases = 0;
         int total_problem_days = 0;
@@ -429,9 +429,9 @@ public class FitnessCalculator {
         double a2 = calculateParallelTeachingFitness(0, end, cat, 0);
         double a3 = calculateUnassignedStudentClassPeriodFitness(0, end, cat, 0);
         double a4 = calculateParallelRoomFitness(cat, 0);
-        double a5 = calculateTeacherEmptyPeriodsFitness(0, end, cat, TEPW, 0);
-        double a6 = calculateTeacherDispersionFitness(end, cat, ITDW, 0);
-        double a7 = calculateClassDispersionFitness(end, cat, ICDW, 0);
+        double a5 = calculateTeacherEmptyPeriodsFitnessSoft(0, end, cat, TEPW, 0);
+        double a6 = calculateTeacherDispersionFitnessSoft(end, cat, ITDW, 0);
+        double a7 = calculateClassDispersionFitnessSoft(end, cat, ICDW, 0);
         return a1 + a2 + a3 + a4 + a5 + a6 + a7;
     }
 
@@ -440,7 +440,7 @@ public class FitnessCalculator {
         double a2 = calculateParallelTeachingFitness(start, end, cat, 0);
         double a3 = calculateUnassignedStudentClassPeriodFitness(start, end, cat, 0);
         double a4 = calculateParallelRoomFitness(cat, 0);
-        double a5 = calculateTeacherEmptyPeriodsFitness(start, end, cat, TEPW, 0);
+        double a5 = calculateTeacherEmptyPeriodsFitnessSoft(start, end, cat, TEPW, 0);
         return a1 + a2 + a3 + a4 + a5;
     }
 

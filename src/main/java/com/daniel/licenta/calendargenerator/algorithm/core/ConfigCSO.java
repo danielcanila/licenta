@@ -22,6 +22,12 @@ public class ConfigCSO {
     public static int HOURS_IN_WEEK = 30;
     public static int HOURS_PER_DAY = 6;
     public static int SEED = 1534380238;
+    public static double TEPW = 0.06;
+    public static double ITDW = 1.0;
+    public static double ICDW = 0.95;
+    public static double TEPW_O = 1.35;
+    public static double ITDW_O = 0.06;
+    public static double ICDW_O = 0.06;
 
     public void overrideConfigData(ConfigData configData) {
         nullCheckSetting(configData.mr, () -> {
@@ -57,6 +63,25 @@ public class ConfigCSO {
         nullCheckSetting(configData.seed, () -> {
             ConfigCSO.SEED = configData.seed;
         });
+        nullCheckSetting(configData.emptyPeriodWeight, () -> {
+            ConfigCSO.TEPW = configData.emptyPeriodWeight;
+        });
+        nullCheckSetting(configData.teacherDispersionWeight, () -> {
+            ConfigCSO.ITDW = configData.teacherDispersionWeight;
+        });
+        nullCheckSetting(configData.classDispersionWeight, () -> {
+            ConfigCSO.ICDW = configData.classDispersionWeight;
+        });
+        nullCheckSetting(configData.emptyPeriodWeightOptimizationPhase, () -> {
+            ConfigCSO.TEPW_O = configData.emptyPeriodWeightOptimizationPhase;
+        });
+        nullCheckSetting(configData.teacherDispersionWeightOptimizationPhase, () -> {
+            ConfigCSO.ITDW_O = configData.teacherDispersionWeightOptimizationPhase;
+        });
+        nullCheckSetting(configData.classDispersionWeight, () -> {
+            ConfigCSO.ICDW_O = configData.classDispersionWeightOptimizationPhase;
+        });
+
     }
 
     private void nullCheckSetting(Object field, Runnable run) {

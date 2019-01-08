@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
+import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.*;
+
 @Component
 public class CsoAlgorithm {
 
@@ -33,11 +35,11 @@ public class CsoAlgorithm {
         randomGenerator.setSeed(configCSO.SEED);
         fitnessCalculator.setCalendarData(calendarData);
 
-        int[][][] globalBestCat = mainCSO.runCsoCoreAlgorithm(0.06, 1.0, 0.95, calendarData);
+        int[][][] globalBestCat = mainCSO.runCsoCoreAlgorithm(TEPW, ITDW, ICDW, calendarData);
 
         dataParser.displayResults(globalBestCat);
 
-        globalBestCat = optimizerCSO.runOptimizationPhase(1.35, 0.06, 0.06, calendarData, globalBestCat);
+        globalBestCat = optimizerCSO.runOptimizationPhase(TEPW_O, ITDW_O, ICDW_O, calendarData, globalBestCat);
 
         dataParser.displayResults(globalBestCat);
 

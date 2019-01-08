@@ -96,9 +96,9 @@ public class OptimizerCSO {
             fitnessCalculator.swap(cat, classPosition, timeslot1, timeslot2);
         }
 
-        double f1 = fitnessCalculator.calculateTeacherEmptyPeriodsFitness(begin, end, cat, TEPW1, 0);
+        double f1 = fitnessCalculator.calculateTeacherEmptyPeriodsFitnessSoft(begin, end, cat, TEPW1, 0);
         fitnessCalculator.swap(cat, classPosition, timeslot1, timeslot2);
-        double f2 = fitnessCalculator.calculateTeacherEmptyPeriodsFitness(begin, end, cat, TEPW1, 0);
+        double f2 = fitnessCalculator.calculateTeacherEmptyPeriodsFitnessSoft(begin, end, cat, TEPW1, 0);
         if (f2 > f1) {
             fitnessCalculator.swap(cat, classPosition, timeslot1, timeslot2);
             return -2;

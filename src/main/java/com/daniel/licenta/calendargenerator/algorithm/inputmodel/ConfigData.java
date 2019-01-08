@@ -12,4 +12,10 @@ public class ConfigData {
     public Integer hoursInWeek;
     public Integer hoursPerDay;
     public Integer seed;
+    public Double emptyPeriodWeight;
+    public Double teacherDispersionWeight;
+    public Double classDispersionWeight;
+    public Double emptyPeriodWeightOptimizationPhase;
+    public Double teacherDispersionWeightOptimizationPhase;
+    public Double classDispersionWeightOptimizationPhase;
 }
