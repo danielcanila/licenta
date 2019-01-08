@@ -12,10 +12,10 @@ public class ConfigCSO {
     public static int REFINEMENT_STEPS = 50000;
     public static double MAX_FITNESS = 10000000;
     public static int HARD_CONSTRAINT_WEIGHT = 10;
-    public static int SEEKING_MEMORY_POOL = 2;
+    public static int SEEKING_MEMORY_POOL = 4;
     public static int SEEKING_RANGE_DIMENSION = 10;
     // self position consideration - if it equals to 1 the cat will also consider its current position during catSeek procedure
-    public static int SPC = 1;
+    public static boolean SPC = true;
     // count of dimensions to change - percentage of dimensions to change
     public static int CDC = 10;
 

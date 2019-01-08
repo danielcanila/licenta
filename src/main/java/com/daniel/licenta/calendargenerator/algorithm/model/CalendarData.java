@@ -15,8 +15,8 @@ import java.util.stream.Collectors;
 public class CalendarData {
 
     public int numberOfSlotsPerDay;
-    public int totalNumberOfStudentClasses;
-    public int totalNumberOfTeachers;
+    public int studentCount;
+    public int teacherCount;
 
     public List<CourseGroupRelationshipRecord> courseGroupRelationshipRecords = new ArrayList<>();
     public Teacher[] teachers;
@@ -24,8 +24,8 @@ public class CalendarData {
     public RoomRecord[] rooms;
 
     public CalendarData(int totalNumberOfStudentClasses, int totalNumberOfTeachers) {
-        this.totalNumberOfStudentClasses = totalNumberOfStudentClasses;
-        this.totalNumberOfTeachers = totalNumberOfTeachers;
+        this.studentCount = totalNumberOfStudentClasses;
+        this.teacherCount = totalNumberOfTeachers;
     }
 
     public List<RoomRecord> getAllRoomsByCapacity(int capacity) {

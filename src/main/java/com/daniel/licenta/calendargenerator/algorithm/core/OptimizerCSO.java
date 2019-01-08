@@ -6,8 +6,10 @@ import com.daniel.licenta.calendargenerator.algorithm.util.RandomGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.HOURS_PER_DAY;
-import static com.daniel.licenta.calendargenerator.algorithm.util.ArrayUtils.fillArrayWithRandomValuesInInteval;
+import static com.daniel.licenta.calendargenerator.algorithm.util.ArrayUtils.genUniqueRandoms;
 import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.MAX_NUMBER_OF_STUDENT_CLASSES;
 import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.REFINEMENT_STEPS;
 
@@ -35,12 +37,12 @@ public class OptimizerCSO {
 
             double partialFitnessOne = fitnessCalculator.calculatePartialFitness(start, start + HOURS_PER_DAY, globalBestCat, TEPW);
 
-            ArrayUtils.copyMatrices(start, start + HOURS_PER_DAY, helperArray, globalBestCat, this.calendarData.totalNumberOfStudentClasses);
+            ArrayUtils.copyMatrices(start, start + HOURS_PER_DAY, helperArray, globalBestCat, this.calendarData.studentCount);
 
             for (int i = 0; i < REFINEMENT_STEPS; i++) {
-                int[] timeStamps = fillArrayWithRandomValuesInInteval(new int[2], start, start + 6, 2, randomGenerator);
+                List<Integer> timeStamps = genUniqueRandoms(start, start + 6, 2, randomGenerator);
 
-                performSwap(start, start + HOURS_PER_DAY, helperArray, timeStamps[0], timeStamps[1], TEPW);
+                performSwap(start, start + HOURS_PER_DAY, helperArray, timeStamps.get(0), timeStamps.get(1), TEPW);
                 double partialFitnessTwo = fitnessCalculator.calculatePartialFitness(start, start + HOURS_PER_DAY, helperArray, TEPW);
 
                 if (fitnessCalculator.checkHardConstraints(start, start + HOURS_PER_DAY, helperArray) > 0.0) {
@@ -49,7 +51,7 @@ public class OptimizerCSO {
 
                 if (partialFitnessTwo <= partialFitnessOne) {
                     partialFitnessOne = partialFitnessTwo;
-                    ArrayUtils.copyMatrices(start, start + HOURS_PER_DAY, globalBestCat, helperArray, this.calendarData.totalNumberOfStudentClasses);
+                    ArrayUtils.copyMatrices(start, start + HOURS_PER_DAY, globalBestCat, helperArray, this.calendarData.studentCount);
 
                     if (partialFitnessTwo == 0.0) {
                         break;
@@ -121,7 +123,7 @@ public class OptimizerCSO {
     }
 
     private void performSwap(int begin, int end, int[][][] cat, int timeslot1, int timeslot2, double TEPW1) {
-        for (int i = 0; i < calendarData.totalNumberOfStudentClasses; i++) {
+        for (int i = 0; i < calendarData.studentCount; i++) {
             boolean ok = acceptSwap(begin, end, cat, i, timeslot1, timeslot2, TEPW1);
             if (ok) {
                 fitnessCalculator.swap(cat, i, timeslot1, timeslot2);

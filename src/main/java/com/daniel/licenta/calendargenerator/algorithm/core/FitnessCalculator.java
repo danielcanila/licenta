@@ -31,7 +31,7 @@ public class FitnessCalculator {
         int cases_of_teachers = 0;
         int total_gaps_of_teachers = 0;
 
-        for (int i = 0; i < calendarData.totalNumberOfTeachers; i++) {
+        for (int i = 0; i < calendarData.teacherCount; i++) {
             if (calendarData.teachers[i].isEmptyTimeSlot()) {
                 continue;
             }
@@ -119,7 +119,7 @@ public class FitnessCalculator {
         int totalNumberOfFaultDays = 0;
         double total_cost = 0.0;
 
-        for (int teacherPosition = 0; teacherPosition < calendarData.totalNumberOfTeachers; teacherPosition++) {
+        for (int teacherPosition = 0; teacherPosition < calendarData.teacherCount; teacherPosition++) {
             if (calendarData.teachers[teacherPosition].isEmptyTimeSlot()) {
                 continue;
             }
@@ -237,7 +237,7 @@ public class FitnessCalculator {
         int violation_cases = 0;
         int total_problem_days = 0;
 
-        for (int i = 0; i < calendarData.totalNumberOfStudentClasses; i++) {
+        for (int i = 0; i < calendarData.studentCount; i++) {
             int problem_days = 0;
             double cost = 0.0;
             int totalHoursPerClass = 0;
@@ -294,7 +294,7 @@ public class FitnessCalculator {
             }
         }
 
-        for (int i = 0; i < calendarData.totalNumberOfStudentClasses; i++) {
+        for (int i = 0; i < calendarData.studentCount; i++) {
             for (int j = 0; j < configCSO.HOURS_IN_WEEK; j++) {
                 roomData[cat[i][j][1]][j]++;
             }
@@ -323,13 +323,13 @@ public class FitnessCalculator {
         int number_of_cases = 0;
         double cost = 0.0;
 
-        for (int i = 0; i < calendarData.totalNumberOfTeachers; i++) {
+        for (int i = 0; i < calendarData.teacherCount; i++) {
             if (calendarData.teachers[i].isEmptyTimeSlot()) {
                 continue;
             }
             for (int t = start; t < end; t++) {
                 int parallel_teaching = 0;
-                for (int j = 0; j < calendarData.totalNumberOfStudentClasses; j++) {
+                for (int j = 0; j < calendarData.studentCount; j++) {
                     if (cat[j][t][0] == i) {
                         parallel_teaching++;
                     }
@@ -375,7 +375,7 @@ public class FitnessCalculator {
         int number_of_cases = 0;
         double cost = 0.0;
 
-        for (int i = 0; i < calendarData.totalNumberOfStudentClasses; i++) {
+        for (int i = 0; i < calendarData.studentCount; i++) {
             for (int start = begin; start < end; start = start + configCSO.HOURS_PER_DAY) {
                 for (int t = start; t < start + configCSO.HOURS_PER_DAY; t++) {
                     if (cat[i][t][0] == -1
@@ -405,7 +405,7 @@ public class FitnessCalculator {
         int t;
         int number_of_cases = 0;
         double cost = 0.0;
-        for (int i = 0; i < calendarData.totalNumberOfStudentClasses; i++) {
+        for (int i = 0; i < calendarData.studentCount; i++) {
             for (int j = 0; j < calendarData.studentGroups[i].numberOfTeachers; j++) {
                 for (t = start; t < end; t++) {
                     if (cat[i][t][0] == calendarData.studentGroups[i].teachersOfClassAndHours[j][0]
