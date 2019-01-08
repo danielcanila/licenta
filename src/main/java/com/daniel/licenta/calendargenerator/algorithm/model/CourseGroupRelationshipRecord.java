@@ -9,10 +9,10 @@ import java.util.List;
 @Getter
 @Setter
 public class CourseGroupRelationshipRecord {
-    private int semian;
+    private int semianIndex;
     private List<Integer> studentGroup = new ArrayList<>();
 
     public CourseGroupRelationshipRecord(int studentGroupIndex) {
-        this.semian = studentGroupIndex;
+        this.semianIndex = studentGroupIndex;
     }
 }

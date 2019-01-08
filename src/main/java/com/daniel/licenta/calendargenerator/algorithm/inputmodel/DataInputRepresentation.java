@@ -12,7 +12,7 @@ import java.util.List;
 public class DataInputRepresentation {
 
     int timeslotsPerDay;
-    List<CourseGroupRelationship> relationships= new ArrayList<>();
+    List<CourseGroupRelationship> relationships = new ArrayList<>();
     List<StudentClass> studentClasses = new ArrayList<>();
     List<TeacherInput> teachers = new ArrayList<>();
     List<RoomInput> rooms = new ArrayList<>();
@@ -33,6 +33,12 @@ public class DataInputRepresentation {
         return rooms.stream().filter(teacherInput -> teacherInput.getRoomIndex() == index).findFirst().get();
     }
 
+    public CourseGroupRelationship getRelationshipByIndex(int index) {
+        return relationships.stream()
+                .filter(courseGroupRelationship -> courseGroupRelationship.getCourse().getIndex() == index)
+                .findFirst()
+                .orElseGet(() -> null);
+    }
 
     public void setStudentClasses(List<StudentClass> toAdd) {
         studentClasses.clear();
@@ -67,7 +73,7 @@ public class DataInputRepresentation {
         teachers.sort(Comparator.comparing(TeacherInput::getIdentifier));
     }
 
-    public void setRelationships(List<CourseGroupRelationship> relationships){
+    public void setRelationships(List<CourseGroupRelationship> relationships) {
         this.relationships.clear();
         this.relationships.addAll(relationships);
     }

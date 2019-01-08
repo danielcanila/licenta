@@ -6,9 +6,10 @@ import com.daniel.licenta.calendargenerator.algorithm.util.RandomGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.HOURS_PER_DAY;
 import static com.daniel.licenta.calendargenerator.algorithm.util.ArrayUtils.fillArrayWithRandomValuesInInteval;
 import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.MAX_NUMBER_OF_STUDENT_CLASSES;
-import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.REFINEMENT_STEPS;
+import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.REFINEMENT_STEPS;
 
 @Component
 public class OptimizerCSO {
@@ -30,25 +31,25 @@ public class OptimizerCSO {
         System.out.print("\n\nOptimizing timetables ...\n");
         int[][][] helperArray = new int[MAX_NUMBER_OF_STUDENT_CLASSES][configCSO.HOURS_IN_WEEK][2];
 
-        for (int start = 0; start < configCSO.HOURS_IN_WEEK; start = start + configCSO.HOURS_PER_DAY) {
-            System.out.println("Optimization iteration : " + start);
-            double partialFitnessOne = fitnessCalculator.calculatePartialFitness(start, start + configCSO.HOURS_PER_DAY, globalBestCat, TEPW);
+        for (int start = 0; start < configCSO.HOURS_IN_WEEK; start = start + (HOURS_PER_DAY)) {
 
-            ArrayUtils.copyMatrices(start, start + configCSO.HOURS_PER_DAY, helperArray, globalBestCat, this.calendarData.totalNumberOfStudentClasses);
+            double partialFitnessOne = fitnessCalculator.calculatePartialFitness(start, start + HOURS_PER_DAY, globalBestCat, TEPW);
+
+            ArrayUtils.copyMatrices(start, start + HOURS_PER_DAY, helperArray, globalBestCat, this.calendarData.totalNumberOfStudentClasses);
 
             for (int i = 0; i < REFINEMENT_STEPS; i++) {
                 int[] timeStamps = fillArrayWithRandomValuesInInteval(new int[2], start, start + 6, 2, randomGenerator);
 
-                performSwap(start, start + configCSO.HOURS_PER_DAY, helperArray, timeStamps[0], timeStamps[1], TEPW);
-                double partialFitnessTwo = fitnessCalculator.calculatePartialFitness(start, start + configCSO.HOURS_PER_DAY, helperArray, TEPW);
+                performSwap(start, start + HOURS_PER_DAY, helperArray, timeStamps[0], timeStamps[1], TEPW);
+                double partialFitnessTwo = fitnessCalculator.calculatePartialFitness(start, start + HOURS_PER_DAY, helperArray, TEPW);
 
-                if (fitnessCalculator.checkHardConstraints(start, start + configCSO.HOURS_PER_DAY, helperArray) > 0.0) {
+                if (fitnessCalculator.checkHardConstraints(start, start + HOURS_PER_DAY, helperArray) > 0.0) {
                     continue;
                 }
 
                 if (partialFitnessTwo <= partialFitnessOne) {
                     partialFitnessOne = partialFitnessTwo;
-                    ArrayUtils.copyMatrices(start, start + configCSO.HOURS_PER_DAY, globalBestCat, helperArray, this.calendarData.totalNumberOfStudentClasses);
+                    ArrayUtils.copyMatrices(start, start + HOURS_PER_DAY, globalBestCat, helperArray, this.calendarData.totalNumberOfStudentClasses);
 
                     if (partialFitnessTwo == 0.0) {
                         break;
@@ -57,7 +58,7 @@ public class OptimizerCSO {
             }
 
             double fullFitness = fitnessCalculator.calculateFitness(configCSO.HOURS_IN_WEEK, globalBestCat, TEPW, ITDW, ICDW);
-
+            System.out.println("Optimization iteration cycle ended with fitness result of: " + fullFitness);
             if (fullFitness == 0.0) {
                 break;
             }

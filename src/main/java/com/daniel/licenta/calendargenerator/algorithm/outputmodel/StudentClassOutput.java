@@ -1,11 +1,10 @@
 package com.daniel.licenta.calendargenerator.algorithm.outputmodel;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import javafx.util.Pair;
 import lombok.Getter;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Getter
@@ -14,7 +13,7 @@ public class StudentClassOutput {
     private int identifier;
     private String name;
     private int numberOfStudents;
-    private Map<Integer, List<Pair<Integer, Pair<TeacherOutput, RoomOutput>>>> schedule = new HashMap<>();
+    private Map<Integer, Pair<TeacherOutput, RoomOutput>> schedule = new HashMap<>();
 
 
     public StudentClassOutput(int identifier, String name, int numberOfStudents) {
@@ -23,16 +22,22 @@ public class StudentClassOutput {
         this.numberOfStudents = numberOfStudents;
     }
 
-    public void addTeachingSession(TeacherOutput teacherOutput, int dayOfWeek, int sessionOfDay, RoomOutput roomOutput) {
-        if (schedule.containsKey(dayOfWeek)) {
-            schedule.get(dayOfWeek).add(new Pair<>(sessionOfDay, new Pair<>(teacherOutput, roomOutput)));
-        } else {
-            List<Pair<Integer, Pair<TeacherOutput, RoomOutput>>> list = new ArrayList<>();
-            list.add(new Pair<>(sessionOfDay, new Pair<>(teacherOutput, roomOutput)));
-            schedule.put(dayOfWeek, list);
+    public void addTeachingSession(TeacherOutput teacherOutput, int sessionOfWeek, RoomOutput roomOutput) {
+        Pair<TeacherOutput, RoomOutput> teacherOutputRoomOutputPair = schedule.get(sessionOfWeek);
+        if (teacherOutputRoomOutputPair != null) {
+            if (teacherOutput.isFree()) {
+                return;
+            }
+            if (!teacherOutputRoomOutputPair.getKey().isFree()) {
+                throw new RuntimeException("We have duplicates on class :" + name);
+            }
+            schedule.remove(sessionOfWeek);
         }
 
-        teacherOutput.addClassForTeaching(this, dayOfWeek, sessionOfDay);
+        schedule.put(sessionOfWeek, new Pair<>(teacherOutput, roomOutput));
+
+
+        teacherOutput.addClassForTeaching(this, sessionOfWeek);
 
     }
 

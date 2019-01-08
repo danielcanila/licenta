@@ -1,7 +1,6 @@
-package com.daniel.licenta.calendargenerator.algorithm;
+package com.daniel.licenta.calendargenerator.algorithm.core;
 
 
-import com.daniel.licenta.calendargenerator.algorithm.core.*;
 import com.daniel.licenta.calendargenerator.algorithm.model.CalendarData;
 import com.daniel.licenta.calendargenerator.algorithm.util.RandomGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,10 +8,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
-import static com.daniel.licenta.calendargenerator.algorithm.util.BufferHandlingUtil.fprintf;
-
 @Component
-public class CoreCSO {
+public class CsoAlgorithm {
 
     @Autowired
     private FitnessCalculator fitnessCalculator;
@@ -32,9 +29,8 @@ public class CoreCSO {
     @Autowired
     private ConfigCSO configCSO;
 
-    public int[][][] runCSO(int seed, CalendarData calendarData) {
-        configCSO.setHOURS_PER_DAY(calendarData.getNumberOfSlotsPerDay());
-        randomGenerator.setSeed(seed);
+    public int[][][] runCSO(CalendarData calendarData) {
+        randomGenerator.setSeed(configCSO.SEED);
         fitnessCalculator.setCalendarData(calendarData);
 
         int[][][] globalBestCat = mainCSO.runCsoCoreAlgorithm(0.06, 1.0, 0.95, calendarData);

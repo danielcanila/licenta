@@ -1,5 +1,6 @@
 package com.daniel.licenta.calendargenerator.algorithm.outputmodel;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import javafx.util.Pair;
 import lombok.Getter;
 
@@ -15,20 +16,21 @@ public class TeacherOutput {
 
     private int identifier;
     private String name;
-    private Map<Integer, List<Pair<Integer, StudentClassOutput>>> schedule = new HashMap<>();
+    @JsonBackReference
+    private Map<Integer, List<StudentClassOutput>> schedule = new HashMap<>();
 
     public TeacherOutput(int identifier, String name) {
         this.identifier = identifier;
         this.name = name;
     }
 
-    public void addClassForTeaching(StudentClassOutput classOutput, int dayOfWeek, int sessionOfDay) {
-        if (schedule.containsKey(dayOfWeek)) {
-            schedule.get(dayOfWeek).add(new Pair<>(sessionOfDay, classOutput));
+    public void addClassForTeaching(StudentClassOutput classOutput, int sessionOfWeek) {
+        if (schedule.containsKey(sessionOfWeek)) {
+            schedule.get(sessionOfWeek).add(classOutput);
         } else {
-            List<Pair<Integer, StudentClassOutput>> list = new ArrayList<>();
-            list.add(new Pair<>(sessionOfDay, classOutput));
-            schedule.put(dayOfWeek, list);
+            List<StudentClassOutput> list = new ArrayList<>();
+            list.add(classOutput);
+            schedule.put(sessionOfWeek, list);
         }
     }
 

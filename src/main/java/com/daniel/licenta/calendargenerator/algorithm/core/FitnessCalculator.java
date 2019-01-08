@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.BASE;
-import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.HARD_CONSTRAINT_WEIGHT;
+import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.HARD_CONSTRAINT_WEIGHT;
 
 @Component
 public class FitnessCalculator {
@@ -268,8 +268,7 @@ public class FitnessCalculator {
                 total_problem_days = total_problem_days + problem_days;
                 violation_cases++;
 
-                // TODO : check here
-                cost = ICDW1 * totalHoursPerClass;//* Math.pow(BASE, problem_days);
+                cost = ICDW1 * Math.pow(BASE, violation_cases);
 
                 if (showResults == 1) {
                     System.out.printf("\nThe class %s has %d repeated lessons at %d  days\n", calendarData.studentGroups[i].
@@ -344,7 +343,7 @@ public class FitnessCalculator {
         }
 
         for (CourseGroupRelationshipRecord relationship : calendarData.getCourseGroupRelationshipRecords()) {
-            int[][] semianSchedule = cat[relationship.getSemian()];
+            int[][] semianSchedule = cat[relationship.getSemianIndex()];
             int parallel_teaching = 0;
             for (Integer subGroup : relationship.getStudentGroup()) {
                 int[][] subgroupSchedule = cat[subGroup];
@@ -450,7 +449,7 @@ public class FitnessCalculator {
         double a2 = calculateParallelTeachingFitness(start, end, cat, 0);
         double a3 = calculateUnassignedStudentClassPeriodFitness(start, end, cat, 0);
         double a4 = calculateParallelRoomFitness(cat, 0);
-        return a1 + a2 + a3 + 4;
+        return a1 + a2 + a3 + a4;
     }
 
 }

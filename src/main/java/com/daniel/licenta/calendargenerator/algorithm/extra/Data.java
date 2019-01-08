@@ -153,13 +153,13 @@ public class Data {
 
     public static DataInputRepresentation facultyExampleTwo() {
         StudentClass g1 = new StudentClass(1111, "G1", 30);
-        StudentClass g2 = new StudentClass(1112, "G2", 20);
+        StudentClass g2 = new StudentClass(1112, "G2", 30);
         StudentClass g3 = new StudentClass(1113, "G3", 30);
-        StudentClass g4 = new StudentClass(1114, "G4", 20);
+        StudentClass g4 = new StudentClass(1114, "G4", 30);
         StudentClass g5 = new StudentClass(1115, "G5", 30);
-        StudentClass g6 = new StudentClass(1116, "G6", 20);
+        StudentClass g6 = new StudentClass(1116, "G6", 30);
         StudentClass g7 = new StudentClass(1117, "G7", 30);
-        StudentClass g8 = new StudentClass(1118, "G8", 20);
+        StudentClass g8 = new StudentClass(1118, "G8", 30);
         StudentClass SA = new StudentClass(1119, "SA", 100);
         StudentClass SB = new StudentClass(1120, "SB", 100);
 
@@ -172,14 +172,14 @@ public class Data {
 
         List<CourseGroupRelationship> courseGroupRelationships = Arrays.asList(semianA, semianB);
 
-        RoomInput r1 = new RoomInput(1, "C201", 20);
-        RoomInput r2 = new RoomInput(2, "C202", 20);
-        RoomInput r3 = new RoomInput(3, "C203", 20);
-        RoomInput r4 = new RoomInput(4, "C204", 20);
-        RoomInput r5 = new RoomInput(5, "C205", 20);
-        RoomInput r6 = new RoomInput(6, "C206", 20);
-        RoomInput r7 = new RoomInput(7, "C207", 20);
-        RoomInput r8 = new RoomInput(8, "C208", 20);
+        RoomInput r1 = new RoomInput(1, "C201", 30);
+        RoomInput r2 = new RoomInput(2, "C202", 30);
+        RoomInput r3 = new RoomInput(3, "C203", 30);
+        RoomInput r4 = new RoomInput(4, "C204", 30);
+        RoomInput r5 = new RoomInput(5, "C205", 30);
+        RoomInput r6 = new RoomInput(6, "C206", 30);
+        RoomInput r7 = new RoomInput(7, "C207", 30);
+        RoomInput r8 = new RoomInput(8, "C208", 30);
 
         RoomInput r9 = new RoomInput(9, "C901", 30);
         RoomInput r10 = new RoomInput(10, "C902", 30);

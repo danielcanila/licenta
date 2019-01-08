@@ -35,4 +35,9 @@ public class CalendarData {
     public Teacher getTeacherByIndex(int index) {
         return teachers[index];
     }
+
+    public boolean isSemianGroup(int index) {
+        return courseGroupRelationshipRecords.stream()
+                .anyMatch(courseGroupRelationshipRecord -> courseGroupRelationshipRecord.getSemianIndex() == index);
+    }
 }

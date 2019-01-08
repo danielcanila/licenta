@@ -27,4 +27,7 @@ public class RandomGenerator {
         return randomGenerator.nextDouble();
     }
 
+    public int getSeed() {
+        return seed;
+    }
 }

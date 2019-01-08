@@ -1,10 +1,11 @@
 package com.daniel.licenta.calendargenerator.algorithm.util;
 
-import com.daniel.licenta.calendargenerator.algorithm.inputmodel.StudentClass;
-import com.daniel.licenta.calendargenerator.algorithm.inputmodel.DataInputRepresentation;
-import com.daniel.licenta.calendargenerator.algorithm.inputmodel.RoomInput;
-import com.daniel.licenta.calendargenerator.algorithm.inputmodel.TeacherInput;
+import com.daniel.licenta.calendargenerator.algorithm.inputmodel.*;
 import com.daniel.licenta.calendargenerator.algorithm.model.*;
+import com.daniel.licenta.calendargenerator.algorithm.outputmodel.CalendarOutput;
+import com.daniel.licenta.calendargenerator.algorithm.outputmodel.RoomOutput;
+import com.daniel.licenta.calendargenerator.algorithm.outputmodel.StudentClassOutput;
+import com.daniel.licenta.calendargenerator.algorithm.outputmodel.TeacherOutput;
 import org.springframework.stereotype.Component;
 
 import java.util.Comparator;
@@ -185,5 +186,53 @@ public class DataMapper {
 
 
         return classRecords;
+    }
+
+    public CalendarOutput mapToOutput(DataInputRepresentation data, CalendarData calendarData, int[][][] result) {
+        CalendarOutput calendarOutput = new CalendarOutput(calendarData.getNumberOfSlotsPerDay());
+        data.getStudentClasses()
+                .stream()
+                .filter(studentClass -> !calendarData.isSemianGroup(studentClass.getIndex()))
+                .map(classInput -> new StudentClassOutput(classInput.getIdentifier(), classInput.getName(), classInput.getNumberOfStudents()))
+                .collect(Collectors.toCollection(calendarOutput::getStudentClassOutputs));
+
+        data.getTeachers()
+                .stream()
+                .map(teacherInput -> new TeacherOutput(teacherInput.getIdentifier(), teacherInput.getName()))
+                .collect(Collectors.toCollection(calendarOutput::getTeachers));
+
+        data.getRooms()
+                .stream()
+                .map(roomInput -> new RoomOutput(roomInput.getIdentifier(), roomInput.getName(), roomInput.getCapacity()))
+                .collect(Collectors.toCollection(calendarOutput::getRooms));
+
+
+        data.getStudentClasses()
+                .stream()
+                .sorted(Comparator.comparing(StudentClass::getNumberOfStudents))
+                .forEach(classInput -> {
+                    if (calendarData.isSemianGroup(classInput.getIndex())) {
+                        CourseGroupRelationship relationshipByIndex = data.getRelationshipByIndex(classInput.getIndex());
+                        for (StudentClass studentClass : relationshipByIndex.getStudentGroups()) {
+                            StudentClassOutput classOutput = calendarOutput.getStudentClassByIdentifier(studentClass.getIdentifier());
+                            mapDataToStudentClass(data, calendarData, result[classInput.getIndex()], calendarOutput, classOutput);
+                        }
+                    } else {
+                        StudentClassOutput classOutput = calendarOutput.getStudentClassByIdentifier(classInput.getIdentifier());
+                        mapDataToStudentClass(data, calendarData, result[classInput.getIndex()], calendarOutput, classOutput);
+                    }
+                });
+        return calendarOutput;
+    }
+
+    private void mapDataToStudentClass(DataInputRepresentation data, CalendarData calendarData, int[][] ints, CalendarOutput calendarOutput, StudentClassOutput classOutput) {
+        for (int j = 0; j < data.getTimeslotsPerDay() * 5; j++) {
+            int teacherPosition = ints[j][0];
+            int roomPosition = ints[j][1];
+
+            TeacherOutput teacherOutput = calendarOutput.getTeacherByIdentifier(data.getTeacherByIndex(teacherPosition).getIdentifier());
+            RoomOutput roomOutput = calendarOutput.getRoomByIdentifier(data.getRoomByIndex(roomPosition).getIdentifier());
+            classOutput.addTeachingSession(teacherOutput, j, roomOutput);
+        }
     }
 }

@@ -1,6 +1,7 @@
 package com.daniel.licenta.calendargenerator.algorithm.core;
 
 import com.daniel.licenta.calendargenerator.algorithm.model.CalendarData;
+import com.daniel.licenta.calendargenerator.algorithm.util.RandomGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,10 @@ public class DataParser {
 
     @Autowired
     private FitnessCalculator fitnessCalculator;
+
+    @Autowired
+    private RandomGenerator randomGenerator;
+
 
     public void displayResults(int[][][] cat) {
         double TEPW = 0.06;
@@ -30,6 +35,7 @@ public class DataParser {
         double a6 = fitnessCalculator.calculateClassDispersionFitness(configCSO.HOURS_IN_WEEK, cat, ICDW, 2);
         double a7 = fitnessCalculator.calculateTeacherEmptyPeriodsFitness(0, configCSO.HOURS_IN_WEEK, cat, TEPW, 2);
 
+        System.out.println("SEED : " + randomGenerator.getSeed());
         System.out.printf("\nCOST SUMMARY (as calculated for TEPW=%.2f, ICDW=%.2f, ITDW=%.2f\n", TEPW, ICDW, ITDW);
         System.out.print("-------------------------------------------------------------------\n");
         System.out.printf("\nCost of unavailability : %f", a1);
