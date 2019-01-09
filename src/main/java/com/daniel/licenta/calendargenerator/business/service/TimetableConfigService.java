@@ -67,7 +67,7 @@ public class TimetableConfigService {
 
         List<StudentData> classes = studentClasses
                 .stream()
-                .map(studentClass -> new StudentData(studentClass.getId(), studentClass.getName(), studentClass.hasChildren() ? 100l : 30l))
+                .map(studentClass -> new StudentData())
                 .collect(Collectors.toList());
 
         studentClasses.stream()

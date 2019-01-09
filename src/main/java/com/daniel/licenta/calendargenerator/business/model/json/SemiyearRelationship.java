@@ -1,12 +1,17 @@
 package com.daniel.licenta.calendargenerator.business.model.json;
 
-import lombok.Getter;
+import lombok.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-public class SemiyearRelationship {
+@Setter
+@EqualsAndHashCode
+@ToString
+@NoArgsConstructor
+public class SemiyearRelationship implements Serializable {
 
     private Long classId;
 

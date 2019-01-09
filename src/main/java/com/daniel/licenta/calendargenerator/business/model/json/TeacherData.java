@@ -1,16 +1,24 @@
 package com.daniel.licenta.calendargenerator.business.model.json;
 
-import com.daniel.licenta.calendargenerator.algorithm.inputmodel.StudentClass;
+import javafx.util.Pair;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.Serializable;
+import java.util.*;
 
-public class TeacherData {
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
+public class TeacherData implements Serializable {
 
     int identifier;
     String name;
-    Map<StudentClass, Integer> assignedStudentClasses = new HashMap<>();
+    //    Map<StudentData, Integer> assignedStudentClasses = new HashMap<>();
+    Set<Pair<StudentData, Integer>> assignedStudentClasses = new HashSet<>();
     Map<Integer, List<Integer>> unavailabilityIntervals = new HashMap<>();
 
 }
