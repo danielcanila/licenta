@@ -36,7 +36,7 @@ public class Teacher {
     @JsonIgnore
     private List<Course> courses;
 
-    @OneToMany(mappedBy = "course")
+    @OneToMany(mappedBy = "teacher")
     @JsonIdentityReference(alwaysAsId = true)
     private List<Constraint> constraints;
 

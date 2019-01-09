@@ -23,6 +23,12 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "course_sequence")
     private Long id;
 
+    @Column
+    private Long day;
+
+    @Column
+    private Long hour;
+
     @ManyToOne
     @JoinColumn(name = "teacher_id", nullable = false)
     @JsonIdentityReference(alwaysAsId = true)
@@ -33,6 +39,11 @@ public class Course {
     @JsonIdentityReference(alwaysAsId = true)
     private Lecture lecture;
 
+    @ManyToOne
+    @JoinColumn(name = "room_id", nullable = false)
+    @JsonIdentityReference(alwaysAsId = true)
+    private Room room;
+
     @ManyToMany
     @JoinTable(
             name = "t_course_student_class_link",
@@ -42,11 +53,4 @@ public class Course {
     @JsonIdentityReference(alwaysAsId = true)
     private List<StudentClass> studentClasses;
 
-    @OneToMany(mappedBy = "course")
-    @JsonIdentityReference(alwaysAsId = true)
-    private List<RoomReservation> roomReservations;
-
-    @OneToMany(mappedBy = "course")
-    @JsonIdentityReference(alwaysAsId = true)
-    private List<Constraint> constraints;
 }

@@ -30,9 +30,6 @@ public class Room {
     private Long capacity;
 
     @OneToMany(mappedBy = "room")
-    private List<RoomReservation> courses;
-
-    @OneToMany(mappedBy = "course")
     @JsonIdentityReference(alwaysAsId = true)
     private List<Constraint> constraints;
 }

@@ -7,153 +7,7 @@ import java.util.List;
 
 public class Data {
 
-    public static DataInputRepresentation testTwo() {
-        StudentClass c1 = new StudentClass(1111, "C1", 30);
-        StudentClass c2 = new StudentClass(1112, "C2", 30);
-        StudentClass c3 = new StudentClass(1113, "C3", 50);
-        StudentClass c4 = new StudentClass(1114, "C4", 50);
-        StudentClass c5 = new StudentClass(1115, "C5", 50);
-
-        TeacherInput t1 = new TeacherInput(111, "T1");
-        TeacherInput t2 = new TeacherInput(112, "T2");
-        TeacherInput t3 = new TeacherInput(113, "T3");
-        TeacherInput t4 = new TeacherInput(114, "T4");
-        TeacherInput t5 = new TeacherInput(115, "T5");
-        TeacherInput t6 = new TeacherInput(116, "T6");
-        TeacherInput t7 = new TeacherInput(117, "T7");
-        TeacherInput t8 = new TeacherInput(118, "T8");
-        TeacherInput t9 = new TeacherInput(119, "T9");
-
-
-        t1.addStudentClass(c1, 1, 1);
-        t1.addStudentClass(c2, 1, 1);
-        t1.addStudentClass(c3, 1, 1);
-        t1.addStudentClass(c4, 1, 1);
-        t1.addStudentClass(c5, 1, 1);
-        t1.addUnavailabilityInterval(0, 0, 1, 2, 3, 4, 5);
-
-        t2.addStudentClass(c1, 1, 1);
-        t2.addStudentClass(c2, 1, 1);
-        t2.addStudentClass(c3, 1, 1);
-        t2.addStudentClass(c4, 1, 1);
-        t2.addStudentClass(c5, 1, 1);
-        t2.addUnavailabilityInterval(1, 0, 1, 2, 3, 4, 5);
-
-        t3.addStudentClass(c1, 1, 1);
-        t3.addStudentClass(c2, 1, 1);
-        t3.addStudentClass(c3, 1, 1);
-        t3.addStudentClass(c4, 1, 1);
-        t3.addStudentClass(c5, 1, 1);
-
-        t4.addStudentClass(c1, 1, 1);
-        t4.addStudentClass(c2, 1, 1);
-        t4.addStudentClass(c3, 1, 1);
-        t4.addStudentClass(c4, 1, 1);
-        t4.addStudentClass(c5, 1, 1);
-
-        t5.addStudentClass(c1, 1, 1);
-        t5.addStudentClass(c2, 1, 1);
-        t5.addStudentClass(c3, 1, 1);
-        t5.addStudentClass(c4, 1, 1);
-        t5.addStudentClass(c5, 1, 1);
-
-        t6.addStudentClass(c1, 1, 1);
-        t6.addStudentClass(c2, 1, 1);
-        t6.addStudentClass(c3, 1, 1);
-        t6.addStudentClass(c4, 1, 1);
-        t6.addStudentClass(c5, 1, 1);
-
-        t7.addStudentClass(c1, 1, 1);
-        t7.addStudentClass(c2, 1, 1);
-        t7.addStudentClass(c3, 1, 1);
-        t7.addStudentClass(c4, 1, 1);
-        t7.addStudentClass(c5, 1, 1);
-
-        t8.addStudentClass(c1, 1, 1);
-        t8.addStudentClass(c2, 1, 1);
-        t8.addStudentClass(c3, 1, 1);
-        t8.addStudentClass(c4, 1, 1);
-        t8.addStudentClass(c5, 1, 1);
-
-        t9.addStudentClass(c1, 1, 1);
-        t9.addStudentClass(c2, 1, 1);
-        t9.addStudentClass(c3, 1, 1);
-        t9.addStudentClass(c4, 1, 1);
-        t9.addStudentClass(c5, 1, 1);
-
-
-        DataInputRepresentation dataInputRepresentation1 = new DataInputRepresentation(6);
-        dataInputRepresentation1.setStudentClasses(Arrays.asList(c1, c2, c3, c4, c5));
-        dataInputRepresentation1.setTeachers(Arrays.asList(t1, t2, t3, t4, t5, t6, t7, t8, t9));
-
-
-        return dataInputRepresentation1;
-    }
-
-    public DataInputRepresentation testOne() {
-        StudentClass c1 = new StudentClass(1111, "C1", 30);
-        StudentClass c2 = new StudentClass(1112, "C2", 30);
-        StudentClass c3 = new StudentClass(1113, "C3", 30);
-        StudentClass c4 = new StudentClass(1114, "C4", 30);
-        StudentClass c5 = new StudentClass(1115, "C5", 30);
-
-        TeacherInput t1 = new TeacherInput(111, "T1");
-        TeacherInput t2 = new TeacherInput(112, "T2");
-        TeacherInput t3 = new TeacherInput(113, "T3");
-        TeacherInput t4 = new TeacherInput(114, "T4");
-        TeacherInput t5 = new TeacherInput(115, "T5");
-        TeacherInput t6 = new TeacherInput(116, "T6");
-        TeacherInput t7 = new TeacherInput(117, "T7");
-        TeacherInput t8 = new TeacherInput(118, "T8");
-        TeacherInput t9 = new TeacherInput(119, "T9");
-
-
-        t1.addStudentClass(c1, 10, 1);
-        t1.addStudentClass(c2, 10, 1);
-
-        t2.addStudentClass(c2, 10, 1);
-        t2.addStudentClass(c3, 5, 1);
-
-        t3.addStudentClass(c3, 5, 1);
-        t3.addStudentClass(c4, 10, 1);
-
-        t4.addStudentClass(c4, 10, 1);
-        t4.addStudentClass(c5, 10, 1);
-
-        t5.addStudentClass(c5, 10, 1);
-        t5.addStudentClass(c1, 10, 1);
-
-        t6.addStudentClass(c1, 10, 1);
-        t6.addStudentClass(c2, 5, 1);
-
-        t7.addStudentClass(c2, 5, 1);
-        t7.addStudentClass(c3, 10, 1);
-
-        t8.addStudentClass(c3, 10, 1);
-        t8.addStudentClass(c4, 5, 1);
-
-        t9.addStudentClass(c4, 5, 1);
-        t9.addStudentClass(c5, 10, 1);
-
-
-        RoomInput[] roomRecords = new RoomInput[4];
-        for (int i = 0; i < 2; i++) {
-            roomRecords[i] = new RoomInput(i, "Room" + i, 30);
-        }
-        for (int i = 2; i < 4; i++) {
-            roomRecords[i] = new RoomInput(i, "Room" + i, 50);
-        }
-
-
-        DataInputRepresentation dataInputRepresentation1 = new DataInputRepresentation(6);
-        dataInputRepresentation1.setStudentClasses(Arrays.asList(c1, c2, c3, c4, c5));
-        dataInputRepresentation1.setTeachers(Arrays.asList(t1, t2, t3, t4, t5, t6, t7, t8, t9));
-        dataInputRepresentation1.setRooms(Arrays.asList(roomRecords));
-        return dataInputRepresentation1;
-    }
-
-
-    public static DataInputRepresentation facultyExampleTwo() {
+    public static DataInputRepresentation facultyExample() {
         StudentClass g1 = new StudentClass(1111, "G1", 30);
         StudentClass g2 = new StudentClass(1112, "G2", 30);
         StudentClass g3 = new StudentClass(1113, "G3", 30);
@@ -203,132 +57,130 @@ public class Data {
         t01.addUnavailabilityInterval(2, 0, 1, 2);
         t01.addUnavailabilityInterval(3, 0, 1, 2);
         t01.addUnavailabilityInterval(4, 0, 1, 2);
-        t01.addStudentClass(g1, 1, 1);
-        t01.addStudentClass(g2, 1, 1);
-        t01.addStudentClass(g3, 1, 1);
-        t01.addStudentClass(g4, 1, 1);
-        t01.addStudentClass(SA, 1, 1);
-        t01.addStudentClass(SB, 1, 1);
+        t01.addStudentClass(g1, 1);
+        t01.addStudentClass(g2, 1);
+        t01.addStudentClass(g3, 1);
+        t01.addStudentClass(g4, 1);
+        t01.addStudentClass(SA, 1);
 
         TeacherInput t02 = new TeacherInput(112, "T02");
-        t02.addStudentClass(g1, 1, 1);
-        t02.addStudentClass(g2, 1, 1);
-        t02.addStudentClass(g3, 1, 1);
-        t02.addStudentClass(g4, 1, 1);
-        t02.addStudentClass(SA, 1, 1);
+        t02.addStudentClass(g1, 1);
+        t02.addStudentClass(g2, 1);
+        t02.addStudentClass(g3, 1);
+        t02.addStudentClass(g4, 1);
+        t02.addStudentClass(SA, 1);
 
         TeacherInput t03 = new TeacherInput(113, "T03");
-        t03.addStudentClass(g1, 1, 1);
-        t03.addStudentClass(g2, 1, 1);
-        t03.addStudentClass(g3, 1, 1);
-        t03.addStudentClass(g4, 1, 1);
-        t03.addStudentClass(SA, 1, 1);
+        t03.addStudentClass(g1, 1);
+        t03.addStudentClass(g2, 1);
+        t03.addStudentClass(g3, 1);
+        t03.addStudentClass(g4, 1);
+        t03.addStudentClass(SA, 1);
 
         TeacherInput t04 = new TeacherInput(114, "T04");
-        t04.addStudentClass(g1, 1, 1);
-        t04.addStudentClass(g2, 1, 1);
-        t04.addStudentClass(g3, 1, 1);
-        t04.addStudentClass(g4, 1, 1);
-        t04.addStudentClass(SA, 1, 1);
-        t04.addStudentClass(SB, 1, 1);
+        t04.addStudentClass(g1, 1);
+        t04.addStudentClass(g2, 1);
+        t04.addStudentClass(g3, 1);
+        t04.addStudentClass(g4, 1);
+        t04.addStudentClass(SA, 1);
+        t04.addStudentClass(SB, 1);
 
         TeacherInput t05 = new TeacherInput(115, "T05");
         t05.addUnavailabilityInterval(3, 0, 1, 2, 3, 4, 5);
-        t05.addStudentClass(g1, 1, 1);
-        t05.addStudentClass(g2, 1, 1);
-        t05.addStudentClass(g3, 1, 1);
-        t05.addStudentClass(g4, 1, 1);
-        t05.addStudentClass(SA, 1, 1);
+        t05.addStudentClass(g1, 1);
+        t05.addStudentClass(g2, 1);
+        t05.addStudentClass(g3, 1);
+        t05.addStudentClass(g4, 1);
+        t05.addStudentClass(SA, 1);
 
         TeacherInput t06 = new TeacherInput(121, "T06");
-        t06.addStudentClass(g1, 1, 1);
-        t06.addStudentClass(g2, 1, 1);
-        t06.addStudentClass(g3, 1, 1);
-        t06.addStudentClass(g4, 1, 1);
-        t06.addStudentClass(g5, 1, 1);
-        t06.addStudentClass(g6, 1, 1);
-        t06.addStudentClass(g7, 1, 1);
-        t06.addStudentClass(g8, 1, 1);
+        t06.addStudentClass(g1, 1);
+        t06.addStudentClass(g2, 1);
+        t06.addStudentClass(g3, 1);
+        t06.addStudentClass(g4, 1);
+        t06.addStudentClass(g5, 1);
+        t06.addStudentClass(g6, 1);
+        t06.addStudentClass(g7, 1);
+        t06.addStudentClass(g8, 1);
 
         TeacherInput t07 = new TeacherInput(122, "T07");
-        t07.addUnavailabilityInterval(4,0,1,2,3,4,5);
-        t07.addStudentClass(g1, 1, 1);
-        t07.addStudentClass(g2, 1, 1);
-        t07.addStudentClass(g3, 1, 1);
-        t07.addStudentClass(g4, 1, 1);
-        t07.addStudentClass(g5, 1, 1);
-        t07.addStudentClass(g6, 1, 1);
-        t07.addStudentClass(g7, 1, 1);
-        t07.addStudentClass(g8, 1, 1);
+        t07.addUnavailabilityInterval(4, 0, 1, 2, 3, 4, 5);
+        t07.addStudentClass(g1, 1);
+        t07.addStudentClass(g2, 1);
+        t07.addStudentClass(g3, 1);
+        t07.addStudentClass(g4, 1);
+        t07.addStudentClass(g5, 1);
+        t07.addStudentClass(g6, 1);
+        t07.addStudentClass(g7, 1);
+        t07.addStudentClass(g8, 1);
 
         TeacherInput t08 = new TeacherInput(123, "T08");
-        t08.addStudentClass(g1, 1, 1);
-        t08.addStudentClass(g2, 1, 1);
-        t08.addStudentClass(g3, 1, 1);
-        t08.addStudentClass(g4, 1, 1);
-        t08.addStudentClass(g5, 1, 1);
-        t08.addStudentClass(g6, 1, 1);
-        t08.addStudentClass(g7, 1, 1);
-        t08.addStudentClass(g8, 1, 1);
+        t08.addStudentClass(g1, 1);
+        t08.addStudentClass(g2, 1);
+        t08.addStudentClass(g3, 1);
+        t08.addStudentClass(g4, 1);
+        t08.addStudentClass(g5, 1);
+        t08.addStudentClass(g6, 1);
+        t08.addStudentClass(g7, 1);
+        t08.addStudentClass(g8, 1);
 
         TeacherInput t09 = new TeacherInput(124, "T09");
-        t09.addStudentClass(g1, 1, 1);
-        t09.addStudentClass(g2, 1, 1);
-        t09.addStudentClass(g3, 1, 1);
-        t09.addStudentClass(g4, 1, 1);
-        t09.addStudentClass(g5, 1, 1);
-        t09.addStudentClass(g6, 1, 1);
-        t09.addStudentClass(g7, 1, 1);
-        t09.addStudentClass(g8, 1, 1);
+        t09.addStudentClass(g1, 1);
+        t09.addStudentClass(g2, 1);
+        t09.addStudentClass(g3, 1);
+        t09.addStudentClass(g4, 1);
+        t09.addStudentClass(g5, 1);
+        t09.addStudentClass(g6, 1);
+        t09.addStudentClass(g7, 1);
+        t09.addStudentClass(g8, 1);
 
         TeacherInput t15 = new TeacherInput(130, "T15");
-        t15.addStudentClass(g1, 1, 1);
-        t15.addStudentClass(g2, 1, 1);
-        t15.addStudentClass(g3, 1, 1);
-        t15.addStudentClass(g4, 1, 1);
-        t15.addStudentClass(g5, 1, 1);
-        t15.addStudentClass(g6, 1, 1);
-        t15.addStudentClass(g7, 1, 1);
-        t15.addStudentClass(g8, 1, 1);
+        t15.addStudentClass(g1, 1);
+        t15.addStudentClass(g2, 1);
+        t15.addStudentClass(g3, 1);
+        t15.addStudentClass(g4, 1);
+        t15.addStudentClass(g5, 1);
+        t15.addStudentClass(g6, 1);
+        t15.addStudentClass(g7, 1);
+        t15.addStudentClass(g8, 1);
 
         TeacherInput t16 = new TeacherInput(136, "T16");
-        t16.addStudentClass(g5, 1, 1);
-        t16.addStudentClass(g6, 1, 1);
-        t16.addStudentClass(g7, 1, 1);
-        t16.addStudentClass(g8, 1, 1);
-        t16.addStudentClass(SA, 1, 1);
-        t16.addStudentClass(SB, 1, 1);
+        t16.addStudentClass(g5, 1);
+        t16.addStudentClass(g6, 1);
+        t16.addStudentClass(g7, 1);
+        t16.addStudentClass(g8, 1);
+        t16.addStudentClass(SA, 1);
+        t16.addStudentClass(SB, 1);
 
         TeacherInput t17 = new TeacherInput(137, "T17");
-        t17.addStudentClass(g5, 1, 1);
-        t17.addStudentClass(g6, 1, 1);
-        t17.addStudentClass(g7, 1, 1);
-        t17.addStudentClass(g8, 1, 1);
-        t17.addStudentClass(SA, 1, 1);
-        t17.addStudentClass(SB, 1, 1);
+        t17.addStudentClass(g5, 1);
+        t17.addStudentClass(g6, 1);
+        t17.addStudentClass(g7, 1);
+        t17.addStudentClass(g8, 1);
+        t17.addStudentClass(SB, 1);
 
 
         TeacherInput t18 = new TeacherInput(138, "T18");
-        t18.addStudentClass(g5, 1, 1);
-        t18.addStudentClass(g6, 1, 1);
-        t18.addStudentClass(g7, 1, 1);
-        t18.addStudentClass(g8, 1, 1);
-        t18.addStudentClass(SB, 1, 1);
+        t18.addStudentClass(g5, 1);
+        t18.addStudentClass(g6, 1);
+        t18.addStudentClass(g7, 1);
+        t18.addStudentClass(g8, 1);
+        t18.addStudentClass(SB, 1);
 
 
         TeacherInput t19 = new TeacherInput(139, "T19");
-        t19.addStudentClass(g5, 1, 1);
-        t19.addStudentClass(g6, 1, 1);
-        t19.addStudentClass(g7, 1, 1);
-        t19.addStudentClass(g8, 1, 1);
-        t19.addStudentClass(SB, 1, 1);
+        t19.addStudentClass(g5, 1);
+        t19.addStudentClass(g6, 1);
+        t19.addStudentClass(g7, 1);
+        t19.addStudentClass(g8, 1);
+        t19.addStudentClass(SB, 1);
 
         TeacherInput t20 = new TeacherInput(140, "T20");
-        t20.addStudentClass(g5, 1, 1);
-        t20.addStudentClass(g6, 1, 1);
-        t20.addStudentClass(g7, 1, 1);
-        t20.addStudentClass(g8, 1, 1);
-        t20.addStudentClass(SB, 1, 1);
+        t20.addStudentClass(g5, 1);
+        t20.addStudentClass(g6, 1);
+        t20.addStudentClass(g7, 1);
+        t20.addStudentClass(g8, 1);
+        t20.addStudentClass(SB, 1);
 
 
         List<TeacherInput> teacherInputs =

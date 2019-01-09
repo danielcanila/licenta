@@ -29,57 +29,57 @@ public class ConfigCSO {
     public static double ICDW_O = 0.06;
 
     public void overrideConfigData(ConfigData configData) {
-        nullCheckSetting(configData.mr, () -> {
-            ConfigCSO.MR = configData.mr;
-        });
-        nullCheckSetting(configData.cats, () -> {
-            ConfigCSO.CATS = configData.cats;
-        });
-        nullCheckSetting(configData.iterations, () -> {
-            ConfigCSO.ITERATIONS = configData.iterations;
-        });
-        nullCheckSetting(configData.refinementSteps, () -> {
-            ConfigCSO.REFINEMENT_STEPS = configData.refinementSteps;
-        });
-        nullCheckSetting(configData.maxFitness, () -> {
-            ConfigCSO.MAX_FITNESS = configData.maxFitness;
-        });
-        nullCheckSetting(configData.hardConstraintWeight, () -> {
-            ConfigCSO.HARD_CONSTRAINT_WEIGHT = configData.hardConstraintWeight;
-        });
-        nullCheckSetting(configData.seekingMemoryPool, () -> {
-            ConfigCSO.SEEKING_MEMORY_POOL = configData.seekingMemoryPool;
-        });
-        nullCheckSetting(configData.seekingRangeDimension, () -> {
-            ConfigCSO.SEEKING_RANGE_DIMENSION = configData.seekingRangeDimension;
-        });
-        nullCheckSetting(configData.hoursInWeek, () -> {
-            ConfigCSO.HOURS_IN_WEEK = configData.hoursInWeek;
-        });
-        nullCheckSetting(configData.hoursPerDay, () -> {
-            ConfigCSO.HOURS_PER_DAY = configData.hoursPerDay;
-        });
-        nullCheckSetting(configData.seed, () -> {
-            ConfigCSO.SEED = configData.seed;
-        });
-        nullCheckSetting(configData.emptyPeriodWeight, () -> {
-            ConfigCSO.TEPW = configData.emptyPeriodWeight;
-        });
-        nullCheckSetting(configData.teacherDispersionWeight, () -> {
-            ConfigCSO.ITDW = configData.teacherDispersionWeight;
-        });
-        nullCheckSetting(configData.classDispersionWeight, () -> {
-            ConfigCSO.ICDW = configData.classDispersionWeight;
-        });
-        nullCheckSetting(configData.emptyPeriodWeightOptimizationPhase, () -> {
-            ConfigCSO.TEPW_O = configData.emptyPeriodWeightOptimizationPhase;
-        });
-        nullCheckSetting(configData.teacherDispersionWeightOptimizationPhase, () -> {
-            ConfigCSO.ITDW_O = configData.teacherDispersionWeightOptimizationPhase;
-        });
-        nullCheckSetting(configData.classDispersionWeight, () -> {
-            ConfigCSO.ICDW_O = configData.classDispersionWeightOptimizationPhase;
-        });
+//        nullCheckSetting(configData.mr, () -> {
+//            ConfigCSO.MR = configData.mr;
+//        });
+//        nullCheckSetting(configData.cats, () -> {
+//            ConfigCSO.CATS = configData.cats;
+//        });
+//        nullCheckSetting(configData.iterations, () -> {
+//            ConfigCSO.ITERATIONS = configData.iterations;
+//        });
+//        nullCheckSetting(configData.refinementSteps, () -> {
+//            ConfigCSO.REFINEMENT_STEPS = configData.refinementSteps;
+//        });
+//        nullCheckSetting(configData.maxFitness, () -> {
+//            ConfigCSO.MAX_FITNESS = configData.maxFitness;
+//        });
+//        nullCheckSetting(configData.hardConstraintWeight, () -> {
+//            ConfigCSO.HARD_CONSTRAINT_WEIGHT = configData.hardConstraintWeight;
+//        });
+//        nullCheckSetting(configData.seekingMemoryPool, () -> {
+//            ConfigCSO.SEEKING_MEMORY_POOL = configData.seekingMemoryPool;
+//        });
+//        nullCheckSetting(configData.seekingRangeDimension, () -> {
+//            ConfigCSO.SEEKING_RANGE_DIMENSION = configData.seekingRangeDimension;
+//        });
+//        nullCheckSetting(configData.hoursInWeek, () -> {
+//            ConfigCSO.HOURS_IN_WEEK = configData.hoursInWeek;
+//        });
+//        nullCheckSetting(configData.hoursPerDay, () -> {
+//            ConfigCSO.HOURS_PER_DAY = configData.hoursPerDay;
+//        });
+//        nullCheckSetting(configData.seed, () -> {
+//            ConfigCSO.SEED = configData.seed;
+//        });
+//        nullCheckSetting(configData.emptyPeriodWeight, () -> {
+//            ConfigCSO.TEPW = configData.emptyPeriodWeight;
+//        });
+//        nullCheckSetting(configData.teacherDispersionWeight, () -> {
+//            ConfigCSO.ITDW = configData.teacherDispersionWeight;
+//        });
+//        nullCheckSetting(configData.classDispersionWeight, () -> {
+//            ConfigCSO.ICDW = configData.classDispersionWeight;
+//        });
+//        nullCheckSetting(configData.emptyPeriodWeightOptimizationPhase, () -> {
+//            ConfigCSO.TEPW_O = configData.emptyPeriodWeightOptimizationPhase;
+//        });
+//        nullCheckSetting(configData.teacherDispersionWeightOptimizationPhase, () -> {
+//            ConfigCSO.ITDW_O = configData.teacherDispersionWeightOptimizationPhase;
+//        });
+//        nullCheckSetting(configData.classDispersionWeight, () -> {
+//            ConfigCSO.ICDW_O = configData.classDispersionWeightOptimizationPhase;
+//        });
 
     }
 

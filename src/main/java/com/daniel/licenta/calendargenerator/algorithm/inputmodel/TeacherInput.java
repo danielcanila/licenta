@@ -13,7 +13,7 @@ public class TeacherInput {
     int index;
     int identifier;
     String name;
-    Map<StudentClass, Pair<Integer, Integer>> assignedStudentClasses = new HashMap<>();
+    Map<StudentClass, Integer> assignedStudentClasses = new HashMap<>();
     Map<Integer, List<Integer>> unavailabilityIntervals = new HashMap<>();
 
     public TeacherInput(int identifier, String name) {
@@ -21,9 +21,9 @@ public class TeacherInput {
         this.name = name;
     }
 
-    public void addStudentClass(StudentClass studentClass, int timeSlots, int lessons) {
-        assignedStudentClasses.put(studentClass, new Pair<>(timeSlots, lessons));
-        studentClass.addTeacher(this, timeSlots, lessons);
+    public void addStudentClass(StudentClass studentClass, int timeSlots) {
+        assignedStudentClasses.put(studentClass, timeSlots);
+        studentClass.addTeacher(this, timeSlots);
     }
 
     public void addUnavailabilityInterval(int day, int timeSlot) {

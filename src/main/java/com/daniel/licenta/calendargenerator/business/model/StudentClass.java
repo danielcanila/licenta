@@ -27,11 +27,21 @@ public class StudentClass {
     @Column
     private String name;
 
+    @ManyToOne
+    @JoinColumn(name = "parent_class_id", nullable = true)
+    @JsonIdentityReference(alwaysAsId = true)
+    private StudentClass studentClass;
+
     @OneToMany(mappedBy = "studentClass")
     @JsonIdentityReference(alwaysAsId = true)
-    private List<Student> students;
+    private List<StudentClass> studentClasses;
 
     @ManyToMany(mappedBy = "studentClasses")
     @JsonIdentityReference(alwaysAsId = true)
     private List<Course> courses;
+
+
+    public boolean hasChildren() {
+        return !studentClasses.isEmpty();
+    }
 }

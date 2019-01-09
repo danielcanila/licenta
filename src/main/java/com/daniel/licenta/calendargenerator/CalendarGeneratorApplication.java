@@ -1,5 +1,6 @@
 package com.daniel.licenta.calendargenerator;
 
+import com.daniel.licenta.calendargenerator.algorithm.inputmodel.ConfigData;
 import com.daniel.licenta.calendargenerator.business.model.*;
 import org.dozer.DozerBeanMapper;
 import org.dozer.loader.api.BeanMappingBuilder;
@@ -39,9 +40,9 @@ public class CalendarGeneratorApplication implements WebMvcConfigurer {
             mapping(Course.class, Course.class, TypeMappingOptions.mapNull(false));
             mapping(Lecture.class, Lecture.class, TypeMappingOptions.mapNull(false));
             mapping(Room.class, Room.class, TypeMappingOptions.mapNull(false));
-            mapping(Student.class, Student.class, TypeMappingOptions.mapNull(false));
             mapping(StudentClass.class, StudentClass.class, TypeMappingOptions.mapNull(false));
             mapping(Teacher.class, Teacher.class, TypeMappingOptions.mapNull(false));
+            mapping(ConfigData.class, ConfigData.class, TypeMappingOptions.mapNull(false));
         }
     };
 }

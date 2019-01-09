@@ -62,12 +62,12 @@ public class DataMapper {
                 occupiedHours += teacherInput.getAssignedStudentClasses().entrySet().
                         stream()
                         .filter(classInputPairEntry -> classInputPairEntry.getKey().equals(classInput))
-                        .map(classInputPairEntry -> classInputPairEntry.getValue().getKey())
+                        .map(Map.Entry::getValue)
                         .mapToInt(Integer::intValue)
                         .sum();
             }
             if (occupiedHours < data.getTimeslotsPerDay() * 5) {
-                emptyTimeSlotsTeacher.addStudentClass(classInput, (data.getTimeslotsPerDay() * 5) - occupiedHours, 1);
+                emptyTimeSlotsTeacher.addStudentClass(classInput, (data.getTimeslotsPerDay() * 5) - occupiedHours);
             }
 
 
@@ -118,9 +118,9 @@ public class DataMapper {
                     .sorted(Comparator.comparing(o -> o.getKey().getIndex()))
                     .forEach(classInputPairEntry -> {
                         teacher.classesHeTeaches[teacher.numberOfClasses][0] = classInputPairEntry.getKey().getIndex();
-                        teacher.classesHeTeaches[teacher.numberOfClasses][1] = classInputPairEntry.getValue().getKey();
-                        teacher.classesHeTeaches[teacher.numberOfClasses][2] = classInputPairEntry.getValue().getValue();
-                        teacher.totalHours += classInputPairEntry.getValue().getKey();
+                        teacher.classesHeTeaches[teacher.numberOfClasses][1] = classInputPairEntry.getValue();
+                        teacher.classesHeTeaches[teacher.numberOfClasses][2] = 1;
+                        teacher.totalHours += classInputPairEntry.getValue();
                         teacher.numberOfClasses++;
                     });
 
@@ -175,8 +175,8 @@ public class DataMapper {
                     .sorted(Comparator.comparing(o -> o.getKey().getIndex()))
                     .forEach(keyValue -> {
                         classRecord.teachersOfClassAndHours[classRecord.numberOfTeachers][0] = keyValue.getKey().getIndex();
-                        classRecord.teachersOfClassAndHours[classRecord.numberOfTeachers][1] = keyValue.getValue().getKey();
-                        classRecord.teachersOfClassAndHours[classRecord.numberOfTeachers][2] = keyValue.getValue().getValue();
+                        classRecord.teachersOfClassAndHours[classRecord.numberOfTeachers][1] = keyValue.getValue();
+                        classRecord.teachersOfClassAndHours[classRecord.numberOfTeachers][2] = 1;
                         classRecord.numberOfTeachers++;
                     });
 

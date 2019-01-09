@@ -31,11 +31,6 @@ public class Constraint {
     private Boolean hardConstraint = Boolean.FALSE;
 
     @ManyToOne
-    @JoinColumn(name = "course_id", nullable = true)
-    @JsonIdentityReference(alwaysAsId = true)
-    private Course course;
-
-    @ManyToOne
     @JoinColumn(name = "teacher_id", nullable = true)
     @JsonIdentityReference(alwaysAsId = true)
     private Teacher teacher;

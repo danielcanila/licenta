@@ -1,21 +1,34 @@
 package com.daniel.licenta.calendargenerator.algorithm.inputmodel;
 
-public class ConfigData {
-    public Integer mr;
-    public Integer cats;
-    public Integer iterations;
-    public Integer refinementSteps;
+import com.sun.xml.internal.ws.developer.Serialization;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.io.Serializable;
+
+@Getter
+@Setter
+@EqualsAndHashCode
+public class ConfigData implements Serializable {
+    public String name;
+    public Long mr;
+    public Long cats;
+    public Long iterations;
+    public Long refinementSteps;
     public Double maxFitness;
-    public Integer hardConstraintWeight;
-    public Integer seekingMemoryPool;
-    public Integer seekingRangeDimension;
-    public Integer hoursInWeek;
-    public Integer hoursPerDay;
-    public Integer seed;
+    public Long hardConstraintWeight;
+    public Long seekingMemoryPool;
+    public Long seekingRangeDimension;
+    public Long hoursInWeek;
+    public Long hoursPerDay;
+    public Long seed;
     public Double emptyPeriodWeight;
     public Double teacherDispersionWeight;
     public Double classDispersionWeight;
     public Double emptyPeriodWeightOptimizationPhase;
     public Double teacherDispersionWeightOptimizationPhase;
     public Double classDispersionWeightOptimizationPhase;
+    public Long timeslotsPerDay;
+
 }
