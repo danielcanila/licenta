@@ -1,0 +1,14 @@
+.main-page {
+    text-align: center;
+    width: 1300px;
+    height: 800px;
+    position: relative;
+    left: 50%;
+    margin-left: -650px;
+}
+
+.nav-item, nav-item:hover, nav-item:active {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+}

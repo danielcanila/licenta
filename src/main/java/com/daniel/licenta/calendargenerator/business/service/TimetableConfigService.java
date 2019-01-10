@@ -127,7 +127,7 @@ public class TimetableConfigService {
         int hoursPerDay = timetableConfig.getConfig().getConfigData().getHoursPerDay().intValue();
 
         assignments.stream()
-                .filter(assignment -> assignment.getLectureId() != null)
+                .filter(assignment -> assignment.getTeacherId() == null)
                 .forEach(assignmentDTO -> {
                     Lecture lecture = lectures.stream()
                             .filter(lect -> lect.getId().equals(assignmentDTO.getLectureId()))

@@ -1,5 +1,6 @@
 package com.daniel.licenta.calendargenerator.business.model;
 
+import com.daniel.licenta.calendargenerator.algorithm.inputmodel.ConfigData;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -25,9 +26,15 @@ public class TimetableResult {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "timetable_result_sequence")
     private Long id;
 
-    @OneToMany(mappedBy = "timetableResult")
+    @Column
+    private String name;
+
+    @OneToMany(mappedBy = "timetableResult", fetch = FetchType.LAZY)
     private List<SlotReservation> slotReservations = new ArrayList<>();
 
+    @ManyToOne
+    @JoinColumn(name = "config_id", nullable = false)
+    private TimetableConfig timetableConfig;
 
     public void addSlotReservations(List<SlotReservation> slotReservations) {
         slotReservations.forEach(slotReservation -> slotReservation.setTimetableResult(this));

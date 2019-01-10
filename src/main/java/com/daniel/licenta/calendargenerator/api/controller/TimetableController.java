@@ -4,12 +4,11 @@ import com.daniel.licenta.calendargenerator.api.model.SlotReservationDTO;
 import com.daniel.licenta.calendargenerator.business.model.TimetableResult;
 import com.daniel.licenta.calendargenerator.business.service.TimetableService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/timetable")
@@ -20,17 +19,19 @@ public class TimetableController {
     private TimetableService timetableService;
 
     @GetMapping("/triggerConfig/{id}")
-    public TimetableResult generateTimetable(@PathVariable("id") long id) {
-        return timetableService.triggerCalendarGenerator(id);
+    public String generateTimetable(@PathVariable("id") long id) {
+        timetableService.triggerCalendarGenerator(id);
+        return "Request was sent. Timetable is generating and should be available soon!";
     }
 
-    @GetMapping("{id}")
-    public TimetableResult retrieveTimetable(@PathVariable("id") long id) {
-        return timetableService.getTimetableResult(id);
+    @GetMapping()
+    public List<TimetableResult> retrieveTimetable() {
+        return timetableService.getTimetableResults();
     }
 
+    //    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("{id}/class/{classId}")
-    public List<SlotReservationDTO> retrieveTimetable(@PathVariable("id") long id, @PathVariable("classId") long classId) {
+    public Map<Long, List<SlotReservationDTO>> retrieveTimetable(@PathVariable("id") long id, @PathVariable("classId") long classId) {
         return timetableService.getTimetableForClass(id, classId);
     }
 }

@@ -14,8 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -33,26 +36,39 @@ public class TimetableService {
     @Autowired
     private SlotReservationRepository slotReservationRepository;
 
-    public TimetableResult triggerCalendarGenerator(Long id) {
-        TimetableConfig timetableConfig = timetableConfigRepository.findById(id).orElseThrow(() -> new RuntimeException("Config not found!"));
-        TimetableResult timetableResult = timetableGenerator.generateTimeTable(timetableConfig.getConfig());
-        TimetableResult save = timetableResultRepository.save(timetableResult);
-        slotReservationRepository.saveAll(timetableResult.getSlotReservations());
-        return save;
+    public void triggerCalendarGenerator(Long id) {
+        new Thread(() -> {
+            TimetableConfig timetableConfig = timetableConfigRepository.findById(id).orElseThrow(() -> new RuntimeException("Config not found!"));
+            TimetableResult timetableResult = timetableGenerator.generateTimeTable(timetableConfig.getConfig());
+
+            timetableResult.setName(timetableConfig.getName() + " - " + LocalDateTime.now());
+            timetableResult.setTimetableConfig(timetableConfig);
+            timetableResultRepository.save(timetableResult);
+            slotReservationRepository.saveAll(timetableResult.getSlotReservations());
+        }).start();
     }
 
-    public TimetableResult getTimetableResult(Long id) {
-        return timetableResultRepository.findById(id).orElseThrow(() -> new RuntimeException("Result now fount!"));
+    public List<TimetableResult> getTimetableResults() {
+        List<TimetableResult> found = timetableResultRepository.findAll();
+
+        return found.stream()
+                .map(timetableResult -> {
+                    TimetableResult result = new TimetableResult();
+                    result.setName(timetableResult.getName());
+                    result.setId(timetableResult.getId());
+                    return result;
+                })
+                .collect(Collectors.toList());
     }
 
-    public List<SlotReservationDTO> getTimetableForClass(Long id, Long classId) {
+    public Map<Long, List<SlotReservationDTO>> getTimetableForClass(Long id, Long classId) {
         TimetableResult timetableResult = timetableResultRepository.findById(id).orElseThrow(() -> new RuntimeException("Result now fount!"));
 
         return timetableResult.getSlotReservations()
                 .stream()
                 .filter(slotReservation -> slotReservation.getStudentClass().getId().equals(classId))
                 .map(this::mapToDTO)
-                .collect(Collectors.toList());
+                .collect(Collectors.groupingBy(SlotReservationDTO::getDay));
     }
 
     private SlotReservationDTO mapToDTO(SlotReservation slotReservation) {
