@@ -8,10 +8,10 @@ import java.util.List;
 @Getter
 public class CourseGroupRelationship {
 
-    private StudentClass course;
-    List<StudentClass> studentGroups = new ArrayList<>();
+    private StudentClassInput course;
+    List<StudentClassInput> studentGroups = new ArrayList<>();
 
-    public CourseGroupRelationship(StudentClass course) {
+    public CourseGroupRelationship(StudentClassInput course) {
         this.course = course;
     }
 }

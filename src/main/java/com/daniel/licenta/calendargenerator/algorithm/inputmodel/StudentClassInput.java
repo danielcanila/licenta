@@ -8,7 +8,7 @@ import java.util.Map;
 
 @Getter
 @EqualsAndHashCode(of = {"index", "identifier", "name"})
-public class StudentClass {
+public class StudentClassInput {
 
     int index;
     int identifier;
@@ -17,13 +17,19 @@ public class StudentClass {
 
     Map<TeacherInput, Integer> assignedTeachers = new HashMap<>();
 
-    public StudentClass(int identifier, String name, int numberOfStudents) {
+    public StudentClassInput(int identifier, String name, int numberOfStudents) {
         this.identifier = identifier;
         this.name = name;
         this.numberOfStudents = numberOfStudents;
     }
 
     public void addTeacher(TeacherInput teacherInput, int hours) {
-        assignedTeachers.put(teacherInput, hours);
+        Integer integer = assignedTeachers.get(teacherInput);
+        if (integer != null) {
+            assignedTeachers.remove(teacherInput);
+            assignedTeachers.put(teacherInput, integer + hours);
+        } else {
+            assignedTeachers.put(teacherInput, hours);
+        }
     }
 }

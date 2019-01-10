@@ -45,4 +45,8 @@ public class TeacherController {
         return teacherService.deleteLecturesFromTeacher(id, ids);
     }
 
+    @PutMapping("{id}/unavailabilityTimeslots")
+    public Teacher setUnavailabilityTimeslots(@PathVariable("id") Long id, @RequestBody List<Long> timeslots) {
+        return teacherService.setUnavailabilityTimeslots(id, timeslots);
+    }
 }

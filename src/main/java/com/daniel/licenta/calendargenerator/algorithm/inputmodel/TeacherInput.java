@@ -1,10 +1,13 @@
 package com.daniel.licenta.calendargenerator.algorithm.inputmodel;
 
-import javafx.util.Pair;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 
 @Getter
 @EqualsAndHashCode(of = {"index", "identifier", "name"})
@@ -13,7 +16,7 @@ public class TeacherInput {
     int index;
     int identifier;
     String name;
-    Map<StudentClass, Integer> assignedStudentClasses = new HashMap<>();
+    Map<StudentClassInput, Integer> assignedStudentClasses = new HashMap<>();
     Map<Integer, List<Integer>> unavailabilityIntervals = new HashMap<>();
 
     public TeacherInput(int identifier, String name) {
@@ -21,8 +24,14 @@ public class TeacherInput {
         this.name = name;
     }
 
-    public void addStudentClass(StudentClass studentClass, int timeSlots) {
-        assignedStudentClasses.put(studentClass, timeSlots);
+    public void addStudentClass(StudentClassInput studentClass, int timeSlots) {
+        Integer integer = assignedStudentClasses.get(studentClass);
+        if (integer != null) {
+            assignedStudentClasses.remove(studentClass);
+            assignedStudentClasses.put(studentClass, integer + timeSlots);
+        } else {
+            assignedStudentClasses.put(studentClass, timeSlots);
+        }
         studentClass.addTeacher(this, timeSlots);
     }
 

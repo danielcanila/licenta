@@ -1,17 +1,15 @@
 package com.daniel.licenta.calendargenerator.business.model.json;
 
-import com.daniel.licenta.calendargenerator.business.model.Teacher;
-import javafx.util.Pair;
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 @Getter
 @Setter
-@EqualsAndHashCode
-@ToString
+@EqualsAndHashCode(exclude = {"assignedTeachers"})
 @NoArgsConstructor
 public class StudentData implements Serializable {
 
@@ -19,7 +17,10 @@ public class StudentData implements Serializable {
     String name;
     Long numberOfStudents;
 
-    //    Map<TeacherData, Integer> assignedTeachers = new HashMap<>();
-    Set<Pair<Teacher, Integer>> assignedTeachers = new HashSet<>();
+    public StudentData(Long identifier, String name, Long numberOfStudents) {
+        this.identifier = identifier;
+        this.name = name;
+        this.numberOfStudents = numberOfStudents;
+    }
 
 }

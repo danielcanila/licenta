@@ -44,7 +44,7 @@ public class DataMapper {
                     CourseGroupRelationshipRecord courseGroupRelationshipRecord = new CourseGroupRelationshipRecord(courseGroupRelationship.getCourse().getIndex());
                     courseGroupRelationship.getStudentGroups()
                             .stream()
-                            .map(StudentClass::getIndex)
+                            .map(StudentClassInput::getIndex)
                             .collect(Collectors.toCollection(courseGroupRelationshipRecord::getStudentGroup));
                     return courseGroupRelationshipRecord;
                 })
@@ -55,7 +55,7 @@ public class DataMapper {
     private void fillDataWithEmptyTimeSlots(DataInputRepresentation data) {
         TeacherInput emptyTimeSlotsTeacher = new TeacherInput(999999999, EMPTY_TIME_SLOT);
 
-        for (StudentClass classInput : data.getStudentClasses()) {
+        for (StudentClassInput classInput : data.getStudentClasses()) {
             int occupiedHours = 0;
 
             for (TeacherInput teacherInput : classInput.getAssignedTeachers().keySet()) {
@@ -156,15 +156,15 @@ public class DataMapper {
     }
 
     private static StudentGroup[] mapClass(DataInputRepresentation dataInputRepresentation) {
-        List<StudentClass> classes = dataInputRepresentation.getStudentClasses()
+        List<StudentClassInput> classes = dataInputRepresentation.getStudentClasses()
                 .stream()
-                .sorted(Comparator.comparing(StudentClass::getIndex))
+                .sorted(Comparator.comparing(StudentClassInput::getIndex))
                 .collect(Collectors.toList());
 
         StudentGroup[] classRecords = new StudentGroup[dataInputRepresentation.getStudentClasses().size()];
 
         for (int i = 0; i < classes.size(); i++) {
-            StudentClass classInput = classes.get(i);
+            StudentClassInput classInput = classes.get(i);
             StudentGroup classRecord = new StudentGroup();
             classRecord.classSequence = i;
             classRecord.className = classInput.getName();
@@ -209,11 +209,11 @@ public class DataMapper {
 
         data.getStudentClasses()
                 .stream()
-                .sorted(Comparator.comparing(StudentClass::getNumberOfStudents))
+                .sorted(Comparator.comparing(StudentClassInput::getNumberOfStudents))
                 .forEach(classInput -> {
                     if (calendarData.isSemianGroup(classInput.getIndex())) {
                         CourseGroupRelationship relationshipByIndex = data.getRelationshipByIndex(classInput.getIndex());
-                        for (StudentClass studentClass : relationshipByIndex.getStudentGroups()) {
+                        for (StudentClassInput studentClass : relationshipByIndex.getStudentGroups()) {
                             StudentClassOutput classOutput = calendarOutput.getStudentClassByIdentifier(studentClass.getIdentifier());
                             mapDataToStudentClass(data, calendarData, result[classInput.getIndex()], calendarOutput, classOutput);
                         }

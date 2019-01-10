@@ -1,11 +1,16 @@
 package com.daniel.licenta.calendargenerator.business.model;
 
 import com.fasterxml.jackson.annotation.*;
+import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
+import org.hibernate.annotations.TypeDefs;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -14,6 +19,9 @@ import java.util.List;
 @Table(name = "t_teacher")
 @JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id")
 @EqualsAndHashCode
+@TypeDefs({
+        @TypeDef(name = "jsonb", typeClass = JsonBinaryType.class),
+})
 public class Teacher {
 
     @Id
@@ -36,8 +44,7 @@ public class Teacher {
     @JsonIgnore
     private List<Course> courses;
 
-    @OneToMany(mappedBy = "teacher")
-    @JsonIdentityReference(alwaysAsId = true)
-    private List<Constraint> constraints;
-
+    @Type(type = "jsonb")
+    @Column(columnDefinition = "jsonb")
+    private List<Long> unavailabilitySlots = new ArrayList<>();
 }

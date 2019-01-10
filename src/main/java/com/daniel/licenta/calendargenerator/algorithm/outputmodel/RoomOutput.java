@@ -15,5 +15,9 @@ public class RoomOutput {
         this.capacity = capacity;
     }
 
+    public boolean isCourseClass() {
+        return (capacity > 50);
+    }
+
 
 }

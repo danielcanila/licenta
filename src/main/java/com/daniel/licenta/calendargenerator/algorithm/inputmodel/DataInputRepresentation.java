@@ -13,7 +13,7 @@ public class DataInputRepresentation {
 
     int timeslotsPerDay;
     List<CourseGroupRelationship> relationships = new ArrayList<>();
-    List<StudentClass> studentClasses = new ArrayList<>();
+    List<StudentClassInput> studentClasses = new ArrayList<>();
     List<TeacherInput> teachers = new ArrayList<>();
     List<RoomInput> rooms = new ArrayList<>();
 
@@ -21,8 +21,12 @@ public class DataInputRepresentation {
         this.timeslotsPerDay = timeslotsPerDay;
     }
 
-    public StudentClass getStudentClassByIndex(int index) {
+    public StudentClassInput getStudentClassByIndex(int index) {
         return studentClasses.stream().filter(classInput -> classInput.getIndex() == index).findFirst().get();
+    }
+
+    public StudentClassInput getStudentClassByIdentifier(int identifier) {
+        return studentClasses.stream().filter(classInput -> classInput.getIdentifier() == identifier).findFirst().get();
     }
 
     public TeacherInput getTeacherByIndex(int index) {
@@ -40,10 +44,10 @@ public class DataInputRepresentation {
                 .orElseGet(() -> null);
     }
 
-    public void setStudentClasses(List<StudentClass> toAdd) {
+    public void setStudentClasses(List<StudentClassInput> toAdd) {
         studentClasses.clear();
         studentClasses.addAll(toAdd);
-        studentClasses.sort(Comparator.comparing(StudentClass::getIdentifier));
+        studentClasses.sort(Comparator.comparing(StudentClassInput::getIdentifier));
         for (int i = 0; i < studentClasses.size(); i++) {
             studentClasses.get(i).index = i;
         }

@@ -8,18 +8,18 @@ import java.util.List;
 public class Data {
 
     public static DataInputRepresentation facultyExample() {
-        StudentClass g1 = new StudentClass(1111, "G1", 30);
-        StudentClass g2 = new StudentClass(1112, "G2", 30);
-        StudentClass g3 = new StudentClass(1113, "G3", 30);
-        StudentClass g4 = new StudentClass(1114, "G4", 30);
-        StudentClass g5 = new StudentClass(1115, "G5", 30);
-        StudentClass g6 = new StudentClass(1116, "G6", 30);
-        StudentClass g7 = new StudentClass(1117, "G7", 30);
-        StudentClass g8 = new StudentClass(1118, "G8", 30);
-        StudentClass SA = new StudentClass(1119, "SA", 100);
-        StudentClass SB = new StudentClass(1120, "SB", 100);
+        StudentClassInput g1 = new StudentClassInput(1111, "G1", 30);
+        StudentClassInput g2 = new StudentClassInput(1112, "G2", 30);
+        StudentClassInput g3 = new StudentClassInput(1113, "G3", 30);
+        StudentClassInput g4 = new StudentClassInput(1114, "G4", 30);
+        StudentClassInput g5 = new StudentClassInput(1115, "G5", 30);
+        StudentClassInput g6 = new StudentClassInput(1116, "G6", 30);
+        StudentClassInput g7 = new StudentClassInput(1117, "G7", 30);
+        StudentClassInput g8 = new StudentClassInput(1118, "G8", 30);
+        StudentClassInput SA = new StudentClassInput(1119, "SA", 100);
+        StudentClassInput SB = new StudentClassInput(1120, "SB", 100);
 
-        List<StudentClass> studentGroups = Arrays.asList(g1, g2, g3, g4, g5, g6, g7, g8, SA, SB);
+        List<StudentClassInput> studentGroups = Arrays.asList(g1, g2, g3, g4, g5, g6, g7, g8, SA, SB);
 
         CourseGroupRelationship semianA = new CourseGroupRelationship(SA);
         semianA.getStudentGroups().addAll(Arrays.asList(g1, g2, g3, g4));

@@ -73,4 +73,10 @@ public class TeacherService {
 
         return teacherRepository.save(teacher);
     }
+
+    public Teacher setUnavailabilityTimeslots(Long id, List<Long> unavailabilityTimeSlots) {
+        Teacher teacher = teacherRepository.findById(id).orElseThrow(() -> new RuntimeException("Teacher not found"));
+        teacher.setUnavailabilitySlots(unavailabilityTimeSlots);
+        return teacherRepository.save(teacher);
+    }
 }
