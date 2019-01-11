@@ -1,7 +1,6 @@
 package com.daniel.licenta.calendargenerator.business.service;
 
-import com.daniel.licenta.calendargenerator.algorithm.inputmodel.ConfigData;
-import com.daniel.licenta.calendargenerator.algorithm.outputmodel.CalendarOutput;
+import com.daniel.licenta.calendargenerator.api.model.DataDTO;
 import com.daniel.licenta.calendargenerator.api.model.SlotReservationDTO;
 import com.daniel.licenta.calendargenerator.business.calendargenerator.TimetableGenerator;
 import com.daniel.licenta.calendargenerator.business.model.SlotReservation;
@@ -13,10 +12,7 @@ import com.daniel.licenta.calendargenerator.integration.repo.TimetableResultRepo
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -71,6 +67,66 @@ public class TimetableService {
                 .collect(Collectors.groupingBy(SlotReservationDTO::getDay));
     }
 
+    public Map<Long, List<SlotReservationDTO>> getTimetableForTeacher(long id, long teacherId) {
+        TimetableResult timetableResult = timetableResultRepository.findById(id).orElseThrow(() -> new RuntimeException("Result now fount!"));
+
+        Map<Long, List<SlotReservationDTO>> collect = timetableResult.getSlotReservations()
+                .stream()
+                .filter(slotReservation -> slotReservation.getTeacher().getId().equals(teacherId))
+                .map(this::mapToDTO)
+                .collect(Collectors.groupingBy(SlotReservationDTO::getDay));
+
+
+        return handleCourseDuplicates(collect);
+    }
+
+    public Map<Long, List<SlotReservationDTO>> getTimetableForRoom(long id, long roomId) {
+        TimetableResult timetableResult = timetableResultRepository.findById(id).orElseThrow(() -> new RuntimeException("Result now fount!"));
+
+        Map<Long, List<SlotReservationDTO>> collect = timetableResult.getSlotReservations()
+                .stream()
+                .filter(slotReservation -> slotReservation.getRoom().getId().equals(roomId))
+                .map(this::mapToDTO)
+                .collect(Collectors.groupingBy(SlotReservationDTO::getDay));
+
+        return handleCourseDuplicates(collect);
+    }
+
+    public List<DataDTO> retrieveAllTimetables() {
+        return timetableResultRepository.findAll()
+                .stream()
+                .map(result -> new DataDTO(result.getId(), result.getName()))
+                .collect(Collectors.toList());
+    }
+
+    public List<DataDTO> retrieveAllTeachersForTimetable(Long id) {
+        TimetableResult timetableResult = timetableResultRepository.findById(id).orElseThrow(() -> new RuntimeException("Result now fount!"));
+
+        return timetableResult
+                .getSlotReservations()
+                .stream()
+                .map(slot -> new DataDTO(slot.getTeacher().getId(), slot.getTeacher().getName()))
+                .collect(Collectors.toList());
+    }
+
+    public List<DataDTO> retrieveAllStudentClassesForTimetable(Long id) {
+        TimetableResult timetableResult = timetableResultRepository.findById(id).orElseThrow(() -> new RuntimeException("Result now fount!"));
+        return timetableResult
+                .getSlotReservations()
+                .stream()
+                .map(slot -> new DataDTO(slot.getStudentClass().getId(), slot.getStudentClass().getName()))
+                .collect(Collectors.toList());
+    }
+
+    public List<DataDTO> retrieveAllRoomsForTimetable(Long id) {
+        TimetableResult timetableResult = timetableResultRepository.findById(id).orElseThrow(() -> new RuntimeException("Result now fount!"));
+        return timetableResult
+                .getSlotReservations()
+                .stream()
+                .map(slot -> new DataDTO(slot.getRoom().getId(), slot.getRoom().getName()))
+                .collect(Collectors.toList());
+    }
+
     private SlotReservationDTO mapToDTO(SlotReservation slotReservation) {
         SlotReservationDTO slotReservationDTO = new SlotReservationDTO();
         slotReservationDTO.setDay(slotReservation.getDay());
@@ -83,4 +139,27 @@ public class TimetableService {
         return slotReservationDTO;
     }
 
+    private Map<Long, List<SlotReservationDTO>> handleCourseDuplicates(Map<Long, List<SlotReservationDTO>> collect) {
+        return collect.entrySet()
+                .stream()
+                .flatMap(dayReservation ->
+                        dayReservation.getValue()
+                                .stream()
+                                .collect(Collectors.groupingBy(SlotReservationDTO::getSlot))
+                                .entrySet()
+                                .stream()
+                                .map(slotReservation -> {
+                                    SlotReservationDTO dto = slotReservation.getValue().get(0);
+                                    String studentGroups = slotReservation
+                                            .getValue()
+                                            .stream()
+                                            .map(SlotReservationDTO::getStudentClassName)
+                                            .collect(Collectors.joining(", "));
+                                    dto.setStudentClassName(studentGroups);
+                                    return dto;
+                                })
+                )
+                .collect(Collectors.groupingBy(SlotReservationDTO::getDay));
+    }
 }
+

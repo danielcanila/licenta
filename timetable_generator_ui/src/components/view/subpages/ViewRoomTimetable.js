@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import './viewClassTimetable.css';
+import './viewRoomTimetable.css';
 import axios from 'axios';
 import {Table} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Day from '../../common/Day'
 import Timeslot from '../../common/Timeslot'
 
-class ViewClassTimetable extends Component {
+class ViewRoomTimetable extends Component {
 
     constructor(props) {
         super(props);
@@ -18,8 +18,8 @@ class ViewClassTimetable extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
-    retrieveTimetable(resultId, classId) {
-        let url = 'http://localhost:8090/timetable/' + resultId + '/class/' + classId;
+    retrieveTimetable(resultId, roomId) {
+        let url = 'http://localhost:8090/timetable/' + resultId + '/room/' + roomId;
         let config = {
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -49,7 +49,7 @@ class ViewClassTimetable extends Component {
             <th>To</th>
             <th>Lecture</th>
             <th>Teacher</th>
-            <th>Room</th>
+            <th>Student class</th>
             <th>Capacity</th>
         </tr>
     }
@@ -66,7 +66,7 @@ class ViewClassTimetable extends Component {
                     <th><Timeslot timeslot={reservation.slot + 1}/></th>
                     <th>{reservation.lectureName}</th>
                     <th>{reservation.teacherName}</th>
-                    <th>{reservation.roomName}</th>
+                    <th>{reservation.studentClassName}</th>
                     <th>{reservation.roomCapacity}</th>
                 </tr>)
             }
@@ -97,4 +97,4 @@ class ViewClassTimetable extends Component {
 
 }
 
-export default ViewClassTimetable;
+export default ViewRoomTimetable;

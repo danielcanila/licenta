@@ -3,6 +3,8 @@ import './viewTimetable.css';
 import {Col, Nav, NavItem, Row, Tab} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ViewClassTimetable from "./subpages/ViewClassTimetable";
+import ViewTeacherTimetable from "./subpages/ViewTeacherTimetable";
+import ViewRoomTimetable from "./subpages/ViewRoomTimetable";
 
 class ViewTimetable extends Component {
 
@@ -19,8 +21,8 @@ class ViewTimetable extends Component {
                 <Col sm={10}>
                     <Tab.Content animation>
                         <Tab.Pane eventKey="first"><ViewClassTimetable/></Tab.Pane>
-                        <Tab.Pane eventKey="second">Teacher timetable</Tab.Pane>
-                        <Tab.Pane eventKey="third">Room timetable</Tab.Pane>
+                        <Tab.Pane eventKey="second"><ViewTeacherTimetable/></Tab.Pane>
+                        <Tab.Pane eventKey="third"><ViewRoomTimetable/></Tab.Pane>
                     </Tab.Content>
                 </Col>
             </Row>
