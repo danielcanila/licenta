@@ -106,6 +106,7 @@ public class TimetableService {
                 .getSlotReservations()
                 .stream()
                 .map(slot -> new DataDTO(slot.getTeacher().getId(), slot.getTeacher().getName()))
+                .distinct()
                 .collect(Collectors.toList());
     }
 
@@ -115,6 +116,7 @@ public class TimetableService {
                 .getSlotReservations()
                 .stream()
                 .map(slot -> new DataDTO(slot.getStudentClass().getId(), slot.getStudentClass().getName()))
+                .distinct()
                 .collect(Collectors.toList());
     }
 
@@ -124,6 +126,7 @@ public class TimetableService {
                 .getSlotReservations()
                 .stream()
                 .map(slot -> new DataDTO(slot.getRoom().getId(), slot.getRoom().getName()))
+                .distinct()
                 .collect(Collectors.toList());
     }
 

@@ -121,7 +121,7 @@ function checkValidServiceWorker(swUrl, config) {
     })
     .catch(() => {
       console.log(
-        'No internet connection found. ViewClassTimetable is running in offline mode.'
+        'No internet connection found. StudentTimetableView is running in offline mode.'
       );
     });
 }

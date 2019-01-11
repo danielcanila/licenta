@@ -4,11 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Day from './Day'
 import Timeslot from './Timeslot'
 
-class TeacherTable extends Component {
-
-    constructor(props) {
-        super(props);
-    }
+class StudentTable extends Component {
 
     createTable(reservations) {
         if (!reservations) {
@@ -27,30 +23,30 @@ class TeacherTable extends Component {
             <th>From</th>
             <th>To</th>
             <th>Lecture</th>
-            <th>Student class</th>
+            <th>Teacher</th>
             <th>Room</th>
             <th>Capacity</th>
         </tr>
     }
 
     createTableContent(reservations) {
-        let table = [];
+        let table = []
         for (let key of Object.keys(reservations)) {
             table.push(<tr className="SubHeader">
                 <th colSpan={10}>{<Day day={key}/>}</th>
-            </tr>);
+            </tr>)
             for (let reservation of reservations[key]) {
                 table.push(<tr>
                     <th><Timeslot timeslot={reservation.slot}/></th>
                     <th><Timeslot timeslot={reservation.slot + 1}/></th>
                     <th>{reservation.lectureName}</th>
-                    <th>{reservation.studentClassName}</th>
+                    <th>{reservation.teacherName}</th>
                     <th>{reservation.roomName}</th>
                     <th>{reservation.roomCapacity}</th>
                 </tr>)
             }
         }
-        return table
+        return table;
     }
 
     render() {
@@ -58,4 +54,4 @@ class TeacherTable extends Component {
     };
 }
 
-export default TeacherTable;
+export default StudentTable;

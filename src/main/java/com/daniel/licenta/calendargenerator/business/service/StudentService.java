@@ -32,7 +32,7 @@ public class StudentService {
 
         List<StudentClass> allById = studentClassRepository.findAllById(ids);
         toSave.getStudentClasses().addAll(allById);
-allById.forEach(studentClass -> studentClass.setStudentClass(toSave));
+        allById.forEach(studentClass -> studentClass.setStudentClass(toSave));
 
         return studentClassRepository.save(toSave);
     }

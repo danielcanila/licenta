@@ -20,7 +20,7 @@ class Navigation extends Component {
     render() {
         return (
             <Navbar>
-                <Nav bsStyle="tabs myStyle" activeKey={this.state.activePage} onSelect={val => this.handleSelect(val)}>
+                <Nav activeKey={this.state.activePage} onSelect={val => this.handleSelect(val)}>
                     <LinkContainer to="/home">
                         <NavItem eventKey="1">
                             Home
@@ -38,7 +38,7 @@ class Navigation extends Component {
                     </LinkContainer>
                     <LinkContainer to="/viewTimetable">
                         <NavItem eventKey="4">
-                           Timetable view
+                            Timetable view
                         </NavItem>
                     </LinkContainer>
                 </Nav>

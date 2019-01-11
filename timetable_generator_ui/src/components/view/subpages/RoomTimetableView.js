@@ -1,31 +1,30 @@
 import React, {Component} from 'react';
-import './viewTeacherTimetable.css';
+import './roomTimetableView.css';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SelectTimetableDropdown from '../../common/SelectTimetableDropdown'
-import TeacherTable from '../../common/TeacherTable'
+import SelectDropdown from '../common/CustomDropdown'
+import RoomTable from "../common/RoomTable";
 
-class ViewTeacherTimetable extends Component {
+class RoomTimetableView extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             reservations: null,
             timetables: null,
-            teachers: null,
             selectedTimetable: null,
-            selectedTeacher: null
+            rooms: null,
+            selectedRoom: null,
         };
-
         this.retrieveAllTimetables();
         this.retrieveTimetable = this.retrieveTimetable.bind(this);
-        this.handleTeacherSelect = this.handleTeacherSelect.bind(this);
         this.retrieveAllTimetables = this.retrieveAllTimetables.bind(this);
         this.handleTimetableSelect = this.handleTimetableSelect.bind(this);
+        this.handleRoomSelect = this.handleRoomSelect.bind(this);
     }
 
-    retrieveTimetable(resultId, teacherId) {
-        let url = 'http://localhost:8090/timetable/' + resultId + '/teacher/' + teacherId;
+    retrieveTimetable(resultId, roomId) {
+        let url = 'http://localhost:8090/timetable/' + resultId + '/room/' + roomId;
         let config = {
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -34,9 +33,9 @@ class ViewTeacherTimetable extends Component {
         axios.get(url, config)
             .then(response => response.data)
             .then(data => {
-                console.log(data);
                 this.setState({reservations: data})
             });
+
     }
 
     retrieveAllTimetables() {
@@ -49,13 +48,12 @@ class ViewTeacherTimetable extends Component {
         axios.get(url, config)
             .then(response => response.data)
             .then(data => {
-                console.log(data);
                 this.setState({timetables: data})
             });
     }
 
-    retrieveAllTeachers(resultId) {
-        let url = 'http://localhost:8090/timetable/' + resultId + '/teacher';
+    retrieveAllRooms(resultId) {
+        let url = 'http://localhost:8090/timetable/' + resultId + '/room';
         let config = {
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -64,8 +62,7 @@ class ViewTeacherTimetable extends Component {
         axios.get(url, config)
             .then(response => response.data)
             .then(data => {
-                console.log(data);
-                this.setState({teachers: data})
+                this.setState({rooms: data})
             });
     }
 
@@ -74,34 +71,34 @@ class ViewTeacherTimetable extends Component {
                 selectedTimetable: key
             }
         );
-        this.retrieveAllTeachers(key.id);
+        this.retrieveAllRooms(key.id);
     }
 
-    handleTeacherSelect(key) {
+    handleRoomSelect(key) {
         this.setState({
-            selectedTeacher: key
+            selectedRoom: {...key}
         });
         this.retrieveTimetable(this.state.selectedTimetable.id, key.id)
     }
 
     render() {
         return (
-            <div className="App">
-                <SelectTimetableDropdown selectItems={this.state.timetables}
-                                         handleOnChange={this.handleTimetableSelect}
-                                         selectedItem={this.state.selectedTimetable}
-                                         elementName={"timetable"}/>
+            <div className="Room">
+                <SelectDropdown selectItems={this.state.timetables}
+                                handleOnChange={this.handleTimetableSelect}
+                                selectedItem={this.state.selectedTimetable}
+                                defaultName={"timetable"}/>
+                <SelectDropdown selectItems={this.state.rooms}
+                                handleOnChange={this.handleRoomSelect}
+                                selectedItem={this.state.selectedRoom}
+                                defaultName={"room"}/>
 
-                <SelectTimetableDropdown selectItems={this.state.teachers}
-                                         handleOnChange={this.handleTeacherSelect}
-                                         selectedItem={this.state.selectedTeacher}
-                                         elementName={"teacher"}/>
-
-                <TeacherTable reservations={this.state.reservations}/>
+                <RoomTable reservations={this.state.reservations}/>
             </div>
-        )
-
+        );
     };
+
+
 }
 
-export default ViewTeacherTimetable;
+export default RoomTimetableView;

@@ -8,38 +8,38 @@ Hour 10 :  FREE
 Hour 12 :  FREE
 Hour 14 :  FREE
 Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 18 :  teacher: Varlan | room: Room 8 (capacity = 30)
 
 Day 1
 Hour 08 :  FREE
 Hour 10 :  FREE
 Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  teacher: Iacob | room: C2 (capacity = 100)
+Hour 16 :  FREE
 Hour 18 :  FREE
 
 Day 2
-Hour 08 :  teacher: Breaban | room: Room 8 (capacity = 30)
-Hour 10 :  teacher: Breaban | room: C2 (capacity = 100)
-Hour 12 :  teacher: Frasinaru | room: C2 (capacity = 100)
+Hour 08 :  teacher: Forascu | room: Room 8 (capacity = 30)
+Hour 10 :  FREE
+Hour 12 :  FREE
 Hour 14 :  FREE
 Hour 16 :  FREE
 Hour 18 :  FREE
 
 Day 3
-Hour 08 :  FREE
-Hour 10 :  teacher: Forascu | room: Room 8 (capacity = 30)
-Hour 12 :  FREE
+Hour 08 :  teacher: Frasinaru | room: C2 (capacity = 100)
+Hour 10 :  FREE
+Hour 12 :  teacher: Iacob | room: C2 (capacity = 100)
 Hour 14 :  FREE
-Hour 16 :  FREE
+Hour 16 :  teacher: Breaban | room: C2 (capacity = 100)
 Hour 18 :  FREE
 
 Day 4
-Hour 08 :  FREE
+Hour 08 :  teacher: Breaban | room: Room 8 (capacity = 30)
 Hour 10 :  FREE
 Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  teacher: Varlan | room: Room 8 (capacity = 30)
+Hour 16 :  FREE
 Hour 18 :  FREE
 -----------------------------------------------------------------------------------
 Schedule for class : Class B - students nr: 30
@@ -48,8 +48,8 @@ Day 0
 Hour 08 :  FREE
 Hour 10 :  FREE
 Hour 12 :  FREE
-Hour 14 :  teacher: Moruz | room: Room 7 (capacity = 30)
-Hour 16 :  teacher: Varlan | room: Room 7 (capacity = 30)
+Hour 14 :  FREE
+Hour 16 :  teacher: Forascu | room: Room 7 (capacity = 30)
 Hour 18 :  FREE
 
 Day 1
@@ -57,18 +57,10 @@ Hour 08 :  FREE
 Hour 10 :  FREE
 Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  teacher: Iacob | room: C2 (capacity = 100)
-Hour 18 :  FREE
-
-Day 2
-Hour 08 :  FREE
-Hour 10 :  teacher: Breaban | room: C2 (capacity = 100)
-Hour 12 :  teacher: Frasinaru | room: C2 (capacity = 100)
-Hour 14 :  FREE
 Hour 16 :  FREE
 Hour 18 :  FREE
 
-Day 3
+Day 2
 Hour 08 :  FREE
 Hour 10 :  FREE
 Hour 12 :  FREE
@@ -76,10 +68,18 @@ Hour 14 :  FREE
 Hour 16 :  FREE
 Hour 18 :  FREE
 
+Day 3
+Hour 08 :  teacher: Frasinaru | room: C2 (capacity = 100)
+Hour 10 :  FREE
+Hour 12 :  teacher: Iacob | room: C2 (capacity = 100)
+Hour 14 :  FREE
+Hour 16 :  teacher: Breaban | room: C2 (capacity = 100)
+Hour 18 :  teacher: Varlan | room: Room 7 (capacity = 30)
+
 Day 4
 Hour 08 :  FREE
-Hour 10 :  teacher: Forascu | room: Room 7 (capacity = 30)
-Hour 12 :  FREE
+Hour 10 :  FREE
+Hour 12 :  teacher: Moruz | room: Room 7 (capacity = 30)
 Hour 14 :  FREE
 Hour 16 :  FREE
 Hour 18 :  FREE
@@ -88,7 +88,7 @@ Schedule for class : Class C - students nr: 30
 
 Day 0
 Hour 08 :  FREE
-Hour 10 :  FREE
+Hour 10 :  teacher: Iacob | room: Room 6 (capacity = 30)
 Hour 12 :  FREE
 Hour 14 :  FREE
 Hour 16 :  FREE
@@ -97,31 +97,31 @@ Hour 18 :  FREE
 Day 1
 Hour 08 :  FREE
 Hour 10 :  FREE
-Hour 12 :  FREE
+Hour 12 :  teacher: Varlan | room: Room 6 (capacity = 30)
 Hour 14 :  FREE
-Hour 16 :  teacher: Iacob | room: C2 (capacity = 100)
-Hour 18 :  teacher: Varlan | room: Room 6 (capacity = 30)
-
-Day 2
-Hour 08 :  FREE
-Hour 10 :  teacher: Breaban | room: C2 (capacity = 100)
-Hour 12 :  teacher: Frasinaru | room: C2 (capacity = 100)
-Hour 14 :  teacher: Moruz | room: Room 6 (capacity = 30)
 Hour 16 :  FREE
 Hour 18 :  FREE
 
-Day 3
+Day 2
 Hour 08 :  FREE
 Hour 10 :  FREE
 Hour 12 :  FREE
 Hour 14 :  FREE
 Hour 16 :  FREE
+Hour 18 :  FREE
+
+Day 3
+Hour 08 :  teacher: Frasinaru | room: C2 (capacity = 100)
+Hour 10 :  teacher: Moruz | room: Room 6 (capacity = 30)
+Hour 12 :  teacher: Iacob | room: C2 (capacity = 100)
+Hour 14 :  FREE
+Hour 16 :  teacher: Breaban | room: C2 (capacity = 100)
 Hour 18 :  FREE
 
 Day 4
 Hour 08 :  FREE
 Hour 10 :  FREE
-Hour 12 :  teacher: Iacob | room: Room 6 (capacity = 30)
+Hour 12 :  FREE
 Hour 14 :  FREE
 Hour 16 :  FREE
 Hour 18 :  FREE
@@ -138,21 +138,13 @@ Hour 18 :  FREE
 
 Day 1
 Hour 08 :  FREE
-Hour 10 :  teacher: Breaban | room: Room 5 (capacity = 30)
+Hour 10 :  FREE
 Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  teacher: Iacob | room: C2 (capacity = 100)
+Hour 14 :  teacher: Breaban | room: Room 5 (capacity = 30)
+Hour 16 :  FREE
 Hour 18 :  FREE
 
 Day 2
-Hour 08 :  FREE
-Hour 10 :  teacher: Breaban | room: C2 (capacity = 100)
-Hour 12 :  teacher: Frasinaru | room: C2 (capacity = 100)
-Hour 14 :  FREE
-Hour 16 :  teacher: Forascu | room: Room 5 (capacity = 30)
-Hour 18 :  FREE
-
-Day 3
 Hour 08 :  FREE
 Hour 10 :  FREE
 Hour 12 :  FREE
@@ -160,22 +152,30 @@ Hour 14 :  FREE
 Hour 16 :  FREE
 Hour 18 :  FREE
 
+Day 3
+Hour 08 :  teacher: Frasinaru | room: C2 (capacity = 100)
+Hour 10 :  teacher: Forascu | room: Room 5 (capacity = 30)
+Hour 12 :  teacher: Iacob | room: C2 (capacity = 100)
+Hour 14 :  FREE
+Hour 16 :  teacher: Breaban | room: C2 (capacity = 100)
+Hour 18 :  FREE
+
 Day 4
 Hour 08 :  FREE
-Hour 10 :  FREE
+Hour 10 :  teacher: Moruz | room: Room 5 (capacity = 30)
 Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  teacher: Moruz | room: Room 5 (capacity = 30)
+Hour 16 :  FREE
 Hour 18 :  FREE
 -----------------------------------------------------------------------------------
 Schedule for class : Class E - students nr: 30
 
 Day 0
-Hour 08 :  FREE
+Hour 08 :  teacher: Iacob | room: C1 (capacity = 100)
 Hour 10 :  FREE
-Hour 12 :  teacher: Breaban | room: C1 (capacity = 100)
+Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  FREE
+Hour 16 :  teacher: Frasinaru | room: Room 4 (capacity = 30)
 Hour 18 :  FREE
 
 Day 1
@@ -184,21 +184,21 @@ Hour 10 :  FREE
 Hour 12 :  FREE
 Hour 14 :  FREE
 Hour 16 :  FREE
-Hour 18 :  teacher: Iacob | room: C1 (capacity = 100)
+Hour 18 :  FREE
 
 Day 2
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  teacher: Iacob | room: Room 4 (capacity = 30)
+Hour 08 :  teacher: Varlan | room: Room 4 (capacity = 30)
+Hour 10 :  teacher: Frasinaru | room: C1 (capacity = 100)
+Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  FREE
+Hour 16 :  teacher: Breaban | room: C1 (capacity = 100)
 Hour 18 :  FREE
 
 Day 3
 Hour 08 :  FREE
-Hour 10 :  teacher: Varlan | room: Room 4 (capacity = 30)
-Hour 12 :  teacher: Frasinaru | room: C1 (capacity = 100)
-Hour 14 :  teacher: Frasinaru | room: Room 4 (capacity = 30)
+Hour 10 :  FREE
+Hour 12 :  FREE
+Hour 14 :  FREE
 Hour 16 :  FREE
 Hour 18 :  FREE
 
@@ -206,40 +206,40 @@ Day 4
 Hour 08 :  FREE
 Hour 10 :  FREE
 Hour 12 :  FREE
-Hour 14 :  FREE
+Hour 14 :  teacher: Iacob | room: Room 4 (capacity = 30)
 Hour 16 :  FREE
 Hour 18 :  FREE
 -----------------------------------------------------------------------------------
 Schedule for class : Class F - students nr: 30
 
 Day 0
-Hour 08 :  FREE
+Hour 08 :  teacher: Iacob | room: C1 (capacity = 100)
 Hour 10 :  FREE
-Hour 12 :  teacher: Breaban | room: C1 (capacity = 100)
+Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  teacher: Moruz | room: Room 3 (capacity = 30)
+Hour 16 :  FREE
 Hour 18 :  FREE
 
 Day 1
 Hour 08 :  FREE
-Hour 10 :  teacher: Forascu | room: Room 3 (capacity = 30)
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  teacher: Iacob | room: C1 (capacity = 100)
-
-Day 2
-Hour 08 :  FREE
 Hour 10 :  FREE
 Hour 12 :  FREE
-Hour 14 :  FREE
+Hour 14 :  teacher: Varlan | room: Room 3 (capacity = 30)
 Hour 16 :  FREE
 Hour 18 :  FREE
 
+Day 2
+Hour 08 :  teacher: Moruz | room: Room 3 (capacity = 30)
+Hour 10 :  teacher: Frasinaru | room: C1 (capacity = 100)
+Hour 12 :  FREE
+Hour 14 :  FREE
+Hour 16 :  teacher: Breaban | room: C1 (capacity = 100)
+Hour 18 :  FREE
+
 Day 3
-Hour 08 :  teacher: Varlan | room: Room 3 (capacity = 30)
+Hour 08 :  FREE
 Hour 10 :  FREE
-Hour 12 :  teacher: Frasinaru | room: C1 (capacity = 100)
+Hour 12 :  FREE
 Hour 14 :  FREE
 Hour 16 :  FREE
 Hour 18 :  FREE
@@ -249,39 +249,39 @@ Hour 08 :  FREE
 Hour 10 :  FREE
 Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  FREE
+Hour 16 :  teacher: Forascu | room: Room 3 (capacity = 30)
 Hour 18 :  FREE
 -----------------------------------------------------------------------------------
 Schedule for class : Class G - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Iacob | room: Room 2 (capacity = 30)
+Hour 08 :  teacher: Iacob | room: C1 (capacity = 100)
 Hour 10 :  FREE
-Hour 12 :  teacher: Breaban | room: C1 (capacity = 100)
+Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  FREE
+Hour 16 :  teacher: Moruz | room: Room 2 (capacity = 30)
 Hour 18 :  FREE
 
 Day 1
 Hour 08 :  FREE
-Hour 10 :  teacher: Moruz | room: Room 2 (capacity = 30)
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  teacher: Iacob | room: C1 (capacity = 100)
-
-Day 2
-Hour 08 :  FREE
-Hour 10 :  FREE
+Hour 10 :  teacher: Iacob | room: Room 2 (capacity = 30)
 Hour 12 :  FREE
 Hour 14 :  FREE
 Hour 16 :  FREE
 Hour 18 :  FREE
 
+Day 2
+Hour 08 :  FREE
+Hour 10 :  teacher: Frasinaru | room: C1 (capacity = 100)
+Hour 12 :  FREE
+Hour 14 :  FREE
+Hour 16 :  teacher: Breaban | room: C1 (capacity = 100)
+Hour 18 :  teacher: Breaban | room: Room 2 (capacity = 30)
+
 Day 3
 Hour 08 :  FREE
 Hour 10 :  FREE
-Hour 12 :  teacher: Frasinaru | room: C1 (capacity = 100)
+Hour 12 :  FREE
 Hour 14 :  FREE
 Hour 16 :  FREE
 Hour 18 :  FREE
@@ -291,45 +291,45 @@ Hour 08 :  FREE
 Hour 10 :  FREE
 Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  teacher: Breaban | room: Room 2 (capacity = 30)
+Hour 16 :  FREE
 Hour 18 :  FREE
 -----------------------------------------------------------------------------------
 Schedule for class : Class H - students nr: 30
 
 Day 0
-Hour 08 :  FREE
+Hour 08 :  teacher: Iacob | room: C1 (capacity = 100)
 Hour 10 :  FREE
-Hour 12 :  teacher: Breaban | room: C1 (capacity = 100)
+Hour 12 :  FREE
 Hour 14 :  teacher: Forascu | room: Room 1 (capacity = 30)
 Hour 16 :  FREE
-Hour 18 :  teacher: Frasinaru | room: Room 1 (capacity = 30)
+Hour 18 :  FREE
 
 Day 1
 Hour 08 :  FREE
 Hour 10 :  FREE
 Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  teacher: Iacob | room: C1 (capacity = 100)
+Hour 16 :  teacher: Varlan | room: Room 1 (capacity = 30)
+Hour 18 :  FREE
 
 Day 2
 Hour 08 :  FREE
-Hour 10 :  teacher: Varlan | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Frasinaru | room: C1 (capacity = 100)
 Hour 12 :  FREE
 Hour 14 :  FREE
-Hour 16 :  FREE
+Hour 16 :  teacher: Breaban | room: C1 (capacity = 100)
 Hour 18 :  FREE
 
 Day 3
 Hour 08 :  FREE
 Hour 10 :  FREE
-Hour 12 :  teacher: Frasinaru | room: C1 (capacity = 100)
+Hour 12 :  FREE
 Hour 14 :  FREE
 Hour 16 :  FREE
 Hour 18 :  FREE
 
 Day 4
-Hour 08 :  FREE
+Hour 08 :  teacher: Frasinaru | room: Room 1 (capacity = 30)
 Hour 10 :  FREE
 Hour 12 :  FREE
 Hour 14 :  FREE

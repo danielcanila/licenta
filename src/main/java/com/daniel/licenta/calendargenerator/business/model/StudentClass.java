@@ -36,11 +36,6 @@ public class StudentClass {
     @JsonIdentityReference(alwaysAsId = true)
     private List<StudentClass> studentClasses;
 
-    @ManyToMany(mappedBy = "studentClasses")
-    @JsonIdentityReference(alwaysAsId = true)
-    private List<Course> courses;
-
-
     public boolean hasChildren() {
         return !studentClasses.isEmpty();
     }

@@ -36,4 +36,13 @@ public class LectureController {
         return lectureService.update(id, lecture);
     }
 
+    @PostMapping("{id}/teacher")
+    public Lecture addTeacherToLecture(@PathVariable("id") Long id, @RequestBody List<Long> teacherIds) {
+        return lectureService.addTeachersToLecture(id, teacherIds);
+    }
+
+    @DeleteMapping("{id}/teacher")
+    public Lecture removeTeacherToLecture(@PathVariable("id") Long id, @RequestBody List<Long> teacherIds) {
+        return lectureService.removeTeachersToLecture(id, teacherIds);
+    }
 }

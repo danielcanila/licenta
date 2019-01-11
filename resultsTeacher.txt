@@ -1,46 +1,46 @@
 
 -----------------------------------------------------------------------------------
 Schedule for teacher : Iacob
-Slot 0 (hour 8)- Group: Class G
-Slot 10 (hour 16)- Group: Class D
-Slot 11 (hour 18)- Group: Class H
-Slot 14 (hour 12)- Group: Class E
-Slot 26 (hour 12)- Group: Class C
+Slot 0 (hour 8)- Group: Class H
+Slot 1 (hour 10)- Group: Class C
+Slot 7 (hour 10)- Group: Class G
+Slot 20 (hour 12)- Group: Class D
+Slot 27 (hour 14)- Group: Class E
 -----------------------------------------------------------------------------------
 Schedule for teacher : Frasinaru
-Slot 5 (hour 18)- Group: Class H
-Slot 14 (hour 12)- Group: Class D
-Slot 20 (hour 12)- Group: Class H
-Slot 21 (hour 14)- Group: Class E
+Slot 4 (hour 16)- Group: Class E
+Slot 13 (hour 10)- Group: Class H
+Slot 18 (hour 8)- Group: Class D
+Slot 24 (hour 8)- Group: Class H
 -----------------------------------------------------------------------------------
 Schedule for teacher : Varlan
-Slot 4 (hour 16)- Group: Class B
-Slot 11 (hour 18)- Group: Class C
-Slot 13 (hour 10)- Group: Class H
-Slot 18 (hour 8)- Group: Class F
-Slot 19 (hour 10)- Group: Class E
-Slot 28 (hour 16)- Group: Class A
+Slot 5 (hour 18)- Group: Class A
+Slot 8 (hour 12)- Group: Class C
+Slot 9 (hour 14)- Group: Class F
+Slot 10 (hour 16)- Group: Class H
+Slot 12 (hour 8)- Group: Class E
+Slot 23 (hour 18)- Group: Class B
 -----------------------------------------------------------------------------------
 Schedule for teacher : Forascu
 Slot 3 (hour 14)- Group: Class H
-Slot 7 (hour 10)- Group: Class F
-Slot 16 (hour 16)- Group: Class D
-Slot 19 (hour 10)- Group: Class A
-Slot 25 (hour 10)- Group: Class B
+Slot 4 (hour 16)- Group: Class B
+Slot 12 (hour 8)- Group: Class A
+Slot 19 (hour 10)- Group: Class D
+Slot 28 (hour 16)- Group: Class F
 -----------------------------------------------------------------------------------
 Schedule for teacher : Moruz
-Slot 3 (hour 14)- Group: Class B
-Slot 4 (hour 16)- Group: Class F
-Slot 7 (hour 10)- Group: Class G
-Slot 15 (hour 14)- Group: Class C
-Slot 28 (hour 16)- Group: Class D
+Slot 4 (hour 16)- Group: Class G
+Slot 12 (hour 8)- Group: Class F
+Slot 19 (hour 10)- Group: Class C
+Slot 25 (hour 10)- Group: Class D
+Slot 26 (hour 12)- Group: Class B
 -----------------------------------------------------------------------------------
 Schedule for teacher : Breaban
-Slot 2 (hour 12)- Group: Class H
-Slot 7 (hour 10)- Group: Class D
-Slot 12 (hour 8)- Group: Class A
-Slot 13 (hour 10)- Group: Class D
-Slot 28 (hour 16)- Group: Class G
+Slot 9 (hour 14)- Group: Class D
+Slot 16 (hour 16)- Group: Class H
+Slot 17 (hour 18)- Group: Class G
+Slot 22 (hour 16)- Group: Class D
+Slot 24 (hour 8)- Group: Class A
 -----------------------------------------------------------------------------------
 Schedule for teacher : EMPTY_TIME_SLOT
 Slot 0 (hour 8)- Group: Class H
@@ -48,15 +48,15 @@ Slot 1 (hour 10)- Group: Class H
 Slot 2 (hour 12)- Group: Class H
 Slot 3 (hour 14)- Group: Class G
 Slot 4 (hour 16)- Group: Class H
-Slot 5 (hour 18)- Group: Class G
+Slot 5 (hour 18)- Group: Class H
 Slot 6 (hour 8)- Group: Class H
 Slot 7 (hour 10)- Group: Class H
 Slot 8 (hour 12)- Group: Class H
 Slot 9 (hour 14)- Group: Class H
-Slot 10 (hour 16)- Group: Class H
+Slot 10 (hour 16)- Group: Class G
 Slot 11 (hour 18)- Group: Class H
 Slot 12 (hour 8)- Group: Class H
-Slot 13 (hour 10)- Group: Class G
+Slot 13 (hour 10)- Group: Class H
 Slot 14 (hour 12)- Group: Class H
 Slot 15 (hour 14)- Group: Class H
 Slot 16 (hour 16)- Group: Class H
@@ -67,7 +67,7 @@ Slot 20 (hour 12)- Group: Class H
 Slot 21 (hour 14)- Group: Class H
 Slot 22 (hour 16)- Group: Class H
 Slot 23 (hour 18)- Group: Class H
-Slot 24 (hour 8)- Group: Class H
+Slot 24 (hour 8)- Group: Class G
 Slot 25 (hour 10)- Group: Class H
 Slot 26 (hour 12)- Group: Class H
 Slot 27 (hour 14)- Group: Class H

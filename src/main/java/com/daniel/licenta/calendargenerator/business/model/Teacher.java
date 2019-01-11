@@ -40,10 +40,6 @@ public class Teacher {
     )
     private List<Lecture> lectures;
 
-    @OneToMany(mappedBy = "teacher")
-    @JsonIgnore
-    private List<Course> courses;
-
     @Type(type = "jsonb")
     @Column(columnDefinition = "jsonb")
     private List<Long> unavailabilitySlots = new ArrayList<>();

@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import './inputData.css';
 import {Col, Nav, NavItem, Row, Tab} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import RoomInput from './subpages/RoomInput';
+import StudentClassInput from './subpages/StudentClassInput';
+import LectureInput from './subpages/LectureInput';
+import TeacherInput from './subpages/TeacherInput';
 
 class InputData extends Component {
 
@@ -18,10 +22,10 @@ class InputData extends Component {
                 </Col>
                 <Col sm={10}>
                     <Tab.Content animation>
-                        <Tab.Pane eventKey="first">Add/Edit/Delete rooms</Tab.Pane>
-                        <Tab.Pane eventKey="second">Add/Edit/Delete student classes</Tab.Pane>
-                        <Tab.Pane eventKey="third">Add/Edit/Delete lectures</Tab.Pane>
-                        <Tab.Pane eventKey="forth">Add/Edit/Delete teachers</Tab.Pane>
+                        <Tab.Pane eventKey="first"><RoomInput/></Tab.Pane>
+                        <Tab.Pane eventKey="second"><StudentClassInput/></Tab.Pane>
+                        <Tab.Pane eventKey="third"><LectureInput/></Tab.Pane>
+                        <Tab.Pane eventKey="forth"><TeacherInput/></Tab.Pane>
                     </Tab.Content>
                 </Col>
             </Row>

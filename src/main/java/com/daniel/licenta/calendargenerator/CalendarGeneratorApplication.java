@@ -25,8 +25,6 @@ public class CalendarGeneratorApplication implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-//        registry.addMapping("/*****");
-
         registry.addMapping("/**")
                 .allowedOrigins("http://localhost:3000")
                 .allowedMethods("PUT", "DELETE", "POST", "PATCH", "GET");
@@ -42,7 +40,6 @@ public class CalendarGeneratorApplication implements WebMvcConfigurer {
     BeanMappingBuilder objectMappingBuilder = new BeanMappingBuilder() {
         @Override
         protected void configure() {
-            mapping(Course.class, Course.class, TypeMappingOptions.mapNull(false));
             mapping(Lecture.class, Lecture.class, TypeMappingOptions.mapNull(false));
             mapping(Room.class, Room.class, TypeMappingOptions.mapNull(false));
             mapping(StudentClass.class, StudentClass.class, TypeMappingOptions.mapNull(false));

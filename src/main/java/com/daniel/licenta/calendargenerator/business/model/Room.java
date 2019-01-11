@@ -28,8 +28,4 @@ public class Room {
 
     @Column
     private Long capacity;
-
-    @OneToMany(mappedBy = "room")
-    @JsonIdentityReference(alwaysAsId = true)
-    private List<Constraint> constraints;
 }
