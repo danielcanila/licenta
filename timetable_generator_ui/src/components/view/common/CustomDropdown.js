@@ -4,37 +4,30 @@ import {SplitButton, MenuItem} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class CustomDropdown extends Component {
-
     getTitle() {
-        if (this.props.selectedItem) {
-            return <div>{this.props.selectedItem.name}</div>
+        let {selectedItem, defaultName} = this.props;
+
+        if (selectedItem) {
+            return <div>{selectedItem.name}</div>
         } else {
-            return <div>Choose a {this.props.defaultName}</div>
+            return <div>Choose a {defaultName}</div>
         }
-    }
-
-    createSelectItems(values) {
-        let selectItems = [];
-        if (values) {
-            for (let element of values) {
-                selectItems.push(<MenuItem key={element.index} eventKey={element}>{element.name}</MenuItem>)
-            }
-        }
-        return selectItems;
-    }
-
-    createTimetableDropDown() {
-        return <SplitButton id={'dropdown-id-'+this.getTitle} title={this.getTitle()}
-                            bsClass="dropdown"
-                            bsSize="small"
-                            onSelect={this.props.handleOnChange}
-                            disabled={!this.props.selectItems}>
-            {this.createSelectItems(this.props.selectItems)}
-        </SplitButton>;
     }
 
     render() {
-        return this.createTimetableDropDown();
+        let {selectItems} = this.props;
+
+        return (
+            <SplitButton id="dropdown-id" title={this.getTitle()}
+                         bsClass="dropdown"
+                         bsSize="small"
+                         onSelect={this.props.handleOnChange}
+                         disabled={!this.props.selectItems}>
+                {selectItems && selectItems.map(item => (
+                    <MenuItem key={item.id} eventKey={item}>{item.name}</MenuItem>
+                ))}
+            </SplitButton>
+        );
     }
 
 }

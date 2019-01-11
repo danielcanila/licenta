@@ -10,7 +10,7 @@ import TeacherInput from './subpages/TeacherInput';
 class InputData extends Component {
 
     TabDateIntrare() {
-        return <Tab.Container defaultActiveKey="first">
+        return <Tab.Container defaultActiveKey="first" id="input-data-container">
             <Row className="clearfix">
                 <Col sm={2}>
                     <Nav bsStyle="pills" stacked>

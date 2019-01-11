@@ -6,29 +6,6 @@ import Timeslot from './Timeslot'
 
 class StudentTable extends Component {
 
-    createTable(reservations) {
-        if (!reservations) {
-            return <div></div>
-        }
-        return <Table bordered condensed hover responsive className="Table">
-            <tbody>
-            {this.createMainHeader()}
-            {this.createTableContent(reservations)}
-            </tbody>
-        </Table>
-    }
-
-    createMainHeader() {
-        return <tr className="MainHeader">
-            <th>From</th>
-            <th>To</th>
-            <th>Lecture</th>
-            <th>Teacher</th>
-            <th>Room</th>
-            <th>Capacity</th>
-        </tr>
-    }
-
     createTableContent(reservations) {
         let table = []
         for (let key of Object.keys(reservations)) {
@@ -50,7 +27,26 @@ class StudentTable extends Component {
     }
 
     render() {
-        return this.createTable(this.props.reservations)
+        let {reservations} = this.props;
+        if(!reservations) return null;
+
+        return (
+            <div className="student-table">
+                <Table bordered condensed hover responsive className="Table">
+                    <tbody>
+                        <tr className="MainHeader">
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Lecture</th>
+                            <th>Teacher</th>
+                            <th>Room</th>
+                            <th>Capacity</th>
+                        </tr>
+                    {this.createTableContent(reservations)}
+                    </tbody>
+                </Table>
+            </div>
+        );
     };
 }
 

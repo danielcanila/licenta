@@ -62,7 +62,7 @@ class ConfigTimetable extends Component {
     }
 
     TabConfigurareOrar() {
-        return <Tab.Container activeKey={this.state.activateTab}>
+        return <Tab.Container id="tc-config-timetable" activeKey={this.state.activateTab} onSelect={() => {}}>
             <Row className="clearfix">
                 <Col sm={2}>
                     <Nav bsStyle="pills" stacked>

@@ -7,10 +7,6 @@ import TeacherTimetableView from "./subpages/TeacherTimetableView";
 import RoomTimetableView from "./subpages/RoomTimetableView";
 
 class ViewTimetable extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <Tab.Container defaultActiveKey="first" id="timetable-view">
