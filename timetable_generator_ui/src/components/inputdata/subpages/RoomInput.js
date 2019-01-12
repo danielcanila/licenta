@@ -4,7 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {retrieveAllRooms, saveRoom, deleteRoom, updateRoom} from '../../services/RoomService'
 import {Button, Glyphicon} from "react-bootstrap";
 
-import CrudTable from '../common/CrudTable';
+import CrudTableRow from '../common/CRUDTable/CrudTableRow';
+import CrudTableHeader from '../common/CRUDTable/CrudTableHeader';
+import Popup from '../common/popup/Popup';
 
 class RoomInput extends Component {
 
@@ -12,7 +14,11 @@ class RoomInput extends Component {
         super(props);
         this.state = {
             rooms: [],
-
+            showModal: false,
+            popupState: {
+                capacity: 30,
+                name: ''
+            }
         }
     }
 
@@ -33,18 +39,6 @@ class RoomInput extends Component {
                 console.error(error);
             });
     }
-
-    // saveRoom() {
-    //     saveRoom({name: 'new Room', capacity: 100});
-    // }
-    //
-    // deleteRoom() {
-    //     deleteRoom(123123123);
-    // }
-    //
-    // updateRoom() {
-    //     updateRoom(123123123, {name: 'new Room 2', capacity: 100});
-    // }
 
     updateRoomObject(id, newProperties) {
         return this.state.rooms.map(room => {
@@ -68,34 +62,58 @@ class RoomInput extends Component {
     }
 
     updateRoomRow(id, room) {
-        this.setState({
-            rooms: this.updateRoomObject(id, {
-                name: room.editableName,
-                capacity: room.editableCapacity,
-                editable: false
-            })
-        });
+        let {editableName, editableCapacity} = room;
+
+        updateRoom(id, {name: editableName, capacity: editableCapacity})
+            .then(() => {
+                this.setState({
+                    rooms: this.updateRoomObject(id, {
+                        name: room.editableName,
+                        capacity: room.editableCapacity,
+                        editable: false
+                    })
+                });
+            });
     }
 
     onRemove(id) {
-        let rooms = this.state.rooms.filter(room => room.id !== id);
-        this.setState({rooms});
+        deleteRoom(id).then(() => {
+            let rooms = this.state.rooms.filter(room => room.id !== id);
+            this.setState({rooms});
+        });
+    }
+
+    onModalSave() {
+        let {name, capacity} = this.state.popupState;
+        saveRoom({name, capacity}).then(response => {
+            console.log('POST response: ', response);
+
+            this.setState({
+                rooms: [...this.state.rooms, response],
+                showModal: false,
+                popupState: {
+                    capacity: 30,
+                    name: ''
+                }
+            });
+        });
     }
 
     render() {
-        let {rooms} = this.state;
+        let {rooms, popupState} = this.state;
+
         return (
             <div className="room-input">
-                <h5>Manage rooms</h5>
 
-                <div className="row table-header">
-                    <div className="column">Name</div>
-                    <div className="column">Capacity</div>
-                </div>
+                <CrudTableHeader
+                    title="Manage rooms"
+                    columns={['Name', 'Capacity']}
+                    addNewItem={() => this.setState({showModal: true})}
+                />
 
                 <div className="scrollable-items">
                     {rooms && rooms.map(room => (
-                        <CrudTable
+                        <CrudTableRow
                             key={room.id}
                             columns={[room.name, room.capacity]}
                             editable={room.editable}
@@ -112,9 +130,37 @@ class RoomInput extends Component {
                                 <option key="100" value='100'>100</option>
                                 <option key="200" value='200'>200</option>
                             </select>
-                        </CrudTable>
+
+                        </CrudTableRow>
                     ))}
                 </div>
+
+                <Popup
+                    show={this.state.showModal}
+                    title="Add new Room"
+                    onSave={() => this.onModalSave()}
+                    handleClose={() => this.setState({showModal: false})}>
+
+                    <div className="room-input add-row">
+                        <span>Room Name:</span>
+                        <input
+                            type="text"
+                            value={popupState.name}
+                            onChange={e => this.setState({popupState: {...popupState, name: e.target.value}})}
+                        />
+                    </div>
+
+                    <div className="room-input add-row">
+                        <span>Capacity:</span>
+                        <select
+                            value={popupState.capacity}
+                            onChange={(e) => this.setState({popupState: {...popupState, capacity: e.target.value}})}>
+                            <option key="30" value='30'>30</option>
+                            <option key="100" value='100'>100</option>
+                            <option key="200" value='200'>200</option>
+                        </select>
+                    </div>
+                </Popup>
             </div>
         );
     };

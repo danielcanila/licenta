@@ -1,4 +1,4 @@
-.crud-table .row {
+.crud-table.row {
     display: flex;
     height: 40px;
     align-items: center;

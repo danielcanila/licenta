@@ -9,17 +9,23 @@ const retrieveAllRooms = function () {
             'Access-Control-Allow-Origin': '*',
         }
         };
-    return axios.get(requestUrl, config).then(r => r.data);
+    return axios.get(requestUrl, config)
+        .then(function (response) {
+            return response.data;
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
 };
 
 const saveRoom = function (roomData) {
     let requestUrl = url;
     return axios.post(requestUrl, roomData)
         .then(function (response) {
-            return response;
+            return response.data;
         })
         .catch(function (error) {
-            return error;
+            console.error(error);
         });
 };
 
@@ -27,10 +33,10 @@ const deleteRoom = function (roomId) {
     let requestUrl = url + "/" + roomId;
     return axios.delete(requestUrl)
         .then(function (response) {
-            return response;
+            return response.data;
         })
         .catch(function (error) {
-            return error;
+            console.error(error);
         });
 };
 
@@ -38,10 +44,10 @@ const updateRoom = function (roomId, roomData) {
     let requestUrl = url + "/" + roomId;
     return axios.patch(requestUrl, roomData)
         .then(function (response) {
-            return response;
+            return response.data;
         })
         .catch(function (error) {
-            return error;
+            console.error(error);
         });
 };
 

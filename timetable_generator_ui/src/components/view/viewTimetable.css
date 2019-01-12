@@ -1,0 +1,40 @@
+#timetable .MainHeader,
+#timetable .MainHeader:hover {
+    color: #fff;
+    background-color: #205d90;
+    height: 40px;
+    border-bottom: none;
+}
+
+#timetable .MainHeader th {
+    padding: 0 10px;
+    border: none;
+    line-height: 40px;
+    color: #fff;
+}
+
+#timetable tr {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+#timetable th {
+    border: none;
+    line-height: 25px;
+    font-weight: normal;
+}
+
+#timetable .SubHeader,
+#timetable .SubHeader:hover {
+    color: #fff;
+    background-color: #337ab7;
+}
+
+#timetable .table-bordered {
+    border: none;
+}
+
+#timetable .table-responsive {
+    margin: 20px 0;
+}
+

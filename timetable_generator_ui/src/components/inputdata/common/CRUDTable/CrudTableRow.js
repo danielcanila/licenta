@@ -1,9 +1,9 @@
 import React from 'react';
 import {Glyphicon} from "react-bootstrap";
 
-import './crudTable.css';
+import './crudTableRow.css';
 
-export default class CrudTable extends React.Component {
+export default class CrudTableRow extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -22,7 +22,7 @@ export default class CrudTable extends React.Component {
 
                 <div className="action-items">
                     {!editable ?
-                        <Glyphicon glyph="glyphicon glyphicon-pencil"  onClick={toggleEdit} />
+                        <Glyphicon glyph="glyphicon glyphicon-pencil" onClick={toggleEdit} />
                         :
                         <Glyphicon glyph="glyphicon glyphicon-ok" onClick={updateRoomRow} />
                     }
