@@ -7,7 +7,7 @@
 }
 
 #timetable .MainHeader th {
-    padding: 0 10px;
+    padding: 0 15px;
     border: none;
     line-height: 40px;
     color: #fff;
@@ -20,8 +20,9 @@
 
 #timetable th {
     border: none;
-    line-height: 25px;
+    line-height: 35px;
     font-weight: normal;
+    padding: 0 15px;
 }
 
 #timetable .SubHeader,
@@ -35,6 +36,21 @@
 }
 
 #timetable .table-responsive {
-    margin: 20px 0;
+    margin: 20px 30px;
+}
+
+#timetable .dropdown {
+    width: 225px;
+    margin: 0 20px;
+}
+
+#timetable .dropdown button:first-child {
+    width: calc(100% - 25px);
+}
+
+#timetable .dropdown button > div {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
