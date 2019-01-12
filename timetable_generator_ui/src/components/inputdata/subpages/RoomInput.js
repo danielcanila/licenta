@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import './roomInput.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {retrieveAllRooms, saveRoom, deleteRoom, updateRoom} from '../../services/RoomService'
-import {Button, Glyphicon} from "react-bootstrap";
+import {deleteRoom, retrieveAllRooms, saveRoom, updateRoom} from '../../services/RoomService'
 
 import CrudTableRow from '../common/CRUDTable/CrudTableRow';
 import CrudTableHeader from '../common/CRUDTable/CrudTableHeader';
@@ -14,7 +13,7 @@ class RoomInput extends Component {
         super(props);
         this.state = {
             rooms: [],
-            showModal: false,
+            showPopup: false,
             popupState: {
                 capacity: 30,
                 name: ''
@@ -30,8 +29,8 @@ class RoomInput extends Component {
                     name: room.name,
                     capacity: room.capacity,
                     editable: false,
-                    editableName: room.name,
-                    editableCapacity: room.capacity
+                    newName: room.name,
+                    newCapacity: room.capacity
                 }));
                 this.setState({rooms});
             })
@@ -42,7 +41,7 @@ class RoomInput extends Component {
 
     updateRoomObject(id, newProperties) {
         return this.state.rooms.map(room => {
-            if (room.id == id) {
+            if (room.id === id) {
                 return Object.assign({}, room, newProperties)
             }
             return room;
@@ -54,22 +53,22 @@ class RoomInput extends Component {
     }
 
     onNameChange(e, id) {
-        this.setState({rooms: this.updateRoomObject(id, {editableName: e.target.value})});
+        this.setState({rooms: this.updateRoomObject(id, {newName: e.target.value})});
     }
 
     onCapacityChange(e, id) {
-        this.setState({rooms: this.updateRoomObject(id, {editableCapacity: e.target.value})});
+        this.setState({rooms: this.updateRoomObject(id, {newCapacity: e.target.value})});
     }
 
     updateRoomRow(id, room) {
-        let {editableName, editableCapacity} = room;
+        let {newName, newCapacity} = room;
 
-        updateRoom(id, {name: editableName, capacity: editableCapacity})
+        updateRoom(id, {name: newName, capacity: newCapacity})
             .then(() => {
                 this.setState({
                     rooms: this.updateRoomObject(id, {
-                        name: room.editableName,
-                        capacity: room.editableCapacity,
+                        name: room.newName,
+                        capacity: room.newCapacity,
                         editable: false
                     })
                 });
@@ -86,11 +85,9 @@ class RoomInput extends Component {
     onModalSave() {
         let {name, capacity} = this.state.popupState;
         saveRoom({name, capacity}).then(response => {
-            console.log('POST response: ', response);
-
             this.setState({
                 rooms: [...this.state.rooms, response],
-                showModal: false,
+                showPopup: false,
                 popupState: {
                     capacity: 30,
                     name: ''
@@ -108,7 +105,7 @@ class RoomInput extends Component {
                 <CrudTableHeader
                     title="Manage rooms"
                     columns={['Name', 'Capacity']}
-                    addNewItem={() => this.setState({showModal: true})}
+                    addNewItem={() => this.setState({showPopup: true})}
                 />
 
                 <div className="scrollable-items">
@@ -121,10 +118,10 @@ class RoomInput extends Component {
                             updateRoomRow={() => this.updateRoomRow(room.id, room)}
                             onRemove={() => this.onRemove(room.id)}>
 
-                            <input type="text" value={room.editableName}
-                                   onChange={(e) => this.onNameChange(e, room.id)} />
+                            <input type="text" value={room.newName}
+                                   onChange={(e) => this.onNameChange(e, room.id)}/>
                             <select
-                                value={room.editableCapacity}
+                                value={room.newCapacity}
                                 onChange={(e) => this.onCapacityChange(e, room.id)}>
                                 <option key="30" value='30'>30</option>
                                 <option key="100" value='100'>100</option>
@@ -136,10 +133,10 @@ class RoomInput extends Component {
                 </div>
 
                 <Popup
-                    show={this.state.showModal}
+                    show={this.state.showPopup}
                     title="Add new Room"
                     onSave={() => this.onModalSave()}
-                    handleClose={() => this.setState({showModal: false})}>
+                    handleClose={() => this.setState({showPopup: false})}>
 
                     <div className="room-input add-row">
                         <span>Room Name:</span>

@@ -3,11 +3,11 @@ import React from 'react';
 import {Glyphicon} from "react-bootstrap";
 import './crudTableHeader.css';
 
-export default function({columns, addNewItem}) {
+export default function({columns, title, addNewItem}) {
     return (
         <div className="table-header">
             <div className="title-section">
-                <h5>Manage rooms</h5>
+                <h5>{title}</h5>
                 <Glyphicon glyph="glyphicon glyphicon-plus" onClick={addNewItem} />
             </div>
 
