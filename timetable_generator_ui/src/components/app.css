@@ -1,10 +1,8 @@
 .main-page {
     text-align: center;
-    width: 1300px;
-    height: 800px;
+    width: 80%;
     position: relative;
-    left: 50%;
-    margin-left: -650px;
+    margin: auto;
 }
 
 .nav-item, nav-item:hover, nav-item:active {

@@ -1,0 +1,21 @@
+.crud-table .row {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+    margin-right: 0;
+    margin-left: 0;
+}
+.crud-table .column {
+    width: 200px;
+}
+
+.crud-table .action-items {
+    margin-left: auto;
+}
+
+.crud-table .action-items span {
+    padding: 10px;
+    margin-right: 10px;
+}

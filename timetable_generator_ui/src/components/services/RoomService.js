@@ -8,13 +8,8 @@ const retrieveAllRooms = function () {
         headers: {
             'Access-Control-Allow-Origin': '*',
         }
-    };
-    return axios.get(requestUrl, config)
-        .then(response => response.data)
-        .then(data => {
-            return data;
-        });
-
+        };
+    return axios.get(requestUrl, config).then(r => r.data);
 };
 
 const saveRoom = function (roomData) {

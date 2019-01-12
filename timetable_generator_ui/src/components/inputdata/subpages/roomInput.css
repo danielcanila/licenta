@@ -1,0 +1,40 @@
+.room-input .scrollable-items {
+    max-height: 320px;
+    overflow: auto;
+}
+
+.room-input .row {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+    margin-right: 0;
+    margin-left: 0;
+}
+.table-header .column {
+    width: 200px;
+}
+
+.room-input input {
+    width: 180px;
+    margin: 0 10px;
+    box-sizing: content-box;;
+}
+
+.room-input select {
+    width: 180px;
+    margin: 0 10px;
+}
+
+.room-input h5 {
+    color: #fff;
+    background-color: #205d90;
+    line-height: 40px;
+    margin-bottom: 0;
+}
+
+.room-input .table-header {
+    color: #fff;
+    background-color: #337ab7;
+}
