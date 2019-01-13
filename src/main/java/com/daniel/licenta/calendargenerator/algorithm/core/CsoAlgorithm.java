@@ -6,8 +6,6 @@ import com.daniel.licenta.calendargenerator.algorithm.util.RandomGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Random;
-
 import static com.daniel.licenta.calendargenerator.algorithm.core.ConfigCSO.*;
 
 @Component
@@ -26,7 +24,7 @@ public class CsoAlgorithm {
     private DataParser dataParser;
 
     @Autowired
-    private OptimizerCSO optimizerCSO;
+    private LocalSearchOptimizerCSO optimizerCSO;
 
     @Autowired
     private ConfigCSO configCSO;

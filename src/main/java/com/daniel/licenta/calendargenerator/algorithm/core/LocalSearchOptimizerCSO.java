@@ -13,7 +13,7 @@ import static com.daniel.licenta.calendargenerator.algorithm.util.ArrayUtils.gen
 import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.MAX_NUMBER_OF_STUDENT_CLASSES;
 
 @Component
-public class OptimizerCSO {
+public class LocalSearchOptimizerCSO {
 
     @Autowired
     private ConfigCSO configCSO;
