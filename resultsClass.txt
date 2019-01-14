@@ -1,337 +1,1009 @@
 
 -----------------------------------------------------------------------------------
-Schedule for class : Class A - students nr: 30
+Schedule for class : 9A - students nr: 30
 
 Day 0
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  teacher: Varlan | room: Room 8 (capacity = 30)
+Hour 08 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
 
 Day 1
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
 
 Day 2
-Hour 08 :  teacher: Forascu | room: Room 8 (capacity = 30)
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
 
 Day 3
-Hour 08 :  teacher: Frasinaru | room: C2 (capacity = 100)
-Hour 10 :  FREE
-Hour 12 :  teacher: Iacob | room: C2 (capacity = 100)
-Hour 14 :  FREE
-Hour 16 :  teacher: Breaban | room: C2 (capacity = 100)
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
 
 Day 4
-Hour 08 :  teacher: Breaban | room: Room 8 (capacity = 30)
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
 -----------------------------------------------------------------------------------
-Schedule for class : Class B - students nr: 30
+Schedule for class : 9B - students nr: 30
 
 Day 0
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  teacher: Forascu | room: Room 7 (capacity = 30)
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
 
 Day 1
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
 
 Day 2
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
 
 Day 3
-Hour 08 :  teacher: Frasinaru | room: C2 (capacity = 100)
-Hour 10 :  FREE
-Hour 12 :  teacher: Iacob | room: C2 (capacity = 100)
-Hour 14 :  FREE
-Hour 16 :  teacher: Breaban | room: C2 (capacity = 100)
-Hour 18 :  teacher: Varlan | room: Room 7 (capacity = 30)
+Hour 08 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
 
 Day 4
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  teacher: Moruz | room: Room 7 (capacity = 30)
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
 -----------------------------------------------------------------------------------
-Schedule for class : Class C - students nr: 30
+Schedule for class : 9C - students nr: 30
 
 Day 0
-Hour 08 :  FREE
-Hour 10 :  teacher: Iacob | room: Room 6 (capacity = 30)
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
 
 Day 1
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  teacher: Varlan | room: Room 6 (capacity = 30)
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
 
 Day 2
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
 
 Day 3
-Hour 08 :  teacher: Frasinaru | room: C2 (capacity = 100)
-Hour 10 :  teacher: Moruz | room: Room 6 (capacity = 30)
-Hour 12 :  teacher: Iacob | room: C2 (capacity = 100)
-Hour 14 :  FREE
-Hour 16 :  teacher: Breaban | room: C2 (capacity = 100)
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
 
 Day 4
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
 -----------------------------------------------------------------------------------
-Schedule for class : Class D - students nr: 30
+Schedule for class : 9D - students nr: 30
 
 Day 0
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
 
 Day 1
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  teacher: Breaban | room: Room 5 (capacity = 30)
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
 
 Day 2
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
 
 Day 3
-Hour 08 :  teacher: Frasinaru | room: C2 (capacity = 100)
-Hour 10 :  teacher: Forascu | room: Room 5 (capacity = 30)
-Hour 12 :  teacher: Iacob | room: C2 (capacity = 100)
-Hour 14 :  FREE
-Hour 16 :  teacher: Breaban | room: C2 (capacity = 100)
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
 
 Day 4
-Hour 08 :  FREE
-Hour 10 :  teacher: Moruz | room: Room 5 (capacity = 30)
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
 -----------------------------------------------------------------------------------
-Schedule for class : Class E - students nr: 30
+Schedule for class : 9E - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Iacob | room: C1 (capacity = 100)
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  teacher: Frasinaru | room: Room 4 (capacity = 30)
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
 
 Day 1
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
 
 Day 2
-Hour 08 :  teacher: Varlan | room: Room 4 (capacity = 30)
-Hour 10 :  teacher: Frasinaru | room: C1 (capacity = 100)
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  teacher: Breaban | room: C1 (capacity = 100)
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
 
 Day 3
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
 
 Day 4
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  teacher: Iacob | room: Room 4 (capacity = 30)
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
 -----------------------------------------------------------------------------------
-Schedule for class : Class F - students nr: 30
+Schedule for class : 9F - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Iacob | room: C1 (capacity = 100)
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
 
 Day 1
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  teacher: Varlan | room: Room 3 (capacity = 30)
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
 
 Day 2
-Hour 08 :  teacher: Moruz | room: Room 3 (capacity = 30)
-Hour 10 :  teacher: Frasinaru | room: C1 (capacity = 100)
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  teacher: Breaban | room: C1 (capacity = 100)
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
 
 Day 3
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
 
 Day 4
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  teacher: Forascu | room: Room 3 (capacity = 30)
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
 -----------------------------------------------------------------------------------
-Schedule for class : Class G - students nr: 30
+Schedule for class : 10A - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Iacob | room: C1 (capacity = 100)
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  teacher: Moruz | room: Room 2 (capacity = 30)
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
 
 Day 1
-Hour 08 :  FREE
-Hour 10 :  teacher: Iacob | room: Room 2 (capacity = 30)
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
 
 Day 2
-Hour 08 :  FREE
-Hour 10 :  teacher: Frasinaru | room: C1 (capacity = 100)
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  teacher: Breaban | room: C1 (capacity = 100)
-Hour 18 :  teacher: Breaban | room: Room 2 (capacity = 30)
+Hour 08 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
 
 Day 3
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
 
 Day 4
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
 -----------------------------------------------------------------------------------
-Schedule for class : Class H - students nr: 30
+Schedule for class : 10B - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Iacob | room: C1 (capacity = 100)
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  teacher: Forascu | room: Room 1 (capacity = 30)
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
 
 Day 1
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  teacher: Varlan | room: Room 1 (capacity = 30)
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
 
 Day 2
-Hour 08 :  FREE
-Hour 10 :  teacher: Frasinaru | room: C1 (capacity = 100)
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  teacher: Breaban | room: C1 (capacity = 100)
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
 
 Day 3
-Hour 08 :  FREE
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
 
 Day 4
-Hour 08 :  teacher: Frasinaru | room: Room 1 (capacity = 30)
-Hour 10 :  FREE
-Hour 12 :  FREE
-Hour 14 :  FREE
-Hour 16 :  FREE
-Hour 18 :  FREE
+Hour 08 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 10C - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 10D - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 10E - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 10F - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 11A - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 11B - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 11C - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 11D - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 11E - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 11F - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 12A - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 12B - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 12C - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Informatica 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 12D - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 4 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Mate 2 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 12E - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Biologie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Informatica 3 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Geografie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Engleza 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Sport 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Chimie 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Fizica 1 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Istorie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 3 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Germana/Franceza 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Romana 4 | room: Room 1 (capacity = 30)
+-----------------------------------------------------------------------------------
+Schedule for class : 12F - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+
+Day 1
+Hour 08 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Chimie 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Filozofie 2 | room: Room 1 (capacity = 30)
+
+Day 2
+Hour 08 :  teacher: Prof Filozofie 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Relgigie 1 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+
+Day 3
+Hour 08 :  teacher: Prof Informatica 1 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Romana 3 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Istorie 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Biologie 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Geografie 2 | room: Room 1 (capacity = 30)
+
+Day 4
+Hour 08 :  teacher: Prof Mate 4 | room: Room 1 (capacity = 30)
+Hour 10 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 12 :  teacher: Prof Sport 2 | room: Room 1 (capacity = 30)
+Hour 14 :  teacher: Prof Germana/Franceza 2 | room: Room 1 (capacity = 30)
+Hour 16 :  teacher: Prof Engleza 2 | room: Room 1 (capacity = 30)
+Hour 18 :  teacher: Prof Fizica 2 | room: Room 1 (capacity = 30)

@@ -18,7 +18,6 @@ public class CalendarData {
     public int studentCount;
     public int teacherCount;
 
-    public List<CourseGroupRelationshipRecord> courseGroupRelationshipRecords = new ArrayList<>();
     public Teacher[] teachers;
     public StudentGroup[] studentGroups;
     public RoomRecord[] rooms;
@@ -36,8 +35,4 @@ public class CalendarData {
         return teachers[index];
     }
 
-    public boolean isSemianGroup(int index) {
-        return courseGroupRelationshipRecords.stream()
-                .anyMatch(courseGroupRelationshipRecord -> courseGroupRelationshipRecord.getSemianIndex() == index);
-    }
 }

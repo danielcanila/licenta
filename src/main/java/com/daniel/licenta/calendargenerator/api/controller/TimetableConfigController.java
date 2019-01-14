@@ -7,6 +7,7 @@ import com.daniel.licenta.calendargenerator.business.service.TimetableConfigServ
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -43,7 +44,25 @@ public class TimetableConfigController {
 
     @PostMapping("{id}/assignTeachers")
     public TimetableConfig addTeachersToStudentClasses(@PathVariable("id") long id, @RequestBody List<StudentTeacherAssignmentDTO> assignments) {
-        return timetableConfigService.assignTeachersToClasses(id, assignments);
+        List<StudentTeacherAssignmentDTO> l = new ArrayList<>();
+        for (long i = 1; i < 25; i++) {
+            l.add(new StudentTeacherAssignmentDTO(i, null, 1L, 2L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 2L, 2L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 3L, 4L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 4L, 4L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 5L, 3L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 6L, 2L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 7L, 2L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 8L, 2L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 9L, 2L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 10L, 1L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 11L, 2L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 12L, 2L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 13L, 1L));
+            l.add(new StudentTeacherAssignmentDTO(i, null, 14L, 1L));
+        }
+
+        return timetableConfigService.assignTeachersToClasses(id, l);
     }
 
 }

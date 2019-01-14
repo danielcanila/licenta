@@ -35,12 +35,4 @@ public class Teacher {
         return surname.equals(EMPTY_TIME_SLOT);
     }
 
-    public int getCapacityOfClass(int classIndex) {
-        for (int[] classesHeTeach : classesHeTeaches) {
-            if (classesHeTeach[0] == classIndex) {
-                return classesHeTeach[3];
-            }
-        }
-        throw new RuntimeException("No class present!");
-    }
 }

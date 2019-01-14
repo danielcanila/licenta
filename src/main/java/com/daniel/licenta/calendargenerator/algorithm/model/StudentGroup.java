@@ -11,5 +11,5 @@ public class StudentGroup {
     public int numberOfTeachers = 0;
 
     // matrix with the teachers, the teaching hours and the number of lessons that are taught in the class
-    public int[][] teachersOfClassAndHours = new int[MAX_NUMBER_OF_TEACHERS][3];
+    public int[][] teachersOfClassAndHours = new int[MAX_NUMBER_OF_TEACHERS][2];
 }

@@ -12,7 +12,7 @@ public class ConfigCSO {
     public static int REFINEMENT_STEPS = 50000;
     public static double MAX_FITNESS = 10000000;
     public static int HARD_CONSTRAINT_WEIGHT = 10;
-    public static int SEEKING_MEMORY_POOL = 4;
+    public static int SEEKING_MEMORY_POOL = 2;
     public static int SEEKING_RANGE_DIMENSION = 10;
     public static boolean SPC = true;
     // count of dimensions to change - percentage of dimensions to change
@@ -23,10 +23,8 @@ public class ConfigCSO {
     public static int SEED = 1534380238;
     public static double TEPW = 0.06;
     public static double ITDW = 1.0;
-    public static double ICDW = 0.95;
     public static double TEPW_O = 1.35;
     public static double ITDW_O = 0.06;
-    public static double ICDW_O = 0.06;
 
     public void overrideConfigData(ConfigData configData) {
         nullCheckSetting(configData.mr, () -> {
@@ -68,17 +66,11 @@ public class ConfigCSO {
         nullCheckSetting(configData.teacherDispersionWeight, () -> {
             ConfigCSO.ITDW = configData.teacherDispersionWeight;
         });
-        nullCheckSetting(configData.classDispersionWeight, () -> {
-            ConfigCSO.ICDW = configData.classDispersionWeight;
-        });
         nullCheckSetting(configData.emptyPeriodWeightOptimizationPhase, () -> {
             ConfigCSO.TEPW_O = configData.emptyPeriodWeightOptimizationPhase;
         });
         nullCheckSetting(configData.teacherDispersionWeightOptimizationPhase, () -> {
             ConfigCSO.ITDW_O = configData.teacherDispersionWeightOptimizationPhase;
-        });
-        nullCheckSetting(configData.classDispersionWeight, () -> {
-            ConfigCSO.ICDW_O = configData.classDispersionWeightOptimizationPhase;
         });
 
     }

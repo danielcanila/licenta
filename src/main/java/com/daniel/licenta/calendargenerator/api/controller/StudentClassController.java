@@ -24,6 +24,11 @@ public class StudentClassController {
         return studentService.addStudentClass(studentClass);
     }
 
+    @PostMapping("/bulk")
+    public List<StudentClass> addStudentClasses(@RequestBody List<StudentClass> studentClasses) {
+        return studentService.addStudentClasses(studentClasses);
+    }
+
     @DeleteMapping("{id}")
     public String deleteStudentClass(@PathVariable("id") Long id) {
         studentService.deleteStudentClass(id);

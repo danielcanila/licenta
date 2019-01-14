@@ -24,32 +24,14 @@ public class DataMapper {
         StudentGroup[] classRecords = mapClass(dataInputRepresentation);
         Teacher[] teachers = mapTeachers(dataInputRepresentation);
         RoomRecord[] roomRecords = mapRooms(dataInputRepresentation);
-        List<CourseGroupRelationshipRecord> courseGroupRelationshipRecords = mapCourseGroupRelationship(dataInputRepresentation);
-
 
         CalendarData calendarData = new CalendarData(classRecords.length, teachers.length);
         calendarData.setTeachers(teachers);
         calendarData.setStudentGroups(classRecords);
         calendarData.setRooms(roomRecords);
         calendarData.setNumberOfSlotsPerDay(dataInputRepresentation.getTimeslotsPerDay());
-        calendarData.setCourseGroupRelationshipRecords(courseGroupRelationshipRecords);
 
         return calendarData;
-    }
-
-    private List<CourseGroupRelationshipRecord> mapCourseGroupRelationship(DataInputRepresentation dataInputRepresentation) {
-        return dataInputRepresentation.getRelationships()
-                .stream()
-                .map(courseGroupRelationship -> {
-                    CourseGroupRelationshipRecord courseGroupRelationshipRecord = new CourseGroupRelationshipRecord(courseGroupRelationship.getCourse().getIndex());
-                    courseGroupRelationship.getStudentGroups()
-                            .stream()
-                            .map(StudentClassInput::getIndex)
-                            .collect(Collectors.toCollection(courseGroupRelationshipRecord::getStudentGroup));
-                    return courseGroupRelationshipRecord;
-                })
-                .collect(Collectors.toList());
-
     }
 
     private void fillDataWithEmptyTimeSlots(DataInputRepresentation data) {
@@ -119,7 +101,6 @@ public class DataMapper {
                     .forEach(classInputPairEntry -> {
                         teacher.classesHeTeaches[teacher.numberOfClasses][0] = classInputPairEntry.getKey().getIndex();
                         teacher.classesHeTeaches[teacher.numberOfClasses][1] = classInputPairEntry.getValue();
-                        teacher.classesHeTeaches[teacher.numberOfClasses][2] = 1;
                         teacher.totalHours += classInputPairEntry.getValue();
                         teacher.numberOfClasses++;
                     });
@@ -176,7 +157,6 @@ public class DataMapper {
                     .forEach(keyValue -> {
                         classRecord.teachersOfClassAndHours[classRecord.numberOfTeachers][0] = keyValue.getKey().getIndex();
                         classRecord.teachersOfClassAndHours[classRecord.numberOfTeachers][1] = keyValue.getValue();
-                        classRecord.teachersOfClassAndHours[classRecord.numberOfTeachers][2] = 1;
                         classRecord.numberOfTeachers++;
                     });
 
@@ -192,7 +172,6 @@ public class DataMapper {
         CalendarOutput calendarOutput = new CalendarOutput(calendarData.getNumberOfSlotsPerDay());
         data.getStudentClasses()
                 .stream()
-                .filter(studentClass -> !calendarData.isSemianGroup(studentClass.getIndex()))
                 .map(classInput -> new StudentClassOutput(classInput.getIdentifier(), classInput.getName(), classInput.getNumberOfStudents()))
                 .collect(Collectors.toCollection(calendarOutput::getStudentClassOutputs));
 
@@ -211,21 +190,13 @@ public class DataMapper {
                 .stream()
                 .sorted(Comparator.comparing(StudentClassInput::getNumberOfStudents))
                 .forEach(classInput -> {
-                    if (calendarData.isSemianGroup(classInput.getIndex())) {
-                        CourseGroupRelationship relationshipByIndex = data.getRelationshipByIndex(classInput.getIndex());
-                        for (StudentClassInput studentClass : relationshipByIndex.getStudentGroups()) {
-                            StudentClassOutput classOutput = calendarOutput.getStudentClassByIdentifier(studentClass.getIdentifier());
-                            mapDataToStudentClass(data, calendarData, result[classInput.getIndex()], calendarOutput, classOutput);
-                        }
-                    } else {
-                        StudentClassOutput classOutput = calendarOutput.getStudentClassByIdentifier(classInput.getIdentifier());
-                        mapDataToStudentClass(data, calendarData, result[classInput.getIndex()], calendarOutput, classOutput);
-                    }
+                    StudentClassOutput classOutput = calendarOutput.getStudentClassByIdentifier(classInput.getIdentifier());
+                    mapDataToStudentClass(data, result[classInput.getIndex()], calendarOutput, classOutput);
                 });
         return calendarOutput;
     }
 
-    private void mapDataToStudentClass(DataInputRepresentation data, CalendarData calendarData, int[][] ints, CalendarOutput calendarOutput, StudentClassOutput classOutput) {
+    private void mapDataToStudentClass(DataInputRepresentation data, int[][] ints, CalendarOutput calendarOutput, StudentClassOutput classOutput) {
         for (int j = 0; j < data.getTimeslotsPerDay() * 5; j++) {
             int teacherPosition = ints[j][0];
             int roomPosition = ints[j][1];

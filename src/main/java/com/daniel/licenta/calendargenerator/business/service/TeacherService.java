@@ -79,4 +79,9 @@ public class TeacherService {
         teacher.setUnavailabilitySlots(unavailabilityTimeSlots);
         return teacherRepository.save(teacher);
     }
+
+    public List<Teacher> saveAll(List<Teacher> teachers) {
+        return teacherRepository.saveAll(teachers);
+    }
 }
+

@@ -23,6 +23,10 @@ public class TeacherController {
     public Teacher addTeacher(@RequestBody Teacher teacher) {
         return teacherService.save(teacher);
     }
+    @PostMapping("/bulk")
+    public List<Teacher> addTeacher(@RequestBody List<Teacher> teachers) {
+        return teacherService.saveAll(teachers);
+    }
 
     @DeleteMapping("{id}")
     public String deleteTeacher(@PathVariable("id") Long id) {

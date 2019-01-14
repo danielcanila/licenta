@@ -20,28 +20,24 @@ public class DataParser {
 
         System.out.println("-------------------------------------------------------------------\n");
 
-        double a1 = fitnessCalculator.calculateTeacherUnavailabilityFitness(0, HOURS_IN_WEEK, cat, 1);
-        double a2 = fitnessCalculator.calculateParallelTeachingFitness(0, HOURS_IN_WEEK, cat, 1);
-        double a3 = fitnessCalculator.calculateUnassignedStudentClassPeriodFitness(0, HOURS_IN_WEEK, cat, 1);
-        double a4 = fitnessCalculator.calculateParallelRoomFitness(cat, 1);
+        double a1 = fitnessCalculator.calculateTeacherUnavailabilityFitness(0, HOURS_IN_WEEK, cat);
+        double a2 = fitnessCalculator.calculateParallelTeachingFitness(0, HOURS_IN_WEEK, cat);
+        double a3 = fitnessCalculator.calculateUnassignedStudentClassPeriodFitness(0, HOURS_IN_WEEK, cat);
 
         System.out.print("\nSoft constraints\n");
 
-        double a5 = fitnessCalculator.calculateTeacherDispersionFitnessSoft(HOURS_IN_WEEK, cat, ITDW, 2);
-        double a6 = fitnessCalculator.calculateClassDispersionFitnessSoft(HOURS_IN_WEEK, cat, ICDW, 2);
-        double a7 = fitnessCalculator.calculateTeacherEmptyPeriodsFitnessSoft(0, HOURS_IN_WEEK, cat, TEPW, 2);
+        double a5 = fitnessCalculator.calculateTeacherDispersionFitnessSoft(HOURS_IN_WEEK, cat, ITDW);
+        double a7 = fitnessCalculator.calculateTeacherEmptyPeriodsFitnessSoft(0, HOURS_IN_WEEK, cat, TEPW);
 
         System.out.println("SEED : " + randomGenerator.getSeed());
-        System.out.printf("\nCOST SUMMARY (as calculated for emptyPeriodWeight=%.2f, classDispersionWeight=%.2f, teacherDispersionWeight=%.2f\n", TEPW, ICDW, ITDW);
+        System.out.printf("\nCOST SUMMARY (as calculated for emptyPeriodWeight=%.2f, teacherDispersionWeight=%.2f\n", TEPW, ITDW);
         System.out.print("-------------------------------------------------------------------\n");
         System.out.printf("\nCost of unavailability : %f", a1);
         System.out.printf("\nCost of parallel teaching : %f", a2);
         System.out.printf("\nCost of class empty periods :%f", a3);
         System.out.printf("\nCost of teachers dispersion : %f", a5);
-        System.out.printf("\nCost of class dispersion : %f", a6);
         System.out.printf("\nCost of teachers empty periods : %f\n", a7);
-        System.out.printf("\nCost of paralel rooms : %f\n", a4);
-        System.out.printf("\nT o t a l   c o s t   i s   %f \n", a1 + a2 + a3 + a4 + a5 + a6 + a7);
+        System.out.printf("\nT o t a l   c o s t   i s   %f \n", a1 + a2 + a3 + a5 + a7);
     }
 
 }

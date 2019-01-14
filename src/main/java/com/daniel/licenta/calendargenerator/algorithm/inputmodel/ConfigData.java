@@ -25,10 +25,8 @@ public class ConfigData implements Serializable {
     public Long seed;
     public Double emptyPeriodWeight;
     public Double teacherDispersionWeight;
-    public Double classDispersionWeight;
     public Double emptyPeriodWeightOptimizationPhase;
     public Double teacherDispersionWeightOptimizationPhase;
-    public Double classDispersionWeightOptimizationPhase;
     public Long timeslotsPerDay;
 
 }

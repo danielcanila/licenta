@@ -33,11 +33,11 @@ public class CsoAlgorithm {
         randomGenerator.setSeed(configCSO.SEED);
         fitnessCalculator.setCalendarData(calendarData);
 
-        int[][][] globalBestCat = mainCSO.runCsoCoreAlgorithm(TEPW, ITDW, ICDW, calendarData);
+        int[][][] globalBestCat = mainCSO.runCsoCoreAlgorithm(TEPW, ITDW, calendarData);
 
         dataParser.displayResults(globalBestCat);
 
-        globalBestCat = optimizerCSO.runOptimizationPhase(TEPW_O, ITDW_O, ICDW_O, calendarData, globalBestCat, REFINEMENT_STEPS, true);
+        globalBestCat = optimizerCSO.runOptimizationPhase(TEPW_O, ITDW_O, calendarData, globalBestCat, REFINEMENT_STEPS, true);
 
         dataParser.displayResults(globalBestCat);
 

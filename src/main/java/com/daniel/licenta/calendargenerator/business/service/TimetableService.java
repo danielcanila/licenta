@@ -33,7 +33,7 @@ public class TimetableService {
     private SlotReservationRepository slotReservationRepository;
 
     public void triggerCalendarGenerator(Long id) {
-        new Thread(() -> {
+//        new Thread(() -> {
             TimetableConfig timetableConfig = timetableConfigRepository.findById(id).orElseThrow(() -> new RuntimeException("Config not found!"));
             TimetableResult timetableResult = timetableGenerator.generateTimeTable(timetableConfig.getConfig());
 
@@ -41,7 +41,7 @@ public class TimetableService {
             timetableResult.setTimetableConfig(timetableConfig);
             timetableResultRepository.save(timetableResult);
             slotReservationRepository.saveAll(timetableResult.getSlotReservations());
-        }).start();
+//        }).start();
     }
 
     public List<TimetableResult> getTimetableResults() {

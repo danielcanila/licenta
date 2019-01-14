@@ -26,7 +26,7 @@ public class LocalSearchOptimizerCSO {
 
     private CalendarData calendarData;
 
-    public int[][][] runOptimizationPhase(double TEPW, double ITDW, double ICDW, CalendarData calendarData, int[][][] globalBestCat, int refinementSteps, boolean displayInfo) {
+    public int[][][] runOptimizationPhase(double TEPW, double ITDW, CalendarData calendarData, int[][][] globalBestCat, int refinementSteps, boolean displayInfo) {
         this.calendarData = calendarData;
 
         if (displayInfo) {
@@ -60,7 +60,7 @@ public class LocalSearchOptimizerCSO {
                 }
             }
 
-            double fullFitness = fitnessCalculator.calculateFitness(HOURS_IN_WEEK, globalBestCat, TEPW, ITDW, ICDW);
+            double fullFitness = fitnessCalculator.calculateFitness(HOURS_IN_WEEK, globalBestCat, TEPW, ITDW);
             if (displayInfo) {
                 System.out.println("Optimization iteration cycle ended with fitness result of: " + fullFitness);
             }
@@ -72,8 +72,7 @@ public class LocalSearchOptimizerCSO {
     }
 
     private int checkValidity(int begin, int end, int[][][] cat, int classPosition, int timeslot1, int timeslot2, double TEPW1) {
-        if ((cat[classPosition][timeslot1][0] == -1 && cat[classPosition][timeslot2][0] == -1)
-                && (calendarData.rooms[cat[classPosition][timeslot1][1]].capacity == calendarData.rooms[cat[classPosition][timeslot2][1]].capacity)) {
+        if ((cat[classPosition][timeslot1][0] == -1 && cat[classPosition][timeslot2][0] == -1)) {
             return 1;
         }
         if ((cat[classPosition][timeslot1][0] != -1 && calendarData.teachers[cat[classPosition][timeslot1][0]].unavailableTimeslots[timeslot2] == 1)
@@ -81,9 +80,9 @@ public class LocalSearchOptimizerCSO {
             return -1;
         }
 
-        double ok3 = fitnessCalculator.calculateParallelTeachingFitness(begin, end, cat, 0);
+        double ok3 = fitnessCalculator.calculateParallelTeachingFitness(begin, end, cat);
         fitnessCalculator.swap(cat, classPosition, timeslot1, timeslot2);
-        double ok4 = fitnessCalculator.calculateParallelTeachingFitness(begin, end, cat, 0);
+        double ok4 = fitnessCalculator.calculateParallelTeachingFitness(begin, end, cat);
         if (ok4 > ok3) {
             fitnessCalculator.swap(cat, classPosition, timeslot1, timeslot2);
             return -1;
@@ -91,9 +90,9 @@ public class LocalSearchOptimizerCSO {
             fitnessCalculator.swap(cat, classPosition, timeslot1, timeslot2);
         }
 
-        ok3 = fitnessCalculator.calculateUnassignedStudentClassPeriodFitness(begin, end, cat, 0);
+        ok3 = fitnessCalculator.calculateUnassignedStudentClassPeriodFitness(begin, end, cat);
         fitnessCalculator.swap(cat, classPosition, timeslot1, timeslot2);
-        ok4 = fitnessCalculator.calculateUnassignedStudentClassPeriodFitness(begin, end, cat, 0);
+        ok4 = fitnessCalculator.calculateUnassignedStudentClassPeriodFitness(begin, end, cat);
         if (ok4 > ok3) {
             fitnessCalculator.swap(cat, classPosition, timeslot1, timeslot2);
             return -1;
@@ -101,9 +100,9 @@ public class LocalSearchOptimizerCSO {
             fitnessCalculator.swap(cat, classPosition, timeslot1, timeslot2);
         }
 
-        double f1 = fitnessCalculator.calculateTeacherEmptyPeriodsFitnessSoft(begin, end, cat, TEPW1, 0);
+        double f1 = fitnessCalculator.calculateTeacherEmptyPeriodsFitnessSoft(begin, end, cat, TEPW1);
         fitnessCalculator.swap(cat, classPosition, timeslot1, timeslot2);
-        double f2 = fitnessCalculator.calculateTeacherEmptyPeriodsFitnessSoft(begin, end, cat, TEPW1, 0);
+        double f2 = fitnessCalculator.calculateTeacherEmptyPeriodsFitnessSoft(begin, end, cat, TEPW1);
         if (f2 > f1) {
             fitnessCalculator.swap(cat, classPosition, timeslot1, timeslot2);
             return -2;

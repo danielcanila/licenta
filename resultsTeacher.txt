@@ -1,75 +1,785 @@
 
 -----------------------------------------------------------------------------------
-Schedule for teacher : Iacob
-Slot 0 (hour 8)- Group: Class H
-Slot 1 (hour 10)- Group: Class C
-Slot 7 (hour 10)- Group: Class G
-Slot 20 (hour 12)- Group: Class D
-Slot 27 (hour 14)- Group: Class E
+Schedule for teacher : Prof Engleza 1
+Slot 0 (hour 8)- Group: 10C
+Slot 1 (hour 10)- Group: 9C
+Slot 2 (hour 12)- Group: 10C
+Slot 3 (hour 14)- Group: 11C
+Slot 4 (hour 16)- Group: 10A
+Slot 5 (hour 18)- Group: 12E
+Slot 6 (hour 8)- Group: 9A
+Slot 8 (hour 12)- Group: 12C
+Slot 9 (hour 14)- Group: 11C
+Slot 10 (hour 16)- Group: 9C
+Slot 11 (hour 18)- Group: 10A
+Slot 14 (hour 12)- Group: 12C
+Slot 15 (hour 14)- Group: 12A
+Slot 16 (hour 16)- Group: 12E
+Slot 17 (hour 18)- Group: 9E
+Slot 18 (hour 8)- Group: 11A
+Slot 19 (hour 10)- Group: 11E
+Slot 22 (hour 16)- Group: 9E
+Slot 23 (hour 18)- Group: 11A
+Slot 24 (hour 8)- Group: 11E
+Slot 26 (hour 12)- Group: 10E
+Slot 27 (hour 14)- Group: 10E
+Slot 28 (hour 16)- Group: 12A
+Slot 29 (hour 18)- Group: 9A
 -----------------------------------------------------------------------------------
-Schedule for teacher : Frasinaru
-Slot 4 (hour 16)- Group: Class E
-Slot 13 (hour 10)- Group: Class H
-Slot 18 (hour 8)- Group: Class D
-Slot 24 (hour 8)- Group: Class H
+Schedule for teacher : Prof Engleza 2
+Slot 0 (hour 8)- Group: 12D
+Slot 1 (hour 10)- Group: 11D
+Slot 2 (hour 12)- Group: 11B
+Slot 3 (hour 14)- Group: 9B
+Slot 4 (hour 16)- Group: 9A
+Slot 5 (hour 18)- Group: 9F
+Slot 6 (hour 8)- Group: 10F
+Slot 7 (hour 10)- Group: 10D
+Slot 8 (hour 12)- Group: 9F
+Slot 10 (hour 16)- Group: 9B
+Slot 11 (hour 18)- Group: 12D
+Slot 12 (hour 8)- Group: 10F
+Slot 13 (hour 10)- Group: 12B
+Slot 15 (hour 14)- Group: 9D
+Slot 17 (hour 18)- Group: 12B
+Slot 18 (hour 8)- Group: 10D
+Slot 19 (hour 10)- Group: 11F
+Slot 20 (hour 12)- Group: 11F
+Slot 22 (hour 16)- Group: 11D
+Slot 23 (hour 18)- Group: 9D
+Slot 24 (hour 8)- Group: 10B
+Slot 25 (hour 10)- Group: 12F
+Slot 27 (hour 14)- Group: 11B
+Slot 28 (hour 16)- Group: 12F
+Slot 29 (hour 18)- Group: 10B
 -----------------------------------------------------------------------------------
-Schedule for teacher : Varlan
-Slot 5 (hour 18)- Group: Class A
-Slot 8 (hour 12)- Group: Class C
-Slot 9 (hour 14)- Group: Class F
-Slot 10 (hour 16)- Group: Class H
-Slot 12 (hour 8)- Group: Class E
-Slot 23 (hour 18)- Group: Class B
+Schedule for teacher : Prof Germana/Franceza 1
+Slot 2 (hour 12)- Group: 9A
+Slot 3 (hour 14)- Group: 12E
+Slot 4 (hour 16)- Group: 11E
+Slot 5 (hour 18)- Group: 11A
+Slot 6 (hour 8)- Group: 10A
+Slot 7 (hour 10)- Group: 11E
+Slot 8 (hour 12)- Group: 10A
+Slot 9 (hour 14)- Group: 12A
+Slot 10 (hour 16)- Group: 11C
+Slot 12 (hour 8)- Group: 10E
+Slot 13 (hour 10)- Group: 12A
+Slot 14 (hour 12)- Group: 9C
+Slot 16 (hour 16)- Group: 10E
+Slot 17 (hour 18)- Group: 10C
+Slot 19 (hour 10)- Group: 9E
+Slot 20 (hour 12)- Group: 11A
+Slot 21 (hour 14)- Group: 10C
+Slot 22 (hour 16)- Group: 9C
+Slot 23 (hour 18)- Group: 12C
+Slot 24 (hour 8)- Group: 9E
+Slot 25 (hour 10)- Group: 11C
+Slot 27 (hour 14)- Group: 12E
+Slot 28 (hour 16)- Group: 9A
+Slot 29 (hour 18)- Group: 12C
 -----------------------------------------------------------------------------------
-Schedule for teacher : Forascu
-Slot 3 (hour 14)- Group: Class H
-Slot 4 (hour 16)- Group: Class B
-Slot 12 (hour 8)- Group: Class A
-Slot 19 (hour 10)- Group: Class D
-Slot 28 (hour 16)- Group: Class F
+Schedule for teacher : Prof Germana/Franceza 2
+Slot 0 (hour 8)- Group: 11F
+Slot 1 (hour 10)- Group: 10D
+Slot 4 (hour 16)- Group: 11B
+Slot 5 (hour 18)- Group: 12D
+Slot 6 (hour 8)- Group: 12B
+Slot 7 (hour 10)- Group: 9D
+Slot 8 (hour 12)- Group: 12B
+Slot 9 (hour 14)- Group: 10F
+Slot 10 (hour 16)- Group: 12D
+Slot 11 (hour 18)- Group: 9B
+Slot 13 (hour 10)- Group: 10B
+Slot 14 (hour 12)- Group: 10B
+Slot 16 (hour 16)- Group: 11F
+Slot 17 (hour 18)- Group: 12F
+Slot 18 (hour 8)- Group: 9D
+Slot 20 (hour 12)- Group: 11D
+Slot 21 (hour 14)- Group: 10D
+Slot 22 (hour 16)- Group: 10F
+Slot 23 (hour 18)- Group: 9F
+Slot 24 (hour 8)- Group: 9F
+Slot 25 (hour 10)- Group: 9B
+Slot 26 (hour 12)- Group: 11B
+Slot 27 (hour 14)- Group: 12F
+Slot 29 (hour 18)- Group: 11D
 -----------------------------------------------------------------------------------
-Schedule for teacher : Moruz
-Slot 4 (hour 16)- Group: Class G
-Slot 12 (hour 8)- Group: Class F
-Slot 19 (hour 10)- Group: Class C
-Slot 25 (hour 10)- Group: Class D
-Slot 26 (hour 12)- Group: Class B
+Schedule for teacher : Prof Romana 1
+Slot 0 (hour 8)- Group: 9A
+Slot 1 (hour 10)- Group: 11E
+Slot 2 (hour 12)- Group: 11A
+Slot 3 (hour 14)- Group: 11E
+Slot 4 (hour 16)- Group: 11A
+Slot 6 (hour 8)- Group: 10C
+Slot 7 (hour 10)- Group: 9E
+Slot 8 (hour 12)- Group: 10C
+Slot 9 (hour 14)- Group: 9A
+Slot 10 (hour 16)- Group: 12C
+Slot 11 (hour 18)- Group: 10C
+Slot 12 (hour 8)- Group: 9E
+Slot 13 (hour 10)- Group: 9E
+Slot 15 (hour 14)- Group: 12C
+Slot 16 (hour 16)- Group: 10C
+Slot 17 (hour 18)- Group: 11E
+Slot 18 (hour 8)- Group: 12C
+Slot 19 (hour 10)- Group: 11A
+Slot 20 (hour 12)- Group: 11E
+Slot 21 (hour 14)- Group: 9A
+Slot 24 (hour 8)- Group: 11A
+Slot 25 (hour 10)- Group: 9E
+Slot 26 (hour 12)- Group: 12C
+Slot 27 (hour 14)- Group: 9A
 -----------------------------------------------------------------------------------
-Schedule for teacher : Breaban
-Slot 9 (hour 14)- Group: Class D
-Slot 16 (hour 16)- Group: Class H
-Slot 17 (hour 18)- Group: Class G
-Slot 22 (hour 16)- Group: Class D
-Slot 24 (hour 8)- Group: Class A
+Schedule for teacher : Prof Romana 2
+Slot 2 (hour 12)- Group: 9F
+Slot 3 (hour 14)- Group: 9F
+Slot 4 (hour 16)- Group: 10D
+Slot 6 (hour 8)- Group: 10D
+Slot 7 (hour 10)- Group: 11F
+Slot 8 (hour 12)- Group: 9B
+Slot 9 (hour 14)- Group: 11B
+Slot 10 (hour 16)- Group: 11F
+Slot 11 (hour 18)- Group: 9F
+Slot 12 (hour 8)- Group: 10D
+Slot 13 (hour 10)- Group: 11F
+Slot 14 (hour 12)- Group: 9B
+Slot 15 (hour 14)- Group: 11B
+Slot 16 (hour 16)- Group: 9B
+Slot 18 (hour 8)- Group: 9B
+Slot 19 (hour 10)- Group: 9F
+Slot 20 (hour 12)- Group: 12D
+Slot 21 (hour 14)- Group: 11B
+Slot 22 (hour 16)- Group: 11B
+Slot 23 (hour 18)- Group: 11F
+Slot 24 (hour 8)- Group: 12D
+Slot 27 (hour 14)- Group: 12D
+Slot 28 (hour 16)- Group: 12D
+Slot 29 (hour 18)- Group: 10D
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Romana 3
+Slot 0 (hour 8)- Group: 9D
+Slot 1 (hour 10)- Group: 12B
+Slot 2 (hour 12)- Group: 10F
+Slot 3 (hour 14)- Group: 10F
+Slot 4 (hour 16)- Group: 12F
+Slot 5 (hour 18)- Group: 11D
+Slot 6 (hour 8)- Group: 9D
+Slot 8 (hour 12)- Group: 12F
+Slot 9 (hour 14)- Group: 9D
+Slot 10 (hour 16)- Group: 10B
+Slot 11 (hour 18)- Group: 12B
+Slot 12 (hour 8)- Group: 12B
+Slot 13 (hour 10)- Group: 12F
+Slot 14 (hour 12)- Group: 11D
+Slot 15 (hour 14)- Group: 10B
+Slot 18 (hour 8)- Group: 11D
+Slot 19 (hour 10)- Group: 12F
+Slot 20 (hour 12)- Group: 10F
+Slot 21 (hour 14)- Group: 10B
+Slot 22 (hour 16)- Group: 9B
+Slot 23 (hour 18)- Group: 11D
+Slot 24 (hour 8)- Group: 10F
+Slot 25 (hour 10)- Group: 12B
+Slot 28 (hour 16)- Group: 10B
+Slot 29 (hour 18)- Group: 9D
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Romana 4
+Slot 0 (hour 8)- Group: 12E
+Slot 2 (hour 12)- Group: 9C
+Slot 3 (hour 14)- Group: 9C
+Slot 4 (hour 16)- Group: 11C
+Slot 5 (hour 18)- Group: 10A
+Slot 8 (hour 12)- Group: 12A
+Slot 9 (hour 14)- Group: 10A
+Slot 10 (hour 16)- Group: 10E
+Slot 11 (hour 18)- Group: 10E
+Slot 12 (hour 8)- Group: 10A
+Slot 13 (hour 10)- Group: 11C
+Slot 14 (hour 12)- Group: 11C
+Slot 15 (hour 14)- Group: 9C
+Slot 16 (hour 16)- Group: 11C
+Slot 17 (hour 18)- Group: 10E
+Slot 18 (hour 8)- Group: 10E
+Slot 19 (hour 10)- Group: 12E
+Slot 20 (hour 12)- Group: 12A
+Slot 21 (hour 14)- Group: 12A
+Slot 25 (hour 10)- Group: 12A
+Slot 26 (hour 12)- Group: 9C
+Slot 27 (hour 14)- Group: 10A
+Slot 28 (hour 16)- Group: 12E
+Slot 29 (hour 18)- Group: 12E
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Mate 1
+Slot 0 (hour 8)- Group: 9E
+Slot 1 (hour 10)- Group: 12C
+Slot 3 (hour 14)- Group: 9A
+Slot 5 (hour 18)- Group: 9E
+Slot 8 (hour 12)- Group: 11A
+Slot 9 (hour 14)- Group: 12C
+Slot 10 (hour 16)- Group: 11E
+Slot 11 (hour 18)- Group: 9A
+Slot 12 (hour 8)- Group: 10C
+Slot 13 (hour 10)- Group: 11A
+Slot 15 (hour 14)- Group: 10C
+Slot 16 (hour 16)- Group: 9A
+Slot 17 (hour 18)- Group: 11A
+Slot 18 (hour 8)- Group: 11E
+Slot 19 (hour 10)- Group: 9A
+Slot 21 (hour 14)- Group: 11E
+Slot 22 (hour 16)- Group: 10C
+Slot 23 (hour 18)- Group: 10C
+Slot 24 (hour 8)- Group: 12C
+Slot 25 (hour 10)- Group: 12C
+Slot 26 (hour 12)- Group: 9E
+Slot 27 (hour 14)- Group: 11E
+Slot 28 (hour 16)- Group: 11A
+Slot 29 (hour 18)- Group: 9E
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Mate 2
+Slot 0 (hour 8)- Group: 9B
+Slot 1 (hour 10)- Group: 11F
+Slot 3 (hour 14)- Group: 12D
+Slot 4 (hour 16)- Group: 11F
+Slot 5 (hour 18)- Group: 10D
+Slot 6 (hour 8)- Group: 12D
+Slot 7 (hour 10)- Group: 12D
+Slot 9 (hour 14)- Group: 9B
+Slot 10 (hour 16)- Group: 9F
+Slot 11 (hour 18)- Group: 11B
+Slot 12 (hour 8)- Group: 11F
+Slot 13 (hour 10)- Group: 11B
+Slot 14 (hour 12)- Group: 11B
+Slot 15 (hour 14)- Group: 9B
+Slot 18 (hour 8)- Group: 11B
+Slot 19 (hour 10)- Group: 9B
+Slot 20 (hour 12)- Group: 9F
+Slot 21 (hour 14)- Group: 9F
+Slot 22 (hour 16)- Group: 9F
+Slot 23 (hour 18)- Group: 10D
+Slot 26 (hour 12)- Group: 10D
+Slot 27 (hour 14)- Group: 10D
+Slot 28 (hour 16)- Group: 11F
+Slot 29 (hour 18)- Group: 12D
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Mate 3
+Slot 2 (hour 12)- Group: 12A
+Slot 3 (hour 14)- Group: 12A
+Slot 4 (hour 16)- Group: 10E
+Slot 5 (hour 18)- Group: 9C
+Slot 6 (hour 8)- Group: 12E
+Slot 7 (hour 10)- Group: 10E
+Slot 9 (hour 14)- Group: 12E
+Slot 10 (hour 16)- Group: 12A
+Slot 11 (hour 18)- Group: 11C
+Slot 14 (hour 12)- Group: 10E
+Slot 15 (hour 14)- Group: 11C
+Slot 16 (hour 16)- Group: 9C
+Slot 17 (hour 18)- Group: 10A
+Slot 18 (hour 8)- Group: 12A
+Slot 19 (hour 10)- Group: 10E
+Slot 20 (hour 12)- Group: 9C
+Slot 22 (hour 16)- Group: 10A
+Slot 23 (hour 18)- Group: 9C
+Slot 24 (hour 8)- Group: 10A
+Slot 25 (hour 10)- Group: 12E
+Slot 26 (hour 12)- Group: 12E
+Slot 27 (hour 14)- Group: 11C
+Slot 28 (hour 16)- Group: 11C
+Slot 29 (hour 18)- Group: 10A
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Mate 4
+Slot 0 (hour 8)- Group: 12F
+Slot 1 (hour 10)- Group: 10F
+Slot 2 (hour 12)- Group: 12F
+Slot 3 (hour 14)- Group: 11D
+Slot 4 (hour 16)- Group: 10B
+Slot 5 (hour 18)- Group: 10F
+Slot 7 (hour 10)- Group: 11D
+Slot 8 (hour 12)- Group: 10B
+Slot 10 (hour 16)- Group: 12B
+Slot 11 (hour 18)- Group: 11D
+Slot 12 (hour 8)- Group: 9D
+Slot 13 (hour 10)- Group: 9C
+Slot 14 (hour 12)- Group: 9D
+Slot 16 (hour 16)- Group: 11D
+Slot 17 (hour 18)- Group: 9D
+Slot 19 (hour 10)- Group: 10B
+Slot 21 (hour 14)- Group: 12F
+Slot 22 (hour 16)- Group: 12B
+Slot 23 (hour 18)- Group: 10F
+Slot 24 (hour 8)- Group: 12F
+Slot 25 (hour 10)- Group: 10F
+Slot 26 (hour 12)- Group: 9D
+Slot 27 (hour 14)- Group: 10B
+Slot 28 (hour 16)- Group: 12B
+Slot 29 (hour 18)- Group: 12B
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Informatica 1
+Slot 0 (hour 8)- Group: 11E
+Slot 1 (hour 10)- Group: 11A
+Slot 2 (hour 12)- Group: 12B
+Slot 4 (hour 16)- Group: 12B
+Slot 5 (hour 18)- Group: 9A
+Slot 6 (hour 8)- Group: 11A
+Slot 7 (hour 10)- Group: 10C
+Slot 9 (hour 14)- Group: 12F
+Slot 12 (hour 8)- Group: 9A
+Slot 13 (hour 10)- Group: 11E
+Slot 14 (hour 12)- Group: 12F
+Slot 17 (hour 18)- Group: 9A
+Slot 18 (hour 8)- Group: 12F
+Slot 19 (hour 10)- Group: 10C
+Slot 20 (hour 12)- Group: 9E
+Slot 21 (hour 14)- Group: 9E
+Slot 24 (hour 8)- Group: 12B
+Slot 26 (hour 12)- Group: 11E
+Slot 27 (hour 14)- Group: 11A
+Slot 28 (hour 16)- Group: 9E
+Slot 29 (hour 18)- Group: 10C
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Informatica 2
+Slot 0 (hour 8)- Group: 11B
+Slot 1 (hour 10)- Group: 9B
+Slot 2 (hour 12)- Group: 10A
+Slot 3 (hour 14)- Group: 10A
+Slot 6 (hour 8)- Group: 10E
+Slot 7 (hour 10)- Group: 11B
+Slot 12 (hour 8)- Group: 12C
+Slot 13 (hour 10)- Group: 12C
+Slot 14 (hour 12)- Group: 9E
+Slot 16 (hour 16)- Group: 12C
+Slot 20 (hour 12)- Group: 11B
+Slot 21 (hour 14)- Group: 9B
+Slot 22 (hour 16)- Group: 10E
+Slot 23 (hour 18)- Group: 9B
+Slot 24 (hour 8)- Group: 10E
+Slot 25 (hour 10)- Group: 11F
+Slot 26 (hour 12)- Group: 11F
+Slot 28 (hour 16)- Group: 10A
+Slot 29 (hour 18)- Group: 11F
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Informatica 3
+Slot 0 (hour 8)- Group: 12A
+Slot 1 (hour 10)- Group: 12A
+Slot 2 (hour 12)- Group: 12E
+Slot 3 (hour 14)- Group: 10D
+Slot 6 (hour 8)- Group: 9C
+Slot 7 (hour 10)- Group: 12E
+Slot 8 (hour 12)- Group: 9C
+Slot 9 (hour 14)- Group: 10D
+Slot 11 (hour 18)- Group: 11A
+Slot 12 (hour 8)- Group: 9F
+Slot 13 (hour 10)- Group: 12E
+Slot 14 (hour 12)- Group: 9F
+Slot 16 (hour 16)- Group: 9F
+Slot 17 (hour 18)- Group: 11C
+Slot 18 (hour 8)- Group: 11C
+Slot 19 (hour 10)- Group: 11B
+Slot 21 (hour 14)- Group: 11C
+Slot 27 (hour 14)- Group: 12A
+Slot 28 (hour 16)- Group: 10D
+Slot 29 (hour 18)- Group: 9C
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Informatica 4
+Slot 2 (hour 12)- Group: 10B
+Slot 3 (hour 14)- Group: 10B
+Slot 4 (hour 16)- Group: 12D
+Slot 5 (hour 18)- Group: 10B
+Slot 10 (hour 16)- Group: 11D
+Slot 11 (hour 18)- Group: 10F
+Slot 13 (hour 10)- Group: 10A
+Slot 14 (hour 12)- Group: 10F
+Slot 15 (hour 14)- Group: 9F
+Slot 17 (hour 18)- Group: 10F
+Slot 18 (hour 8)- Group: 12D
+Slot 19 (hour 10)- Group: 12D
+Slot 20 (hour 12)- Group: 9D
+Slot 21 (hour 14)- Group: 9D
+Slot 22 (hour 16)- Group: 9D
+Slot 23 (hour 18)- Group: 12A
+Slot 25 (hour 10)- Group: 11D
+Slot 26 (hour 12)- Group: 11D
+Slot 27 (hour 14)- Group: 12B
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Chimie 1
+Slot 0 (hour 8)- Group: 12C
+Slot 1 (hour 10)- Group: 11C
+Slot 3 (hour 14)- Group: 10E
+Slot 4 (hour 16)- Group: 9C
+Slot 5 (hour 18)- Group: 10E
+Slot 6 (hour 8)- Group: 11E
+Slot 7 (hour 10)- Group: 11C
+Slot 8 (hour 12)- Group: 9A
+Slot 10 (hour 16)- Group: 10C
+Slot 11 (hour 18)- Group: 9C
+Slot 14 (hour 12)- Group: 10A
+Slot 15 (hour 14)- Group: 9A
+Slot 16 (hour 16)- Group: 11E
+Slot 17 (hour 18)- Group: 12E
+Slot 18 (hour 8)- Group: 10A
+Slot 19 (hour 10)- Group: 12A
+Slot 20 (hour 12)- Group: 12E
+Slot 21 (hour 14)- Group: 12C
+Slot 22 (hour 16)- Group: 11A
+Slot 23 (hour 18)- Group: 9E
+Slot 24 (hour 8)- Group: 12A
+Slot 25 (hour 10)- Group: 11A
+Slot 26 (hour 12)- Group: 10C
+Slot 27 (hour 14)- Group: 9E
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Chimie 2
+Slot 2 (hour 12)- Group: 11D
+Slot 3 (hour 14)- Group: 12F
+Slot 5 (hour 18)- Group: 11F
+Slot 6 (hour 8)- Group: 9F
+Slot 7 (hour 10)- Group: 12F
+Slot 8 (hour 12)- Group: 11B
+Slot 9 (hour 14)- Group: 12B
+Slot 12 (hour 8)- Group: 10B
+Slot 13 (hour 10)- Group: 10F
+Slot 14 (hour 12)- Group: 12D
+Slot 15 (hour 14)- Group: 11F
+Slot 16 (hour 16)- Group: 9D
+Slot 17 (hour 18)- Group: 11B
+Slot 18 (hour 8)- Group: 12B
+Slot 19 (hour 10)- Group: 9D
+Slot 20 (hour 12)- Group: 10D
+Slot 21 (hour 14)- Group: 11D
+Slot 22 (hour 16)- Group: 10B
+Slot 23 (hour 18)- Group: 12D
+Slot 24 (hour 8)- Group: 9B
+Slot 25 (hour 10)- Group: 10D
+Slot 26 (hour 12)- Group: 9F
+Slot 28 (hour 16)- Group: 10F
+Slot 29 (hour 18)- Group: 9B
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Fizica 1
+Slot 0 (hour 8)- Group: 11C
+Slot 1 (hour 10)- Group: 9A
+Slot 2 (hour 12)- Group: 10E
+Slot 3 (hour 14)- Group: 11A
+Slot 4 (hour 16)- Group: 12C
+Slot 9 (hour 14)- Group: 10C
+Slot 10 (hour 16)- Group: 10A
+Slot 11 (hour 18)- Group: 11E
+Slot 12 (hour 8)- Group: 12E
+Slot 13 (hour 10)- Group: 9A
+Slot 14 (hour 12)- Group: 12A
+Slot 15 (hour 14)- Group: 9E
+Slot 16 (hour 16)- Group: 12A
+Slot 18 (hour 8)- Group: 9E
+Slot 20 (hour 12)- Group: 10C
+Slot 21 (hour 14)- Group: 9C
+Slot 22 (hour 16)- Group: 11E
+Slot 23 (hour 18)- Group: 12E
+Slot 24 (hour 8)- Group: 9C
+Slot 25 (hour 10)- Group: 10A
+Slot 26 (hour 12)- Group: 11A
+Slot 27 (hour 14)- Group: 12C
+Slot 28 (hour 16)- Group: 10E
+Slot 29 (hour 18)- Group: 11C
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Fizica 2
+Slot 3 (hour 14)- Group: 11B
+Slot 4 (hour 16)- Group: 9D
+Slot 5 (hour 18)- Group: 9B
+Slot 6 (hour 8)- Group: 11B
+Slot 7 (hour 10)- Group: 9F
+Slot 8 (hour 12)- Group: 10D
+Slot 10 (hour 16)- Group: 12F
+Slot 11 (hour 18)- Group: 10B
+Slot 14 (hour 12)- Group: 11F
+Slot 15 (hour 14)- Group: 11D
+Slot 16 (hour 16)- Group: 10D
+Slot 17 (hour 18)- Group: 9F
+Slot 18 (hour 8)- Group: 10F
+Slot 19 (hour 10)- Group: 11D
+Slot 20 (hour 12)- Group: 12B
+Slot 21 (hour 14)- Group: 12D
+Slot 22 (hour 16)- Group: 11F
+Slot 23 (hour 18)- Group: 12B
+Slot 24 (hour 8)- Group: 9D
+Slot 25 (hour 10)- Group: 10B
+Slot 26 (hour 12)- Group: 12D
+Slot 27 (hour 14)- Group: 10F
+Slot 28 (hour 16)- Group: 9B
+Slot 29 (hour 18)- Group: 12F
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Biologie 1
+Slot 0 (hour 8)- Group: 9C
+Slot 1 (hour 10)- Group: 10C
+Slot 3 (hour 14)- Group: 10C
+Slot 4 (hour 16)- Group: 12E
+Slot 5 (hour 18)- Group: 12A
+Slot 6 (hour 8)- Group: 12C
+Slot 7 (hour 10)- Group: 9C
+Slot 8 (hour 12)- Group: 11E
+Slot 9 (hour 14)- Group: 9E
+Slot 10 (hour 16)- Group: 12E
+Slot 11 (hour 18)- Group: 9E
+Slot 12 (hour 8)- Group: 11E
+Slot 14 (hour 12)- Group: 11A
+Slot 15 (hour 14)- Group: 10E
+Slot 16 (hour 16)- Group: 11A
+Slot 17 (hour 18)- Group: 12C
+Slot 18 (hour 8)- Group: 9A
+Slot 19 (hour 10)- Group: 11C
+Slot 20 (hour 12)- Group: 10A
+Slot 21 (hour 14)- Group: 10A
+Slot 22 (hour 16)- Group: 12A
+Slot 24 (hour 8)- Group: 11C
+Slot 25 (hour 10)- Group: 10E
+Slot 26 (hour 12)- Group: 9A
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Biologie 2
+Slot 0 (hour 8)- Group: 9F
+Slot 1 (hour 10)- Group: 12D
+Slot 2 (hour 12)- Group: 9D
+Slot 3 (hour 14)- Group: 12B
+Slot 5 (hour 18)- Group: 12B
+Slot 6 (hour 8)- Group: 9B
+Slot 7 (hour 10)- Group: 10F
+Slot 8 (hour 12)- Group: 10F
+Slot 9 (hour 14)- Group: 9F
+Slot 10 (hour 16)- Group: 9D
+Slot 11 (hour 18)- Group: 11F
+Slot 12 (hour 8)- Group: 11D
+Slot 13 (hour 10)- Group: 10D
+Slot 15 (hour 14)- Group: 12D
+Slot 16 (hour 16)- Group: 12F
+Slot 17 (hour 18)- Group: 11F
+Slot 20 (hour 12)- Group: 10B
+Slot 22 (hour 16)- Group: 12F
+Slot 23 (hour 18)- Group: 10B
+Slot 24 (hour 8)- Group: 10D
+Slot 25 (hour 10)- Group: 11B
+Slot 27 (hour 14)- Group: 9B
+Slot 28 (hour 16)- Group: 11D
+Slot 29 (hour 18)- Group: 11B
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Sport 1
+Slot 1 (hour 10)- Group: 9E
+Slot 2 (hour 12)- Group: 11E
+Slot 3 (hour 14)- Group: 12C
+Slot 4 (hour 16)- Group: 9E
+Slot 5 (hour 18)- Group: 11E
+Slot 6 (hour 8)- Group: 12A
+Slot 7 (hour 10)- Group: 12C
+Slot 9 (hour 14)- Group: 11A
+Slot 10 (hour 16)- Group: 11A
+Slot 11 (hour 18)- Group: 12E
+Slot 12 (hour 8)- Group: 12A
+Slot 13 (hour 10)- Group: 10E
+Slot 15 (hour 14)- Group: 10A
+Slot 16 (hour 16)- Group: 10A
+Slot 17 (hour 18)- Group: 9C
+Slot 18 (hour 8)- Group: 12E
+Slot 19 (hour 10)- Group: 9C
+Slot 20 (hour 12)- Group: 10E
+Slot 22 (hour 16)- Group: 11C
+Slot 23 (hour 18)- Group: 9A
+Slot 24 (hour 8)- Group: 10C
+Slot 25 (hour 10)- Group: 9A
+Slot 26 (hour 12)- Group: 11C
+Slot 27 (hour 14)- Group: 10C
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Sport 2
+Slot 0 (hour 8)- Group: 10D
+Slot 1 (hour 10)- Group: 11B
+Slot 2 (hour 12)- Group: 12D
+Slot 4 (hour 16)- Group: 9B
+Slot 5 (hour 18)- Group: 9D
+Slot 6 (hour 8)- Group: 12F
+Slot 7 (hour 10)- Group: 12B
+Slot 8 (hour 12)- Group: 11D
+Slot 9 (hour 14)- Group: 10B
+Slot 10 (hour 16)- Group: 11B
+Slot 11 (hour 18)- Group: 10D
+Slot 12 (hour 8)- Group: 12D
+Slot 13 (hour 10)- Group: 9D
+Slot 15 (hour 14)- Group: 12B
+Slot 16 (hour 16)- Group: 10B
+Slot 17 (hour 18)- Group: 11D
+Slot 20 (hour 12)- Group: 9B
+Slot 21 (hour 14)- Group: 10F
+Slot 24 (hour 8)- Group: 11F
+Slot 25 (hour 10)- Group: 9F
+Slot 26 (hour 12)- Group: 12F
+Slot 27 (hour 14)- Group: 11F
+Slot 28 (hour 16)- Group: 9F
+Slot 29 (hour 18)- Group: 10F
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Filozofie 1
+Slot 0 (hour 8)- Group: 11A
+Slot 1 (hour 10)- Group: 10B
+Slot 7 (hour 10)- Group: 9A
+Slot 8 (hour 12)- Group: 11F
+Slot 9 (hour 14)- Group: 10E
+Slot 11 (hour 18)- Group: 12A
+Slot 12 (hour 8)- Group: 12F
+Slot 13 (hour 10)- Group: 12D
+Slot 14 (hour 12)- Group: 10C
+Slot 15 (hour 14)- Group: 11E
+Slot 18 (hour 8)- Group: 9C
+Slot 19 (hour 10)- Group: 10D
+Slot 20 (hour 12)- Group: 11C
+Slot 21 (hour 14)- Group: 12E
+Slot 24 (hour 8)- Group: 11D
+Slot 25 (hour 10)- Group: 9D
+Slot 26 (hour 12)- Group: 10F
+Slot 28 (hour 16)- Group: 12C
+Slot 29 (hour 18)- Group: 9F
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Filozofie 2
+Slot 0 (hour 8)- Group: 10F
+Slot 1 (hour 10)- Group: 12E
+Slot 2 (hour 12)- Group: 9B
+Slot 8 (hour 12)- Group: 11C
+Slot 9 (hour 14)- Group: 12D
+Slot 10 (hour 16)- Group: 9E
+Slot 11 (hour 18)- Group: 12F
+Slot 12 (hour 8)- Group: 11B
+Slot 13 (hour 10)- Group: 11D
+Slot 14 (hour 12)- Group: 11E
+Slot 15 (hour 14)- Group: 10D
+Slot 16 (hour 16)- Group: 12B
+Slot 17 (hour 18)- Group: 10B
+Slot 21 (hour 14)- Group: 11F
+Slot 22 (hour 16)- Group: 12C
+Slot 23 (hour 18)- Group: 10A
+Slot 27 (hour 14)- Group: 9D
+Slot 28 (hour 16)- Group: 10C
+Slot 29 (hour 18)- Group: 10E
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Istorie 1
+Slot 0 (hour 8)- Group: 10A
+Slot 1 (hour 10)- Group: 10A
+Slot 2 (hour 12)- Group: 11C
+Slot 3 (hour 14)- Group: 9E
+Slot 4 (hour 16)- Group: 12A
+Slot 5 (hour 18)- Group: 12C
+Slot 6 (hour 8)- Group: 11C
+Slot 7 (hour 10)- Group: 11A
+Slot 8 (hour 12)- Group: 9E
+Slot 9 (hour 14)- Group: 11E
+Slot 10 (hour 16)- Group: 9A
+Slot 11 (hour 18)- Group: 12C
+Slot 12 (hour 8)- Group: 9C
+Slot 13 (hour 10)- Group: 10C
+Slot 14 (hour 12)- Group: 12E
+Slot 15 (hour 14)- Group: 11A
+Slot 21 (hour 14)- Group: 10E
+Slot 22 (hour 16)- Group: 9A
+Slot 23 (hour 18)- Group: 10E
+Slot 24 (hour 8)- Group: 12E
+Slot 25 (hour 10)- Group: 10C
+Slot 26 (hour 12)- Group: 12A
+Slot 28 (hour 16)- Group: 9C
+Slot 29 (hour 18)- Group: 11E
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Istorie 2
+Slot 0 (hour 8)- Group: 12B
+Slot 1 (hour 10)- Group: 9F
+Slot 2 (hour 12)- Group: 11F
+Slot 3 (hour 14)- Group: 9D
+Slot 4 (hour 16)- Group: 11D
+Slot 5 (hour 18)- Group: 12F
+Slot 6 (hour 8)- Group: 10B
+Slot 7 (hour 10)- Group: 10B
+Slot 8 (hour 12)- Group: 12D
+Slot 9 (hour 14)- Group: 11F
+Slot 10 (hour 16)- Group: 10F
+Slot 12 (hour 8)- Group: 9B
+Slot 13 (hour 10)- Group: 9B
+Slot 14 (hour 12)- Group: 10D
+Slot 16 (hour 16)- Group: 11B
+Slot 17 (hour 18)- Group: 12D
+Slot 18 (hour 8)- Group: 9F
+Slot 19 (hour 10)- Group: 10F
+Slot 20 (hour 12)- Group: 12F
+Slot 22 (hour 16)- Group: 10D
+Slot 23 (hour 18)- Group: 11B
+Slot 26 (hour 12)- Group: 12B
+Slot 27 (hour 14)- Group: 11D
+Slot 28 (hour 16)- Group: 9D
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Geografie 1
+Slot 0 (hour 8)- Group: 10E
+Slot 1 (hour 10)- Group: 10E
+Slot 2 (hour 12)- Group: 12C
+Slot 4 (hour 16)- Group: 10C
+Slot 5 (hour 18)- Group: 11C
+Slot 6 (hour 8)- Group: 9E
+Slot 7 (hour 10)- Group: 10A
+Slot 8 (hour 12)- Group: 12E
+Slot 9 (hour 14)- Group: 9C
+Slot 12 (hour 8)- Group: 11A
+Slot 14 (hour 12)- Group: 9A
+Slot 15 (hour 14)- Group: 12E
+Slot 16 (hour 16)- Group: 9E
+Slot 17 (hour 18)- Group: 12A
+Slot 18 (hour 8)- Group: 10C
+Slot 19 (hour 10)- Group: 12C
+Slot 20 (hour 12)- Group: 9A
+Slot 21 (hour 14)- Group: 11A
+Slot 23 (hour 18)- Group: 11C
+Slot 25 (hour 10)- Group: 11E
+Slot 26 (hour 12)- Group: 10A
+Slot 27 (hour 14)- Group: 9C
+Slot 28 (hour 16)- Group: 11E
+Slot 29 (hour 18)- Group: 12A
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Geografie 2
+Slot 0 (hour 8)- Group: 11D
+Slot 1 (hour 10)- Group: 12F
+Slot 2 (hour 12)- Group: 10D
+Slot 3 (hour 14)- Group: 11F
+Slot 4 (hour 16)- Group: 9F
+Slot 5 (hour 18)- Group: 11B
+Slot 6 (hour 8)- Group: 11F
+Slot 7 (hour 10)- Group: 9B
+Slot 8 (hour 12)- Group: 9D
+Slot 9 (hour 14)- Group: 11D
+Slot 10 (hour 16)- Group: 10D
+Slot 11 (hour 18)- Group: 9D
+Slot 15 (hour 14)- Group: 10F
+Slot 16 (hour 16)- Group: 10F
+Slot 17 (hour 18)- Group: 9B
+Slot 18 (hour 8)- Group: 10B
+Slot 19 (hour 10)- Group: 12B
+Slot 21 (hour 14)- Group: 12B
+Slot 22 (hour 16)- Group: 12D
+Slot 23 (hour 18)- Group: 12F
+Slot 24 (hour 8)- Group: 11B
+Slot 25 (hour 10)- Group: 12D
+Slot 26 (hour 12)- Group: 10B
+Slot 27 (hour 14)- Group: 9F
+-----------------------------------------------------------------------------------
+Schedule for teacher : Prof Relgigie 1
+Slot 0 (hour 8)- Group: 10B
+Slot 1 (hour 10)- Group: 9D
+Slot 2 (hour 12)- Group: 9E
+Slot 4 (hour 16)- Group: 10F
+Slot 5 (hour 18)- Group: 10C
+Slot 6 (hour 8)- Group: 11D
+Slot 7 (hour 10)- Group: 12A
+Slot 8 (hour 12)- Group: 10E
+Slot 12 (hour 8)- Group: 11C
+Slot 13 (hour 10)- Group: 9F
+Slot 14 (hour 12)- Group: 12B
+Slot 15 (hour 14)- Group: 12F
+Slot 16 (hour 16)- Group: 12D
+Slot 17 (hour 18)- Group: 10D
+Slot 18 (hour 8)- Group: 11F
+Slot 19 (hour 10)- Group: 10A
+Slot 20 (hour 12)- Group: 12C
+Slot 22 (hour 16)- Group: 12E
+Slot 23 (hour 18)- Group: 11E
+Slot 24 (hour 8)- Group: 9A
+Slot 25 (hour 10)- Group: 9C
+Slot 26 (hour 12)- Group: 9B
+Slot 28 (hour 16)- Group: 11B
+Slot 29 (hour 18)- Group: 11A
 -----------------------------------------------------------------------------------
 Schedule for teacher : EMPTY_TIME_SLOT
-Slot 0 (hour 8)- Group: Class H
-Slot 1 (hour 10)- Group: Class H
-Slot 2 (hour 12)- Group: Class H
-Slot 3 (hour 14)- Group: Class G
-Slot 4 (hour 16)- Group: Class H
-Slot 5 (hour 18)- Group: Class H
-Slot 6 (hour 8)- Group: Class H
-Slot 7 (hour 10)- Group: Class H
-Slot 8 (hour 12)- Group: Class H
-Slot 9 (hour 14)- Group: Class H
-Slot 10 (hour 16)- Group: Class G
-Slot 11 (hour 18)- Group: Class H
-Slot 12 (hour 8)- Group: Class H
-Slot 13 (hour 10)- Group: Class H
-Slot 14 (hour 12)- Group: Class H
-Slot 15 (hour 14)- Group: Class H
-Slot 16 (hour 16)- Group: Class H
-Slot 17 (hour 18)- Group: Class H
-Slot 18 (hour 8)- Group: Class H
-Slot 19 (hour 10)- Group: Class H
-Slot 20 (hour 12)- Group: Class H
-Slot 21 (hour 14)- Group: Class H
-Slot 22 (hour 16)- Group: Class H
-Slot 23 (hour 18)- Group: Class H
-Slot 24 (hour 8)- Group: Class G
-Slot 25 (hour 10)- Group: Class H
-Slot 26 (hour 12)- Group: Class H
-Slot 27 (hour 14)- Group: Class H
-Slot 28 (hour 16)- Group: Class H
-Slot 29 (hour 18)- Group: Class H

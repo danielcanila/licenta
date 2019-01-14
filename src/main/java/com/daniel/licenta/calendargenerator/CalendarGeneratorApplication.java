@@ -1,6 +1,7 @@
 package com.daniel.licenta.calendargenerator;
 
 import com.daniel.licenta.calendargenerator.algorithm.inputmodel.ConfigData;
+import com.daniel.licenta.calendargenerator.api.model.StudentTeacherAssignmentDTO;
 import com.daniel.licenta.calendargenerator.business.model.*;
 import org.dozer.DozerBeanMapper;
 import org.dozer.loader.api.BeanMappingBuilder;
@@ -14,6 +15,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @SpringBootApplication
 @EnableWebMvc
 @EnableJpaAuditing
@@ -26,7 +30,7 @@ public class CalendarGeneratorApplication implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000")
+//                .allowedOrigins("http://localhost:3000")
                 .allowedMethods("PUT", "DELETE", "POST", "PATCH", "GET");
     }
 
@@ -47,5 +51,7 @@ public class CalendarGeneratorApplication implements WebMvcConfigurer {
             mapping(ConfigData.class, ConfigData.class, TypeMappingOptions.mapNull(false));
         }
     };
+
+
 }
 

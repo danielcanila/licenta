@@ -51,4 +51,7 @@ public class StudentService {
     }
 
 
+    public List<StudentClass> addStudentClasses(List<StudentClass> studentClasses) {
+        return studentClassRepository.saveAll(studentClasses);
+    }
 }
