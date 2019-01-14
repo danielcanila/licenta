@@ -28,7 +28,7 @@ export default class StudentClassInput extends Component {
     componentDidMount() {
         retrieveAllStudentClasses()
             .then(response => {
-                let classes = this.initClassesObject(response);
+                let classes = this.initClasses(response);
                 this.setState({classes});
             })
             .catch(error => {
@@ -36,7 +36,7 @@ export default class StudentClassInput extends Component {
             });
     }
 
-    initClassesObject(classes) {
+    initClasses(classes) {
         return classes.map(cls => ({
             id: cls.id,
             name: cls.name,
@@ -88,7 +88,7 @@ export default class StudentClassInput extends Component {
         saveClass({name}).then(response => {
             let newClasses = [...this.state.classes, response];
             this.setState({
-                classes: this.initClassesObject(newClasses),
+                classes: this.initClasses(newClasses),
                 showPopup: false,
                 popupState: {
                     name: ''
@@ -125,6 +125,12 @@ export default class StudentClassInput extends Component {
                         </CrudTableRow>
                     ))}
                 </div>
+
+                {(!classes || classes.length === 0) &&
+                <div className="no-items">
+                    <span>No classes to display</span>
+                </div>
+                }
 
                 <Popup
                     show={this.state.showPopup}

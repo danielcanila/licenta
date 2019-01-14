@@ -4,9 +4,6 @@ import {Glyphicon} from "react-bootstrap";
 import './crudTableRow.css';
 
 export default class CrudTableRow extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         let {columns, editable, toggleEdit, updateRow, onRemove} = this.props;

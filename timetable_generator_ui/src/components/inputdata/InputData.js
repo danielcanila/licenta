@@ -7,9 +7,6 @@ import LectureInput from './subpages/LectureInput';
 import TeacherInput from './subpages/TeacherInput';
 
 class InputData extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
