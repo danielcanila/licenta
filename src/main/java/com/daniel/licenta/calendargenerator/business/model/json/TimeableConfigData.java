@@ -23,9 +23,6 @@ public class TimeableConfigData implements Serializable {
     @JsonIdentityReference(alwaysAsId = true)
     private List<TeacherData> teachers = new ArrayList<>();
 
-    // ROOM id/size
-    private List<RoomDTO> rooms = new ArrayList<>();
-
     private ConfigData configData;
 
     public void addAssignment(Long teacherId, Long studentDataId, Long numberOfSessions, Long lectureId) {

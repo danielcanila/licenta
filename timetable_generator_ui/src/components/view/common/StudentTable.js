@@ -18,7 +18,6 @@ class StudentTable extends Component {
                     <th><Timeslot timeslot={reservation.slot + 1}/></th>
                     <th>{reservation.lectureName}</th>
                     <th>{reservation.teacherName}</th>
-                    <th>{reservation.roomName}</th>
                     <th>{reservation.roomCapacity}</th>
                 </tr>)
             }
@@ -39,7 +38,6 @@ class StudentTable extends Component {
                             <th>To</th>
                             <th>Lecture</th>
                             <th>Teacher</th>
-                            <th>Room</th>
                             <th>Capacity</th>
                         </tr>
                     {this.createTableContent(reservations)}

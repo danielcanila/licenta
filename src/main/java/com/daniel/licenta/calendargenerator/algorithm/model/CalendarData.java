@@ -20,19 +20,10 @@ public class CalendarData {
 
     public Teacher[] teachers;
     public StudentGroup[] studentGroups;
-    public RoomRecord[] rooms;
 
     public CalendarData(int totalNumberOfStudentClasses, int totalNumberOfTeachers) {
         this.studentCount = totalNumberOfStudentClasses;
         this.teacherCount = totalNumberOfTeachers;
-    }
-
-    public List<RoomRecord> getAllRoomsByCapacity(int capacity) {
-        return Arrays.stream(rooms).filter(roomRecord -> roomRecord.capacity == capacity).collect(Collectors.toList());
-    }
-
-    public Teacher getTeacherByIndex(int index) {
-        return teachers[index];
     }
 
 }

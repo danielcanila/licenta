@@ -23,12 +23,10 @@ public class DataMapper {
 
         StudentGroup[] classRecords = mapClass(dataInputRepresentation);
         Teacher[] teachers = mapTeachers(dataInputRepresentation);
-        RoomRecord[] roomRecords = mapRooms(dataInputRepresentation);
 
         CalendarData calendarData = new CalendarData(classRecords.length, teachers.length);
         calendarData.setTeachers(teachers);
         calendarData.setStudentGroups(classRecords);
-        calendarData.setRooms(roomRecords);
         calendarData.setNumberOfSlotsPerDay(dataInputRepresentation.getTimeslotsPerDay());
 
         return calendarData;
@@ -56,23 +54,6 @@ public class DataMapper {
         }
 
         data.addTeacher(emptyTimeSlotsTeacher);
-    }
-
-    private static RoomRecord[] mapRooms(DataInputRepresentation dataInputRepresentation) {
-        RoomRecord[] teachersReturn = new RoomRecord[dataInputRepresentation.getRooms().size()];
-
-        List<RoomInput> rooms = dataInputRepresentation
-                .getRooms()
-                .stream()
-                .sorted(Comparator.comparing(RoomInput::getRoomIndex))
-                .collect(Collectors.toList());
-
-        for (int i = 0; i < rooms.size(); i++) {
-            RoomInput roomInput = rooms.get(i);
-            teachersReturn[i] = new RoomRecord(roomInput.getRoomIndex(), roomInput.getName(), roomInput.getCapacity());
-        }
-
-        return teachersReturn;
     }
 
     private static Teacher[] mapTeachers(DataInputRepresentation dataInputRepresentation) {
@@ -180,12 +161,6 @@ public class DataMapper {
                 .map(teacherInput -> new TeacherOutput(teacherInput.getIdentifier(), teacherInput.getName()))
                 .collect(Collectors.toCollection(calendarOutput::getTeachers));
 
-        data.getRooms()
-                .stream()
-                .map(roomInput -> new RoomOutput(roomInput.getIdentifier(), roomInput.getName(), roomInput.getCapacity()))
-                .collect(Collectors.toCollection(calendarOutput::getRooms));
-
-
         data.getStudentClasses()
                 .stream()
                 .sorted(Comparator.comparing(StudentClassInput::getNumberOfStudents))
@@ -199,11 +174,9 @@ public class DataMapper {
     private void mapDataToStudentClass(DataInputRepresentation data, int[][] ints, CalendarOutput calendarOutput, StudentClassOutput classOutput) {
         for (int j = 0; j < data.getTimeslotsPerDay() * 5; j++) {
             int teacherPosition = ints[j][0];
-            int roomPosition = ints[j][1];
 
             TeacherOutput teacherOutput = calendarOutput.getTeacherByIdentifier(data.getTeacherByIndex(teacherPosition).getIdentifier());
-            RoomOutput roomOutput = calendarOutput.getRoomByIdentifier(data.getRoomByIndex(roomPosition).getIdentifier());
-            classOutput.addTeachingSession(teacherOutput, j, roomOutput);
+            classOutput.addTeachingSession(teacherOutput, j);
         }
     }
 }

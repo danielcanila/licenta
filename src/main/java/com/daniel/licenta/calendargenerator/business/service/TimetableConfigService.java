@@ -59,22 +59,6 @@ public class TimetableConfigService {
         return timetableConfigRepository.save(timetableConfig);
     }
 
-    public TimetableConfig addRooms(long id, List<Long> roomIds) {
-        TimetableConfig timetableConfig = timetableConfigRepository.findById(id).orElseThrow(() -> new RuntimeException("Config not found!"));
-
-        List<Room> rooms = roomRepository.findAllById(roomIds);
-        if (roomIds.size() != rooms.size()) {
-            throw new RuntimeException("Some rooms were not found!");
-        }
-
-        List<RoomDTO> roomsDtos = rooms.stream()
-                .map(room -> new RoomDTO(room.getId(), room.getCapacity(), room.getName()))
-                .collect(Collectors.toList());
-
-        timetableConfig.getConfig().getRooms().addAll(roomsDtos);
-        return timetableConfigRepository.save(timetableConfig);
-    }
-
     public TimetableConfig addStudentClasses(long id, List<Long> studentClassIds) {
         TimetableConfig timetableConfig = timetableConfigRepository.findById(id).orElseThrow(() -> new RuntimeException("Config not found!"));
 

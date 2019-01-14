@@ -34,12 +34,6 @@ public class TimetableController {
         return timetableService.getTimetableForTeacher(id, teacherId);
     }
 
-    @GetMapping("{id}/room/{roomId}")
-    public Map<Long, List<SlotReservationDTO>> retrieveTimetableForRoom(@PathVariable("id") long id, @PathVariable("roomId") long roomId) {
-        Map<Long, List<SlotReservationDTO>> timetableForRoom = timetableService.getTimetableForRoom(id, roomId);
-        return timetableForRoom;
-    }
-
     @GetMapping
     public List<DataDTO> retrieveAllTimetables() {
         return timetableService.retrieveAllTimetables();
@@ -55,9 +49,4 @@ public class TimetableController {
         return timetableService.retrieveAllStudentClassesForTimetable(id);
     }
 
-    @GetMapping("{id}/room")
-    public List<DataDTO> retrieveAllRoomsFromTimetable(@PathVariable("id") long id) {
-        List<DataDTO> dataDTOS = timetableService.retrieveAllRoomsForTimetable(id);
-        return dataDTOS;
-    }
 }

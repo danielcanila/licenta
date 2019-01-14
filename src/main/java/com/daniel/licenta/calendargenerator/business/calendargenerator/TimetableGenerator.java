@@ -40,9 +40,8 @@ public class TimetableGenerator {
 
         DataInputRepresentation dataInputRepresentation = mapDataToInput(config);
         CalendarOutput calendarOutput = timeTableGeneratorCSO.generateTimetable(dataInputRepresentation, config.getConfigData());
-        TimetableResult timetableResult = mapDataToResult(calendarOutput, config);
 
-        return timetableResult;
+        return mapDataToResult(calendarOutput, config);
     }
 
     private TimetableResult mapDataToResult(CalendarOutput calendarOutput, TimeableConfigData config) {
@@ -55,33 +54,25 @@ public class TimetableGenerator {
                         .getSchedule()
                         .entrySet()
                         .stream()
-                        .filter(entry -> !entry.getValue().getKey().isFree())
+                        .filter(entry -> !entry.getValue().isFree())
                         .map(entry -> {
                             Integer slot = entry.getKey();
-                            Pair<TeacherOutput, RoomOutput> result = entry.getValue();
+                            TeacherOutput result = entry.getValue();
 
-                            Teacher teacher = teacherRepository.findById((long) result.getKey().getIdentifier())
-                                    .orElseThrow(() -> new RuntimeException("A)Not found " + result.getKey().getIdentifier()));
+                            Teacher teacher = teacherRepository.findById((long) result.getIdentifier())
+                                    .orElseThrow(() -> new RuntimeException("A)Not found " + result.getIdentifier()));
                             StudentClass studentClass = studentClassRepository.findById((long) studClass.getIdentifier())
                                     .orElseThrow(() -> new RuntimeException("B)Not found " + studClass.getIdentifier()));
-                            Room room = roomRepository.findById((long) result.getValue().getIdentifier())
-                                    .orElseThrow(() -> new RuntimeException("C)Not found " + result.getValue().getIdentifier()));
 
-                            Lecture lecture;
-                            if (result.getValue().isCourseClass()) {
-                                lecture = lectureRepository.findById(config.retrieveLectureIdForAssignment(teacher.getId(), config.retrieveParentclassById(studentClass.getId())))
-                                        .orElseThrow(() -> new RuntimeException("Lecture not found"));
-                            } else {
-                                lecture = lectureRepository.findById(config.retrieveLectureIdForAssignment(teacher.getId(), studentClass.getId()))
-                                        .orElseThrow(() -> new RuntimeException("Lecture not found"));
-                            }
+
+                            Lecture lecture = lectureRepository.findById(config.retrieveLectureIdForAssignment(teacher.getId(), studentClass.getId()))
+                                    .orElseThrow(() -> new RuntimeException("Lecture not found"));
 
                             SlotReservation reservation = new SlotReservation();
                             reservation.setDay(slot / slotsPerDay);
                             reservation.setSlot(slot % slotsPerDay);
                             reservation.setTeacher(teacher);
                             reservation.setStudentClass(studentClass);
-                            reservation.setRoom(room);
                             reservation.setLecture(lecture);
                             return reservation;
                         })
@@ -95,12 +86,6 @@ public class TimetableGenerator {
 
     private DataInputRepresentation mapDataToInput(TimeableConfigData config) {
         DataInputRepresentation dataInputRepresentation = new DataInputRepresentation(config.getConfigData().getTimeslotsPerDay().intValue());
-
-        List<RoomInput> rooms = config.getRooms()
-                .stream()
-                .map(dto -> new RoomInput(dto.getRoomId().intValue(), dto.getName(), dto.getRoomCapacity().intValue()))
-                .collect(Collectors.toList());
-        dataInputRepresentation.setRooms(rooms);
 
         List<StudentClassInput> studentClasses = config.getStudentClasses()
                 .stream()

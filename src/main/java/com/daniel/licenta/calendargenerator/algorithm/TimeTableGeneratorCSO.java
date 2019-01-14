@@ -64,12 +64,10 @@ public class TimeTableGeneratorCSO {
                     classBuffer.append("\nDay " + sessionOfWeek / 6);
                 }
                 classBuffer.append("\nHour " + (sessionOfWeek % 6 == 0 ? "0" : "") + ((sessionOfWeek % 6) * 2 + 8) + " : ");
-                if (teacherOutputRoomOutputPair.getKey().isFree()) {
+                if (teacherOutputRoomOutputPair.isFree()) {
                     classBuffer.append(" FREE");
                 } else {
-                    classBuffer.append(" teacher: " + teacherOutputRoomOutputPair.getKey().getName()
-                            + " | room: " + teacherOutputRoomOutputPair.getValue().getName()
-                            + " (capacity = " + teacherOutputRoomOutputPair.getValue().getCapacity() + ")");
+                    classBuffer.append(" teacher: " + teacherOutputRoomOutputPair.getName());
                 }
             });
         });

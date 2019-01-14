@@ -28,29 +28,6 @@ public class Data {
 
         List<CourseGroupRelationship> courseGroupRelationships = Arrays.asList(semianA, semianB);
 
-        RoomInput r1 = new RoomInput(1, "C201", 30);
-        RoomInput r2 = new RoomInput(2, "C202", 30);
-        RoomInput r3 = new RoomInput(3, "C203", 30);
-        RoomInput r4 = new RoomInput(4, "C204", 30);
-        RoomInput r5 = new RoomInput(5, "C205", 30);
-        RoomInput r6 = new RoomInput(6, "C206", 30);
-        RoomInput r7 = new RoomInput(7, "C207", 30);
-        RoomInput r8 = new RoomInput(8, "C208", 30);
-
-        RoomInput r9 = new RoomInput(9, "C901", 30);
-        RoomInput r10 = new RoomInput(10, "C902", 30);
-        RoomInput r11 = new RoomInput(11, "C903", 30);
-        RoomInput r12 = new RoomInput(12, "C904", 30);
-        RoomInput r13 = new RoomInput(13, "C905", 30);
-        RoomInput r14 = new RoomInput(14, "C906", 30);
-        RoomInput r15 = new RoomInput(15, "C907", 30);
-        RoomInput r16 = new RoomInput(16, "C908", 30);
-
-        RoomInput r17 = new RoomInput(17, "C1", 100);
-        RoomInput r18 = new RoomInput(18, "C2", 100);
-
-        List<RoomInput> roomInputs = Arrays.asList(r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18);
-
         TeacherInput t01 = new TeacherInput(111, "T01");
         t01.addUnavailabilityInterval(0, 0, 1, 2);
         t01.addUnavailabilityInterval(1, 0, 1, 2);
@@ -187,7 +164,6 @@ public class Data {
                 Arrays.asList(t01, t02, t03, t04, t05, t06, t07, t08, t09, t15, t16, t17, t18, t19, t20);
 
         DataInputRepresentation dataInputRepresentation = new DataInputRepresentation(6);
-        dataInputRepresentation.setRooms(roomInputs);
         dataInputRepresentation.setStudentClasses(studentGroups);
         dataInputRepresentation.setTeachers(teacherInputs);
         dataInputRepresentation.setRelationships(courseGroupRelationships);

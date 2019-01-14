@@ -43,10 +43,6 @@ public class SlotReservation {
     private Lecture lecture;
 
     @ManyToOne
-    @JoinColumn(name = "room_id", nullable = false)
-    private Room room;
-
-    @ManyToOne
     @JoinColumn(name = "student_class_id", nullable = false)
     private StudentClass studentClass;
 

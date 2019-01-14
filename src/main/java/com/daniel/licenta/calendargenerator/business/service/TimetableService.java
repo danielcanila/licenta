@@ -80,18 +80,6 @@ public class TimetableService {
         return handleCourseDuplicates(collect);
     }
 
-    public Map<Long, List<SlotReservationDTO>> getTimetableForRoom(long id, long roomId) {
-        TimetableResult timetableResult = timetableResultRepository.findById(id).orElseThrow(() -> new RuntimeException("Result now fount!"));
-
-        Map<Long, List<SlotReservationDTO>> collect = timetableResult.getSlotReservations()
-                .stream()
-                .filter(slotReservation -> slotReservation.getRoom().getId().equals(roomId))
-                .map(this::mapToDTO)
-                .collect(Collectors.groupingBy(SlotReservationDTO::getDay));
-
-        return handleCourseDuplicates(collect);
-    }
-
     public List<DataDTO> retrieveAllTimetables() {
         return timetableResultRepository.findAll()
                 .stream()
@@ -120,22 +108,11 @@ public class TimetableService {
                 .collect(Collectors.toList());
     }
 
-    public List<DataDTO> retrieveAllRoomsForTimetable(Long id) {
-        TimetableResult timetableResult = timetableResultRepository.findById(id).orElseThrow(() -> new RuntimeException("Result now fount!"));
-        return timetableResult
-                .getSlotReservations()
-                .stream()
-                .map(slot -> new DataDTO(slot.getRoom().getId(), slot.getRoom().getName()))
-                .distinct()
-                .collect(Collectors.toList());
-    }
 
     private SlotReservationDTO mapToDTO(SlotReservation slotReservation) {
         SlotReservationDTO slotReservationDTO = new SlotReservationDTO();
         slotReservationDTO.setDay(slotReservation.getDay());
         slotReservationDTO.setSlot(slotReservation.getSlot());
-        slotReservationDTO.setRoomName(slotReservation.getRoom().getName());
-        slotReservationDTO.setRoomCapacity(slotReservation.getRoom().getCapacity());
         slotReservationDTO.setLectureName(slotReservation.getLecture().getName());
         slotReservationDTO.setTeacherName(slotReservation.getTeacher().getName());
         slotReservationDTO.setStudentClassName(slotReservation.getStudentClass().getName());

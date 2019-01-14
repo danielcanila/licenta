@@ -15,14 +15,9 @@ public class DataInputRepresentation {
     List<CourseGroupRelationship> relationships = new ArrayList<>();
     List<StudentClassInput> studentClasses = new ArrayList<>();
     List<TeacherInput> teachers = new ArrayList<>();
-    List<RoomInput> rooms = new ArrayList<>();
 
     public DataInputRepresentation(int timeslotsPerDay) {
         this.timeslotsPerDay = timeslotsPerDay;
-    }
-
-    public StudentClassInput getStudentClassByIndex(int index) {
-        return studentClasses.stream().filter(classInput -> classInput.getIndex() == index).findFirst().get();
     }
 
     public StudentClassInput getStudentClassByIdentifier(int identifier) {
@@ -31,17 +26,6 @@ public class DataInputRepresentation {
 
     public TeacherInput getTeacherByIndex(int index) {
         return teachers.stream().filter(teacherInput -> teacherInput.getIndex() == index).findFirst().get();
-    }
-
-    public RoomInput getRoomByIndex(int index) {
-        return rooms.stream().filter(teacherInput -> teacherInput.getRoomIndex() == index).findFirst().get();
-    }
-
-    public CourseGroupRelationship getRelationshipByIndex(int index) {
-        return relationships.stream()
-                .filter(courseGroupRelationship -> courseGroupRelationship.getCourse().getIndex() == index)
-                .findFirst()
-                .orElseGet(() -> null);
     }
 
     public void setStudentClasses(List<StudentClassInput> toAdd) {
@@ -59,15 +43,6 @@ public class DataInputRepresentation {
         teachers.sort(Comparator.comparing(TeacherInput::getIdentifier));
         for (int i = 0; i < teachers.size(); i++) {
             teachers.get(i).index = i;
-        }
-    }
-
-    public void setRooms(List<RoomInput> toAdd) {
-        rooms.clear();
-        rooms.addAll(toAdd);
-        rooms.sort(Comparator.comparing(RoomInput::getIdentifier));
-        for (int i = 0; i < rooms.size(); i++) {
-            rooms.get(i).roomIndex = i;
         }
     }
 

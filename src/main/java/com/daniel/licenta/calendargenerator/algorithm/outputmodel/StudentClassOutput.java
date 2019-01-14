@@ -13,7 +13,7 @@ public class StudentClassOutput {
     private int identifier;
     private String name;
     private int numberOfStudents;
-    private Map<Integer, Pair<TeacherOutput, RoomOutput>> schedule = new HashMap<>();
+    private Map<Integer, TeacherOutput> schedule = new HashMap<>();
 
 
     public StudentClassOutput(int identifier, String name, int numberOfStudents) {
@@ -22,19 +22,19 @@ public class StudentClassOutput {
         this.numberOfStudents = numberOfStudents;
     }
 
-    public void addTeachingSession(TeacherOutput teacherOutput, int sessionOfWeek, RoomOutput roomOutput) {
-        Pair<TeacherOutput, RoomOutput> teacherOutputRoomOutputPair = schedule.get(sessionOfWeek);
+    public void addTeachingSession(TeacherOutput teacherOutput, int sessionOfWeek) {
+        TeacherOutput teacherOutputRoomOutputPair = schedule.get(sessionOfWeek);
         if (teacherOutputRoomOutputPair != null) {
             if (teacherOutput.isFree()) {
                 return;
             }
-            if (!teacherOutputRoomOutputPair.getKey().isFree()) {
+            if (!teacherOutputRoomOutputPair.isFree()) {
                 throw new RuntimeException("We have duplicates on class :" + name);
             }
             schedule.remove(sessionOfWeek);
         }
 
-        schedule.put(sessionOfWeek, new Pair<>(teacherOutput, roomOutput));
+        schedule.put(sessionOfWeek, teacherOutput);
 
 
         teacherOutput.addClassForTeaching(this, sessionOfWeek);
