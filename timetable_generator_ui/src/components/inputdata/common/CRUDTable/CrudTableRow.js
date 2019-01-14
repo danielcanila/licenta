@@ -9,7 +9,7 @@ export default class CrudTableRow extends React.Component {
     }
 
     render() {
-        let {columns, editable, toggleEdit, updateRoomRow, onRemove} = this.props;
+        let {columns, editable, toggleEdit, updateRow, onRemove} = this.props;
         if(!columns) return null;
 
         return (
@@ -24,7 +24,7 @@ export default class CrudTableRow extends React.Component {
                     {!editable ?
                         <Glyphicon glyph="glyphicon glyphicon-pencil" onClick={toggleEdit} />
                         :
-                        <Glyphicon glyph="glyphicon glyphicon-ok" onClick={updateRoomRow} />
+                        <Glyphicon glyph="glyphicon glyphicon-ok" onClick={updateRow} />
                     }
                     <Glyphicon glyph="glyphicon glyphicon-trash" onClick={onRemove} />
                 </div>

@@ -1,0 +1,19 @@
+.class-input .scrollable-items {
+    max-height: 320px;
+    overflow: auto;
+}
+
+.class-input input {
+    width: 180px;
+    margin: 0 10px;
+    box-sizing: content-box;;
+}
+
+.class-input.add-row {
+    margin: 20px 0;
+}
+
+.class-input.add-row span {
+    width: 90px;
+    display: inline-block;
+}
