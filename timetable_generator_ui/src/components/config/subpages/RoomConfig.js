@@ -7,7 +7,7 @@ class RoomConfig extends Component {
     render() {
         return (
             <Button bsStyle="primary" onClick={this.props.enableNext}>Next</Button>
-        );
+            );
     };
 }
 

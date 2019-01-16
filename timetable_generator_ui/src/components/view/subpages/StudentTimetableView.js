@@ -62,7 +62,7 @@ class StudentTimetableView extends Component {
         axios.get(url, config)
             .then(response => response.data)
             .then(data => {
-                this.setState({classes: data})
+                this.setState({rooms: data})
             });
     }
 

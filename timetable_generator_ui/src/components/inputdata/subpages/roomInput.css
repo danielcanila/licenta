@@ -6,7 +6,6 @@
 .room-input input {
     width: 180px;
     margin: 0 10px;
-    box-sizing: content-box;;
 }
 
 .room-input select {

@@ -5,43 +5,147 @@ import {
     retrieveAllLectures,
     saveLecture,
     deleteLecture,
-    updateLecture,
-    addTeacherToLecture,
-    removeTeacherToLecture
-} from '../../services/LectureService'
+    updateLecture
+} from '../../services/LectureService';
+import CrudTableHeader from "../common/CRUDTable/CrudTableHeader";
+import CrudTableRow from "../common/CRUDTable/CrudTableRow";
+import Popup from "../common/popup/Popup";
 
 class LectureInput extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            lectures: retrieveAllLectures()
+            lectures: [],
+            showPopup: false,
+            popupState: {
+                name: ''
+            }
         }
     }
 
-    saveLecture() {
-        saveLecture({name: 'new lecture'});
+    componentDidMount() {
+        retrieveAllLectures()
+            .then(response => {
+                let lectures = this.initLectures(response);
+                this.setState({lectures});
+            })
+            .catch(error => {
+                console.error(error);
+            });
     }
 
-    deleteLecture() {
-        deleteLecture(123123123);
+    initLectures(lectures) {
+        return lectures.map(lec => ({
+            id: lec.id,
+            name: lec.name,
+            editable: false,
+            newName: lec.name
+        }));
     }
 
-    updateLecture() {
-        updateLecture(123123123, {name: 'new lecture 2'});
+    updateLectureObject(id, newProperties) {
+        return this.state.lectures.map(lecture => {
+            if (lecture.id === id) {
+                return Object.assign({}, lecture, newProperties)
+            }
+            return lecture;
+        });
     }
 
-    addTeacherToLecture() {
-        addTeacherToLecture(123123123, [123123123,123131,31232]);
+    toggleEdit(id, lecture) {
+        this.setState({lectures: this.updateLectureObject(id, {editable: !lecture.editable})});
     }
 
-    removeTeacherToLecture() {
-        removeTeacherToLecture(123123123, [123123123,2131231,13122]);
+    onNameChange(e, id) {
+        this.setState({lectures: this.updateLectureObject(id, {newName: e.target.value})});
+    }
+
+    updateClassRow(id, lecture) {
+        let {newName} = lecture;
+
+        updateLecture(id, {name: newName})
+            .then(() => {
+                this.setState({
+                    lectures: this.updateLectureObject(id, {
+                        name: lecture.newName,
+                        editable: false
+                    })
+                });
+            });
+    }
+
+    onRemove(id) {
+        deleteLecture(id).then(() => {
+            let lectures = this.state.lectures.filter(lecture => lecture.id !== id);
+            this.setState({lectures});
+        });
+    }
+
+    onModalSave() {
+        let {name} = this.state.popupState;
+        saveLecture({name}).then(response => {
+            let newLectures = [...this.state.lectures, response];
+            this.setState({
+                lectures: this.initLectures(newLectures),
+                showPopup: false,
+                popupState: {
+                    name: ''
+                }
+            });
+        });
     }
 
     render() {
+        let {lectures, popupState} = this.state;
+
         return (
-            <div>Lecture input</div>
+            <div className="lecture-input">
+                <CrudTableHeader
+                    title="Manage Lectures"
+                    columns={['Lecture Title']}
+                    addNewItem={() => this.setState({showPopup: true})}
+                />
+
+                <div className="scrollable-items">
+                    {lectures && lectures.map(lecture => (
+                        <CrudTableRow
+                            key={lecture.id}
+                            columns={[lecture.name]}
+                            editable={lecture.editable}
+                            toggleEdit={() => this.toggleEdit(lecture.id, lecture)}
+                            updateRow={() => this.updateClassRow(lecture.id, lecture)}
+                            onRemove={() => this.onRemove(lecture.id)}>
+
+                            <input type="text" value={lecture.newName}
+                                   onChange={(e) => this.onNameChange(e, lecture.id)}/>
+
+                        </CrudTableRow>
+                    ))}
+                </div>
+
+                {(!lectures || lectures.length === 0) &&
+                    <div className="no-items">
+                        <span>No lectures to display</span>
+                    </div>
+                }
+
+                <Popup
+                    show={this.state.showPopup}
+                    title="Add a new lecture"
+                    onSave={() => this.onModalSave()}
+                    handleClose={() => this.setState({showPopup: false})}>
+
+                    <div className="lecture-input add-row">
+                        <span>Lecture title:</span>
+                        <input
+                            type="text"
+                            value={popupState.name}
+                            onChange={e => this.setState({popupState: {...popupState, name: e.target.value}})}
+                        />
+                    </div>
+                </Popup>
+            </div>
         );
     };
 
