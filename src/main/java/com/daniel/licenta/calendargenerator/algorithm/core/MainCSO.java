@@ -22,8 +22,7 @@ import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.*
 @Component
 public class MainCSO {
 
-    @Autowired
-    private ConfigCSO configCSO;
+    public static final int c1 = 2;
 
     @Autowired
     private RandomGenerator randomGenerator;
@@ -63,7 +62,10 @@ public class MainCSO {
                     .forEach(catData -> {
                         checkBestGlobal(TEPW, ITDW, calendarData, catData);
                         catTrace(catData);
-                        optimizerCSO.runOptimizationPhase(TEPW, ITDW, calendarData, catData, 10, false);
+//                        int[][][] ints = optimizerCSO.runOptimizationPhase(TEPW, ITDW, calendarData, catData, 100, false);
+//                        for (int k = 0; k < calendarData.studentCount; k++) {
+//                            System.arraycopy(ints[k], 0, catData[k], 0, HOURS_IN_WEEK);
+//                        }
                     });
 
         }
@@ -192,8 +194,8 @@ public class MainCSO {
         double bestFitness = fitnessCalculator.checkHardConstraints(0, HOURS_IN_WEEK, catInTrace);
         double globalBestFitness = fitnessCalculator.checkHardConstraints(0, HOURS_IN_WEEK, globalBestCat);
 
-        double distance = 10 + (bestFitness - globalBestFitness) % 50;
-        int swapsToMake = MathUtils.roundNumber((randomGenerator.nextDouble() * (double) distance));
+        double distance = c1 * (bestFitness - globalBestFitness);
+        int swapsToMake = MathUtils.roundNumber((randomGenerator.nextDouble() * distance)) % (200);
 
         for (int i = 0; i < swapsToMake; i++) {
             singleSwap(catInTrace,

@@ -30,7 +30,7 @@ public class LocalSearchOptimizerCSO {
         this.calendarData = calendarData;
 
         if (displayInfo) {
-            System.out.print("\n\nOptimizing timetables ...\n");
+            System.out.print("\n\nOptimizing solution ...\n");
         }
         int[][][] helperArray = new int[MAX_NUMBER_OF_STUDENT_CLASSES][HOURS_IN_WEEK][2];
 
