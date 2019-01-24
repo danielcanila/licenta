@@ -1,0 +1,50 @@
+/*@media (min-width: 768px){*/
+    /*.modal-dialog {*/
+        /*width: 60%;*/
+    /*}*/
+
+/*}*/
+
+.teacher-popup .popup-row {
+    padding: 10px 0;
+    border-bottom: 1px solid #f8f8f8;
+}
+
+.teacher-popup .popup-row:last-of-type {
+    padding-bottom: 0;
+    border: none;
+}
+
+.teacher-popup .popup-row .label-name {
+    width: 150px;
+    display: inline-block;
+}
+
+.teacher-popup .list-wrapper .item input {
+    vertical-align: middle;
+    margin: 0;
+}
+
+.teacher-popup .list-wrapper .item span {
+    line-height: 32px;
+    padding: 0 5px;
+    max-width: 150px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.teacher-popup .list-wrapper {
+    max-height: 130px;
+    overflow: auto;
+}
+
+.teacher-popup .list-wrapper .item {
+    display: inline-block;
+    width: 30%;
+}
+
+.teacher-popup {
+
+}

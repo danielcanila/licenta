@@ -10,20 +10,30 @@ import {
     removeLectures,
     setUnavailabilityTimeslots
 } from '../../services/TeacherService';
-import {retrieveAllLectures} from "../../services/LectureService";
 
 import CrudTableHeader from "../common/CRUDTable/CrudTableHeader";
 import CrudTableRow from "../common/CRUDTable/CrudTableRow";
+import TeacherPopup from '../common/teacherPopup/TeacherPopup';
 
 class TeacherInput extends Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
             teachers: [],
+            lectures: [],
             teachersReady: false,
-            showPopup: false
+            showPopup: false,
+            onEdit: false,
+            editTeacher: {
+                name: '',
+                lectures: []
+            }
         };
+
+        this.dayObject = this.getDayObject();
+        this.timeInterval = this.getTimeInterval();
     }
 
     componentDidMount() {
@@ -33,11 +43,34 @@ class TeacherInput extends Component {
     getTeachers() {
         retrieveAllTeachers()
             .then(response => {
+                console.log('teachers: ', response);
                 this.setState({teachers: response, teachersReady: true});
             })
             .catch(error => {
                 console.error(error);
             });
+    }
+
+    getDayObject() {
+        return {
+            0: 'Monday',
+            1: 'Tuesday',
+            2: 'Wednesday',
+            3: 'Thursday',
+            4: 'Friday'
+        };
+    }
+
+    getTimeInterval() {
+        return {
+            0: 'from 8:00 to 9:00',
+            1: 'from 9:00 to 10:00',
+            2: 'from 10:00 to 11:00',
+            3: 'from 11:00 to 12:00',
+            4: 'from 12:00 to 13:00',
+            5: 'from 13:00 to 14:00',
+            6: 'from 14:00 to 15:00'
+        };
     }
 
     // saveTeacher() {
@@ -68,8 +101,27 @@ class TeacherInput extends Component {
         return teacher.lectures.map(l => l.name).join(', ');
     }
 
-    getUnavailabilitySlots(unavailabilitySlots) {
-        if(!unavailabilitySlots || unavailabilitySlots.length === 0) return '-';
+    getSlotDay(unavailabilityNumber) {
+        return this.dayObject[Math.floor(unavailabilityNumber / 7)];
+    }
+
+    getSlotInterval(unavailabilityNumber) {
+        return this.timeInterval[unavailabilityNumber % 7];
+    }
+
+    getUnavailabilitySlots(slots) {
+        if(!slots || slots.length === 0) return '-';
+        return slots.map(s => `${this.getSlotDay(s)} ${this.getSlotInterval(s)}`);
+    }
+
+    editTeacher(teacher) {
+        this.setState({
+            onEdit: true,
+            showPopup: true,
+            editTeacher: {
+                ...teacher
+            }
+        });
     }
 
     render() {
@@ -87,14 +139,13 @@ class TeacherInput extends Component {
                     {teachers && teachersReady &&
                         teachers.map(teacher => {
                             let lectures = this.getTeacherLectures(teacher),
-                                unavailability = this.getUnavailabilitySlots(teacher.unavailabilitySlots);
+                                unavailabilityRows = this.getUnavailabilitySlots(teacher.unavailabilitySlots);
+
                             return (
                                 <CrudTableRow
                                     key={teacher.id}
-                                    columns={[teacher.name, lectures, unavailability]}
-                                    // editable={teacher.editable}
-                                    // toggleEdit={() => this.toggleEdit(teacher.id, teacher)}
-                                    // updateRow={() => this.updateClassRow(teacher.id, teacher)}
+                                    columns={[teacher.name, lectures, unavailabilityRows]}
+                                    toggleEdit={() => this.editTeacher(teacher)}
                                     // onRemove={() => this.onRemove(teacher.id)}
                                 />
                             );
@@ -107,6 +158,13 @@ class TeacherInput extends Component {
                     <span>No teachers to display</span>
                 </div>
                 }
+
+                <TeacherPopup
+                    {...this.state.editTeacher}
+                    showPopup={this.state.showPopup}
+                    title={this.state.onEdit ? 'Update teacher details' : 'Add new teacher'}
+                    onClose={() => this.setState({showPopup: false})}
+                />
 
             </div>
         );

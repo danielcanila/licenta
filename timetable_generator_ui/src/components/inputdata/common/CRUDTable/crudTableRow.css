@@ -11,6 +11,10 @@
     width: 200px;
 }
 
+.crud-table .sub-column {
+    line-height: 30px;
+}
+
 .crud-table .action-items {
     margin-left: auto;
 }

@@ -5,6 +5,12 @@ import './crudTableRow.css';
 
 export default class CrudTableRow extends React.Component {
 
+    getSubColumns(columns) {
+        return columns.map((subColumn, i) => (
+            <div key={i} className="sub-column">{subColumn}</div>
+        ))
+    }
+
     render() {
         let {columns, editable, toggleEdit, updateRow, onRemove} = this.props;
         if(!columns) return null;
@@ -12,7 +18,9 @@ export default class CrudTableRow extends React.Component {
         return (
             <div className="crud-table row">
                 {!editable ? columns.map((column, index) => (
-                    <div key={index} className="column">{column}</div>
+                    <div key={index} className="column">
+                        {Array.isArray(column) ? this.getSubColumns(column) : column}
+                    </div>
                 )) : (
                     this.props.children
                 )}
