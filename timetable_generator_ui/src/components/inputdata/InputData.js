@@ -21,9 +21,15 @@ class InputData extends Component {
                     </Col>
                     <Col sm={10}>
                         <Tab.Content animation>
-                            <Tab.Pane eventKey="first"><StudentClassInput/></Tab.Pane>
-                            <Tab.Pane eventKey="second"><LectureInput/></Tab.Pane>
-                            <Tab.Pane eventKey="third"><TeacherInput/></Tab.Pane>
+                            <Tab.Pane eventKey="first" mountOnEnter={true} unmountOnExit={true}>
+                                <StudentClassInput />
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="second" mountOnEnter={true} unmountOnExit={true}>
+                                <LectureInput />
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="third" mountOnEnter={true} unmountOnExit={true}>
+                                <TeacherInput />
+                            </Tab.Pane>
                         </Tab.Content>
                     </Col>
                 </Row>

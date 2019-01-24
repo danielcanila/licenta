@@ -17,7 +17,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "t_teacher")
-@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id")
+//@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id")
 @EqualsAndHashCode
 @TypeDefs({
         @TypeDef(name = "jsonb", typeClass = JsonBinaryType.class),

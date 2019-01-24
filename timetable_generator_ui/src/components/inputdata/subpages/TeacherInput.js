@@ -10,7 +10,10 @@ import {
     removeLectures,
     setUnavailabilityTimeslots
 } from '../../services/TeacherService';
+import {retrieveAllLectures} from "../../services/LectureService";
+
 import CrudTableHeader from "../common/CRUDTable/CrudTableHeader";
+import CrudTableRow from "../common/CRUDTable/CrudTableRow";
 
 class TeacherInput extends Component {
 
@@ -18,21 +21,24 @@ class TeacherInput extends Component {
         super(props);
         this.state = {
             teachers: [],
+            teachersReady: false,
             showPopup: false
         };
     }
 
     componentDidMount() {
+        this.getTeachers();
+    }
+
+    getTeachers() {
         retrieveAllTeachers()
             .then(response => {
-                console.log('techers response: ', response);
-                this.setState({teachers: response});
+                this.setState({teachers: response, teachersReady: true});
             })
             .catch(error => {
                 console.error(error);
             });
     }
-
 
     // saveTeacher() {
     //     saveTeacher({name: 'new Room', capacity: 100});
@@ -58,8 +64,16 @@ class TeacherInput extends Component {
     //     setUnavailabilityTimeslots(123123123, [0, 1, 2])
     // }
 
+    getTeacherLectures(teacher) {
+        return teacher.lectures.map(l => l.name).join(', ');
+    }
+
+    getUnavailabilitySlots(unavailabilitySlots) {
+        if(!unavailabilitySlots || unavailabilitySlots.length === 0) return '-';
+    }
+
     render() {
-        let {teachers} = this.state;
+        let {teachers, teachersReady} = this.state;
 
         return (
             <div className="teacher-input">
@@ -69,11 +83,31 @@ class TeacherInput extends Component {
                     addNewItem={() => this.setState({showPopup: true})}
                 />
 
-                {(!teachers || teachers.length === 0) &&
+                <div className="scrollable-items">
+                    {teachers && teachersReady &&
+                        teachers.map(teacher => {
+                            let lectures = this.getTeacherLectures(teacher),
+                                unavailability = this.getUnavailabilitySlots(teacher.unavailabilitySlots);
+                            return (
+                                <CrudTableRow
+                                    key={teacher.id}
+                                    columns={[teacher.name, lectures, unavailability]}
+                                    // editable={teacher.editable}
+                                    // toggleEdit={() => this.toggleEdit(teacher.id, teacher)}
+                                    // updateRow={() => this.updateClassRow(teacher.id, teacher)}
+                                    // onRemove={() => this.onRemove(teacher.id)}
+                                />
+                            );
+                        })
+                    }
+                </div>
+
+                {(teachersReady && (!teachers || teachers.length === 0)) &&
                 <div className="no-items">
                     <span>No teachers to display</span>
                 </div>
                 }
+
             </div>
         );
     };

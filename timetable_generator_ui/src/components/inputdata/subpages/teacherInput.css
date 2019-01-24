@@ -6,3 +6,16 @@
     background-color: #f8f8f8;
     border-bottom: 1px solid #e7e7e7;
 }
+
+.teacher-input .scrollable-items {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.teacher-input .table-header .column:last-of-type {
+    width: calc(100% - 500px);
+}
+
+.teacher-input .crud-table .column:nth-child(3) {
+    flex: 1;
+}

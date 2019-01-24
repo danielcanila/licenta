@@ -16,7 +16,7 @@ class StudentTimetableView extends Component {
             classes: null,
             selectedClass: null,
         };
-        this.retrieveAllTimetables()
+        this.retrieveAllTimetables();
         this.retrieveTimetable = this.retrieveTimetable.bind(this);
         this.retrieveAllClases = this.retrieveAllClases.bind(this);
         this.handleTimetableSelect = this.handleTimetableSelect.bind(this);
@@ -62,7 +62,7 @@ class StudentTimetableView extends Component {
         axios.get(url, config)
             .then(response => response.data)
             .then(data => {
-                this.setState({rooms: data})
+                this.setState({classes: data})
             });
     }
 
@@ -85,12 +85,14 @@ class StudentTimetableView extends Component {
     render() {
         return (
             <div className="App">
-                <SelectDropdown selectItems={this.state.timetables}
+                <SelectDropdown key={'01'}
+                                selectItems={this.state.timetables}
                                 handleOnChange={this.handleTimetableSelect}
                                 selectedItem={this.state.selectedTimetable}
                                 defaultName={"timetable"}/>
 
-                <SelectDropdown selectItems={this.state.classes}
+                <SelectDropdown key={'02'}
+                                selectItems={this.state.classes}
                                 handleOnChange={this.handleClassSelect}
                                 selectedItem={this.state.selectedClass}
                                 defaultName={"class"}/>

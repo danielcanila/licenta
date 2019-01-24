@@ -17,18 +17,19 @@ class LectureInput extends Component {
         super(props);
         this.state = {
             lectures: [],
+            isReadyToRender: false,
             showPopup: false,
             popupState: {
                 name: ''
             }
-        }
+        };
     }
 
     componentDidMount() {
         retrieveAllLectures()
             .then(response => {
                 let lectures = this.initLectures(response);
-                this.setState({lectures});
+                this.setState({lectures, isReadyToRender: true});
             })
             .catch(error => {
                 console.error(error);
@@ -97,7 +98,7 @@ class LectureInput extends Component {
     }
 
     render() {
-        let {lectures, popupState} = this.state;
+        let {lectures, popupState, isReadyToRender} = this.state;
 
         return (
             <div className="lecture-input">
@@ -108,7 +109,7 @@ class LectureInput extends Component {
                 />
 
                 <div className="scrollable-items">
-                    {lectures && lectures.map(lecture => (
+                    {isReadyToRender && lectures && lectures.map(lecture => (
                         <CrudTableRow
                             key={lecture.id}
                             columns={[lecture.name]}
@@ -124,7 +125,7 @@ class LectureInput extends Component {
                     ))}
                 </div>
 
-                {(!lectures || lectures.length === 0) &&
+                {(isReadyToRender && (!lectures || lectures.length === 0)) &&
                     <div className="no-items">
                         <span>No lectures to display</span>
                     </div>

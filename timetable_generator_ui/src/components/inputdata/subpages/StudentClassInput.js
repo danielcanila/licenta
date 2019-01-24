@@ -18,6 +18,7 @@ export default class StudentClassInput extends Component {
         super(props);
         this.state = {
             classes: [],
+            isReadyToRender: false,
             showPopup: false,
             popupState: {
                 name: ''
@@ -29,7 +30,7 @@ export default class StudentClassInput extends Component {
         retrieveAllStudentClasses()
             .then(response => {
                 let classes = this.initClasses(response);
-                this.setState({classes});
+                this.setState({classes, isReadyToRender: true});
             })
             .catch(error => {
                 console.error(error);
@@ -98,7 +99,7 @@ export default class StudentClassInput extends Component {
     }
 
     render() {
-        let {classes, popupState} = this.state;
+        let {classes, popupState, isReadyToRender} = this.state;
 
         return (
             <div className="class-input">
@@ -110,7 +111,7 @@ export default class StudentClassInput extends Component {
                 />
 
                 <div className="scrollable-items">
-                    {classes && classes.map(classObject => (
+                    {isReadyToRender && classes && classes.map(classObject => (
                         <CrudTableRow
                             key={classObject.id}
                             columns={[classObject.name]}
@@ -126,7 +127,7 @@ export default class StudentClassInput extends Component {
                     ))}
                 </div>
 
-                {(!classes || classes.length === 0) &&
+                {(isReadyToRender && (!classes || classes.length === 0)) &&
                 <div className="no-items">
                     <span>No classes to display</span>
                 </div>
