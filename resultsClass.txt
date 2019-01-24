@@ -3,1007 +3,1007 @@
 Schedule for class : 9A - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Filozofie 1
+Hour 08 :  teacher: Prof Chimie 1
 Hour 10 :  teacher: Prof Fizica 1
-Hour 12 :  teacher: Prof Informatica 1
-Hour 14 :  teacher: Prof Germana/Franceza 1
-Hour 16 :  teacher: Prof Istorie 1
-Hour 18 :  teacher: Prof Chimie 1
+Hour 12 :  teacher: Prof Romana 1
+Hour 14 :  teacher: Prof Chimie 1
+Hour 16 :  teacher: Prof Germana/Franceza 1
+Hour 18 :  teacher: Prof Biologie 1
 
 Day 1
-Hour 08 :  teacher: Prof Informatica 1
+Hour 08 :  teacher: Prof Engleza 1
 Hour 10 :  teacher: Prof Mate 1
-Hour 12 :  teacher: Prof Engleza 2
-Hour 14 :  teacher: Prof Mate 1
-Hour 16 :  teacher: Prof Germana/Franceza 1
-Hour 18 :  teacher: Prof Istorie 1
+Hour 12 :  teacher: Prof Istorie 1
+Hour 14 :  teacher: Prof Informatica 1
+Hour 16 :  teacher: Prof Geografie 1
+Hour 18 :  teacher: Prof Filozofie 1
 
 Day 2
-Hour 08 :  teacher: Prof Biologie 1
+Hour 08 :  teacher: Prof Romana 1
 Hour 10 :  teacher: Prof Engleza 1
-Hour 12 :  teacher: Prof Relgigie 1
+Hour 12 :  teacher: Prof Biologie 1
 Hour 14 :  teacher: Prof Romana 1
-Hour 16 :  teacher: Prof Fizica 1
-Hour 18 :  teacher: Prof Informatica 1
+Hour 16 :  teacher: Prof Mate 1
+Hour 18 :  teacher: Prof Relgigie 1
 
 Day 3
-Hour 08 :  teacher: Prof Romana 1
-Hour 10 :  teacher: Prof Sport 1
-Hour 12 :  teacher: Prof Romana 1
-Hour 14 :  teacher: Prof Sport 1
-Hour 16 :  teacher: Prof Geografie 1
-Hour 18 :  teacher: Prof Geografie 1
+Hour 08 :  teacher: Prof Sport 1
+Hour 10 :  teacher: Prof Mate 1
+Hour 12 :  teacher: Prof Informatica 1
+Hour 14 :  teacher: Prof Istorie 1
+Hour 16 :  teacher: Prof Germana/Franceza 1
+Hour 18 :  teacher: Prof Engleza 2
 
 Day 4
-Hour 08 :  teacher: Prof Chimie 1
-Hour 10 :  teacher: Prof Romana 1
-Hour 12 :  teacher: Prof Mate 1
-Hour 14 :  teacher: Prof Engleza 1
-Hour 16 :  teacher: Prof Mate 1
-Hour 18 :  teacher: Prof Biologie 1
+Hour 08 :  teacher: Prof Mate 1
+Hour 10 :  teacher: Prof Geografie 1
+Hour 12 :  teacher: Prof Sport 1
+Hour 14 :  teacher: Prof Fizica 1
+Hour 16 :  teacher: Prof Romana 1
+Hour 18 :  teacher: Prof Informatica 1
 -----------------------------------------------------------------------------------
 Schedule for class : 9B - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Romana 3
-Hour 10 :  teacher: Prof Relgigie 1
-Hour 12 :  teacher: Prof Geografie 2
+Hour 08 :  teacher: Prof Fizica 2
+Hour 10 :  teacher: Prof Chimie 2
+Hour 12 :  teacher: Prof Engleza 2
+Hour 14 :  teacher: Prof Biologie 2
+Hour 16 :  teacher: Prof Relgigie 1
+Hour 18 :  teacher: Prof Romana 2
+
+Day 1
+Hour 08 :  teacher: Prof Informatica 2
+Hour 10 :  teacher: Prof Romana 3
+Hour 12 :  teacher: Prof Informatica 2
+Hour 14 :  teacher: Prof Sport 2
+Hour 16 :  teacher: Prof Chimie 2
+Hour 18 :  teacher: Prof Filozofie 2
+
+Day 2
+Hour 08 :  teacher: Prof Mate 2
+Hour 10 :  teacher: Prof Geografie 2
+Hour 12 :  teacher: Prof Romana 2
 Hour 14 :  teacher: Prof Mate 2
 Hour 16 :  teacher: Prof Mate 2
 Hour 18 :  teacher: Prof Romana 2
 
-Day 1
-Hour 08 :  teacher: Prof Biologie 2
-Hour 10 :  teacher: Prof Biologie 2
-Hour 12 :  teacher: Prof Sport 2
-Hour 14 :  teacher: Prof Fizica 2
-Hour 16 :  teacher: Prof Chimie 2
-Hour 18 :  teacher: Prof Germana/Franceza 2
-
-Day 2
-Hour 08 :  teacher: Prof Informatica 2
-Hour 10 :  teacher: Prof Informatica 2
-Hour 12 :  teacher: Prof Germana/Franceza 2
-Hour 14 :  teacher: Prof Mate 2
-Hour 16 :  teacher: Prof Engleza 2
-Hour 18 :  teacher: Prof Informatica 2
-
 Day 3
-Hour 08 :  teacher: Prof Istorie 2
-Hour 10 :  teacher: Prof Filozofie 2
-Hour 12 :  teacher: Prof Romana 2
-Hour 14 :  teacher: Prof Sport 2
-Hour 16 :  teacher: Prof Fizica 2
-Hour 18 :  teacher: Prof Romana 2
+Hour 08 :  teacher: Prof Germana/Franceza 2
+Hour 10 :  teacher: Prof Biologie 2
+Hour 12 :  teacher: Prof Informatica 2
+Hour 14 :  teacher: Prof Mate 2
+Hour 16 :  teacher: Prof Geografie 2
+Hour 18 :  teacher: Prof Istorie 2
 
 Day 4
 Hour 08 :  teacher: Prof Engleza 2
-Hour 10 :  teacher: Prof Geografie 2
-Hour 12 :  teacher: Prof Istorie 2
-Hour 14 :  teacher: Prof Mate 2
-Hour 16 :  teacher: Prof Romana 2
-Hour 18 :  teacher: Prof Chimie 2
+Hour 10 :  teacher: Prof Germana/Franceza 2
+Hour 12 :  teacher: Prof Sport 2
+Hour 14 :  teacher: Prof Romana 2
+Hour 16 :  teacher: Prof Istorie 2
+Hour 18 :  teacher: Prof Fizica 2
 -----------------------------------------------------------------------------------
 Schedule for class : 9C - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Chimie 1
-Hour 10 :  teacher: Prof Mate 3
-Hour 12 :  teacher: Prof Germana/Franceza 1
-Hour 14 :  teacher: Prof Engleza 1
-Hour 16 :  teacher: Prof Geografie 1
-Hour 18 :  teacher: Prof Romana 4
+Hour 08 :  teacher: Prof Mate 3
+Hour 10 :  teacher: Prof Romana 4
+Hour 12 :  teacher: Prof Istorie 1
+Hour 14 :  teacher: Prof Istorie 1
+Hour 16 :  teacher: Prof Biologie 1
+Hour 18 :  teacher: Prof Filozofie 1
 
 Day 1
-Hour 08 :  teacher: Prof Informatica 3
+Hour 08 :  teacher: Prof Geografie 1
 Hour 10 :  teacher: Prof Informatica 3
-Hour 12 :  teacher: Prof Romana 4
-Hour 14 :  teacher: Prof Germana/Franceza 1
-Hour 16 :  teacher: Prof Mate 3
-Hour 18 :  teacher: Prof Sport 1
+Hour 12 :  teacher: Prof Sport 1
+Hour 14 :  teacher: Prof Romana 4
+Hour 16 :  teacher: Prof Fizica 1
+Hour 18 :  teacher: Prof Romana 4
 
 Day 2
-Hour 08 :  teacher: Prof Istorie 1
-Hour 10 :  teacher: Prof Istorie 1
-Hour 12 :  teacher: Prof Biologie 1
-Hour 14 :  teacher: Prof Biologie 1
-Hour 16 :  teacher: Prof Chimie 1
-Hour 18 :  teacher: Prof Fizica 1
+Hour 08 :  teacher: Prof Germana/Franceza 1
+Hour 10 :  teacher: Prof Mate 3
+Hour 12 :  teacher: Prof Chimie 1
+Hour 14 :  teacher: Prof Informatica 3
+Hour 16 :  teacher: Prof Informatica 3
+Hour 18 :  teacher: Prof Sport 1
 
 Day 3
-Hour 08 :  teacher: Prof Geografie 1
-Hour 10 :  teacher: Prof Filozofie 1
-Hour 12 :  teacher: Prof Informatica 3
-Hour 14 :  teacher: Prof Mate 3
-Hour 16 :  teacher: Prof Mate 4
+Hour 08 :  teacher: Prof Fizica 1
+Hour 10 :  teacher: Prof Chimie 1
+Hour 12 :  teacher: Prof Relgigie 1
+Hour 14 :  teacher: Prof Engleza 1
+Hour 16 :  teacher: Prof Romana 4
 Hour 18 :  teacher: Prof Engleza 1
 
 Day 4
-Hour 08 :  teacher: Prof Romana 4
-Hour 10 :  teacher: Prof Romana 4
+Hour 08 :  teacher: Prof Mate 4
+Hour 10 :  teacher: Prof Germana/Franceza 1
 Hour 12 :  teacher: Prof Mate 3
-Hour 14 :  teacher: Prof Fizica 1
-Hour 16 :  teacher: Prof Relgigie 1
-Hour 18 :  teacher: Prof Sport 1
+Hour 14 :  teacher: Prof Mate 3
+Hour 16 :  teacher: Prof Geografie 1
+Hour 18 :  teacher: Prof Biologie 1
 -----------------------------------------------------------------------------------
 Schedule for class : 9D - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Mate 4
-Hour 10 :  teacher: Prof Biologie 2
-Hour 12 :  teacher: Prof Chimie 2
-Hour 14 :  teacher: Prof Informatica 4
-Hour 16 :  teacher: Prof Romana 3
-Hour 18 :  teacher: Prof Germana/Franceza 2
+Hour 08 :  teacher: Prof Chimie 2
+Hour 10 :  teacher: Prof Geografie 2
+Hour 12 :  teacher: Prof Romana 3
+Hour 14 :  teacher: Prof Filozofie 2
+Hour 16 :  teacher: Prof Fizica 2
+Hour 18 :  teacher: Prof Geografie 2
 
 Day 1
-Hour 08 :  teacher: Prof Filozofie 1
-Hour 10 :  teacher: Prof Istorie 2
-Hour 12 :  teacher: Prof Geografie 2
-Hour 14 :  teacher: Prof Germana/Franceza 2
+Hour 08 :  teacher: Prof Mate 4
+Hour 10 :  teacher: Prof Informatica 4
+Hour 12 :  teacher: Prof Engleza 2
+Hour 14 :  teacher: Prof Biologie 2
 Hour 16 :  teacher: Prof Mate 4
 Hour 18 :  teacher: Prof Sport 2
 
 Day 2
-Hour 08 :  teacher: Prof Biologie 2
-Hour 10 :  teacher: Prof Romana 3
-Hour 12 :  teacher: Prof Informatica 4
-Hour 14 :  teacher: Prof Chimie 2
-Hour 16 :  teacher: Prof Mate 4
-Hour 18 :  teacher: Prof Fizica 2
-
-Day 3
-Hour 08 :  teacher: Prof Relgigie 1
-Hour 10 :  teacher: Prof Romana 3
-Hour 12 :  teacher: Prof Istorie 2
-Hour 14 :  teacher: Prof Informatica 4
-Hour 16 :  teacher: Prof Engleza 2
+Hour 08 :  teacher: Prof Istorie 2
+Hour 10 :  teacher: Prof Germana/Franceza 2
+Hour 12 :  teacher: Prof Romana 3
+Hour 14 :  teacher: Prof Mate 4
+Hour 16 :  teacher: Prof Chimie 2
 Hour 18 :  teacher: Prof Sport 2
 
-Day 4
-Hour 08 :  teacher: Prof Fizica 2
+Day 3
+Hour 08 :  teacher: Prof Istorie 2
 Hour 10 :  teacher: Prof Mate 4
-Hour 12 :  teacher: Prof Geografie 2
-Hour 14 :  teacher: Prof Filozofie 2
-Hour 16 :  teacher: Prof Engleza 2
-Hour 18 :  teacher: Prof Romana 3
+Hour 12 :  teacher: Prof Romana 3
+Hour 14 :  teacher: Prof Relgigie 1
+Hour 16 :  teacher: Prof Filozofie 1
+Hour 18 :  teacher: Prof Fizica 2
+
+Day 4
+Hour 08 :  teacher: Prof Informatica 4
+Hour 10 :  teacher: Prof Informatica 4
+Hour 12 :  teacher: Prof Germana/Franceza 2
+Hour 14 :  teacher: Prof Engleza 2
+Hour 16 :  teacher: Prof Romana 3
+Hour 18 :  teacher: Prof Biologie 2
 -----------------------------------------------------------------------------------
 Schedule for class : 9E - students nr: 30
 
 Day 0
 Hour 08 :  teacher: Prof Sport 1
-Hour 10 :  teacher: Prof Istorie 1
-Hour 12 :  teacher: Prof Chimie 1
-Hour 14 :  teacher: Prof Biologie 1
+Hour 10 :  teacher: Prof Biologie 1
+Hour 12 :  teacher: Prof Fizica 1
+Hour 14 :  teacher: Prof Engleza 1
 Hour 16 :  teacher: Prof Informatica 1
-Hour 18 :  teacher: Prof Biologie 1
+Hour 18 :  teacher: Prof Informatica 1
 
 Day 1
-Hour 08 :  teacher: Prof Mate 1
-Hour 10 :  teacher: Prof Romana 1
-Hour 12 :  teacher: Prof Romana 1
-Hour 14 :  teacher: Prof Informatica 2
+Hour 08 :  teacher: Prof Biologie 1
+Hour 10 :  teacher: Prof Geografie 1
+Hour 12 :  teacher: Prof Chimie 1
+Hour 14 :  teacher: Prof Filozofie 2
 Hour 16 :  teacher: Prof Istorie 1
-Hour 18 :  teacher: Prof Romana 1
+Hour 18 :  teacher: Prof Germana/Franceza 1
 
 Day 2
-Hour 08 :  teacher: Prof Engleza 1
-Hour 10 :  teacher: Prof Relgigie 1
-Hour 12 :  teacher: Prof Fizica 1
-Hour 14 :  teacher: Prof Geografie 1
-Hour 16 :  teacher: Prof Geografie 1
-Hour 18 :  teacher: Prof Sport 1
+Hour 08 :  teacher: Prof Mate 1
+Hour 10 :  teacher: Prof Informatica 2
+Hour 12 :  teacher: Prof Informatica 1
+Hour 14 :  teacher: Prof Sport 1
+Hour 16 :  teacher: Prof Relgigie 1
+Hour 18 :  teacher: Prof Fizica 1
 
 Day 3
-Hour 08 :  teacher: Prof Filozofie 2
-Hour 10 :  teacher: Prof Engleza 1
+Hour 08 :  teacher: Prof Chimie 1
+Hour 10 :  teacher: Prof Romana 1
 Hour 12 :  teacher: Prof Mate 1
-Hour 14 :  teacher: Prof Germana/Franceza 1
-Hour 16 :  teacher: Prof Mate 1
-Hour 18 :  teacher: Prof Mate 1
+Hour 14 :  teacher: Prof Mate 1
+Hour 16 :  teacher: Prof Romana 1
+Hour 18 :  teacher: Prof Germana/Franceza 1
 
 Day 4
-Hour 08 :  teacher: Prof Informatica 1
-Hour 10 :  teacher: Prof Fizica 1
-Hour 12 :  teacher: Prof Romana 1
-Hour 14 :  teacher: Prof Informatica 1
-Hour 16 :  teacher: Prof Germana/Franceza 1
-Hour 18 :  teacher: Prof Chimie 1
+Hour 08 :  teacher: Prof Romana 1
+Hour 10 :  teacher: Prof Istorie 1
+Hour 12 :  teacher: Prof Geografie 1
+Hour 14 :  teacher: Prof Romana 1
+Hour 16 :  teacher: Prof Mate 1
+Hour 18 :  teacher: Prof Engleza 1
 -----------------------------------------------------------------------------------
 Schedule for class : 9F - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Fizica 2
-Hour 10 :  teacher: Prof Germana/Franceza 2
-Hour 12 :  teacher: Prof Romana 2
-Hour 14 :  teacher: Prof Germana/Franceza 2
-Hour 16 :  teacher: Prof Informatica 3
-Hour 18 :  teacher: Prof Istorie 2
+Hour 08 :  teacher: Prof Informatica 3
+Hour 10 :  teacher: Prof Istorie 2
+Hour 12 :  teacher: Prof Informatica 3
+Hour 14 :  teacher: Prof Engleza 2
+Hour 16 :  teacher: Prof Sport 2
+Hour 18 :  teacher: Prof Engleza 2
 
 Day 1
-Hour 08 :  teacher: Prof Mate 2
-Hour 10 :  teacher: Prof Mate 2
-Hour 12 :  teacher: Prof Filozofie 1
-Hour 14 :  teacher: Prof Mate 2
-Hour 16 :  teacher: Prof Geografie 2
-Hour 18 :  teacher: Prof Romana 2
+Hour 08 :  teacher: Prof Biologie 2
+Hour 10 :  teacher: Prof Filozofie 1
+Hour 12 :  teacher: Prof Geografie 2
+Hour 14 :  teacher: Prof Chimie 2
+Hour 16 :  teacher: Prof Germana/Franceza 2
+Hour 18 :  teacher: Prof Fizica 2
 
 Day 2
-Hour 08 :  teacher: Prof Engleza 2
-Hour 10 :  teacher: Prof Biologie 2
-Hour 12 :  teacher: Prof Mate 2
-Hour 14 :  teacher: Prof Engleza 2
+Hour 08 :  teacher: Prof Romana 2
+Hour 10 :  teacher: Prof Chimie 2
+Hour 12 :  teacher: Prof Istorie 2
+Hour 14 :  teacher: Prof Informatica 4
 Hour 16 :  teacher: Prof Romana 2
-Hour 18 :  teacher: Prof Informatica 3
+Hour 18 :  teacher: Prof Mate 2
 
 Day 3
-Hour 08 :  teacher: Prof Sport 2
-Hour 10 :  teacher: Prof Sport 2
-Hour 12 :  teacher: Prof Informatica 4
-Hour 14 :  teacher: Prof Chimie 2
-Hour 16 :  teacher: Prof Informatica 3
-Hour 18 :  teacher: Prof Geografie 2
+Hour 08 :  teacher: Prof Relgigie 1
+Hour 10 :  teacher: Prof Mate 2
+Hour 12 :  teacher: Prof Romana 2
+Hour 14 :  teacher: Prof Sport 2
+Hour 16 :  teacher: Prof Fizica 2
+Hour 18 :  teacher: Prof Informatica 3
 
 Day 4
-Hour 08 :  teacher: Prof Chimie 2
-Hour 10 :  teacher: Prof Fizica 2
-Hour 12 :  teacher: Prof Relgigie 1
-Hour 14 :  teacher: Prof Biologie 2
-Hour 16 :  teacher: Prof Istorie 2
-Hour 18 :  teacher: Prof Romana 2
+Hour 08 :  teacher: Prof Biologie 2
+Hour 10 :  teacher: Prof Mate 2
+Hour 12 :  teacher: Prof Geografie 2
+Hour 14 :  teacher: Prof Germana/Franceza 2
+Hour 16 :  teacher: Prof Romana 2
+Hour 18 :  teacher: Prof Mate 2
 -----------------------------------------------------------------------------------
 Schedule for class : 10A - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Romana 4
-Hour 10 :  teacher: Prof Geografie 1
-Hour 12 :  teacher: Prof Fizica 1
-Hour 14 :  teacher: Prof Istorie 1
-Hour 16 :  teacher: Prof Informatica 2
-Hour 18 :  teacher: Prof Sport 1
+Hour 08 :  teacher: Prof Istorie 1
+Hour 10 :  teacher: Prof Sport 1
+Hour 12 :  teacher: Prof Romana 4
+Hour 14 :  teacher: Prof Mate 3
+Hour 16 :  teacher: Prof Romana 4
+Hour 18 :  teacher: Prof Relgigie 1
 
 Day 1
-Hour 08 :  teacher: Prof Romana 4
+Hour 08 :  teacher: Prof Fizica 1
+Hour 10 :  teacher: Prof Chimie 1
+Hour 12 :  teacher: Prof Fizica 1
+Hour 14 :  teacher: Prof Informatica 2
+Hour 16 :  teacher: Prof Mate 3
+Hour 18 :  teacher: Prof Sport 1
+
+Day 2
+Hour 08 :  teacher: Prof Informatica 4
+Hour 10 :  teacher: Prof Romana 4
+Hour 12 :  teacher: Prof Engleza 1
+Hour 14 :  teacher: Prof Informatica 2
+Hour 16 :  teacher: Prof Germana/Franceza 1
+Hour 18 :  teacher: Prof Germana/Franceza 1
+
+Day 3
+Hour 08 :  teacher: Prof Biologie 1
 Hour 10 :  teacher: Prof Geografie 1
-Hour 12 :  teacher: Prof Sport 1
+Hour 12 :  teacher: Prof Mate 3
+Hour 14 :  teacher: Prof Romana 4
+Hour 16 :  teacher: Prof Informatica 2
+Hour 18 :  teacher: Prof Biologie 1
+
+Day 4
+Hour 08 :  teacher: Prof Engleza 1
+Hour 10 :  teacher: Prof Chimie 1
+Hour 12 :  teacher: Prof Filozofie 2
+Hour 14 :  teacher: Prof Geografie 1
+Hour 16 :  teacher: Prof Istorie 1
+Hour 18 :  teacher: Prof Mate 3
+-----------------------------------------------------------------------------------
+Schedule for class : 10B - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Romana 3
+Hour 10 :  teacher: Prof Filozofie 1
+Hour 12 :  teacher: Prof Chimie 2
+Hour 14 :  teacher: Prof Geografie 2
+Hour 16 :  teacher: Prof Mate 4
+Hour 18 :  teacher: Prof Germana/Franceza 2
+
+Day 1
+Hour 08 :  teacher: Prof Geografie 2
+Hour 10 :  teacher: Prof Istorie 2
+Hour 12 :  teacher: Prof Istorie 2
+Hour 14 :  teacher: Prof Fizica 2
+Hour 16 :  teacher: Prof Informatica 4
+Hour 18 :  teacher: Prof Romana 3
+
+Day 2
+Hour 08 :  teacher: Prof Engleza 2
+Hour 10 :  teacher: Prof Engleza 2
+Hour 12 :  teacher: Prof Fizica 2
+Hour 14 :  teacher: Prof Filozofie 2
+Hour 16 :  teacher: Prof Sport 2
+Hour 18 :  teacher: Prof Biologie 2
+
+Day 3
+Hour 08 :  teacher: Prof Mate 4
+Hour 10 :  teacher: Prof Romana 3
+Hour 12 :  teacher: Prof Informatica 4
+Hour 14 :  teacher: Prof Biologie 2
+Hour 16 :  teacher: Prof Mate 4
+Hour 18 :  teacher: Prof Chimie 2
+
+Day 4
+Hour 08 :  teacher: Prof Germana/Franceza 2
+Hour 10 :  teacher: Prof Sport 2
+Hour 12 :  teacher: Prof Romana 3
+Hour 14 :  teacher: Prof Relgigie 1
+Hour 16 :  teacher: Prof Informatica 4
+Hour 18 :  teacher: Prof Mate 4
+-----------------------------------------------------------------------------------
+Schedule for class : 10C - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Romana 1
+Hour 10 :  teacher: Prof Filozofie 2
+Hour 12 :  teacher: Prof Informatica 1
 Hour 14 :  teacher: Prof Biologie 1
-Hour 16 :  teacher: Prof Chimie 1
-Hour 18 :  teacher: Prof Relgigie 1
+Hour 16 :  teacher: Prof Sport 1
+Hour 18 :  teacher: Prof Geografie 1
+
+Day 1
+Hour 08 :  teacher: Prof Mate 1
+Hour 10 :  teacher: Prof Informatica 1
+Hour 12 :  teacher: Prof Romana 1
+Hour 14 :  teacher: Prof Chimie 1
+Hour 16 :  teacher: Prof Engleza 1
+Hour 18 :  teacher: Prof Engleza 1
 
 Day 2
 Hour 08 :  teacher: Prof Chimie 1
-Hour 10 :  teacher: Prof Romana 4
-Hour 12 :  teacher: Prof Romana 4
+Hour 10 :  teacher: Prof Filozofie 1
+Hour 12 :  teacher: Prof Mate 1
+Hour 14 :  teacher: Prof Fizica 1
+Hour 16 :  teacher: Prof Istorie 1
+Hour 18 :  teacher: Prof Mate 1
+
+Day 3
+Hour 08 :  teacher: Prof Informatica 1
+Hour 10 :  teacher: Prof Sport 1
+Hour 12 :  teacher: Prof Romana 1
+Hour 14 :  teacher: Prof Geografie 1
+Hour 16 :  teacher: Prof Relgigie 1
+Hour 18 :  teacher: Prof Istorie 1
+
+Day 4
+Hour 08 :  teacher: Prof Germana/Franceza 1
+Hour 10 :  teacher: Prof Romana 1
+Hour 12 :  teacher: Prof Mate 1
+Hour 14 :  teacher: Prof Germana/Franceza 1
+Hour 16 :  teacher: Prof Biologie 1
+Hour 18 :  teacher: Prof Fizica 1
+-----------------------------------------------------------------------------------
+Schedule for class : 10D - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Geografie 2
+Hour 10 :  teacher: Prof Mate 2
+Hour 12 :  teacher: Prof Mate 2
+Hour 14 :  teacher: Prof Relgigie 1
+Hour 16 :  teacher: Prof Filozofie 1
+Hour 18 :  teacher: Prof Sport 2
+
+Day 1
+Hour 08 :  teacher: Prof Mate 2
+Hour 10 :  teacher: Prof Mate 2
+Hour 12 :  teacher: Prof Biologie 2
+Hour 14 :  teacher: Prof Romana 2
+Hour 16 :  teacher: Prof Istorie 2
+Hour 18 :  teacher: Prof Chimie 2
+
+Day 2
+Hour 08 :  teacher: Prof Informatica 3
+Hour 10 :  teacher: Prof Romana 2
+Hour 12 :  teacher: Prof Chimie 2
+Hour 14 :  teacher: Prof Germana/Franceza 2
+Hour 16 :  teacher: Prof Fizica 2
+Hour 18 :  teacher: Prof Fizica 2
+
+Day 3
+Hour 08 :  teacher: Prof Geografie 2
+Hour 10 :  teacher: Prof Sport 2
+Hour 12 :  teacher: Prof Engleza 2
+Hour 14 :  teacher: Prof Germana/Franceza 2
+Hour 16 :  teacher: Prof Informatica 3
+Hour 18 :  teacher: Prof Filozofie 2
+
+Day 4
+Hour 08 :  teacher: Prof Romana 2
+Hour 10 :  teacher: Prof Engleza 2
+Hour 12 :  teacher: Prof Biologie 2
+Hour 14 :  teacher: Prof Istorie 2
+Hour 16 :  teacher: Prof Informatica 3
+Hour 18 :  teacher: Prof Romana 2
+-----------------------------------------------------------------------------------
+Schedule for class : 10E - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Informatica 2
+Hour 10 :  teacher: Prof Chimie 1
+Hour 12 :  teacher: Prof Chimie 1
+Hour 14 :  teacher: Prof Fizica 1
+Hour 16 :  teacher: Prof Mate 3
+Hour 18 :  teacher: Prof Mate 3
+
+Day 1
+Hour 08 :  teacher: Prof Relgigie 1
+Hour 10 :  teacher: Prof Mate 3
+Hour 12 :  teacher: Prof Filozofie 1
 Hour 14 :  teacher: Prof Engleza 1
+Hour 16 :  teacher: Prof Romana 4
+Hour 18 :  teacher: Prof Istorie 1
+
+Day 2
+Hour 08 :  teacher: Prof Romana 4
+Hour 10 :  teacher: Prof Germana/Franceza 1
+Hour 12 :  teacher: Prof Romana 4
+Hour 14 :  teacher: Prof Istorie 1
+Hour 16 :  teacher: Prof Fizica 1
+Hour 18 :  teacher: Prof Geografie 1
+
+Day 3
+Hour 08 :  teacher: Prof Informatica 2
+Hour 10 :  teacher: Prof Engleza 1
+Hour 12 :  teacher: Prof Sport 1
+Hour 14 :  teacher: Prof Germana/Franceza 1
 Hour 16 :  teacher: Prof Filozofie 2
+Hour 18 :  teacher: Prof Informatica 2
+
+Day 4
+Hour 08 :  teacher: Prof Sport 1
+Hour 10 :  teacher: Prof Biologie 1
+Hour 12 :  teacher: Prof Biologie 1
+Hour 14 :  teacher: Prof Romana 4
+Hour 16 :  teacher: Prof Mate 3
+Hour 18 :  teacher: Prof Geografie 1
+-----------------------------------------------------------------------------------
+Schedule for class : 10F - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Mate 4
+Hour 10 :  teacher: Prof Romana 3
+Hour 12 :  teacher: Prof Geografie 2
+Hour 14 :  teacher: Prof Mate 4
+Hour 16 :  teacher: Prof Geografie 2
+Hour 18 :  teacher: Prof Informatica 4
+
+Day 1
+Hour 08 :  teacher: Prof Informatica 4
+Hour 10 :  teacher: Prof Biologie 2
+Hour 12 :  teacher: Prof Relgigie 1
+Hour 14 :  teacher: Prof Engleza 2
+Hour 16 :  teacher: Prof Romana 3
+Hour 18 :  teacher: Prof Istorie 2
+
+Day 2
+Hour 08 :  teacher: Prof Germana/Franceza 2
+Hour 10 :  teacher: Prof Romana 3
+Hour 12 :  teacher: Prof Sport 2
+Hour 14 :  teacher: Prof Istorie 2
+Hour 16 :  teacher: Prof Romana 3
+Hour 18 :  teacher: Prof Filozofie 2
+
+Day 3
+Hour 08 :  teacher: Prof Sport 2
+Hour 10 :  teacher: Prof Filozofie 1
+Hour 12 :  teacher: Prof Fizica 2
+Hour 14 :  teacher: Prof Informatica 4
+Hour 16 :  teacher: Prof Engleza 2
+Hour 18 :  teacher: Prof Mate 4
+
+Day 4
+Hour 08 :  teacher: Prof Chimie 2
+Hour 10 :  teacher: Prof Chimie 2
+Hour 12 :  teacher: Prof Fizica 2
+Hour 14 :  teacher: Prof Biologie 2
+Hour 16 :  teacher: Prof Mate 4
+Hour 18 :  teacher: Prof Germana/Franceza 2
+-----------------------------------------------------------------------------------
+Schedule for class : 11A - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Fizica 1
+Hour 10 :  teacher: Prof Istorie 1
+Hour 12 :  teacher: Prof Engleza 1
+Hour 14 :  teacher: Prof Mate 1
+Hour 16 :  teacher: Prof Fizica 1
+Hour 18 :  teacher: Prof Engleza 1
+
+Day 1
+Hour 08 :  teacher: Prof Sport 1
+Hour 10 :  teacher: Prof Biologie 1
+Hour 12 :  teacher: Prof Informatica 1
+Hour 14 :  teacher: Prof Germana/Franceza 1
+Hour 16 :  teacher: Prof Informatica 1
+Hour 18 :  teacher: Prof Chimie 1
+
+Day 2
+Hour 08 :  teacher: Prof Filozofie 1
+Hour 10 :  teacher: Prof Mate 1
+Hour 12 :  teacher: Prof Romana 1
+Hour 14 :  teacher: Prof Informatica 1
+Hour 16 :  teacher: Prof Romana 1
+Hour 18 :  teacher: Prof Romana 1
+
+Day 3
+Hour 08 :  teacher: Prof Geografie 1
+Hour 10 :  teacher: Prof Biologie 1
+Hour 12 :  teacher: Prof Germana/Franceza 1
+Hour 14 :  teacher: Prof Sport 1
+Hour 16 :  teacher: Prof Geografie 1
+Hour 18 :  teacher: Prof Chimie 1
+
+Day 4
+Hour 08 :  teacher: Prof Istorie 1
+Hour 10 :  teacher: Prof Mate 1
+Hour 12 :  teacher: Prof Romana 1
+Hour 14 :  teacher: Prof Mate 1
+Hour 16 :  teacher: Prof Relgigie 1
+Hour 18 :  teacher: Prof Informatica 3
+-----------------------------------------------------------------------------------
+Schedule for class : 11B - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Filozofie 2
+Hour 10 :  teacher: Prof Engleza 2
+Hour 12 :  teacher: Prof Relgigie 1
+Hour 14 :  teacher: Prof Istorie 2
+Hour 16 :  teacher: Prof Mate 2
+Hour 18 :  teacher: Prof Mate 2
+
+Day 1
+Hour 08 :  teacher: Prof Chimie 2
+Hour 10 :  teacher: Prof Romana 2
+Hour 12 :  teacher: Prof Romana 2
+Hour 14 :  teacher: Prof Istorie 2
+Hour 16 :  teacher: Prof Biologie 2
+Hour 18 :  teacher: Prof Germana/Franceza 2
+
+Day 2
+Hour 08 :  teacher: Prof Fizica 2
+Hour 10 :  teacher: Prof Biologie 2
+Hour 12 :  teacher: Prof Germana/Franceza 2
+Hour 14 :  teacher: Prof Geografie 2
+Hour 16 :  teacher: Prof Engleza 2
+Hour 18 :  teacher: Prof Geografie 2
+
+Day 3
+Hour 08 :  teacher: Prof Mate 2
+Hour 10 :  teacher: Prof Informatica 2
+Hour 12 :  teacher: Prof Mate 2
+Hour 14 :  teacher: Prof Informatica 3
+Hour 16 :  teacher: Prof Sport 2
+Hour 18 :  teacher: Prof Romana 2
+
+Day 4
+Hour 08 :  teacher: Prof Informatica 2
+Hour 10 :  teacher: Prof Romana 2
+Hour 12 :  teacher: Prof Informatica 2
+Hour 14 :  teacher: Prof Chimie 2
+Hour 16 :  teacher: Prof Fizica 2
+Hour 18 :  teacher: Prof Sport 2
+-----------------------------------------------------------------------------------
+Schedule for class : 11C - students nr: 30
+
+Day 0
+Hour 08 :  teacher: Prof Germana/Franceza 1
+Hour 10 :  teacher: Prof Informatica 3
+Hour 12 :  teacher: Prof Geografie 1
+Hour 14 :  teacher: Prof Sport 1
+Hour 16 :  teacher: Prof Chimie 1
+Hour 18 :  teacher: Prof Informatica 3
+
+Day 1
+Hour 08 :  teacher: Prof Filozofie 2
+Hour 10 :  teacher: Prof Engleza 1
+Hour 12 :  teacher: Prof Geografie 1
+Hour 14 :  teacher: Prof Mate 3
+Hour 16 :  teacher: Prof Germana/Franceza 1
+Hour 18 :  teacher: Prof Mate 3
+
+Day 2
+Hour 08 :  teacher: Prof Biologie 1
+Hour 10 :  teacher: Prof Informatica 3
+Hour 12 :  teacher: Prof Fizica 1
+Hour 14 :  teacher: Prof Relgigie 1
+Hour 16 :  teacher: Prof Sport 1
 Hour 18 :  teacher: Prof Biologie 1
 
 Day 3
 Hour 08 :  teacher: Prof Mate 3
 Hour 10 :  teacher: Prof Mate 3
 Hour 12 :  teacher: Prof Istorie 1
-Hour 14 :  teacher: Prof Fizica 1
-Hour 16 :  teacher: Prof Germana/Franceza 1
-Hour 18 :  teacher: Prof Mate 3
-
-Day 4
-Hour 08 :  teacher: Prof Informatica 2
-Hour 10 :  teacher: Prof Mate 3
-Hour 12 :  teacher: Prof Germana/Franceza 1
-Hour 14 :  teacher: Prof Informatica 2
-Hour 16 :  teacher: Prof Informatica 4
-Hour 18 :  teacher: Prof Engleza 1
------------------------------------------------------------------------------------
-Schedule for class : 10B - students nr: 30
-
-Day 0
-Hour 08 :  teacher: Prof Biologie 2
-Hour 10 :  teacher: Prof Mate 4
-Hour 12 :  teacher: Prof Informatica 4
-Hour 14 :  teacher: Prof Fizica 2
-Hour 16 :  teacher: Prof Biologie 2
-Hour 18 :  teacher: Prof Romana 3
-
-Day 1
-Hour 08 :  teacher: Prof Geografie 2
-Hour 10 :  teacher: Prof Mate 4
-Hour 12 :  teacher: Prof Mate 4
-Hour 14 :  teacher: Prof Engleza 2
-Hour 16 :  teacher: Prof Fizica 2
-Hour 18 :  teacher: Prof Chimie 2
-
-Day 2
-Hour 08 :  teacher: Prof Informatica 4
-Hour 10 :  teacher: Prof Sport 2
-Hour 12 :  teacher: Prof Geografie 2
-Hour 14 :  teacher: Prof Mate 4
-Hour 16 :  teacher: Prof Istorie 2
-Hour 18 :  teacher: Prof Romana 3
-
-Day 3
-Hour 08 :  teacher: Prof Chimie 2
-Hour 10 :  teacher: Prof Germana/Franceza 2
-Hour 12 :  teacher: Prof Engleza 2
 Hour 14 :  teacher: Prof Filozofie 1
-Hour 16 :  teacher: Prof Relgigie 1
-Hour 18 :  teacher: Prof Romana 3
-
-Day 4
-Hour 08 :  teacher: Prof Romana 3
-Hour 10 :  teacher: Prof Germana/Franceza 2
-Hour 12 :  teacher: Prof Filozofie 2
-Hour 14 :  teacher: Prof Istorie 2
-Hour 16 :  teacher: Prof Sport 2
-Hour 18 :  teacher: Prof Informatica 4
------------------------------------------------------------------------------------
-Schedule for class : 10C - students nr: 30
-
-Day 0
-Hour 08 :  teacher: Prof Geografie 1
-Hour 10 :  teacher: Prof Mate 1
-Hour 12 :  teacher: Prof Geografie 1
-Hour 14 :  teacher: Prof Romana 1
-Hour 16 :  teacher: Prof Romana 1
-Hour 18 :  teacher: Prof Germana/Franceza 1
-
-Day 1
-Hour 08 :  teacher: Prof Sport 1
-Hour 10 :  teacher: Prof Germana/Franceza 1
-Hour 12 :  teacher: Prof Mate 1
-Hour 14 :  teacher: Prof Chimie 1
-Hour 16 :  teacher: Prof Informatica 1
-Hour 18 :  teacher: Prof Mate 1
-
-Day 2
-Hour 08 :  teacher: Prof Mate 1
-Hour 10 :  teacher: Prof Sport 1
-Hour 12 :  teacher: Prof Engleza 1
-Hour 14 :  teacher: Prof Fizica 1
-Hour 16 :  teacher: Prof Romana 1
-Hour 18 :  teacher: Prof Romana 1
-
-Day 3
-Hour 08 :  teacher: Prof Filozofie 1
-Hour 10 :  teacher: Prof Istorie 1
-Hour 12 :  teacher: Prof Informatica 1
-Hour 14 :  teacher: Prof Biologie 1
-Hour 16 :  teacher: Prof Chimie 1
-Hour 18 :  teacher: Prof Filozofie 2
-
-Day 4
-Hour 08 :  teacher: Prof Relgigie 1
-Hour 10 :  teacher: Prof Informatica 1
-Hour 12 :  teacher: Prof Engleza 1
-Hour 14 :  teacher: Prof Biologie 1
-Hour 16 :  teacher: Prof Fizica 1
-Hour 18 :  teacher: Prof Istorie 1
------------------------------------------------------------------------------------
-Schedule for class : 10D - students nr: 30
-
-Day 0
-Hour 08 :  teacher: Prof Informatica 3
-Hour 10 :  teacher: Prof Geografie 2
-Hour 12 :  teacher: Prof Engleza 2
-Hour 14 :  teacher: Prof Sport 2
-Hour 16 :  teacher: Prof Germana/Franceza 2
-Hour 18 :  teacher: Prof Sport 2
-
-Day 1
-Hour 08 :  teacher: Prof Relgigie 1
-Hour 10 :  teacher: Prof Romana 2
-Hour 12 :  teacher: Prof Biologie 2
-Hour 14 :  teacher: Prof Informatica 3
-Hour 16 :  teacher: Prof Biologie 2
-Hour 18 :  teacher: Prof Mate 2
-
-Day 2
-Hour 08 :  teacher: Prof Fizica 2
-Hour 10 :  teacher: Prof Romana 2
-Hour 12 :  teacher: Prof Istorie 2
-Hour 14 :  teacher: Prof Informatica 3
-Hour 16 :  teacher: Prof Geografie 2
-Hour 18 :  teacher: Prof Filozofie 1
-
-Day 3
-Hour 08 :  teacher: Prof Romana 2
-Hour 10 :  teacher: Prof Istorie 2
-Hour 12 :  teacher: Prof Fizica 2
-Hour 14 :  teacher: Prof Mate 2
-Hour 16 :  teacher: Prof Germana/Franceza 2
-Hour 18 :  teacher: Prof Engleza 2
-
-Day 4
-Hour 08 :  teacher: Prof Mate 2
-Hour 10 :  teacher: Prof Chimie 2
-Hour 12 :  teacher: Prof Chimie 2
-Hour 14 :  teacher: Prof Romana 2
-Hour 16 :  teacher: Prof Mate 2
-Hour 18 :  teacher: Prof Filozofie 2
------------------------------------------------------------------------------------
-Schedule for class : 10E - students nr: 30
-
-Day 0
-Hour 08 :  teacher: Prof Istorie 1
-Hour 10 :  teacher: Prof Informatica 2
-Hour 12 :  teacher: Prof Filozofie 1
-Hour 14 :  teacher: Prof Chimie 1
-Hour 16 :  teacher: Prof Engleza 1
-Hour 18 :  teacher: Prof Fizica 1
-
-Day 1
-Hour 08 :  teacher: Prof Fizica 1
-Hour 10 :  teacher: Prof Engleza 1
-Hour 12 :  teacher: Prof Informatica 2
-Hour 14 :  teacher: Prof Romana 4
-Hour 16 :  teacher: Prof Romana 4
-Hour 18 :  teacher: Prof Biologie 1
-
-Day 2
-Hour 08 :  teacher: Prof Mate 3
-Hour 10 :  teacher: Prof Mate 3
-Hour 12 :  teacher: Prof Sport 1
-Hour 14 :  teacher: Prof Mate 3
-Hour 16 :  teacher: Prof Sport 1
-Hour 18 :  teacher: Prof Relgigie 1
-
-Day 3
-Hour 08 :  teacher: Prof Germana/Franceza 1
-Hour 10 :  teacher: Prof Biologie 1
-Hour 12 :  teacher: Prof Romana 4
-Hour 14 :  teacher: Prof Istorie 1
-Hour 16 :  teacher: Prof Filozofie 2
-Hour 18 :  teacher: Prof Germana/Franceza 1
-
-Day 4
-Hour 08 :  teacher: Prof Geografie 1
-Hour 10 :  teacher: Prof Geografie 1
-Hour 12 :  teacher: Prof Romana 4
-Hour 14 :  teacher: Prof Mate 3
-Hour 16 :  teacher: Prof Chimie 1
-Hour 18 :  teacher: Prof Informatica 2
------------------------------------------------------------------------------------
-Schedule for class : 10F - students nr: 30
-
-Day 0
-Hour 08 :  teacher: Prof Sport 2
-Hour 10 :  teacher: Prof Sport 2
-Hour 12 :  teacher: Prof Relgigie 1
-Hour 14 :  teacher: Prof Romana 3
-Hour 16 :  teacher: Prof Mate 4
-Hour 18 :  teacher: Prof Informatica 4
-
-Day 1
-Hour 08 :  teacher: Prof Romana 3
-Hour 10 :  teacher: Prof Engleza 2
-Hour 12 :  teacher: Prof Fizica 2
-Hour 14 :  teacher: Prof Geografie 2
-Hour 16 :  teacher: Prof Istorie 2
-Hour 18 :  teacher: Prof Geografie 2
-
-Day 2
-Hour 08 :  teacher: Prof Romana 3
-Hour 10 :  teacher: Prof Engleza 2
-Hour 12 :  teacher: Prof Chimie 2
-Hour 14 :  teacher: Prof Germana/Franceza 2
-Hour 16 :  teacher: Prof Biologie 2
-Hour 18 :  teacher: Prof Istorie 2
-
-Day 3
-Hour 08 :  teacher: Prof Informatica 4
-Hour 10 :  teacher: Prof Informatica 4
-Hour 12 :  teacher: Prof Mate 4
-Hour 14 :  teacher: Prof Fizica 2
-Hour 16 :  teacher: Prof Filozofie 1
-Hour 18 :  teacher: Prof Biologie 2
-
-Day 4
-Hour 08 :  teacher: Prof Filozofie 2
-Hour 10 :  teacher: Prof Romana 3
-Hour 12 :  teacher: Prof Germana/Franceza 2
-Hour 14 :  teacher: Prof Chimie 2
-Hour 16 :  teacher: Prof Mate 4
-Hour 18 :  teacher: Prof Mate 4
------------------------------------------------------------------------------------
-Schedule for class : 11A - students nr: 30
-
-Day 0
-Hour 08 :  teacher: Prof Romana 1
-Hour 10 :  teacher: Prof Filozofie 1
-Hour 12 :  teacher: Prof Mate 1
-Hour 14 :  teacher: Prof Sport 1
-Hour 16 :  teacher: Prof Fizica 1
-Hour 18 :  teacher: Prof Geografie 1
-
-Day 1
-Hour 08 :  teacher: Prof Biologie 1
-Hour 10 :  teacher: Prof Relgigie 1
-Hour 12 :  teacher: Prof Informatica 3
-Hour 14 :  teacher: Prof Romana 1
-Hour 16 :  teacher: Prof Biologie 1
-Hour 18 :  teacher: Prof Germana/Franceza 1
-
-Day 2
-Hour 08 :  teacher: Prof Sport 1
-Hour 10 :  teacher: Prof Informatica 1
-Hour 12 :  teacher: Prof Mate 1
-Hour 14 :  teacher: Prof Germana/Franceza 1
 Hour 16 :  teacher: Prof Istorie 1
-Hour 18 :  teacher: Prof Mate 1
-
-Day 3
-Hour 08 :  teacher: Prof Informatica 1
-Hour 10 :  teacher: Prof Romana 1
-Hour 12 :  teacher: Prof Engleza 1
-Hour 14 :  teacher: Prof Geografie 1
-Hour 16 :  teacher: Prof Engleza 1
 Hour 18 :  teacher: Prof Fizica 1
 
 Day 4
-Hour 08 :  teacher: Prof Romana 1
-Hour 10 :  teacher: Prof Chimie 1
-Hour 12 :  teacher: Prof Informatica 1
-Hour 14 :  teacher: Prof Chimie 1
-Hour 16 :  teacher: Prof Istorie 1
-Hour 18 :  teacher: Prof Mate 1
------------------------------------------------------------------------------------
-Schedule for class : 11B - students nr: 30
-
-Day 0
-Hour 08 :  teacher: Prof Geografie 2
-Hour 10 :  teacher: Prof Mate 2
-Hour 12 :  teacher: Prof Informatica 2
-Hour 14 :  teacher: Prof Romana 2
-Hour 16 :  teacher: Prof Chimie 2
-Hour 18 :  teacher: Prof Engleza 2
-
-Day 1
-Hour 08 :  teacher: Prof Romana 2
-Hour 10 :  teacher: Prof Fizica 2
-Hour 12 :  teacher: Prof Mate 2
-Hour 14 :  teacher: Prof Filozofie 2
-Hour 16 :  teacher: Prof Romana 2
-Hour 18 :  teacher: Prof Informatica 2
-
-Day 2
-Hour 08 :  teacher: Prof Germana/Franceza 2
-Hour 10 :  teacher: Prof Mate 2
-Hour 12 :  teacher: Prof Sport 2
-Hour 14 :  teacher: Prof Romana 2
-Hour 16 :  teacher: Prof Fizica 2
-Hour 18 :  teacher: Prof Germana/Franceza 2
-
-Day 3
-Hour 08 :  teacher: Prof Informatica 2
-Hour 10 :  teacher: Prof Biologie 2
-Hour 12 :  teacher: Prof Mate 2
-Hour 14 :  teacher: Prof Biologie 2
-Hour 16 :  teacher: Prof Geografie 2
-Hour 18 :  teacher: Prof Istorie 2
-
-Day 4
-Hour 08 :  teacher: Prof Informatica 3
-Hour 10 :  teacher: Prof Istorie 2
-Hour 12 :  teacher: Prof Sport 2
-Hour 14 :  teacher: Prof Relgigie 1
-Hour 16 :  teacher: Prof Chimie 2
-Hour 18 :  teacher: Prof Engleza 2
------------------------------------------------------------------------------------
-Schedule for class : 11C - students nr: 30
-
-Day 0
-Hour 08 :  teacher: Prof Fizica 1
-Hour 10 :  teacher: Prof Informatica 3
-Hour 12 :  teacher: Prof Informatica 3
-Hour 14 :  teacher: Prof Filozofie 1
-Hour 16 :  teacher: Prof Germana/Franceza 1
-Hour 18 :  teacher: Prof Engleza 1
-
-Day 1
-Hour 08 :  teacher: Prof Engleza 1
-Hour 10 :  teacher: Prof Mate 3
-Hour 12 :  teacher: Prof Chimie 1
-Hour 14 :  teacher: Prof Mate 3
-Hour 16 :  teacher: Prof Sport 1
-Hour 18 :  teacher: Prof Chimie 1
-
-Day 2
-Hour 08 :  teacher: Prof Relgigie 1
-Hour 10 :  teacher: Prof Fizica 1
-Hour 12 :  teacher: Prof Geografie 1
-Hour 14 :  teacher: Prof Filozofie 2
-Hour 16 :  teacher: Prof Romana 4
-Hour 18 :  teacher: Prof Istorie 1
-
-Day 3
-Hour 08 :  teacher: Prof Istorie 1
+Hour 08 :  teacher: Prof Chimie 1
 Hour 10 :  teacher: Prof Romana 4
-Hour 12 :  teacher: Prof Mate 3
-Hour 14 :  teacher: Prof Informatica 3
+Hour 12 :  teacher: Prof Romana 4
+Hour 14 :  teacher: Prof Engleza 1
 Hour 16 :  teacher: Prof Romana 4
 Hour 18 :  teacher: Prof Romana 4
-
-Day 4
-Hour 08 :  teacher: Prof Mate 3
-Hour 10 :  teacher: Prof Sport 1
-Hour 12 :  teacher: Prof Biologie 1
-Hour 14 :  teacher: Prof Germana/Franceza 1
-Hour 16 :  teacher: Prof Biologie 1
-Hour 18 :  teacher: Prof Geografie 1
 -----------------------------------------------------------------------------------
 Schedule for class : 11D - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Germana/Franceza 2
-Hour 10 :  teacher: Prof Informatica 4
-Hour 12 :  teacher: Prof Mate 4
-Hour 14 :  teacher: Prof Engleza 2
-Hour 16 :  teacher: Prof Istorie 2
-Hour 18 :  teacher: Prof Fizica 2
+Hour 08 :  teacher: Prof Filozofie 1
+Hour 10 :  teacher: Prof Mate 4
+Hour 12 :  teacher: Prof Biologie 2
+Hour 14 :  teacher: Prof Sport 2
+Hour 16 :  teacher: Prof Chimie 2
+Hour 18 :  teacher: Prof Biologie 2
 
 Day 1
-Hour 08 :  teacher: Prof Germana/Franceza 2
-Hour 10 :  teacher: Prof Informatica 4
-Hour 12 :  teacher: Prof Chimie 2
-Hour 14 :  teacher: Prof Istorie 2
-Hour 16 :  teacher: Prof Sport 2
-Hour 18 :  teacher: Prof Biologie 2
+Hour 08 :  teacher: Prof Romana 3
+Hour 10 :  teacher: Prof Germana/Franceza 2
+Hour 12 :  teacher: Prof Fizica 2
+Hour 14 :  teacher: Prof Mate 4
+Hour 16 :  teacher: Prof Relgigie 1
+Hour 18 :  teacher: Prof Engleza 2
 
 Day 2
 Hour 08 :  teacher: Prof Chimie 2
-Hour 10 :  teacher: Prof Informatica 4
-Hour 12 :  teacher: Prof Romana 3
-Hour 14 :  teacher: Prof Geografie 2
-Hour 16 :  teacher: Prof Filozofie 1
-Hour 18 :  teacher: Prof Engleza 2
+Hour 10 :  teacher: Prof Istorie 2
+Hour 12 :  teacher: Prof Geografie 2
+Hour 14 :  teacher: Prof Engleza 2
+Hour 16 :  teacher: Prof Filozofie 2
+Hour 18 :  teacher: Prof Romana 3
 
 Day 3
-Hour 08 :  teacher: Prof Romana 3
-Hour 10 :  teacher: Prof Fizica 2
-Hour 12 :  teacher: Prof Filozofie 2
+Hour 08 :  teacher: Prof Fizica 2
+Hour 10 :  teacher: Prof Informatica 4
+Hour 12 :  teacher: Prof Sport 2
 Hour 14 :  teacher: Prof Mate 4
 Hour 16 :  teacher: Prof Romana 3
-Hour 18 :  teacher: Prof Mate 4
+Hour 18 :  teacher: Prof Romana 3
 
 Day 4
-Hour 08 :  teacher: Prof Mate 4
-Hour 10 :  teacher: Prof Relgigie 1
-Hour 12 :  teacher: Prof Romana 3
-Hour 14 :  teacher: Prof Geografie 2
-Hour 16 :  teacher: Prof Biologie 2
-Hour 18 :  teacher: Prof Sport 2
+Hour 08 :  teacher: Prof Geografie 2
+Hour 10 :  teacher: Prof Mate 4
+Hour 12 :  teacher: Prof Istorie 2
+Hour 14 :  teacher: Prof Informatica 4
+Hour 16 :  teacher: Prof Germana/Franceza 2
+Hour 18 :  teacher: Prof Informatica 4
 -----------------------------------------------------------------------------------
 Schedule for class : 11E - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Mate 1
-Hour 10 :  teacher: Prof Romana 1
-Hour 12 :  teacher: Prof Engleza 1
-Hour 14 :  teacher: Prof Mate 1
-Hour 16 :  teacher: Prof Biologie 1
-Hour 18 :  teacher: Prof Romana 1
+Hour 08 :  teacher: Prof Relgigie 1
+Hour 10 :  teacher: Prof Mate 1
+Hour 12 :  teacher: Prof Mate 1
+Hour 14 :  teacher: Prof Informatica 1
+Hour 16 :  teacher: Prof Geografie 1
+Hour 18 :  teacher: Prof Fizica 1
 
 Day 1
 Hour 08 :  teacher: Prof Germana/Franceza 1
-Hour 10 :  teacher: Prof Biologie 1
-Hour 12 :  teacher: Prof Geografie 1
-Hour 14 :  teacher: Prof Geografie 1
+Hour 10 :  teacher: Prof Romana 1
+Hour 12 :  teacher: Prof Germana/Franceza 1
+Hour 14 :  teacher: Prof Romana 1
 Hour 16 :  teacher: Prof Filozofie 2
-Hour 18 :  teacher: Prof Informatica 1
+Hour 18 :  teacher: Prof Geografie 1
 
 Day 2
-Hour 08 :  teacher: Prof Informatica 1
-Hour 10 :  teacher: Prof Germana/Franceza 1
-Hour 12 :  teacher: Prof Romana 1
-Hour 14 :  teacher: Prof Informatica 1
-Hour 16 :  teacher: Prof Engleza 1
-Hour 18 :  teacher: Prof Chimie 1
-
-Day 3
-Hour 08 :  teacher: Prof Sport 1
-Hour 10 :  teacher: Prof Fizica 1
+Hour 08 :  teacher: Prof Engleza 1
+Hour 10 :  teacher: Prof Biologie 1
 Hour 12 :  teacher: Prof Sport 1
 Hour 14 :  teacher: Prof Mate 1
-Hour 16 :  teacher: Prof Istorie 1
-Hour 18 :  teacher: Prof Chimie 1
+Hour 16 :  teacher: Prof Informatica 1
+Hour 18 :  teacher: Prof Istorie 1
+
+Day 3
+Hour 08 :  teacher: Prof Istorie 1
+Hour 10 :  teacher: Prof Fizica 1
+Hour 12 :  teacher: Prof Engleza 1
+Hour 14 :  teacher: Prof Biologie 1
+Hour 16 :  teacher: Prof Mate 1
+Hour 18 :  teacher: Prof Romana 1
 
 Day 4
-Hour 08 :  teacher: Prof Istorie 1
+Hour 08 :  teacher: Prof Informatica 1
 Hour 10 :  teacher: Prof Filozofie 1
-Hour 12 :  teacher: Prof Fizica 1
-Hour 14 :  teacher: Prof Mate 1
-Hour 16 :  teacher: Prof Romana 1
-Hour 18 :  teacher: Prof Relgigie 1
+Hour 12 :  teacher: Prof Chimie 1
+Hour 14 :  teacher: Prof Chimie 1
+Hour 16 :  teacher: Prof Sport 1
+Hour 18 :  teacher: Prof Romana 1
 -----------------------------------------------------------------------------------
 Schedule for class : 11F - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Mate 2
+Hour 08 :  teacher: Prof Romana 2
 Hour 10 :  teacher: Prof Romana 2
-Hour 12 :  teacher: Prof Fizica 2
-Hour 14 :  teacher: Prof Istorie 2
-Hour 16 :  teacher: Prof Sport 2
-Hour 18 :  teacher: Prof Mate 2
+Hour 12 :  teacher: Prof Germana/Franceza 2
+Hour 14 :  teacher: Prof Mate 2
+Hour 16 :  teacher: Prof Germana/Franceza 2
+Hour 18 :  teacher: Prof Informatica 2
 
 Day 1
-Hour 08 :  teacher: Prof Engleza 2
-Hour 10 :  teacher: Prof Chimie 2
-Hour 12 :  teacher: Prof Relgigie 1
-Hour 14 :  teacher: Prof Romana 2
-Hour 16 :  teacher: Prof Engleza 2
-Hour 18 :  teacher: Prof Istorie 2
+Hour 08 :  teacher: Prof Romana 2
+Hour 10 :  teacher: Prof Informatica 2
+Hour 12 :  teacher: Prof Mate 2
+Hour 14 :  teacher: Prof Mate 2
+Hour 16 :  teacher: Prof Fizica 2
+Hour 18 :  teacher: Prof Romana 2
 
 Day 2
-Hour 08 :  teacher: Prof Mate 2
-Hour 10 :  teacher: Prof Chimie 2
-Hour 12 :  teacher: Prof Filozofie 2
-Hour 14 :  teacher: Prof Informatica 2
-Hour 16 :  teacher: Prof Germana/Franceza 2
-Hour 18 :  teacher: Prof Geografie 2
+Hour 08 :  teacher: Prof Informatica 2
+Hour 10 :  teacher: Prof Sport 2
+Hour 12 :  teacher: Prof Filozofie 1
+Hour 14 :  teacher: Prof Biologie 2
+Hour 16 :  teacher: Prof Geografie 2
+Hour 18 :  teacher: Prof Engleza 2
 
 Day 3
-Hour 08 :  teacher: Prof Geografie 2
-Hour 10 :  teacher: Prof Informatica 2
-Hour 12 :  teacher: Prof Biologie 2
-Hour 14 :  teacher: Prof Romana 2
-Hour 16 :  teacher: Prof Mate 2
-Hour 18 :  teacher: Prof Filozofie 1
+Hour 08 :  teacher: Prof Biologie 2
+Hour 10 :  teacher: Prof Istorie 2
+Hour 12 :  teacher: Prof Istorie 2
+Hour 14 :  teacher: Prof Chimie 2
+Hour 16 :  teacher: Prof Chimie 2
+Hour 18 :  teacher: Prof Sport 2
 
 Day 4
-Hour 08 :  teacher: Prof Biologie 2
-Hour 10 :  teacher: Prof Informatica 2
-Hour 12 :  teacher: Prof Romana 2
-Hour 14 :  teacher: Prof Sport 2
-Hour 16 :  teacher: Prof Germana/Franceza 2
-Hour 18 :  teacher: Prof Fizica 2
+Hour 08 :  teacher: Prof Mate 2
+Hour 10 :  teacher: Prof Fizica 2
+Hour 12 :  teacher: Prof Engleza 2
+Hour 14 :  teacher: Prof Filozofie 2
+Hour 16 :  teacher: Prof Geografie 2
+Hour 18 :  teacher: Prof Relgigie 1
 -----------------------------------------------------------------------------------
 Schedule for class : 12A - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Relgigie 1
-Hour 10 :  teacher: Prof Sport 1
+Hour 08 :  teacher: Prof Geografie 1
+Hour 10 :  teacher: Prof Mate 3
 Hour 12 :  teacher: Prof Mate 3
-Hour 14 :  teacher: Prof Geografie 1
-Hour 16 :  teacher: Prof Chimie 1
-Hour 18 :  teacher: Prof Informatica 3
-
-Day 1
-Hour 08 :  teacher: Prof Informatica 4
-Hour 10 :  teacher: Prof Romana 4
-Hour 12 :  teacher: Prof Mate 3
-Hour 14 :  teacher: Prof Fizica 1
-Hour 16 :  teacher: Prof Fizica 1
-Hour 18 :  teacher: Prof Romana 4
-
-Day 2
-Hour 08 :  teacher: Prof Germana/Franceza 1
-Hour 10 :  teacher: Prof Biologie 1
-Hour 12 :  teacher: Prof Mate 3
-Hour 14 :  teacher: Prof Istorie 1
+Hour 14 :  teacher: Prof Filozofie 1
 Hour 16 :  teacher: Prof Informatica 3
-Hour 18 :  teacher: Prof Mate 3
-
-Day 3
-Hour 08 :  teacher: Prof Romana 4
-Hour 10 :  teacher: Prof Geografie 1
-Hour 12 :  teacher: Prof Chimie 1
-Hour 14 :  teacher: Prof Engleza 1
-Hour 16 :  teacher: Prof Biologie 1
 Hour 18 :  teacher: Prof Istorie 1
 
-Day 4
-Hour 08 :  teacher: Prof Filozofie 1
-Hour 10 :  teacher: Prof Engleza 1
-Hour 12 :  teacher: Prof Informatica 3
+Day 1
+Hour 08 :  teacher: Prof Informatica 3
+Hour 10 :  teacher: Prof Sport 1
+Hour 12 :  teacher: Prof Biologie 1
+Hour 14 :  teacher: Prof Istorie 1
+Hour 16 :  teacher: Prof Biologie 1
+Hour 18 :  teacher: Prof Fizica 1
+
+Day 2
+Hour 08 :  teacher: Prof Mate 3
+Hour 10 :  teacher: Prof Chimie 1
+Hour 12 :  teacher: Prof Germana/Franceza 1
 Hour 14 :  teacher: Prof Romana 4
-Hour 16 :  teacher: Prof Sport 1
-Hour 18 :  teacher: Prof Germana/Franceza 1
+Hour 16 :  teacher: Prof Romana 4
+Hour 18 :  teacher: Prof Romana 4
+
+Day 3
+Hour 08 :  teacher: Prof Informatica 4
+Hour 10 :  teacher: Prof Relgigie 1
+Hour 12 :  teacher: Prof Chimie 1
+Hour 14 :  teacher: Prof Fizica 1
+Hour 16 :  teacher: Prof Engleza 1
+Hour 18 :  teacher: Prof Geografie 1
+
+Day 4
+Hour 08 :  teacher: Prof Romana 4
+Hour 10 :  teacher: Prof Mate 3
+Hour 12 :  teacher: Prof Engleza 1
+Hour 14 :  teacher: Prof Informatica 3
+Hour 16 :  teacher: Prof Germana/Franceza 1
+Hour 18 :  teacher: Prof Sport 1
 -----------------------------------------------------------------------------------
 Schedule for class : 12B - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Engleza 2
-Hour 10 :  teacher: Prof Romana 3
-Hour 12 :  teacher: Prof Biologie 2
-Hour 14 :  teacher: Prof Chimie 2
+Hour 08 :  teacher: Prof Istorie 2
+Hour 10 :  teacher: Prof Germana/Franceza 2
+Hour 12 :  teacher: Prof Filozofie 2
+Hour 14 :  teacher: Prof Fizica 2
 Hour 16 :  teacher: Prof Informatica 4
-Hour 18 :  teacher: Prof Informatica 1
+Hour 18 :  teacher: Prof Fizica 2
 
 Day 1
-Hour 08 :  teacher: Prof Chimie 2
-Hour 10 :  teacher: Prof Germana/Franceza 2
-Hour 12 :  teacher: Prof Istorie 2
-Hour 14 :  teacher: Prof Sport 2
-Hour 16 :  teacher: Prof Relgigie 1
+Hour 08 :  teacher: Prof Informatica 1
+Hour 10 :  teacher: Prof Geografie 2
+Hour 12 :  teacher: Prof Mate 4
+Hour 14 :  teacher: Prof Romana 3
+Hour 16 :  teacher: Prof Engleza 2
 Hour 18 :  teacher: Prof Mate 4
 
 Day 2
-Hour 08 :  teacher: Prof Mate 4
-Hour 10 :  teacher: Prof Fizica 2
-Hour 12 :  teacher: Prof Informatica 1
-Hour 14 :  teacher: Prof Romana 3
-Hour 16 :  teacher: Prof Romana 3
-Hour 18 :  teacher: Prof Filozofie 2
+Hour 08 :  teacher: Prof Romana 3
+Hour 10 :  teacher: Prof Mate 4
+Hour 12 :  teacher: Prof Relgigie 1
+Hour 14 :  teacher: Prof Chimie 2
+Hour 16 :  teacher: Prof Mate 4
+Hour 18 :  teacher: Prof Informatica 1
 
 Day 3
-Hour 08 :  teacher: Prof Mate 4
-Hour 10 :  teacher: Prof Geografie 2
-Hour 12 :  teacher: Prof Germana/Franceza 2
-Hour 14 :  teacher: Prof Informatica 1
-Hour 16 :  teacher: Prof Sport 2
-Hour 18 :  teacher: Prof Fizica 2
+Hour 08 :  teacher: Prof Romana 3
+Hour 10 :  teacher: Prof Informatica 1
+Hour 12 :  teacher: Prof Biologie 2
+Hour 14 :  teacher: Prof Engleza 2
+Hour 16 :  teacher: Prof Biologie 2
+Hour 18 :  teacher: Prof Germana/Franceza 2
 
 Day 4
-Hour 08 :  teacher: Prof Geografie 2
-Hour 10 :  teacher: Prof Engleza 2
-Hour 12 :  teacher: Prof Biologie 2
-Hour 14 :  teacher: Prof Mate 4
-Hour 16 :  teacher: Prof Romana 3
+Hour 08 :  teacher: Prof Sport 2
+Hour 10 :  teacher: Prof Romana 3
+Hour 12 :  teacher: Prof Chimie 2
+Hour 14 :  teacher: Prof Geografie 2
+Hour 16 :  teacher: Prof Sport 2
 Hour 18 :  teacher: Prof Istorie 2
 -----------------------------------------------------------------------------------
 Schedule for class : 12C - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Informatica 2
-Hour 10 :  teacher: Prof Chimie 1
-Hour 12 :  teacher: Prof Romana 1
-Hour 14 :  teacher: Prof Informatica 2
-Hour 16 :  teacher: Prof Filozofie 2
-Hour 18 :  teacher: Prof Filozofie 1
-
-Day 1
-Hour 08 :  teacher: Prof Geografie 1
-Hour 10 :  teacher: Prof Sport 1
-Hour 12 :  teacher: Prof Engleza 1
-Hour 14 :  teacher: Prof Engleza 1
-Hour 16 :  teacher: Prof Mate 1
-Hour 18 :  teacher: Prof Fizica 1
-
-Day 2
-Hour 08 :  teacher: Prof Geografie 1
-Hour 10 :  teacher: Prof Mate 1
-Hour 12 :  teacher: Prof Chimie 1
-Hour 14 :  teacher: Prof Mate 1
-Hour 16 :  teacher: Prof Germana/Franceza 1
+Hour 08 :  teacher: Prof Mate 1
+Hour 10 :  teacher: Prof Romana 1
+Hour 12 :  teacher: Prof Informatica 2
+Hour 14 :  teacher: Prof Romana 1
+Hour 16 :  teacher: Prof Istorie 1
 Hour 18 :  teacher: Prof Germana/Franceza 1
 
+Day 1
+Hour 08 :  teacher: Prof Romana 1
+Hour 10 :  teacher: Prof Relgigie 1
+Hour 12 :  teacher: Prof Engleza 1
+Hour 14 :  teacher: Prof Mate 1
+Hour 16 :  teacher: Prof Chimie 1
+Hour 18 :  teacher: Prof Mate 1
+
+Day 2
+Hour 08 :  teacher: Prof Sport 1
+Hour 10 :  teacher: Prof Geografie 1
+Hour 12 :  teacher: Prof Informatica 2
+Hour 14 :  teacher: Prof Biologie 1
+Hour 16 :  teacher: Prof Geografie 1
+Hour 18 :  teacher: Prof Chimie 1
+
 Day 3
-Hour 08 :  teacher: Prof Biologie 1
-Hour 10 :  teacher: Prof Mate 1
+Hour 08 :  teacher: Prof Romana 1
+Hour 10 :  teacher: Prof Istorie 1
 Hour 12 :  teacher: Prof Fizica 1
-Hour 14 :  teacher: Prof Relgigie 1
-Hour 16 :  teacher: Prof Romana 1
-Hour 18 :  teacher: Prof Biologie 1
+Hour 14 :  teacher: Prof Filozofie 2
+Hour 16 :  teacher: Prof Biologie 1
+Hour 18 :  teacher: Prof Mate 1
 
 Day 4
-Hour 08 :  teacher: Prof Sport 1
-Hour 10 :  teacher: Prof Istorie 1
-Hour 12 :  teacher: Prof Istorie 1
-Hour 14 :  teacher: Prof Romana 1
-Hour 16 :  teacher: Prof Informatica 2
-Hour 18 :  teacher: Prof Romana 1
+Hour 08 :  teacher: Prof Filozofie 1
+Hour 10 :  teacher: Prof Informatica 2
+Hour 12 :  teacher: Prof Fizica 1
+Hour 14 :  teacher: Prof Sport 1
+Hour 16 :  teacher: Prof Engleza 1
+Hour 18 :  teacher: Prof Germana/Franceza 1
 -----------------------------------------------------------------------------------
 Schedule for class : 12D - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Informatica 4
-Hour 10 :  teacher: Prof Chimie 2
+Hour 08 :  teacher: Prof Mate 2
+Hour 10 :  teacher: Prof Fizica 2
 Hour 12 :  teacher: Prof Sport 2
-Hour 14 :  teacher: Prof Biologie 2
+Hour 14 :  teacher: Prof Informatica 4
 Hour 16 :  teacher: Prof Romana 2
 Hour 18 :  teacher: Prof Chimie 2
 
 Day 1
-Hour 08 :  teacher: Prof Sport 2
-Hour 10 :  teacher: Prof Geografie 2
-Hour 12 :  teacher: Prof Informatica 4
+Hour 08 :  teacher: Prof Germana/Franceza 2
+Hour 10 :  teacher: Prof Engleza 2
+Hour 12 :  teacher: Prof Chimie 2
 Hour 14 :  teacher: Prof Informatica 4
-Hour 16 :  teacher: Prof Mate 2
-Hour 18 :  teacher: Prof Fizica 2
+Hour 16 :  teacher: Prof Filozofie 1
+Hour 18 :  teacher: Prof Informatica 4
 
 Day 2
-Hour 08 :  teacher: Prof Romana 2
-Hour 10 :  teacher: Prof Germana/Franceza 2
-Hour 12 :  teacher: Prof Biologie 2
-Hour 14 :  teacher: Prof Filozofie 1
-Hour 16 :  teacher: Prof Relgigie 1
-Hour 18 :  teacher: Prof Romana 2
+Hour 08 :  teacher: Prof Relgigie 1
+Hour 10 :  teacher: Prof Mate 2
+Hour 12 :  teacher: Prof Mate 2
+Hour 14 :  teacher: Prof Fizica 2
+Hour 16 :  teacher: Prof Istorie 2
+Hour 18 :  teacher: Prof Istorie 2
 
 Day 3
-Hour 08 :  teacher: Prof Germana/Franceza 2
-Hour 10 :  teacher: Prof Romana 2
+Hour 08 :  teacher: Prof Engleza 2
+Hour 10 :  teacher: Prof Germana/Franceza 2
 Hour 12 :  teacher: Prof Geografie 2
-Hour 14 :  teacher: Prof Engleza 2
-Hour 16 :  teacher: Prof Istorie 2
-Hour 18 :  teacher: Prof Mate 2
+Hour 14 :  teacher: Prof Romana 2
+Hour 16 :  teacher: Prof Romana 2
+Hour 18 :  teacher: Prof Biologie 2
 
 Day 4
-Hour 08 :  teacher: Prof Istorie 2
-Hour 10 :  teacher: Prof Mate 2
-Hour 12 :  teacher: Prof Fizica 2
-Hour 14 :  teacher: Prof Engleza 2
-Hour 16 :  teacher: Prof Filozofie 2
-Hour 18 :  teacher: Prof Mate 2
+Hour 08 :  teacher: Prof Filozofie 2
+Hour 10 :  teacher: Prof Biologie 2
+Hour 12 :  teacher: Prof Romana 2
+Hour 14 :  teacher: Prof Sport 2
+Hour 16 :  teacher: Prof Mate 2
+Hour 18 :  teacher: Prof Geografie 2
 -----------------------------------------------------------------------------------
 Schedule for class : 12E - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Mate 3
-Hour 10 :  teacher: Prof Romana 4
-Hour 12 :  teacher: Prof Biologie 1
-Hour 14 :  teacher: Prof Romana 4
-Hour 16 :  teacher: Prof Sport 1
-Hour 18 :  teacher: Prof Istorie 1
+Hour 08 :  teacher: Prof Biologie 1
+Hour 10 :  teacher: Prof Geografie 1
+Hour 12 :  teacher: Prof Germana/Franceza 1
+Hour 14 :  teacher: Prof Germana/Franceza 1
+Hour 16 :  teacher: Prof Engleza 1
+Hour 18 :  teacher: Prof Romana 4
 
 Day 1
-Hour 08 :  teacher: Prof Mate 3
-Hour 10 :  teacher: Prof Fizica 1
-Hour 12 :  teacher: Prof Biologie 1
-Hour 14 :  teacher: Prof Istorie 1
-Hour 16 :  teacher: Prof Geografie 1
-Hour 18 :  teacher: Prof Filozofie 2
+Hour 08 :  teacher: Prof Filozofie 1
+Hour 10 :  teacher: Prof Filozofie 2
+Hour 12 :  teacher: Prof Mate 3
+Hour 14 :  teacher: Prof Relgigie 1
+Hour 16 :  teacher: Prof Sport 1
+Hour 18 :  teacher: Prof Biologie 1
 
 Day 2
-Hour 08 :  teacher: Prof Romana 4
-Hour 10 :  teacher: Prof Chimie 1
-Hour 12 :  teacher: Prof Germana/Franceza 1
-Hour 14 :  teacher: Prof Romana 4
-Hour 16 :  teacher: Prof Mate 3
-Hour 18 :  teacher: Prof Geografie 1
+Hour 08 :  teacher: Prof Fizica 1
+Hour 10 :  teacher: Prof Sport 1
+Hour 12 :  teacher: Prof Mate 3
+Hour 14 :  teacher: Prof Geografie 1
+Hour 16 :  teacher: Prof Chimie 1
+Hour 18 :  teacher: Prof Informatica 3
 
 Day 3
 Hour 08 :  teacher: Prof Engleza 1
-Hour 10 :  teacher: Prof Germana/Franceza 1
-Hour 12 :  teacher: Prof Relgigie 1
-Hour 14 :  teacher: Prof Chimie 1
-Hour 16 :  teacher: Prof Mate 3
-Hour 18 :  teacher: Prof Informatica 3
+Hour 10 :  teacher: Prof Romana 4
+Hour 12 :  teacher: Prof Romana 4
+Hour 14 :  teacher: Prof Mate 3
+Hour 16 :  teacher: Prof Chimie 1
+Hour 18 :  teacher: Prof Romana 4
 
 Day 4
-Hour 08 :  teacher: Prof Fizica 1
+Hour 08 :  teacher: Prof Mate 3
 Hour 10 :  teacher: Prof Informatica 3
-Hour 12 :  teacher: Prof Filozofie 1
-Hour 14 :  teacher: Prof Sport 1
-Hour 16 :  teacher: Prof Engleza 1
-Hour 18 :  teacher: Prof Informatica 3
+Hour 12 :  teacher: Prof Informatica 3
+Hour 14 :  teacher: Prof Istorie 1
+Hour 16 :  teacher: Prof Fizica 1
+Hour 18 :  teacher: Prof Istorie 1
 -----------------------------------------------------------------------------------
 Schedule for class : 12F - students nr: 30
 
 Day 0
-Hour 08 :  teacher: Prof Informatica 1
-Hour 10 :  teacher: Prof Engleza 2
-Hour 12 :  teacher: Prof Romana 3
-Hour 14 :  teacher: Prof Mate 4
-Hour 16 :  teacher: Prof Fizica 2
-Hour 18 :  teacher: Prof Filozofie 2
-
-Day 1
-Hour 08 :  teacher: Prof Istorie 2
-Hour 10 :  teacher: Prof Romana 3
-Hour 12 :  teacher: Prof Informatica 1
-Hour 14 :  teacher: Prof Chimie 2
-Hour 16 :  teacher: Prof Germana/Franceza 2
-Hour 18 :  teacher: Prof Engleza 2
-
-Day 2
-Hour 08 :  teacher: Prof Sport 2
-Hour 10 :  teacher: Prof Mate 4
-Hour 12 :  teacher: Prof Filozofie 1
-Hour 14 :  teacher: Prof Relgigie 1
-Hour 16 :  teacher: Prof Sport 2
-Hour 18 :  teacher: Prof Mate 4
-
-Day 3
-Hour 08 :  teacher: Prof Fizica 2
-Hour 10 :  teacher: Prof Chimie 2
-Hour 12 :  teacher: Prof Romana 3
-Hour 14 :  teacher: Prof Istorie 2
-Hour 16 :  teacher: Prof Biologie 2
-Hour 18 :  teacher: Prof Informatica 1
-
-Day 4
 Hour 08 :  teacher: Prof Germana/Franceza 2
 Hour 10 :  teacher: Prof Biologie 2
-Hour 12 :  teacher: Prof Mate 4
+Hour 12 :  teacher: Prof Istorie 2
 Hour 14 :  teacher: Prof Romana 3
-Hour 16 :  teacher: Prof Geografie 2
+Hour 16 :  teacher: Prof Engleza 2
+Hour 18 :  teacher: Prof Mate 4
+
+Day 1
+Hour 08 :  teacher: Prof Engleza 2
+Hour 10 :  teacher: Prof Mate 4
+Hour 12 :  teacher: Prof Romana 3
+Hour 14 :  teacher: Prof Germana/Franceza 2
+Hour 16 :  teacher: Prof Sport 2
+Hour 18 :  teacher: Prof Informatica 1
+
+Day 2
+Hour 08 :  teacher: Prof Geografie 2
+Hour 10 :  teacher: Prof Relgigie 1
+Hour 12 :  teacher: Prof Mate 4
+Hour 14 :  teacher: Prof Sport 2
+Hour 16 :  teacher: Prof Biologie 2
+Hour 18 :  teacher: Prof Chimie 2
+
+Day 3
+Hour 08 :  teacher: Prof Filozofie 1
+Hour 10 :  teacher: Prof Fizica 2
+Hour 12 :  teacher: Prof Chimie 2
+Hour 14 :  teacher: Prof Fizica 2
+Hour 16 :  teacher: Prof Istorie 2
 Hour 18 :  teacher: Prof Geografie 2
+
+Day 4
+Hour 08 :  teacher: Prof Romana 3
+Hour 10 :  teacher: Prof Filozofie 2
+Hour 12 :  teacher: Prof Informatica 1
+Hour 14 :  teacher: Prof Mate 4
+Hour 16 :  teacher: Prof Informatica 1
+Hour 18 :  teacher: Prof Romana 3
