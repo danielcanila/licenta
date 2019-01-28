@@ -1,9 +1,6 @@
-/*@media (min-width: 768px){*/
-    /*.modal-dialog {*/
-        /*width: 60%;*/
-    /*}*/
-
-/*}*/
+.teacher-modal-dialog {
+    width: 70%;
+}
 
 .teacher-popup .popup-row {
     padding: 10px 0;
@@ -16,7 +13,7 @@
 }
 
 .teacher-popup .popup-row .label-name {
-    width: 150px;
+    padding-right: 10px;
     display: inline-block;
 }
 
@@ -42,9 +39,5 @@
 
 .teacher-popup .list-wrapper .item {
     display: inline-block;
-    width: 30%;
-}
-
-.teacher-popup {
-
+    width: 20%;
 }

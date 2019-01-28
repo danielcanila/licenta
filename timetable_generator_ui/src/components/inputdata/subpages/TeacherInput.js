@@ -10,6 +10,7 @@ import {
     removeLectures,
     setUnavailabilityTimeslots
 } from '../../services/TeacherService';
+import {retrieveAllLectures} from '../../services/LectureService';
 
 import CrudTableHeader from "../common/CRUDTable/CrudTableHeader";
 import CrudTableRow from "../common/CRUDTable/CrudTableRow";
@@ -29,7 +30,8 @@ class TeacherInput extends Component {
             editTeacher: {
                 name: '',
                 lectures: []
-            }
+            },
+            lecturesReady: false
         };
 
         this.dayObject = this.getDayObject();
@@ -38,6 +40,7 @@ class TeacherInput extends Component {
 
     componentDidMount() {
         this.getTeachers();
+        this.getLectures();
     }
 
     getTeachers() {
@@ -45,6 +48,17 @@ class TeacherInput extends Component {
             .then(response => {
                 console.log('teachers: ', response);
                 this.setState({teachers: response, teachersReady: true});
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+
+    getLectures() {
+        retrieveAllLectures()
+            .then(response => {
+                console.log('lectures: ', response);
+                this.setState({lectures: response, lecturesReady: true});
             })
             .catch(error => {
                 console.error(error);
@@ -124,8 +138,25 @@ class TeacherInput extends Component {
         });
     }
 
+    onSave = (teacherLectures) => {
+        console.log('on SAVE teacherLectures...', teacherLectures);
+
+        this.closePopupAndResetValues();
+    };
+
+    closePopupAndResetValues = () => {
+        this.setState({
+            editTeacher: {
+                name: '',
+                lectures: []
+            },
+            showPopup: false
+        });
+    };
+
     render() {
-        let {teachers, teachersReady} = this.state;
+        let {teachers, teachersReady, lecturesReady} = this.state,
+            isReady = teachersReady && lecturesReady;
 
         return (
             <div className="teacher-input">
@@ -136,7 +167,7 @@ class TeacherInput extends Component {
                 />
 
                 <div className="scrollable-items">
-                    {teachers && teachersReady &&
+                    {teachers && teachers.length > 0 && isReady &&
                         teachers.map(teacher => {
                             let lectures = this.getTeacherLectures(teacher),
                                 unavailabilityRows = this.getUnavailabilitySlots(teacher.unavailabilitySlots);
@@ -153,7 +184,7 @@ class TeacherInput extends Component {
                     }
                 </div>
 
-                {(teachersReady && (!teachers || teachers.length === 0)) &&
+                {(isReady && (!teachers || teachers.length === 0)) &&
                 <div className="no-items">
                     <span>No teachers to display</span>
                 </div>
@@ -161,9 +192,11 @@ class TeacherInput extends Component {
 
                 <TeacherPopup
                     {...this.state.editTeacher}
+                    allLectures={this.state.lectures}
                     showPopup={this.state.showPopup}
                     title={this.state.onEdit ? 'Update teacher details' : 'Add new teacher'}
-                    onClose={() => this.setState({showPopup: false})}
+                    onClose={this.closePopupAndResetValues}
+                    onSave={this.onSave}
                 />
 
             </div>

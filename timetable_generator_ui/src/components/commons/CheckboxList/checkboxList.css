@@ -1,0 +1,24 @@
+.checkbox-list {
+    width: 100%;
+    padding: 10px;
+}
+
+.checkbox-list .item {
+    display: inline-block;
+    width: 20%;
+}
+
+.checkbox-list .item input {
+    vertical-align: middle;
+    margin: 0;
+}
+
+.checkbox-list .item span {
+    line-height: 32px;
+    padding: 0 5px;
+    max-width: 150px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

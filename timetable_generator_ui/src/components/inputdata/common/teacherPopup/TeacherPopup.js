@@ -3,6 +3,7 @@ import React from 'react';
 import './teacherPopup.css';
 
 import Popup from '../popup/Popup';
+import CheckboxList from '../../../commons/CheckboxList/CheckboxList';
 
 export default class TeacherPopup extends React.Component {
 
@@ -11,17 +12,15 @@ export default class TeacherPopup extends React.Component {
 
         this.state = {
             name: props.name,
-            lectures: props.lectures,
             unavailabilitySlots: props.unavailabilitySlots
         };
     }
 
     componentDidUpdate(prevProps) {
         if(prevProps.showPopup !== this.props.showPopup && this.props.showPopup === true) {
-            let {name, lectures} = this.props;
+            let {name, lectures, allLectures} = this.props;
             this.setState({
-                name,
-                lectures
+                name
             });
         }
     }
@@ -30,28 +29,25 @@ export default class TeacherPopup extends React.Component {
         this.setState({name: event.target.value});
     };
 
-    onLectureChange = (event, lecture) => {
-        let checked = event.target.checked;
+    onInit = (api) => {
+        this.getSelectedLectures = api.getSelectedItems;
+    };
 
-        this.setState({
-            lectures: this.state.lectures.map(l => {
-                if(l.id === lecture.id) {
-                    return Object.assign({}, l, {checked});
-                }
-                return l;
-            })
-        });
+    onSave = () => {
+        let selectedLectures = this.getSelectedLectures();
+        this.props.onSave(selectedLectures);
     };
 
     render() {
-        let {showPopup, title, onSave, onClose} = this.props,
-            {name, lectures, unavailabilitySlots} = this.state;
+        let {showPopup, title, onClose, allLectures, lectures} = this.props,
+            {name, unavailabilitySlots} = this.state;
 
         return (
             <Popup
+                dialogClassName="teacher-modal-dialog"
                 show={showPopup}
                 title={title}
-                onSave={() => onSave({...this.state})}
+                onSave={this.onSave}
                 handleClose={onClose}>
 
                 <div className="teacher-popup">
@@ -68,12 +64,11 @@ export default class TeacherPopup extends React.Component {
                         <span className="label-name">Lectures:</span>
 
                         <div className="list-wrapper">
-                            {lectures.map((lecture, i) => (
-                                <div key={i} className="item">
-                                    <input type="checkbox" checked={lecture.checked} onChange={(e) => this.onLectureChange(e, lecture)} />
-                                    <span>{lecture.name}</span>
-                                </div>
-                            ))}
+                            <CheckboxList
+                                onInit={this.onInit}
+                                items={allLectures}
+                                selectedItems={lectures}
+                            />
                         </div>
                     </div>
 

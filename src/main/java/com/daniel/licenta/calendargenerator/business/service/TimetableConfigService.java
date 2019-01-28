@@ -14,6 +14,7 @@ import com.daniel.licenta.calendargenerator.integration.repo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -189,4 +190,10 @@ public class TimetableConfigService {
         return teacherData;
     }
 
+    public TimetableConfig retrieveLatestTimetable() {
+        return retrieveAllTimetableConfigs()
+                .stream()
+                .max(Comparator.comparing(TimetableConfig::getId))
+                .get();
+    }
 }

@@ -2,10 +2,15 @@ import React, {Component} from 'react';
 import './configTimetable.css';
 import {Col, Nav, NavItem, Row, Tab} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import RoomConfig from './subpages/RoomConfig'
+import CreateConfig from './subpages/CreateConfig'
 import StudentClassesConfig from './subpages/StudentClassesConfig'
 import LecturesTeachersConfig from './subpages/LecturesTeachersConfig'
 import GenerateTimetable from './subpages/GenerateTimetable'
+import {
+    retrieveLatestConfig,
+    saveConfig
+} from '../services/ConfigService';
+
 
 class ConfigTimetable extends Component {
 
@@ -16,7 +21,8 @@ class ConfigTimetable extends Component {
             activateTab: "first",
             studentConfigDisabled: true,
             lectureTeacherDisabled: true,
-            generateTimetableDisabled: true
+            generateTimetableDisabled: true,
+            currentConfigId: null
         };
 
         this.navigationStepOne = this.navigationStepOne.bind(this);
@@ -35,6 +41,12 @@ class ConfigTimetable extends Component {
     }
 
     navigationStepTwo() {
+        retrieveLatestConfig()
+            .then(response => {
+                this.setState({
+                    currentConfigId: response.id
+                });
+            });
         this.setState({
             activateTab: "second",
             studentConfigDisabled: false,
@@ -62,11 +74,12 @@ class ConfigTimetable extends Component {
     }
 
     TabConfigurareOrar() {
-        return <Tab.Container id="tc-config-timetable" activeKey={this.state.activateTab} onSelect={() => {}}>
+        return <Tab.Container id="tc-config-timetable" activeKey={this.state.activateTab} onSelect={() => {
+        }}>
             <Row className="clearfix">
                 <Col sm={2}>
                     <Nav bsStyle="pills" stacked>
-                        <NavItem onClick={this.navigationStepOne} eventKey="first">Rooms</NavItem>
+                        <NavItem onClick={this.navigationStepOne} eventKey="first">Create config</NavItem>
                         <NavItem onClick={this.navigationStepTwo} disabled={this.state.studentConfigDisabled}
                                  eventKey="second">Student classes</NavItem>
                         <NavItem onClick={this.navigationStepThird} disabled={this.state.lectureTeacherDisabled}
@@ -80,16 +93,19 @@ class ConfigTimetable extends Component {
                 <Col sm={10}>
                     <Tab.Content animation>
                         <Tab.Pane eventKey="first">
-                            <RoomConfig enableNext={this.navigationStepTwo}/>
+                            <CreateConfig enableNext={this.navigationStepTwo}/>
                         </Tab.Pane>
                         <Tab.Pane eventKey="second">
-                            <StudentClassesConfig enableNext={this.navigationStepThird}/>
+                            <StudentClassesConfig enableNext={this.navigationStepThird}
+                                                  configId={this.state.currentConfigId}/>
                         </Tab.Pane>
                         <Tab.Pane eventKey="third">
-                            <LecturesTeachersConfig enableNext={this.navigationStepForth}/>
+                            <LecturesTeachersConfig enableNext={this.navigationStepForth}
+                                                    configId={this.state.currentConfigId}/>
                         </Tab.Pane>
                         <Tab.Pane eventKey="forth">
-                            <GenerateTimetable enableNext={this.navigationStepForth}/>
+                            <GenerateTimetable enableNext={this.navigationStepForth}
+                                               configId={this.state.currentConfigId}/>
                         </Tab.Pane>
                     </Tab.Content>
                 </Col>

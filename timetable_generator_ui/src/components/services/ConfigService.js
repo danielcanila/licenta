@@ -1,14 +1,14 @@
 import axios from "axios";
 
-const url = 'http://localhost:8090/room';
+const url = 'http://localhost:8090/timetableConfig';
 
-const retrieveAllRooms = function () {
-    let requestUrl = url;
+const retrieveLatestConfig = function () {
+    let requestUrl = url + "/latest";
     let config = {
         headers: {
             'Access-Control-Allow-Origin': '*',
         }
-        };
+    };
     return axios.get(requestUrl, config)
         .then(function (response) {
             return response.data;
@@ -18,9 +18,29 @@ const retrieveAllRooms = function () {
         });
 };
 
-const saveRoom = function (roomData) {
+const saveConfig = function (configData) {
     let requestUrl = url;
-    return axios.post(requestUrl, roomData)
+    return axios.post(requestUrl, configData)
+        .then(function (response) {
+            return response.data;
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+};
+const addStudentsToConfig = function (id, students) {
+    let requestUrl = url + "/" + id + "/studentclasses";
+    return axios.post(requestUrl, students)
+        .then(function (response) {
+            return response.data;
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+};
+const addTeachersToConfig = function (id, assignments) {
+    let requestUrl = url + "/" + id + "/assignTeachers";
+    return axios.post(requestUrl, assignments)
         .then(function (response) {
             return response.data;
         })
@@ -29,26 +49,4 @@ const saveRoom = function (roomData) {
         });
 };
 
-const deleteRoom = function (roomId) {
-    let requestUrl = url + "/" + roomId;
-    return axios.delete(requestUrl)
-        .then(function (response) {
-            return response.data;
-        })
-        .catch(function (error) {
-            console.error(error);
-        });
-};
-
-const updateRoom = function (roomId, roomData) {
-    let requestUrl = url + "/" + roomId;
-    return axios.patch(requestUrl, roomData)
-        .then(function (response) {
-            return response.data;
-        })
-        .catch(function (error) {
-            console.error(error);
-        });
-};
-
-export {retrieveAllRooms, saveRoom, deleteRoom, updateRoom};
+export {retrieveLatestConfig, saveConfig, addStudentsToConfig, addTeachersToConfig};
