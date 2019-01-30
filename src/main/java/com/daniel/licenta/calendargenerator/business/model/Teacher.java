@@ -42,5 +42,6 @@ public class Teacher {
 
     @Type(type = "jsonb")
     @Column(columnDefinition = "jsonb")
+    @JsonManagedReference
     private List<Long> unavailabilitySlots = new ArrayList<>();
 }

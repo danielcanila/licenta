@@ -25,6 +25,6 @@ public class Lecture {
     private String name;
 
     @ManyToMany(mappedBy = "lectures")
-    @JsonIgnore
+    @JsonBackReference
     private List<Teacher> teachers;
 }

@@ -21,11 +21,14 @@ public class TeacherData implements Serializable {
         return assignedStudentClasses.stream().mapToLong(ClassAssignment::getNumberOfHours).sum();
     }
 
-    public void addUnavailabilityInterval(int day, int hour) {
+    public void addUnavailabilityInterval(Integer day, Integer hour) {
         if (unavailabilityIntervals.containsKey(day)) {
-            unavailabilityIntervals.get(day).add(hour);
+            List<Integer> integers = unavailabilityIntervals.get(day);
+            integers.add(hour);
         } else {
-            unavailabilityIntervals.put(day, Arrays.asList(hour));
+            List<Integer> value = new ArrayList<>();
+            value.add(hour);
+            unavailabilityIntervals.put(day, value);
         }
     }
 
