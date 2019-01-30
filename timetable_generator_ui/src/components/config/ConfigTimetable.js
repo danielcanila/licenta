@@ -1,124 +1,237 @@
 import React, {Component} from 'react';
 import './configTimetable.css';
-import {Col, Nav, NavItem, Row, Tab} from 'react-bootstrap';
+import {Button, FieldGroup, Table} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CreateConfig from './subpages/CreateConfig'
-import StudentClassesConfig from './subpages/StudentClassesConfig'
-import LecturesTeachersConfig from './subpages/LecturesTeachersConfig'
-import GenerateTimetable from './subpages/GenerateTimetable'
-import {
-    retrieveLatestConfig,
-    saveConfig
-} from '../services/ConfigService';
-
+import Select from 'react-select';
+import {retrieveAllStudentClasses} from '../services/StudentClassService';
+import {retrieveAllLectures} from '../services/LectureService';
+import {addAssignmentsToConfig, saveConfig} from '../services/ConfigService';
+import Timeslot from "../view/common/StudentTable";
 
 class ConfigTimetable extends Component {
 
-
     constructor(props) {
         super(props);
+
         this.state = {
-            activateTab: "first",
-            studentConfigDisabled: true,
-            lectureTeacherDisabled: true,
-            generateTimetableDisabled: true,
-            currentConfigId: null
+            configId: null,
+            studentClasses: [],
+            lectures: [],
+            teachers: [],
+
+            selectedStudentClasses: null,
+            selectedLecture: null,
+            selectedTeacher: null,
+            selectedNumberOfSessions: '',
+            selections: []
         };
 
-        this.navigationStepOne = this.navigationStepOne.bind(this);
-        this.navigationStepTwo = this.navigationStepTwo.bind(this);
-        this.navigationStepThird = this.navigationStepThird.bind(this);
-        this.navigationStepForth = this.navigationStepForth.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleChangeStudentClasses = this.handleChangeStudentClasses.bind(this);
+        this.handleChangeLecture = this.handleChangeLecture.bind(this);
+        this.handleChangeTeacher = this.handleChangeTeacher.bind(this);
+        this.addAssignation = this.addAssignation.bind(this);
+        this.saveAndContinue = this.saveAndContinue.bind(this);
+        this.handleChangeNumberOfSessions = this.handleChangeNumberOfSessions.bind(this);
+        this.removeElement = this.removeElement.bind(this);
     }
 
-    navigationStepOne() {
-        this.setState({
-            activateTab: "first",
-            studentConfigDisabled: true,
-            lectureTeacherDisabled: true,
-            generateTimetableDisabled: true
-        })
-    }
-
-    navigationStepTwo() {
-        retrieveLatestConfig()
+    componentDidMount() {
+        retrieveAllStudentClasses()
             .then(response => {
-                this.setState({
-                    currentConfigId: response.id
+                let students = response.map(studentClass => {
+                    return {
+                        value: studentClass.id,
+                        label: studentClass.name
+                    }
                 });
+                this.setState({studentClasses: students});
+            })
+            .catch(error => {
+                console.error(error);
             });
-        this.setState({
-            activateTab: "second",
-            studentConfigDisabled: false,
-            lectureTeacherDisabled: true,
-            generateTimetableDisabled: true
-        })
+
+        retrieveAllLectures()
+            .then(response => {
+                let lectures = response.map(lecture => {
+                    console.log(lecture);
+                    return {
+                        value: lecture.id,
+                        label: lecture.name,
+                        teachers: lecture.teachers.map(teacher => {
+                            return {
+                                value: teacher.id,
+                                label: teacher.name
+                            }
+                        })
+                    }
+                });
+                this.setState({lectures: lectures});
+            })
     }
 
-    navigationStepThird() {
-        this.setState({
-            activateTab: "third",
-            studentConfigDisabled: false,
-            lectureTeacherDisabled: false,
-            generateTimetableDisabled: true
-        })
-    }
+    handleChangeStudentClasses = (selectedStudent) => {
+        this.setState({selectedStudentClasses: selectedStudent});
+    };
 
-    navigationStepForth() {
-        this.setState({
-            activateTab: "forth",
-            studentConfigDisabled: false,
-            lectureTeacherDisabled: false,
-            generateTimetableDisabled: false
-        })
-    }
-
-    TabConfigurareOrar() {
-        return <Tab.Container id="tc-config-timetable" activeKey={this.state.activateTab} onSelect={() => {
-        }}>
-            <Row className="clearfix">
-                <Col sm={2}>
-                    <Nav bsStyle="pills" stacked>
-                        <NavItem onClick={this.navigationStepOne} eventKey="first">Create config</NavItem>
-                        <NavItem onClick={this.navigationStepTwo} disabled={this.state.studentConfigDisabled}
-                                 eventKey="second">Student classes</NavItem>
-                        <NavItem onClick={this.navigationStepThird} disabled={this.state.lectureTeacherDisabled}
-                                 eventKey="third">Lectures /
-                            Teachers</NavItem>
-                        <NavItem onClick={this.navigationStepForth} disabled={this.state.generateTimetableDisabled}
-                                 eventKey="forth">Generate
-                            timetable</NavItem>
-                    </Nav>
-                </Col>
-                <Col sm={10}>
-                    <Tab.Content animation>
-                        <Tab.Pane eventKey="first">
-                            <CreateConfig enableNext={this.navigationStepTwo}/>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="second">
-                            <StudentClassesConfig enableNext={this.navigationStepThird}
-                                                  configId={this.state.currentConfigId}/>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="third">
-                            <LecturesTeachersConfig enableNext={this.navigationStepForth}
-                                                    configId={this.state.currentConfigId}/>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="forth">
-                            <GenerateTimetable enableNext={this.navigationStepForth}
-                                               configId={this.state.currentConfigId}/>
-                        </Tab.Pane>
-                    </Tab.Content>
-                </Col>
-            </Row>
-        </Tab.Container>;
-    }
-
-    render() {
-        return (
-            this.TabConfigurareOrar()
+    handleChangeLecture = (selectedLecture) => {
+        this.setState(
+            {
+                selectedLecture: selectedLecture,
+                teachers: selectedLecture.teachers
+            }
         );
     };
 
+    handleChangeTeacher = (selectedTeacher) => {
+        this.setState({selectedTeacher: selectedTeacher});
+    };
+
+    handleChangeNumberOfSessions = (e) => {
+        this.setState({selectedNumberOfSessions: e.target.value});
+    };
+
+    handleChange = (e) => {
+        this.setState({configName: e.target.value});
+    };
+
+    addAssignation() {
+        let selectedStudentClasses = this.state.selectedStudentClasses;
+        let selectedLecture = this.state.selectedLecture;
+        let selectedTeacher = this.state.selectedTeacher;
+        let selectedNumberOfSessions = this.state.selectedNumberOfSessions;
+
+        let item = {
+            studentClasses: selectedStudentClasses,
+            lecture: selectedLecture,
+            teacher: selectedTeacher,
+            numberOfSessions: selectedNumberOfSessions
+        };
+
+        this.setState({
+            selections: [...this.state.selections, item],
+            selectedStudentClasses: null,
+            selectedLecture: null,
+            selectedTeacher: null,
+            selectedNumberOfSessions: ''
+        });
+    }
+
+    saveAndContinue() {
+        let entries = this.state.selections.map(selection => {
+            return selection.studentClasses.map(studentClass => {
+                return {
+                    studentClassId: studentClass.value,
+                    lectureId: selection.lecture.value,
+                    teacherId: selection.teacher ? selection.teacher.value : null,
+                    numberOfSessions: selection.numberOfSessions
+                }
+            })
+        }).flat();
+
+        saveConfig({name: this.state.configName})
+            .then(result => {
+                this.setState({configId: result.id})
+                return result.id;
+            })
+            .then(id => {
+                addAssignmentsToConfig(id, entries);
+            });
+
+        console.log(entries);
+    }
+
+    render() {
+        const {selectedStudentClasses, studentClasses, selectedLecture, lectures, selectedTeacher, teachers} = this.state;
+
+        return (
+            <div>
+                <div>
+                    Config name:
+                    <input type="text" value={this.state.configName} onChange={this.handleChange}/>
+                </div>
+                <div>
+                    <div className={"selectArea"}>
+                        <label>Select student</label>
+                        <Select
+                            value={selectedStudentClasses}
+                            onChange={this.handleChangeStudentClasses}
+                            options={studentClasses}
+                            isMulti={true}
+                            isSearchable={true}
+                            closeMenuOnSelect={false}
+                        />
+                    </div>
+                    <div className={"selectArea"}>
+                        <label>Select lecture</label>
+                        <Select
+                            value={selectedLecture}
+                            onChange={this.handleChangeLecture}
+                            options={lectures}
+                            isSearchable={true}
+                        />
+                    </div>
+                    <div className={"selectArea"}>
+                        <label>Select teacher</label>
+                        <Select
+                            value={selectedTeacher}
+                            onChange={this.handleChangeTeacher}
+                            options={teachers}
+                            isDisabled={teachers.length === 0}
+                            isSearchable={true}
+                            placeholder={"Decide automatically..."}
+                        />
+                    </div>
+                    <div>
+                        Number of sessions
+                        <input type="number" value={this.state.selectedNumberOfSessions}
+                               onChange={this.handleChangeNumberOfSessions}/>
+                    </div>
+                    <div>
+                        <Button bsStyle="primary" onClick={this.addAssignation}>Add assignation</Button>
+                    </div>
+                </div>
+                <div>
+                    <Table bordered condensed hover responsive className="Table">
+                        <tbody>
+                        <tr className="MainHeader">
+                            <th>Students</th>
+                            <th>Lecture</th>
+                            <th>Teacher</th>
+                            <th>Number of sessions</th>
+                            <th>Remove</th>
+                        </tr>
+                        {
+                            this.state.selections.map((selection, index) => {
+                                return <tr key={index}>
+                                    <th>{selection.studentClasses.map(s => s.label).join(", ")}</th>
+                                    <th>{selection.lecture.label}</th>
+                                    <th>{selection.teacher ? selection.teacher.label : 'Let the app decide.'}</th>
+                                    <th>{selection.numberOfSessions}</th>
+                                    <th><Button bsStyle="primary"
+                                                onClick={() => this.removeElement(selection)}>Remove</Button></th>
+                                </tr>
+                            })
+                        }
+
+                        </tbody>
+                    </Table>
+                </div>
+                <div>
+                    <Button bsStyle="primary" onClick={this.saveAndContinue}>Generate timetable</Button>
+                </div>
+            </div>
+        );
+    };
+
+    removeElement(selection) {
+        this.setState({
+            selections: this.state.selections.filter(function (sel) {
+                return sel !== selection
+            })
+        });
+        return undefined;
+    }
 }
 
 export default ConfigTimetable;

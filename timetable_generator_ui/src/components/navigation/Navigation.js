@@ -31,9 +31,9 @@ class Navigation extends Component {
                             Input data
                         </NavItem>
                     </LinkContainer>
-                    <LinkContainer to="/timetableConfig">
+                    <LinkContainer to="/timetableGeneration">
                         <NavItem eventKey="3">
-                            Timetable config
+                            Timetable generation
                         </NavItem>
                     </LinkContainer>
                     <LinkContainer to="/viewTimetable">

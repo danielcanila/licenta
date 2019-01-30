@@ -30,7 +30,7 @@ class App extends Component {
                         <Switch>
                             <Route path="/home" component={Home}/>
                             <Route path="/inputData" component={InputData}/>
-                            <Route path="/timetableConfig" component={ConfigTimetable}/>
+                            <Route path="/timetableGeneration" component={ConfigTimetable}/>
                             <Route path="/viewTimetable" component={ViewTimetable}/>
                             <Route render={() => <Redirect to="/home" />} />
                         </Switch>
