@@ -8,7 +8,7 @@ export default class CheckboxList extends React.Component {
         super(props);
 
         this.state = {
-            items: props.selectedItems && props.selectedItems.length > 0 ? this.initItemsList() : props.items,
+            items: props.selectedItems && props.selectedItems.length > 0 ? this.initItemsList() : props.items.map(i => ({...i, checked: false})),
             selectedItems: props.selectedItems || []
         };
     }
@@ -26,7 +26,7 @@ export default class CheckboxList extends React.Component {
             if(selectedItems.find(i => i.id === item.id)) {
                 return Object.assign({}, item, {checked: true});
             }
-            return item;
+            return Object.assign({}, item, {checked: false});
         });
     }
 
@@ -63,38 +63,10 @@ export default class CheckboxList extends React.Component {
                 {items.map(item => (
                     <div key={item.id} className="item">
                         <input type="checkbox" checked={item.checked} onChange={(e) => this.onChange(e, item)} />
-                        <span>{item.name}</span>
+                        <span title={item.name}>{item.name}</span>
                     </div>
                 ))}
             </div>
         );
     }
 }
-
-// How to use:
-
-// class Blahblah {
-//
-//     onInit = (api) => {
-//         this.getCheckboxListSelectedItems = api.getSelectedItems;
-//     };
-//
-//     aCallback() {
-//         let selectedItems = this.getCheckboxListSelectedItems();
-//     }
-//
-//     anotherCallback() {
-//         let selectedItems = this.getCheckboxListSelectedItems();
-//     }
-//
-//     render() {
-//         return (
-//             <CheckboxList
-//                 onInit={this.onInit}
-//                 items={this.props.allLectures}
-//                 selectedItems={this.props.lectures}
-//             />
-//         );
-//     }
-//
-// }

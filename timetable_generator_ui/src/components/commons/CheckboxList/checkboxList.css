@@ -1,6 +1,5 @@
 .checkbox-list {
     width: 100%;
-    padding: 10px;
 }
 
 .checkbox-list .item {
@@ -20,5 +19,6 @@
     display: inline-block;
     vertical-align: middle;
     overflow: hidden;
-    text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }

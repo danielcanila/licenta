@@ -4,6 +4,7 @@ import './teacherPopup.css';
 
 import Popup from '../popup/Popup';
 import CheckboxList from '../../../commons/CheckboxList/CheckboxList';
+import {Button} from "react-bootstrap";
 
 export default class TeacherPopup extends React.Component {
 
@@ -12,15 +13,16 @@ export default class TeacherPopup extends React.Component {
 
         this.state = {
             name: props.name,
-            unavailabilitySlots: props.unavailabilitySlots
+            day: '',
+            time: '',
+            unavailabilitySlots: (props.unavailabilitySlots && props.unavailabilitySlots.length > 0) ? [...props.unavailabilitySlots] : []
         };
     }
 
     componentDidUpdate(prevProps) {
         if(prevProps.showPopup !== this.props.showPopup && this.props.showPopup === true) {
-            let {name, lectures, allLectures} = this.props;
             this.setState({
-                name
+                name: this.props.name
             });
         }
     }
@@ -28,6 +30,28 @@ export default class TeacherPopup extends React.Component {
     onNameChange = (event) => {
         this.setState({name: event.target.value});
     };
+
+    onDayChange = e => {
+		this.setState({day: e.target.value});
+	};
+	
+	onTimeChange = e => {
+		this.setState({time: e.target.value});
+	};
+
+	addInterval = () => {
+		let {day, time} = this.state;
+		if(!day || !time) return;
+
+		this.setState({
+			day: '',
+			time: '',
+			unavailabilitySlots: [...this.state.unavailabilitySlots, {
+				day,
+				time
+			}],
+		});
+	}
 
     onInit = (api) => {
         this.getSelectedLectures = api.getSelectedItems;
@@ -39,7 +63,7 @@ export default class TeacherPopup extends React.Component {
     };
 
     render() {
-        let {showPopup, title, onClose, allLectures, lectures} = this.props,
+        let {showPopup, title, onClose, allLectures, lectures, getDayObject, getTimeInterval} = this.props,
             {name, unavailabilitySlots} = this.state;
 
         return (
@@ -76,7 +100,35 @@ export default class TeacherPopup extends React.Component {
                         <span className="label-name">Unavailability:</span>
 
                         <div className="list-wrapper">
+							<span>Day:</span>
+                            <select value={this.state.day} onChange={this.onDayChange}>
+                                <option value="">-</option>
+                                {Object.values(getDayObject()).map(dayObj => (
+                                    <option key={dayObj} value={dayObj}>{dayObj}</option>
+                                ))}
+                            </select>
+							
+							<span>Time:</span>
+                            <select value={this.state.time} onChange={this.onTimeChange}>
+                                <option value="">-</option>
+                                {Object.values(getTimeInterval()).map(timeInt => (
+                                    <option key={timeInt} value={timeInt}>{timeInt}</option>
+                                ))}
+                            </select>
 
+							<Button bsStyle="primary" onClick={this.addInterval}>Add</Button>
+							
+							{unavailabilitySlots.length > 0 &&
+								<div className="selected-intervals">
+									<div className="title">Selected Intervals:</div>
+									{unavailabilitySlots.map((interval, i) => (
+										<div key={i} className="row">
+											<span>{interval.day}</span>
+											<span>{interval.time}</span>
+										</div>
+									))}
+								</div>
+							}
                         </div>
                     </div>
 

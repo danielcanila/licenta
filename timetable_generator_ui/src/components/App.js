@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './app.css';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./home/Home";
 import InputData from "./inputdata/InputData";
@@ -32,6 +32,7 @@ class App extends Component {
                             <Route path="/inputData" component={InputData}/>
                             <Route path="/timetableConfig" component={ConfigTimetable}/>
                             <Route path="/viewTimetable" component={ViewTimetable}/>
+                            <Route render={() => <Redirect to="/home" />} />
                         </Switch>
                     </div>
 

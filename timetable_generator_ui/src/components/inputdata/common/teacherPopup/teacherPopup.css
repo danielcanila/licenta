@@ -14,7 +14,8 @@
 
 .teacher-popup .popup-row .label-name {
     padding-right: 10px;
-    display: inline-block;
+	display: inline-block;
+	margin-bottom: 10px;
 }
 
 .teacher-popup .list-wrapper .item input {
@@ -37,7 +38,33 @@
     overflow: auto;
 }
 
+.teacher-popup .list-wrapper > span {
+	margin-right: 10px;
+}
+
+.teacher-popup .list-wrapper select {
+    width: 170px;
+    height: 26px;
+    margin-right: 20px;
+}
+
 .teacher-popup .list-wrapper .item {
     display: inline-block;
     width: 20%;
+}
+
+.teacher-popup .list-wrapper .selected-intervals {
+	margin-top: 25px;
+}
+
+.teacher-popup .list-wrapper .selected-intervals .row {
+	margin: 0;
+}
+
+.teacher-popup .list-wrapper .selected-intervals .row span {
+	margin-right: 5px;
+}
+
+.teacher-popup .list-wrapper .selected-intervals .title {
+	margin-bottom: 10px;
 }

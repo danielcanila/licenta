@@ -46,7 +46,6 @@ class TeacherInput extends Component {
     getTeachers() {
         retrieveAllTeachers()
             .then(response => {
-                console.log('teachers: ', response);
                 this.setState({teachers: response, teachersReady: true});
             })
             .catch(error => {
@@ -57,7 +56,6 @@ class TeacherInput extends Component {
     getLectures() {
         retrieveAllLectures()
             .then(response => {
-                console.log('lectures: ', response);
                 this.setState({lectures: response, lecturesReady: true});
             })
             .catch(error => {
@@ -197,6 +195,8 @@ class TeacherInput extends Component {
                     title={this.state.onEdit ? 'Update teacher details' : 'Add new teacher'}
                     onClose={this.closePopupAndResetValues}
                     onSave={this.onSave}
+                    getTimeInterval={this.getTimeInterval}
+                    getDayObject={this.getDayObject}
                 />
 
             </div>
