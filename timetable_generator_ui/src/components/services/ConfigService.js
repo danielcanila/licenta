@@ -38,7 +38,7 @@ const addStudentsToConfig = function (id, students) {
             console.error(error);
         });
 };
-const addTeachersToConfig = function (id, assignments) {
+const addAssignmentsToConfig = function (id, assignments) {
     let requestUrl = url + "/" + id + "/assignTeachers";
     return axios.post(requestUrl, assignments)
         .then(function (response) {
@@ -49,4 +49,4 @@ const addTeachersToConfig = function (id, assignments) {
         });
 };
 
-export {retrieveLatestConfig, saveConfig, addStudentsToConfig, addTeachersToConfig};
+export {retrieveLatestConfig, saveConfig, addStudentsToConfig, addAssignmentsToConfig};

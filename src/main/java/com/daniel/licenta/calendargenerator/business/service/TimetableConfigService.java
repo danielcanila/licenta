@@ -93,6 +93,14 @@ public class TimetableConfigService {
 
 
     public TimetableConfig assignTeachersToClasses(long id, List<StudentTeacherAssignmentDTO> assignments) {
+        List<Long> studentsToAdd = assignments.stream()
+                .map(StudentTeacherAssignmentDTO::getStudentClassId)
+                .distinct()
+                .collect(Collectors.toList());
+
+
+        addStudentClasses(id, studentsToAdd);
+
         TimetableConfig timetableConfig = timetableConfigRepository.findById(id).orElseThrow(() -> new RuntimeException("Config not found!"));
 
         handleAssignmentsWithTeachers(assignments, timetableConfig);

@@ -1,5 +1,7 @@
 package com.daniel.licenta.calendargenerator.api.controller;
 
+import com.daniel.licenta.calendargenerator.api.model.LectureDTO;
+import com.daniel.licenta.calendargenerator.api.model.TeacherDTO;
 import com.daniel.licenta.calendargenerator.business.model.Lecture;
 import com.daniel.licenta.calendargenerator.business.service.LectureService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/lecture")
@@ -16,8 +19,20 @@ public class LectureController {
     private LectureService lectureService;
 
     @GetMapping
-    public List<Lecture> getLectures() {
-        return lectureService.findAll();
+    public List<LectureDTO> getLectures() {
+        return lectureService.findAll()
+                .stream()
+                .map(lecture -> {
+                    LectureDTO lectureDTO = new LectureDTO();
+                    lectureDTO.setId(lecture.getId());
+                    lectureDTO.setName(lecture.getName());
+                    lecture.getTeachers().stream()
+                            .map(teacher -> new TeacherDTO(teacher.getId(), teacher.getName()))
+                            .collect(Collectors.toCollection(lectureDTO::getTeachers));
+
+                    return lectureDTO;
+                })
+                .collect(Collectors.toList());
     }
 
     @PostMapping

@@ -12,15 +12,13 @@ class CreateConfig extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            configName: '',
-            enableNext: this.props.enableNext
+            configName: ''
         };
-        // this.handleChange = this.handleChange.bind(this);
         this.createConfig = this.createConfig.bind(this);
     }
 
     createConfig() {
-        // let saveConfig1 = saveConfig({name: this.state.configName});
+        let saveConfig1 = saveConfig({name: this.state.configName});
         this.props.enableNext();
     }
 
