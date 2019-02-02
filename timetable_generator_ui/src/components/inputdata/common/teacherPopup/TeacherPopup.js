@@ -16,13 +16,17 @@ export default class TeacherPopup extends React.Component {
             day: '',
             time: '',
             unavailabilitySlots: (props.unavailabilitySlots && props.unavailabilitySlots.length > 0) ? [...props.unavailabilitySlots] : []
-        };
+		};
     }
 
     componentDidUpdate(prevProps) {
         if(prevProps.showPopup !== this.props.showPopup && this.props.showPopup === true) {
+			// reset state when popup is opened
             this.setState({
-                name: this.props.name
+				name: this.props.name,
+				day: '',
+            	time: '',
+				unavailabilitySlots: (this.props.unavailabilitySlots && this.props.unavailabilitySlots.length > 0) ? [...this.props.unavailabilitySlots] : []
             });
         }
     }
@@ -40,16 +44,30 @@ export default class TeacherPopup extends React.Component {
 	};
 
 	addInterval = () => {
-		let {day, time} = this.state;
-		if(!day || !time) return;
+		let {day, time} = this.state,
+			allIntervals = [];
+		if(!day) return;
+
+		if(!time) {
+			let timeIntervals = Object.values(this.props.getTimeInterval());
+			allIntervals = timeIntervals.map(time => ({
+				day,
+				time
+			}));
+		} else {
+			allIntervals.push({
+				day,
+				time
+			});
+		}
 
 		this.setState({
 			day: '',
 			time: '',
-			unavailabilitySlots: [...this.state.unavailabilitySlots, {
-				day,
-				time
-			}],
+			unavailabilitySlots: [
+				...this.state.unavailabilitySlots,
+				...allIntervals
+			]
 		});
 	}
 
@@ -58,9 +76,20 @@ export default class TeacherPopup extends React.Component {
     };
 
     onSave = () => {
-        let selectedLectures = this.getSelectedLectures();
-        this.props.onSave(selectedLectures);
-    };
+		let selectedLectures = this.getSelectedLectures(),
+			{name, unavailabilitySlots} = this.state;
+        this.props.onSave({
+			selectedLectures,
+			name,
+			unavailabilitySlots
+		});
+	};
+	
+	removeInterval({day, time}) {
+		this.setState({
+			unavailabilitySlots: [...this.state.unavailabilitySlots.filter(slot => !(slot.day === day && slot.time === time))]
+		});
+	}
 
     render() {
         let {showPopup, title, onClose, allLectures, lectures, getDayObject, getTimeInterval} = this.props,
@@ -125,6 +154,8 @@ export default class TeacherPopup extends React.Component {
 										<div key={i} className="row">
 											<span>{interval.day}</span>
 											<span>{interval.time}</span>
+											<span className="remove-button glyphicon glyphicon-remove"
+												onClick={() => this.removeInterval(interval)}></span>
 										</div>
 									))}
 								</div>

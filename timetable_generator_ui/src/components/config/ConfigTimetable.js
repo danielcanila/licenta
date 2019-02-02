@@ -22,7 +22,7 @@ class ConfigTimetable extends Component {
             selectedStudentClasses: null,
             selectedLecture: null,
             selectedTeacher: null,
-            selectedNumberOfSessions: '',
+            selectedNumberOfSessions: '1',
             selections: []
         };
 
@@ -145,81 +145,87 @@ class ConfigTimetable extends Component {
         const {selectedStudentClasses, studentClasses, selectedLecture, lectures, selectedTeacher, teachers} = this.state;
 
         return (
-            <div>
-                <div>
-                    Config name:
-                    <input type="text" value={this.state.configName} onChange={this.handleChange}/>
-                </div>
-                <div>
-                    <div className={"selectArea"}>
-                        <label>Select student</label>
-                        <Select
-                            value={selectedStudentClasses}
-                            onChange={this.handleChangeStudentClasses}
-                            options={studentClasses}
-                            isMulti={true}
-                            isSearchable={true}
-                            closeMenuOnSelect={false}
-                        />
-                    </div>
-                    <div className={"selectArea"}>
-                        <label>Select lecture</label>
-                        <Select
-                            value={selectedLecture}
-                            onChange={this.handleChangeLecture}
-                            options={lectures}
-                            isSearchable={true}
-                        />
-                    </div>
-                    <div className={"selectArea"}>
-                        <label>Select teacher</label>
-                        <Select
-                            value={selectedTeacher}
-                            onChange={this.handleChangeTeacher}
-                            options={teachers}
-                            isDisabled={teachers.length === 0}
-                            isSearchable={true}
-                            placeholder={"Decide automatically..."}
-                        />
-                    </div>
-                    <div>
-                        Number of sessions
-                        <input type="number" value={this.state.selectedNumberOfSessions}
-                               onChange={this.handleChangeNumberOfSessions}/>
-                    </div>
-                    <div>
-                        <Button bsStyle="primary" onClick={this.addAssignation}>Add assignation</Button>
-                    </div>
-                </div>
-                <div>
-                    <Table bordered condensed hover responsive className="Table">
-                        <tbody>
-                        <tr className="MainHeader">
-                            <th>Students</th>
-                            <th>Lecture</th>
-                            <th>Teacher</th>
-                            <th>Number of sessions</th>
-                            <th>Remove</th>
-                        </tr>
-                        {
-                            this.state.selections.map((selection, index) => {
-                                return <tr key={index}>
-                                    <th>{selection.studentClasses.map(s => s.label).join(", ")}</th>
-                                    <th>{selection.lecture.label}</th>
-                                    <th>{selection.teacher ? selection.teacher.label : 'Let the app decide.'}</th>
-                                    <th>{selection.numberOfSessions}</th>
-                                    <th><Button bsStyle="primary"
-                                                onClick={() => this.removeElement(selection)}>Remove</Button></th>
-                                </tr>
-                            })
-                        }
+            <div className="timetable">
+				<div className="select-area-content">
+					<div className="config-name row">
+						<span>Config name</span>
+						<input className="select-field" type="text" value={this.state.configName} onChange={this.handleChange}/>
+					</div>
+					<div className="row">
+						<span>Select student</span>
+						<Select
+							className="select-field"
+							value={selectedStudentClasses}
+							onChange={this.handleChangeStudentClasses}
+							options={studentClasses}
+							isMulti={true}
+							isSearchable={true}
+							closeMenuOnSelect={false}
+						/>
+					</div>
+					<div className="row">
+						<span>Select lecture</span>
+						<Select
+							className="select-field"
+							value={selectedLecture}
+							onChange={this.handleChangeLecture}
+							options={lectures}
+							isSearchable={true}
+						/>
+					</div>
+					<div className="row">
+						<span>Select teacher</span>
+						<Select
+							className="select-field"
+							value={selectedTeacher}
+							onChange={this.handleChangeTeacher}
+							options={teachers}
+							isDisabled={teachers.length === 0}
+							isSearchable={true}
+							placeholder={"Decide automatically..."}
+						/>
+					</div>
+					<div className="row">
+						<span>Number of sessions</span>
+						<input type="number"
+							min="1"
+							value={this.state.selectedNumberOfSessions}
+							className="select-field"
+							onChange={this.handleChangeNumberOfSessions} />
+					</div>
+				</div>
 
-                        </tbody>
-                    </Table>
-                </div>
-                <div>
-                    <Button bsStyle="primary" onClick={this.saveAndContinue}>Generate timetable</Button>
-                </div>
+				<Button className="generate-btn" bsStyle="primary" onClick={this.addAssignation}>Add assignation</Button>
+
+				{this.state.selections && this.state.selections.length > 0 &&
+					<Table bordered condensed hover responsive className="Table">
+						<tbody>
+						<tr className="MainHeader">
+							<th>Students</th>
+							<th>Lecture</th>
+							<th>Teacher</th>
+							<th>Number of sessions</th>
+							<th>Remove</th>
+						</tr>
+						{
+							this.state.selections.map((selection, index) => {
+								return <tr key={index}>
+									<th>{selection.studentClasses.map(s => s.label).join(", ")}</th>
+									<th>{selection.lecture.label}</th>
+									<th>{selection.teacher ? selection.teacher.label : 'Let the app decide.'}</th>
+									<th>{selection.numberOfSessions}</th>
+									<th><Button bsStyle="primary"
+												onClick={() => this.removeElement(selection)}>Remove</Button></th>
+								</tr>
+							})
+						}
+
+						</tbody>
+					</Table>
+				}
+				<div className="generate-btn-content">
+                	<Button className="generate-btn" bsStyle="primary" onClick={this.saveAndContinue}>Generate timetable</Button>
+				</div>
             </div>
         );
     };

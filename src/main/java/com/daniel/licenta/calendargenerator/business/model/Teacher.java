@@ -36,12 +36,12 @@ public class Teacher {
     @JoinTable(
             name = "t_teacher_lecture_link",
             joinColumns = {@JoinColumn(name = "teacher_id")},
+
             inverseJoinColumns = {@JoinColumn(name = "lecture_id")}
     )
     private List<Lecture> lectures;
 
     @Type(type = "jsonb")
     @Column(columnDefinition = "jsonb")
-    @JsonManagedReference
     private List<Long> unavailabilitySlots = new ArrayList<>();
 }

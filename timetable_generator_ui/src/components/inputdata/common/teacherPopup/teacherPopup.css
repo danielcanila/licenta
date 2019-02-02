@@ -34,7 +34,7 @@
 }
 
 .teacher-popup .list-wrapper {
-    max-height: 130px;
+    max-height: 150px;
     overflow: auto;
 }
 
@@ -59,6 +59,14 @@
 
 .teacher-popup .list-wrapper .selected-intervals .row {
 	margin: 0;
+	line-height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.teacher-popup .list-wrapper .selected-intervals .remove-button {
+	margin: 5px;
+	cursor: pointer;
 }
 
 .teacher-popup .list-wrapper .selected-intervals .row span {

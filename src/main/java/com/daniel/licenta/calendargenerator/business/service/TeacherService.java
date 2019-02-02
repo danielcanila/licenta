@@ -50,6 +50,12 @@ public class TeacherService {
         Teacher teacher = teacherRepository.findById(teacherId).orElseThrow(() -> new RuntimeException("Teacher not found"));
         List<Lecture> lecturesToAdd = lectureRepository.findAllById(lectureIds);
 
+        teacher.getLectures().forEach(lecture ->{
+            lecture.getTeachers().remove(teacher);
+
+        });
+        teacher.getLectures().clear();
+
         lecturesToAdd.forEach(lecture -> {
             lecture.getTeachers().remove(teacher);
             teacher.getLectures().remove(lecture);

@@ -7,7 +7,6 @@ import {
     deleteTeacher,
     updateTeacher,
     addLectures,
-    removeLectures,
     setUnavailabilityTimeslots
 } from '../../services/TeacherService';
 import {retrieveAllLectures} from '../../services/LectureService';
@@ -23,13 +22,14 @@ class TeacherInput extends Component {
 
         this.state = {
             teachers: [],
-            lectures: [],
+			lectures: [],
             teachersReady: false,
             showPopup: false,
             onEdit: false,
             editTeacher: {
                 name: '',
-                lectures: []
+				lectures: [],
+				unavailabilitySlots: []
             },
             lecturesReady: false
         };
@@ -84,42 +84,36 @@ class TeacherInput extends Component {
             6: 'from 14:00 to 15:00'
         };
     }
-
-    // saveTeacher() {
-    //     saveTeacher({name: 'new Room', capacity: 100});
-    // }
-    //
-    // deleteTeacher() {
-    //     deleteTeacher(123123123);
-    // }
-    //
-    // updateTeacher() {
-    //     updateTeacher(123123123, {name: 'new Room 2', capacity: 100});
-    // }
-    //
-    // addLecture() {
-    //     addLectures(123123123, [1, 2])
-    // }
-    //
-    // removeLecture() {
-    //     removeLectures(123123123, [1, 2])
-    // }
-    //
-    // setUnavailabilityTimeslots() {
-    //     setUnavailabilityTimeslots(123123123, [0, 1, 2])
-    // }
+    
+    deleteTeacher(id) {
+        deleteTeacher(id).then(() => {
+			this.setState({
+				teachers: [...this.state.teachers.filter(t => t.id !== id)]
+			})
+		});
+    }
 
     getTeacherLectures(teacher) {
         return teacher.lectures.map(l => l.name).join(', ');
     }
 
+	// dayIndex = nr / 7
     getSlotDay(unavailabilityNumber) {
         return this.dayObject[Math.floor(unavailabilityNumber / 7)];
     }
 
+	// timeIndex = nr % 7
     getSlotInterval(unavailabilityNumber) {
         return this.timeInterval[unavailabilityNumber % 7];
-    }
+	}
+	
+	// SLOT Number = dayIndex * 7 + timeIndex
+	reverseUnavailabilitySlotsToNumber({day, time}) {
+		let dayIndex = Object.values(this.dayObject).findIndex(d => d === day),
+			timeIndex = Object.values(this.timeInterval).findIndex(t => t === time);
+
+		return dayIndex * 7 + timeIndex;
+	}
 
     getUnavailabilitySlots(slots) {
         if(!slots || slots.length === 0) return '-';
@@ -131,13 +125,48 @@ class TeacherInput extends Component {
             onEdit: true,
             showPopup: true,
             editTeacher: {
-                ...teacher
+				...teacher,
+				unavailabilitySlots: teacher.unavailabilitySlots.map(slot => ({
+					day: this.getSlotDay(slot),
+					time: this.getSlotInterval(slot)
+				}))
             }
         });
-    }
+	}
+	
+	async saveNewTeacher({lecturesIds, name, slotsNumbers}) {
+		let teacherObject = await saveTeacher({name});
+		teacherObject = await addLectures(teacherObject.id, lecturesIds);
+		teacherObject = await setUnavailabilityTimeslots(teacherObject.id, slotsNumbers);
 
-    onSave = (teacherLectures) => {
-        console.log('on SAVE teacherLectures...', teacherLectures);
+		this.setState({
+			teachers: [...this.state.teachers, teacherObject]
+		});
+	}
+
+	async editTeacherSave(id, {lecturesIds, name, slotsNumbers}) {
+		let teacherObject = await updateTeacher(id, {name});
+		teacherObject = await addLectures(id, lecturesIds);
+		teacherObject = await setUnavailabilityTimeslots(id, slotsNumbers);
+
+		let teachers = this.state.teachers.map(teacher => {
+			if(teacher.id === id) {
+				return teacherObject;
+			}
+			return teacher;
+		});
+
+		this.setState({
+			teachers
+		});
+	}
+
+    onSave = ({selectedLectures, name, unavailabilitySlots}) => {
+		let slotsNumbers = unavailabilitySlots.map(s => this.reverseUnavailabilitySlotsToNumber({...s})),
+			lecturesIds = selectedLectures.map(l => l.id),
+			teacherId = this.state.editTeacher.id;
+
+		this.state.onEdit ? this.editTeacherSave(teacherId, {lecturesIds, name, slotsNumbers}) : this.saveNewTeacher({lecturesIds, name, slotsNumbers});
 
         this.closePopupAndResetValues();
     };
@@ -146,9 +175,11 @@ class TeacherInput extends Component {
         this.setState({
             editTeacher: {
                 name: '',
-                lectures: []
+				lectures: [],
+				unavailabilitySlots: []
             },
-            showPopup: false
+			showPopup: false,
+			onEdit: false
         });
     };
 
@@ -175,7 +206,7 @@ class TeacherInput extends Component {
                                     key={teacher.id}
                                     columns={[teacher.name, lectures, unavailabilityRows]}
                                     toggleEdit={() => this.editTeacher(teacher)}
-                                    // onRemove={() => this.onRemove(teacher.id)}
+                                    onRemove={() => this.deleteTeacher(teacher.id)}
                                 />
                             );
                         })
