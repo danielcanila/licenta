@@ -16,9 +16,6 @@ import static com.daniel.licenta.calendargenerator.algorithm.util.CSOConstants.M
 public class LocalSearchOptimizerCSO {
 
     @Autowired
-    private ConfigCSO configCSO;
-
-    @Autowired
     private RandomGenerator randomGenerator;
 
     @Autowired

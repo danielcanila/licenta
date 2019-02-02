@@ -18,13 +18,13 @@ public class ConfigCSO {
     // count of dimensions to change - percentage of dimensions to change
     public static int CDC = 10;
 
-    public static int HOURS_IN_WEEK = 30;
-    public static int HOURS_PER_DAY = 6;
+    public static int HOURS_IN_WEEK = 35;
+    public static int HOURS_PER_DAY = 7;
     public static int SEED = 1534380238;
-    public static double TEPW = 0.06;
+    public static double TEPW = 1.0;
     public static double ITDW = 1.0;
-    public static double TEPW_O = 1.35;
-    public static double ITDW_O = 0.06;
+    public static double TEPW_O = 1.0;
+    public static double ITDW_O = 0.05;
 
     public void overrideConfigData(ConfigData configData) {
         nullCheckSetting(configData.mr, () -> {

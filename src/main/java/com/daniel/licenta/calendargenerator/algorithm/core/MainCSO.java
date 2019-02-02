@@ -62,10 +62,6 @@ public class MainCSO {
                     .forEach(catData -> {
                         checkBestGlobal(TEPW, ITDW, calendarData, catData);
                         catTrace(catData);
-//                        int[][][] ints = optimizerCSO.runOptimizationPhase(TEPW, ITDW, calendarData, catData, 100, false);
-//                        for (int k = 0; k < calendarData.studentCount; k++) {
-//                            System.arraycopy(ints[k], 0, catData[k], 0, HOURS_IN_WEEK);
-//                        }
                     });
 
         }
@@ -195,7 +191,7 @@ public class MainCSO {
         double globalBestFitness = fitnessCalculator.checkHardConstraints(0, HOURS_IN_WEEK, globalBestCat);
 
         double distance = c1 * (bestFitness - globalBestFitness);
-        int swapsToMake = MathUtils.roundNumber((randomGenerator.nextDouble() * distance)) % (200);
+        int swapsToMake = MathUtils.roundNumber((randomGenerator.nextDouble() * distance));
 
         for (int i = 0; i < swapsToMake; i++) {
             singleSwap(catInTrace,
@@ -212,11 +208,12 @@ public class MainCSO {
         double[][] storePositionsAndFitness = new double[2][HOURS_IN_WEEK];
 
         for (int i = 0; i < data.studentCount; i++) {
-            if ((timeslot == HOURS_PER_DAY - 1
-                    || timeslot == 2 * HOURS_PER_DAY - 1
-                    || timeslot == 3 * HOURS_PER_DAY - 1
-                    || timeslot == 4 * HOURS_PER_DAY - 1
-                    || timeslot == 5 * HOURS_PER_DAY - 1) && destination[i][timeslot][0] == -1) {
+            if ((timeslot == HOURS_PER_DAY * 1 - 1
+                    || timeslot == HOURS_PER_DAY * 2 - 1
+                    || timeslot == HOURS_PER_DAY * 3 - 1
+                    || timeslot == HOURS_PER_DAY * 4 - 1
+                    || timeslot == HOURS_PER_DAY * 5 - 1)
+                    && destination[i][timeslot][0] == -1) {
                 continue;
             }
 
